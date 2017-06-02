@@ -55,6 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ValueConverters\Base\BaseValueConverter.cs" />
     <Compile Include="ViewModels\Helpers\WindowResizer.cs" />
     <Compile Include="ViewModels\WindowViewModel.cs" />
     <Page Include="MainWindow.xaml">

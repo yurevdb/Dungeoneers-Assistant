@@ -48,57 +48,23 @@ namespace DnDAssistant.Wpf
         public ICommand CloseCommand { get; set; }
 
         /// <summary>
-        /// The command to open the system menu the window
-        /// </summary>
-        public ICommand MenuCommand { get; set; }
-
-        /// <summary>
-        /// The command to log out of the program
-        /// </summary>
-        public ICommand LogOutCommand { get; set; }
-
-        /// <summary>
-        /// The command to contact an administrator
-        /// </summary>
-        public ICommand ContactCommand { get; set; }
-
-        /// <summary>
-        /// Show the user management view
-        /// </summary>
-        public ICommand ShowUserManagement { get; set; }
-
-        /// <summary>
-        /// Show the server statistics view
-        /// </summary>
-        public ICommand ShowServerStats { get; set; }
-
-        /// <summary>
-        /// Show the navigation menu
-        /// </summary>
-        public ICommand ShowNavigation { get; set; }
-
-        /// <summary>
         /// Shows the custom context menu
         /// </summary>
-        public ICommand TitleCommand { get; set; }
+        public ICommand MenuCommand { get; set; }
 
         #endregion
 
         #region Public Properties
 
-        public double WindowMinimumWidth { get; set; } = 400;
-
-        public double WindowMinimumHeight { get; set; } = 300;
-
         /// <summary>
-        /// the size of the resizeborder around the window
+        /// The size of the resizeborder around the window
         /// </summary>
         public int ResizeBorder { get; set; } = 2;
 
         /// <summary>
-        /// the size of the resize border around the window, taking into account the outer margin
+        /// The size of the resize border around the window, taking into account the outer margin
         /// </summary>
-        public Thickness ResizeBorderThickness { get { return new Thickness(ResizeBorder + OuterMarginSize); } }
+        public Thickness ResizeBorderThickness => new Thickness(ResizeBorder + OuterMarginSize);
 
         /// <summary>
         /// The margin around the window to allow for a drop shadow
@@ -112,10 +78,10 @@ namespace DnDAssistant.Wpf
         /// <summary>
         /// The margin around the window to allow for a drop shadow
         /// </summary>
-        public Thickness OuterMarginSizeThickness { get { return new Thickness(OuterMarginSize); } }
+        public Thickness OuterMarginSizeThickness => new Thickness(OuterMarginSize);
 
         /// <summary>
-        /// the radius of the edges from the window
+        /// The radius of the edges from the window
         /// </summary>
         public int WindowRadius
         {
@@ -124,21 +90,34 @@ namespace DnDAssistant.Wpf
         }
 
         /// <summary>
-        /// the radius of the edges from the window
+        /// The radius of the edges from the window
         /// </summary>
-        public CornerRadius WindowCornerRadius { get { return new CornerRadius(WindowRadius); } }
+        public CornerRadius WindowCornerRadius => new CornerRadius(WindowRadius);
 
         /// <summary>
-        /// the height of the title bar
+        /// The height of the title bar
         /// </summary>
         public int TitleHeight { get; set; } = 35;
 
         /// <summary>
-        /// the height of the title bar
+        /// The height of the title bar
         /// </summary>
-        public GridLength TitleHeightGridlength { get { return new GridLength(TitleHeight + ResizeBorder); } }
+        public double TitleHeightGridlength => TitleHeight + ResizeBorder;
 
-        public Thickness InnerContentPadding { get { return new Thickness(ResizeBorder); } }
+        /// <summary>
+        /// The padding of the content
+        /// </summary>
+        public Thickness InnerContentPadding => new Thickness(ResizeBorder);
+
+        /// <summary>
+        /// The height of the content margin
+        /// </summary>
+        public double InnerContentMarginHeight => TitleHeight + ResizeBorder - 7;
+
+        /// <summary>
+        /// The height of the caption bar
+        /// </summary>
+        public double CaptionHeight => TitleHeight + ResizeBorder;
 
         #endregion
 
@@ -172,19 +151,6 @@ namespace DnDAssistant.Wpf
             MaximizeCommand = new RelayCommand(() => window.WindowState ^= WindowState.Maximized);
             CloseCommand = new RelayCommand(() => window.Close());
             MenuCommand = new RelayCommand(() => SystemCommands.ShowSystemMenu(window, GetMousePosition()));
-
-            ContactCommand = new RelayCommand(() => {
-            });
-
-            TitleCommand = new RelayCommand(() =>
-            {
-            });
-
-            ShowUserManagement = new RelayCommand(() => {
-            });
-
-            ShowServerStats = new RelayCommand(() => {
-            });
 
             #endregion
 

@@ -4,9 +4,10 @@
              xmlns:local="clr-namespace:DnDAssistant.Wpf">
     <Application.Resources>
         <ResourceDictionary>
+            <!-- Order is important -->
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Styles/Window.xaml"/>
                 <ResourceDictionary Source="Styles/Buttons.xaml"/>
+                <ResourceDictionary Source="Styles/Window.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

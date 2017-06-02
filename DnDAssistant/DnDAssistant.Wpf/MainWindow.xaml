@@ -7,29 +7,22 @@
         mc:Ignorable="d"
         Style="{StaticResource CustomWindowStyle}"
         Title="Dungeoneers Assistant" 
-        Height="350"
+        Height="450"
         WindowStartupLocation="CenterScreen"
-        ResizeMode="CanResize"
-        Width="525"
-        MinHeight="400"
-        MinWidth="400">
+        ResizeMode="CanMinimize"
+        Width="700">
 
 
     <WindowChrome.WindowChrome>
         <WindowChrome 
-            ResizeBorderThickness="3"
-            CaptionHeight="{Binding TitleHeight}"
-            CornerRadius="0"
-            GlassFrameThickness="0"
+            CaptionHeight="{Binding CaptionHeight}"
             />
     </WindowChrome.WindowChrome>
     
+    <!-- Content -->
     <Grid>
-        
-        <!-- Background -->
-        <Grid.Background>
-            <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Wallpaper.jpg" AlignmentX="Center" AlignmentY="Center" Stretch="UniformToFill"/>
-        </Grid.Background>
-        
+
+        <!--<TextBlock Background="White" />-->
+
     </Grid>
 </Window>

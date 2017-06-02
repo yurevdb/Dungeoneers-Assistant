@@ -6,28 +6,34 @@
     <Style TargetType="{x:Type local:MainWindow}" x:Key="CustomWindowStyle">
         <Setter Property="WindowStyle" Value="None"/>
         <Setter Property="AllowsTransparency" Value="True"/>
-        <Setter Property="MinHeight" Value="{Binding WindowMinimumHeight}"/>
-        <Setter Property="MinWidth" Value="{Binding WindowMinimumWidth}"/>
+        <Setter Property="MinHeight" Value="300"/>
+        <Setter Property="MinWidth" Value="400"/>
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Window}">
                     <!-- Outer border with the dropshadow margin -->
-                    <Border Margin="{Binding OuterMarginSizeThickness, FallbackValue=10}">
+                    <Border Padding="{Binding OuterMarginSizeThickness, FallbackValue=10}">
 
                         <!-- Main Window Outline -->
                         <Grid>
 
                             <!-- opacity mask for corners on grid -->
-                            <Border x:Name="Container" Background="White" CornerRadius="{Binding WindowCornerRadius, FallbackValue=10}">
+                            <Border x:Name="Container" Background="White" CornerRadius="{Binding WindowCornerRadius, FallbackValue=0}">
                             </Border>
 
                             <!-- Window border and dropshadow -->
-                            <!-- Also sets the background of the window -->
-                            <Border CornerRadius="{Binding WindowCornerRadius, FallbackValue=10}"
-                                    Background="White">
+                            <Border CornerRadius="{Binding WindowCornerRadius, FallbackValue=0}">
+
+                                <!-- Background of the window -->
+                                <Border.Background>
+                                    <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Wallpaper.jpg" 
+                                                AlignmentX="Center" AlignmentY="Center" 
+                                                Stretch="UniformToFill"/> 
+                                </Border.Background>
+
                                 <Border.Effect>
-                                    <DropShadowEffect ShadowDepth="3" Opacity="0.4" BlurRadius="5"/>
+                                    <DropShadowEffect ShadowDepth="2" Opacity="0.5" BlurRadius="10"/>
                                 </Border.Effect>
                             </Border>
 
@@ -39,14 +45,15 @@
                                 </Grid.OpacityMask>
 
                                 <Grid.RowDefinitions>
+                                    <RowDefinition Height="{Binding InnerContentMarginHeight}"/>
                                     <RowDefinition Height="*"/>
                                 </Grid.RowDefinitions>
 
                                 <!-- Title Bar -->
-                                <Grid Panel.ZIndex="1"
+                                <Grid Panel.ZIndex="99"
                                       Grid.Row="0"
                                       Background="Transparent"
-                                      Height="{Binding TitleHeightGridLength, FallbackValue=30}" 
+                                      Height="{Binding TitleHeightGridLength, FallbackValue=37}" 
                                       VerticalAlignment="Top" 
                                       ClipToBounds="True">
 
@@ -58,21 +65,21 @@
 
 
                                     <!-- Title Text -->
-                                    <Viewbox  Grid.Column="0" Margin="0">
+                                    <Viewbox Grid.Column="0" Margin="0">
                                         <Button Content="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Title, FallbackValue='Dungeoneers Assistant'}"
-                                                Command="{Binding TitleCommand}"/>
+                                                Command="{Binding MenuCommand}"/>
                                     </Viewbox>
 
                                     <!-- Window Buttons -->
                                     <StackPanel Orientation="Horizontal" Grid.Column="2" ClipToBounds="True">
-                                        <Button Command="{Binding MinimizeCommand}" Content="_"/>
-                                        <Button Command="{Binding MaximizeCommand}" Content="[ ]"/>
-                                        <Button Command="{Binding CloseCommand}" Content="X"/>
+                                        <Button Style="{StaticResource WindowButtonStyle}" Command="{Binding MinimizeCommand}" Content="_"/>
+                                        <Button Style="{StaticResource WindowButtonStyle}" Command="{Binding MaximizeCommand}" Content="[ ]"/>
+                                        <Button Style="{StaticResource WindowButtonStyle}" Command="{Binding CloseCommand}" Content="X"/>
                                     </StackPanel>
                                 </Grid>
 
                                 <!-- Page Content -->
-                                <Border Grid.Row="0" Padding="0" BorderThickness="0" Margin="0" ClipToBounds="True">
+                                <Border Grid.Row="1" BorderThickness="0"  ClipToBounds="True">
                                     <ContentPresenter Content="{TemplateBinding Content}"/>
                                 </Border>
 
