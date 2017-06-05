@@ -44,12 +44,12 @@
                                 </Grid.OpacityMask>
 
                                 <Grid.RowDefinitions>
-                                    <RowDefinition Height="{Binding InnerContentMarginHeight}"/>
+                                    <RowDefinition Height="{Binding InnerContentMarginHeight, FallbackValue=35}"/>
                                     <RowDefinition Height="*"/>
                                 </Grid.RowDefinitions>
 
                                 <!-- Title Bar -->
-                                <Grid Panel.ZIndex="99"
+                                <Grid Panel.ZIndex="10"
                                       Grid.Row="0"
                                       Background="Transparent"
                                       VerticalAlignment="Top" 
