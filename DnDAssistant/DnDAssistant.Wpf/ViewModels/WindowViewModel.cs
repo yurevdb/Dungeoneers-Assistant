@@ -100,11 +100,6 @@ namespace DnDAssistant.Wpf
         public int TitleHeight { get; set; } = 35;
 
         /// <summary>
-        /// The height of the title bar
-        /// </summary>
-        public double TitleHeightGridlength => TitleHeight + ResizeBorder;
-
-        /// <summary>
         /// The padding of the content
         /// </summary>
         public Thickness InnerContentPadding => new Thickness(ResizeBorder);
@@ -143,10 +138,7 @@ namespace DnDAssistant.Wpf
 
             #region Commands
 
-            MinimizeCommand = new RelayCommand(() =>
-            {
-                window.WindowState = WindowState.Minimized;
-            });
+            MinimizeCommand = new RelayCommand(() => window.WindowState = WindowState.Minimized);
             // ^= is xor
             MaximizeCommand = new RelayCommand(() => window.WindowState ^= WindowState.Maximized);
             CloseCommand = new RelayCommand(() => window.Close());
