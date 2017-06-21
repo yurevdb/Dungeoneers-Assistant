@@ -4,7 +4,6 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DnDAssistant.Wpf"
-        xmlns:sys="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
         Style="{StaticResource CustomWindowStyle}"
         Title="Dungeoneers Assistant" 
@@ -13,21 +12,21 @@
         ResizeMode="CanMinimize"
         Width="700">
 
+    <!--#region Custom Window-->
 
     <WindowChrome.WindowChrome>
-        <WindowChrome CaptionHeight="{Binding CaptionHeight}"/>
+        <WindowChrome
+            CaptionHeight="{Binding CaptionHeight}"/>
     </WindowChrome.WindowChrome>
+
+    <!--#endregion-->
     
-    <!-- Set the interactability of elements around or in the window -->
-    <!-- THIS IS VERY FUCKING IMPORTANT: DO NOT REMOVE -->
-    <WindowChrome.IsHitTestVisibleInChrome>
-        <sys:Boolean>True</sys:Boolean>
-    </WindowChrome.IsHitTestVisibleInChrome>
+    <!--#region Content-->
 
-    <!-- Content -->
-    <Grid>
-
-        <!--<TextBlock Background="White" />-->
-
-    </Grid>
+    <Border>
+        
+    </Border>
+    
+    <!--#endregion-->
+    
 </Window>

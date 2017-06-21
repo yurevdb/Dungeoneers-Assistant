@@ -28,7 +28,7 @@ namespace DnDAssistant.Core
         }
 
         #endregion
-
+        
         // All methods here must be protected instead of public
         // Only made usable for the ViewModels
         #region Protected Helper Methods
@@ -38,7 +38,7 @@ namespace DnDAssistant.Core
         /// </summary>
         /// <param name="Action">The <see cref="Action"/> to run asynchronously</param>
         /// <returns></returns>
-        protected async Task RunTask(Action Action)
+        protected async Task RunAsync(Action Action)
         {
             // Run the task
             await Task.Run(Action);

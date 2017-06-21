@@ -64,7 +64,8 @@
                                     <!-- Title Text -->
                                     <Viewbox Grid.Column="0" Margin="0">
                                         <Button Content="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Title, FallbackValue='Dungeoneers Assistant'}"
-                                                Command="{Binding MenuCommand}"/>
+                                                Command="{Binding MenuCommand}"
+                                                Style="{StaticResource ApplicationMenuButton}"/>
                                     </Viewbox>
 
                                     <!-- Window Buttons -->

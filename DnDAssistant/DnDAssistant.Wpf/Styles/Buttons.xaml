@@ -2,18 +2,21 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:DnDAssistant.Wpf">
 
-    <Style x:Key="BaseButtonStyle" TargetType="Button">
-        
+    <Style x:Key="BaseButtonStyle" TargetType="{x:Type Button}">
+        <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True"/>
     </Style>
 
 
-    <Style x:Key="IconButtonStyle" TargetType="Button">
+    <Style x:Key="IconButtonStyle" TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
         
     </Style>
 
     <Style x:Key="WindowButtonStyle" TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
-        <Setter Property="Background" Value="Black"/>
-        <Setter Property="Foreground" Value="White"/>
+        
+    </Style>
+
+    <Style x:Key="ApplicationMenuButton" TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
+        
     </Style>
 
 </ResourceDictionary>
