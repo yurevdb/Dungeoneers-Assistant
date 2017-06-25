@@ -1,0 +1,29 @@
+Benodigdheden:
+
+Beginning (Code):
+    -Character lookup
+    -Character Creator:
+        -Simple
+        -Advanced
+        -Tutorial
+    -Monster:
+        -Creator
+        -lookup
+    -Spells:
+        -Creator
+        -lookup
+    
+Advanced:
+
+
+
+Taak Verdeling:
+
+Yuré:
+-Xml streamer(code)
+-Window (UI)
+
+
+Giovanni:
+-Character Creator (simple) (Code, UI(poging))
+

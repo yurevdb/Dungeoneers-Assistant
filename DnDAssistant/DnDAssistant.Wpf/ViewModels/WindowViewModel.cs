@@ -143,9 +143,7 @@ namespace DnDAssistant.Wpf
             MaximizeCommand = new RelayCommand(() => _Window.WindowState ^= WindowState.Maximized);
             CloseCommand = new RelayCommand(() => _Window.Close());
             MenuCommand = new RelayCommand(() => SystemCommands.ShowSystemMenu(_Window, GetMousePosition()));
-
-
-
+            
             #endregion
 
             // Fix window resize issue
