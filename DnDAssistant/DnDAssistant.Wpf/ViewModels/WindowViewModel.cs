@@ -16,17 +16,17 @@ namespace DnDAssistant.Wpf
         /// <summary>
         /// the window
         /// </summary>
-        private Window window;
+        private Window _Window;
 
         /// <summary>
         ///  The margin around the window to allow for a drop shadow
         /// </summary>
-        private int outerMarginSize = 10;
+        private int _OuterMarginSize = 10;
 
         /// <summary>
         /// the radius of the edges from the window
         /// </summary>
-        private int windowRadius = 0;
+        private int _WindowRadius = 0;
 
         #endregion
 
@@ -71,8 +71,8 @@ namespace DnDAssistant.Wpf
         /// </summary>
         public int OuterMarginSize
         {
-            get => window.WindowState == WindowState.Maximized ? 0 : outerMarginSize;
-            set => outerMarginSize = value;
+            get => _Window.WindowState == WindowState.Maximized ? 0 : _OuterMarginSize;
+            set => _OuterMarginSize = value;
         }
 
         /// <summary>
@@ -85,8 +85,8 @@ namespace DnDAssistant.Wpf
         /// </summary>
         public int WindowRadius
         {
-            get => window.WindowState == WindowState.Maximized ? 0 : windowRadius;
-            set => windowRadius = value;
+            get => _Window.WindowState == WindowState.Maximized ? 0 : _WindowRadius;
+            set => _WindowRadius = value;
         }
 
         /// <summary>
@@ -124,9 +124,9 @@ namespace DnDAssistant.Wpf
         /// <param name="_window"></param>
         public WindowViewModel(Window _window)
         {
-            window = _window;
+            _Window = _window;
             //Listen out for the window resizing
-            window.StateChanged += (sender, e) =>
+            _Window.StateChanged += (sender, e) =>
             {
                 // Fire off events for all properties affected by the resize
                 OnPropertyChanged(nameof(ResizeBorderThickness));
@@ -138,16 +138,18 @@ namespace DnDAssistant.Wpf
 
             #region Commands
 
-            MinimizeCommand = new RelayCommand(() => window.WindowState = WindowState.Minimized);
+            MinimizeCommand = new RelayCommand(() => _Window.WindowState = WindowState.Minimized);
             // ^= is xor
-            MaximizeCommand = new RelayCommand(() => window.WindowState ^= WindowState.Maximized);
-            CloseCommand = new RelayCommand(() => window.Close());
-            MenuCommand = new RelayCommand(() => SystemCommands.ShowSystemMenu(window, GetMousePosition()));
+            MaximizeCommand = new RelayCommand(() => _Window.WindowState ^= WindowState.Maximized);
+            CloseCommand = new RelayCommand(() => _Window.Close());
+            MenuCommand = new RelayCommand(() => SystemCommands.ShowSystemMenu(_Window, GetMousePosition()));
+
+
 
             #endregion
 
             // Fix window resize issue
-            var resizer = new WindowResizer(window);
+            var resizer = new WindowResizer(_Window);
         }
 
         #endregion
