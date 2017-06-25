@@ -124,6 +124,7 @@ namespace DnDAssistant.Wpf
         /// <param name="_window"></param>
         public WindowViewModel(Window _window)
         {
+            
             window = _window;
             //Listen out for the window resizing
             window.StateChanged += (sender, e) =>
