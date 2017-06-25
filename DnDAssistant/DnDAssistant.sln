@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26228.9
+VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DnDAssistant.Wpf", "DnDAssistant.Wpf\DnDAssistant.Wpf.csproj", "{65575EDE-6FC7-4559-B369-D0C81F488EB9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DnDAssistant.Core", "DnDAssistant.Core\DnDAssistant.Core.csproj", "{FC905F7D-DA4A-46A4-B2CA-78CB93209C19}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DnDAssistant.UnitTester", "DnDAssistant.UnitTester\DnDAssistant.UnitTester.csproj", "{40DC1186-4028-4D36-9E19-A472FA766C28}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{FC905F7D-DA4A-46A4-B2CA-78CB93209C19}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC905F7D-DA4A-46A4-B2CA-78CB93209C19}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC905F7D-DA4A-46A4-B2CA-78CB93209C19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40DC1186-4028-4D36-9E19-A472FA766C28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40DC1186-4028-4D36-9E19-A472FA766C28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40DC1186-4028-4D36-9E19-A472FA766C28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40DC1186-4028-4D36-9E19-A472FA766C28}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

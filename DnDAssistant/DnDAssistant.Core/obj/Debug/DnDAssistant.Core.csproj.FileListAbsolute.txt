@@ -5,3 +5,10 @@ C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Core\obj\Debug\DnDAssistant.Core.csprojResolveAssemblyReference.cache
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Core\obj\Debug\DnDAssistant.Core.dll
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Core\obj\Debug\DnDAssistant.Core.pdb
+D:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Repository\DnDAssistant\DnDAssistant.Core\bin\Debug\DnDAssistant.Core.dll
+D:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Repository\DnDAssistant\DnDAssistant.Core\bin\Debug\DnDAssistant.Core.pdb
+D:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Repository\DnDAssistant\DnDAssistant.Core\bin\Debug\Ninject.dll
+D:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Repository\DnDAssistant\DnDAssistant.Core\bin\Debug\Ninject.xml
+D:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Repository\DnDAssistant\DnDAssistant.Core\obj\Debug\DnDAssistant.Core.csprojResolveAssemblyReference.cache
+D:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Repository\DnDAssistant\DnDAssistant.Core\obj\Debug\DnDAssistant.Core.dll
+D:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Repository\DnDAssistant\DnDAssistant.Core\obj\Debug\DnDAssistant.Core.pdb
