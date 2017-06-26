@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 namespace DnDAssistant.Core
 {
     /// <summary>
-    /// A base for every viewmodel
+    /// A base for every viewmodel. Use OnPropertyChanged for a property to update it
     /// </summary>
     public class BaseViewModel : INotifyPropertyChanged
     {
@@ -21,7 +21,7 @@ namespace DnDAssistant.Core
         /// The function the update the view with OnPropertyChanged
         /// </summary>
         /// <param name="PropertyName">The name of the property to update</param>
-        public void OnPropertyChanged([CallerMemberName]string PropertyName = null)
+        protected void OnPropertyChanged([CallerMemberName]string PropertyName = null)
         {
             // Call the property changed event
             PropertyChanged(this, new PropertyChangedEventArgs(PropertyName));

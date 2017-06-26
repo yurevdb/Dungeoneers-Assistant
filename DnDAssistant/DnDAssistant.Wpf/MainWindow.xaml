@@ -32,8 +32,14 @@
         <local:MenuControl VerticalAlignment="Top"
                            Panel.ZIndex="10"
                            HorizontalAlignment="Left"
-                           Width="300"
-                           Visibility="{Binding ApplicationMenuVisible, Converter={local:BooleanToVisibilityConverter}}"/>
+                           Width="250"
+                           Visibility="{Binding ApplicationMenuVisible, Converter={local:BooleanToVisibilityConverter}}">
+            <local:MenuControl.Effect>
+                <DropShadowEffect BlurRadius="6"
+                                  ShadowDepth="2"
+                                  Color="Black"/>
+            </local:MenuControl.Effect>
+        </local:MenuControl>
 
     </Grid>
     

@@ -117,7 +117,7 @@ namespace DnDAssistant.Wpf
         /// <summary>
         /// True when the application menu should be visible, false when not
         /// </summary>
-        public bool ApplicationMenuVisible { get; set; } = true;
+        public bool ApplicationMenuVisible { get; set; } = false;
 
         #endregion
 
@@ -147,7 +147,11 @@ namespace DnDAssistant.Wpf
             // ^= is xor
             MaximizeCommand = new RelayCommand(() => _Window.WindowState ^= WindowState.Maximized);
             CloseCommand = new RelayCommand(() => _Window.Close());
-            MenuCommand = new RelayCommand(() => ApplicationMenuVisible ^= true);
+            MenuCommand = new RelayCommand(() =>
+            {
+                ApplicationMenuVisible = (ApplicationMenuVisible == true) ? false : true;
+                OnPropertyChanged(nameof(ApplicationMenuVisible));
+            });
             
             #endregion
 

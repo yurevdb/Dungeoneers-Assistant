@@ -53,8 +53,18 @@
     </Style>
 
     <!-- The application name in the header button -->
-    <Style x:Key="ApplicationMenuButton" TargetType="Button">
-        <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True"/>
+    <Style x:Key="ApplicationMenuButton" TargetType="Button" BasedOn="{StaticResource WindowIconButtonStyle}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Padding="{TemplateBinding Padding}"
+                            Background="{TemplateBinding Background}">
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="{TemplateBinding Content}"
+                                   FontSize="{StaticResource FontsizeExtraLarge}"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
     </Style>
 
 </ResourceDictionary>
