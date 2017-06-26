@@ -26,9 +26,16 @@
     
     <!--#region Content-->
 
-    <Border>
-        
-    </Border>
+    <Grid>
+
+        <!-- Application Menu -->
+        <local:MenuControl VerticalAlignment="Top"
+                           Panel.ZIndex="10"
+                           HorizontalAlignment="Left"
+                           Width="300"
+                           Visibility="{Binding ApplicationMenuVisible, Converter={local:BooleanToVisibilityConverter}}"/>
+
+    </Grid>
     
     <!--#endregion-->
     

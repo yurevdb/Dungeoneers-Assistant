@@ -1,6 +1,4 @@
 ﻿using DnDAssistant.Core;
-using System;
-using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Input;
 
@@ -56,6 +54,7 @@ namespace DnDAssistant.Wpf
 
         #region Public Properties
 
+        #region Window Ui Properties
         /// <summary>
         /// The size of the resizeborder around the window
         /// </summary>
@@ -113,6 +112,12 @@ namespace DnDAssistant.Wpf
         /// The height of the caption bar
         /// </summary>
         public double CaptionHeight => TitleHeight + ResizeBorder;
+        #endregion
+
+        /// <summary>
+        /// True when the application menu should be visible, false when not
+        /// </summary>
+        public bool ApplicationMenuVisible { get; set; } = true;
 
         #endregion
 
@@ -142,7 +147,7 @@ namespace DnDAssistant.Wpf
             // ^= is xor
             MaximizeCommand = new RelayCommand(() => _Window.WindowState ^= WindowState.Maximized);
             CloseCommand = new RelayCommand(() => _Window.Close());
-            MenuCommand = new RelayCommand(() => SystemCommands.ShowSystemMenu(_Window, GetMousePosition()));
+            MenuCommand = new RelayCommand(() => ApplicationMenuVisible ^= true);
             
             #endregion
 
@@ -150,25 +155,6 @@ namespace DnDAssistant.Wpf
             var resizer = new WindowResizer(_Window);
         }
 
-        #endregion
-
-        #region Private Helpers
-        [DllImport("user32.dll")]
-        [return: MarshalAs(UnmanagedType.Bool)]
-        internal static extern bool GetCursorPos(ref Win32Point pt);
-
-        [StructLayout(LayoutKind.Sequential)]
-        internal struct Win32Point
-        {
-            public Int32 X;
-            public Int32 Y;
-        };
-        private static Point GetMousePosition()
-        {
-            Win32Point w32Mouse = new Win32Point();
-            GetCursorPos(ref w32Mouse);
-            return new Point(w32Mouse.X, w32Mouse.Y);
-        }
         #endregion
     }
 }

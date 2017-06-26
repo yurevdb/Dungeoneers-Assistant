@@ -55,9 +55,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Controls\MenuControl.xaml.cs">
+      <DependentUpon>MenuControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ValueConverters\Base\BaseValueConverter.cs" />
+    <Compile Include="ValueConverters\BooleanToVisibilityConverter.cs" />
     <Compile Include="ViewModels\Helpers\WindowResizer.cs" />
     <Compile Include="ViewModels\WindowViewModel.cs" />
+    <Page Include="Controls\MenuControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
