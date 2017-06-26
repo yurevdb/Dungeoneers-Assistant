@@ -10,7 +10,6 @@
 
     <!-- Base button style-->
     <Style x:Key="BaseButtonStyle" TargetType="{x:Type Button}">
-        <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True"/>
     </Style>
 
     <!-- General icon button style -->
@@ -19,7 +18,8 @@
     </Style>
 
     <!-- Icon style for the window buttons (i.e. minimize) -->
-    <Style x:Key="WindowIconButtonStyle" TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
+    <Style x:Key="WindowIconButtonStyle" TargetType="Button">
+        <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True"/>
         <Setter Property="Padding" Value="10"/>
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="Foreground" Value="{StaticResource WhiteBrush}"/>
@@ -53,8 +53,8 @@
     </Style>
 
     <!-- The application name in the header button -->
-    <Style x:Key="ApplicationMenuButton" TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
-        
+    <Style x:Key="ApplicationMenuButton" TargetType="Button">
+        <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True"/>
     </Style>
 
 </ResourceDictionary>
