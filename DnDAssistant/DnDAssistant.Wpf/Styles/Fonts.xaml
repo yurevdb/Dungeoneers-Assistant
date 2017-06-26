@@ -1,0 +1,10 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:DnDAssistant.Wpf"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+
+    
+    <!-- Fontsizes -->
+    <system:Double x:Key="FontsizeRegular">18</system:Double>
+    
+</ResourceDictionary>

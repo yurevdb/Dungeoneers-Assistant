@@ -59,7 +59,7 @@ namespace DnDAssistant.Wpf
         /// <summary>
         /// The size of the resizeborder around the window
         /// </summary>
-        public int ResizeBorder { get; set; } = 2;
+        public int ResizeBorder { get; set; } = 5;
 
         /// <summary>
         /// The size of the resize border around the window, taking into account the outer margin
@@ -97,7 +97,7 @@ namespace DnDAssistant.Wpf
         /// <summary>
         /// The height of the title bar
         /// </summary>
-        public int TitleHeight { get; set; } = 35;
+        public int TitleHeight { get; set; } = 50;
 
         /// <summary>
         /// The padding of the content

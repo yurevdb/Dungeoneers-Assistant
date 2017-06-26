@@ -70,9 +70,9 @@
 
                                     <!-- Window Buttons -->
                                     <StackPanel Orientation="Horizontal" Grid.Column="2" >
-                                        <Button Style="{StaticResource WindowButtonStyle}" Command="{Binding MinimizeCommand}" Content="_"/>
-                                        <Button Style="{StaticResource WindowButtonStyle}" Command="{Binding MaximizeCommand}" Content="[ ]"/>
-                                        <Button Style="{StaticResource WindowButtonStyle}" Command="{Binding CloseCommand}" Content="X"/>
+                                        <Button Style="{StaticResource WindowIconButtonStyle}" Command="{Binding MinimizeCommand}" Content="_"/>
+                                        <Button Style="{StaticResource WindowIconButtonStyle}" Command="{Binding MaximizeCommand}" Content="[ ]"/>
+                                        <Button Style="{StaticResource WindowIconButtonStyle}" Command="{Binding CloseCommand}" Content="X"/>
                                     </StackPanel>
                                     
                                 </Grid>

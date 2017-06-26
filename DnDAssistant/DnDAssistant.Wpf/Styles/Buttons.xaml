@@ -2,19 +2,57 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:DnDAssistant.Wpf">
 
+    <ResourceDictionary.MergedDictionaries>
+        <!--Order is important-->
+        <ResourceDictionary Source="Colors.xaml"/>
+        <ResourceDictionary Source="Fonts.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+    <!-- Base button style-->
     <Style x:Key="BaseButtonStyle" TargetType="{x:Type Button}">
         <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True"/>
     </Style>
 
-
+    <!-- General icon button style -->
     <Style x:Key="IconButtonStyle" TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
         
     </Style>
 
-    <Style x:Key="WindowButtonStyle" TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
-        
+    <!-- Icon style for the window buttons (i.e. minimize) -->
+    <Style x:Key="WindowIconButtonStyle" TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
+        <Setter Property="Padding" Value="10"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Foreground" Value="{StaticResource WhiteBrush}"/>
+        <Setter Property="Opacity" Value="0.6"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Padding="{TemplateBinding Padding}"
+                            Background="{TemplateBinding Background}">
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="{TemplateBinding Content}"
+                                   FontSize="{StaticResource FontsizeRegular}"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Opacity" Value="1"/>
+                <Setter Property="Effect">
+                    <Setter.Value>
+                        <DropShadowEffect ShadowDepth="1"
+                                          Direction="270"
+                                          Color="{StaticResource White}"
+                                          Opacity="1"
+                                          BlurRadius="10"/>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+        </Style.Triggers>
     </Style>
 
+    <!-- The application name in the header button -->
     <Style x:Key="ApplicationMenuButton" TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
         
     </Style>

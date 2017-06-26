@@ -8,15 +8,18 @@
         Style="{StaticResource CustomWindowStyle}"
         Title="Dungeoneers Assistant" 
         Height="450"
+        Width="700"
+        ShowInTaskbar="True"
         WindowStartupLocation="CenterScreen"
-        ResizeMode="CanMinimize"
-        Width="700">
+        ResizeMode="CanResize"
+        >
 
     <!--#region Custom Window-->
 
     <WindowChrome.WindowChrome>
         <WindowChrome
-            CaptionHeight="{Binding CaptionHeight}"/>
+            CaptionHeight="{Binding CaptionHeight}"
+            ResizeBorderThickness="{Binding ResizeBorderThickness}"/>
     </WindowChrome.WindowChrome>
 
     <!--#endregion-->
