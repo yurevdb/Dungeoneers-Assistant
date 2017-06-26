@@ -31,9 +31,10 @@
         <!-- Application Menu -->
         <local:MenuControl VerticalAlignment="Top"
                            Panel.ZIndex="10"
+                           DataContext="{Binding AppMenu}"
                            HorizontalAlignment="Left"
-                           Width="250"
-                           Visibility="{Binding ApplicationMenuVisible, Converter={local:BooleanToVisibilityConverter}}">
+                           Width="275"
+                           Visibility="{Binding DataContext.ApplicationMenuVisible, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Window}, Converter={local:BooleanToVisibilityConverter}}">
             <local:MenuControl.Effect>
                 <DropShadowEffect BlurRadius="6"
                                   ShadowDepth="2"

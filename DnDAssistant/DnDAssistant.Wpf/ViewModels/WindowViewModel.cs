@@ -119,6 +119,11 @@ namespace DnDAssistant.Wpf
         /// </summary>
         public bool ApplicationMenuVisible { get; set; } = false;
 
+        /// <summary>
+        /// The view model for the application menu
+        /// </summary>
+        public ApplicationMenuViewModel AppMenu { get; set; }
+
         #endregion
 
         #region Constructor
@@ -152,7 +157,13 @@ namespace DnDAssistant.Wpf
                 ApplicationMenuVisible = (ApplicationMenuVisible == true) ? false : true;
                 OnPropertyChanged(nameof(ApplicationMenuVisible));
             });
-            
+
+            #endregion
+
+            #region Menu
+
+            AppMenu = new ApplicationMenuViewModel();
+
             #endregion
 
             // Fix window resize issue

@@ -55,14 +55,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Controls\MenuControl.xaml.cs">
+    <Compile Include="Controls\MenuControl\MenuControl.xaml.cs">
       <DependentUpon>MenuControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="ValueConverters\Base\BaseValueConverter.cs" />
     <Compile Include="ValueConverters\BooleanToVisibilityConverter.cs" />
+    <Compile Include="ValueConverters\HorizontalAlignmentConverter.cs" />
+    <Compile Include="ValueConverters\StringRGBToBrushConverter.cs" />
     <Compile Include="ViewModels\Helpers\WindowResizer.cs" />
     <Compile Include="ViewModels\WindowViewModel.cs" />
-    <Page Include="Controls\MenuControl.xaml">
+    <Page Include="Controls\MenuControl\MenuControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -128,6 +130,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Animations\" />
     <Folder Include="Helpers\" />
   </ItemGroup>
   <ItemGroup>
