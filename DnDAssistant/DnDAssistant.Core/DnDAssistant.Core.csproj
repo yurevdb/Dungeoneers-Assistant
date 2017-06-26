@@ -49,12 +49,18 @@
     <Compile Include="Helpers\Characters\Classes.cs" />
     <Compile Include="Helpers\Dice\Dice.cs" />
     <Compile Include="Helpers\Dice\Die.cs" />
+    <Compile Include="Helpers\XmlStream\XmlStream.cs" />
+    <Compile Include="IoC\IoC.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\Application\ApplicationViewModel.cs" />
     <Compile Include="ViewModels\Base\BaseViewModel.cs" />
     <Compile Include="ViewModels\Base\RelayCommand.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

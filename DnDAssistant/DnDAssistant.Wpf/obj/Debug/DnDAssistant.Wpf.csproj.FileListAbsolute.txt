@@ -40,3 +40,5 @@ D:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Repository\DnDAs
 D:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Repository\DnDAssistant\DnDAssistant.Wpf\obj\Debug\DnDAssistant.Wpf.csproj.GenerateResource.Cache
 D:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Repository\DnDAssistant\DnDAssistant.Wpf\obj\Debug\DnDAssistant.Wpf.exe
 D:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Repository\DnDAssistant\DnDAssistant.Wpf\obj\Debug\DnDAssistant.Wpf.pdb
+C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\bin\Debug\Ninject.dll
+C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\bin\Debug\Ninject.xml
