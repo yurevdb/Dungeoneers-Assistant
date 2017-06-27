@@ -59,8 +59,7 @@
         <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True"/>
         <Setter Property="Padding" Value="10"/>
         <Setter Property="Background" Value="Transparent"/>
-        <Setter Property="Foreground" Value="{StaticResource WhiteBrush}"/>
-        <Setter Property="Opacity" Value="0.6"/>
+        <Setter Property="Foreground" Value="{StaticResource BlackBrush}"/>
         <Setter Property="BorderThickness" Value="0"/>
         <Setter Property="Template">
             <Setter.Value>
@@ -75,10 +74,9 @@
         </Setter>
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Opacity" Value="1"/>
                 <Setter Property="Effect">
                     <Setter.Value>
-                        <DropShadowEffect ShadowDepth="1"
+                        <DropShadowEffect ShadowDepth="2"
                                           Direction="270"
                                           Color="{StaticResource White}"
                                           Opacity="1"
