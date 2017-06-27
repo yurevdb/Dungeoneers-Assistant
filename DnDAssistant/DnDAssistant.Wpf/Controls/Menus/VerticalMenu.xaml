@@ -60,30 +60,33 @@
                         </Border.InputBindings>
                         
                         <!-- Grid container for text and icon -->
-                        <Grid>
-                            <Grid.ColumnDefinitions>
+                        <Border Padding="5">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <!-- Icon -->
+                                    <ColumnDefinition Width="Auto"/>
+                                    <!-- Text -->
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
                                 <!-- Icon -->
-                                <ColumnDefinition Width="Auto"/>
-                                <!-- Text -->
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
-
-                            <!-- Icon -->
-                            <TextBlock Name="icon"
-                                       Padding="5"
-                                       VerticalAlignment="Center"
-                                       FontFamily="{StaticResource FontAwasome}"
-                                       Text="{Binding Icon, Converter={local:IconTypeToFontAwesomeConverter}}"/>
+                                <TextBlock Name="icon"
+                                           Margin="{Binding Icon, Converter={local:IconTypeToMarginConverter}}"
+                                           HorizontalAlignment="Left"
+                                           VerticalAlignment="Center"
+                                           FontFamily="{StaticResource FontAwasome}"
+                                           Text="{Binding Icon, Converter={local:IconTypeToFontAwesomeConverter}}"/>
                             
-                            <!-- Text -->
-                            <TextBlock Name="text"
-                                       Grid.Column="1"
-                                       Margin="5 0 5 0"
-                                       VerticalAlignment="Center"
-                                       Text="{Binding Text}"/>
+                                <!-- Text -->
+                                <TextBlock Name="text"
+                                           Grid.Column="1"
+                                           VerticalAlignment="Center"
+                                           HorizontalAlignment="Left"
+                                           Text="{Binding Text}"/>
 
-                        </Grid>
-                        
+                            </Grid>
+                        </Border>
+
                     </Border>
                     
                 </Grid>
