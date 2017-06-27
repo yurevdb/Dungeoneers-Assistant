@@ -50,6 +50,11 @@ namespace DnDAssistant.Wpf
         /// </summary>
         public ICommand MenuCommand { get; set; }
 
+        /// <summary>
+        /// The command for when any area around the popup is clicked
+        /// </summary>
+        public ICommand PopupClickawayCommand { get; set; }
+
         #endregion
 
         #region Public Properties
@@ -117,7 +122,12 @@ namespace DnDAssistant.Wpf
         /// <summary>
         /// True when the application menu should be visible, false when not
         /// </summary>
-        public bool ApplicationMenuVisible { get; set; } = false;
+        public bool ApplicationMenuVisible { get; set; } = true;
+
+        /// <summary>
+        /// True when a popup menu is visible
+        /// </summary>
+        public bool AnyPopupVisible => ApplicationMenuVisible;
 
         /// <summary>
         /// The view model for the application menu
@@ -154,7 +164,12 @@ namespace DnDAssistant.Wpf
             CloseCommand = new RelayCommand(() => _Window.Close());
             MenuCommand = new RelayCommand(() =>
             {
-                ApplicationMenuVisible = (ApplicationMenuVisible == true) ? false : true;
+                ApplicationMenuVisible ^= true;
+                OnPropertyChanged(nameof(ApplicationMenuVisible));
+            });
+            PopupClickawayCommand = new RelayCommand(() =>
+            {
+                ApplicationMenuVisible = false;
                 OnPropertyChanged(nameof(ApplicationMenuVisible));
             });
 

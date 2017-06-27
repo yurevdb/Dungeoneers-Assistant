@@ -20,7 +20,9 @@
                 Padding="10"
                 Background="{Binding MenuBackground, Converter={local:StringRGBToBrushConverter}}"
                 >
-            <TextBlock Text="hallo"/>
+            <!--The Content-->
+            <ContentControl Content="{Binding Converter={local:PopupContentConverter}}"/>
+            
         </Border>
         <Path Grid.Row="0"
               Stroke="Black"

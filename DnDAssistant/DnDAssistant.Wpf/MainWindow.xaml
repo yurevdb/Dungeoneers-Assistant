@@ -27,10 +27,19 @@
     <!--#region Content-->
 
     <Grid>
+        
+        <!-- Popup Overlay for closing any popup of the window -->
+        <Border Background="red"
+                Panel.ZIndex="1"
+                Visibility="{Binding AnyPopupVisible, Converter={local:BooleanToVisibilityConverter}}">
+            <Border.InputBindings>
+                <MouseBinding MouseAction="LeftClick" Command="{Binding PopupClickawayCommand}"/>
+            </Border.InputBindings>
+        </Border>
 
         <!-- Application Menu -->
         <local:MenuControl VerticalAlignment="Top"
-                           Panel.ZIndex="10"
+                           Panel.ZIndex="2"
                            DataContext="{Binding AppMenu}"
                            HorizontalAlignment="Left"
                            Width="275"

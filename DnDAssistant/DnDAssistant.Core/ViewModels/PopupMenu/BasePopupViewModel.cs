@@ -3,7 +3,7 @@
     /// <summary>
     /// A view model for any popup menus
     /// </summary>
-    public class BasePopupMenuViewModel
+    public class BasePopupViewModel
     {
         #region Public Properties
 
@@ -17,6 +17,12 @@
         /// </summary>
         public ElementHorizontalAlignment ArrowAlignment { get; set; }
 
+
+        /// <summary>
+        /// The content inside of this popup menu
+        /// </summary>
+        public BaseViewModel Content { get; set; }
+
         #endregion
 
         #region Constructor
@@ -24,7 +30,7 @@
         /// <summary>
         /// Default constructor
         /// </summary>
-        public BasePopupMenuViewModel()
+        public BasePopupViewModel()
         {
             // Set default values
             // TODO: Move colors into core and use it here
