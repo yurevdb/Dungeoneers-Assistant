@@ -50,6 +50,13 @@
                                   Color="Black"/>
             </local:MenuControl.Effect>
         </local:MenuControl>
+        
+        <!-- Dimmed Overlay -->
+        <Border Opacity="0.3" 
+                Panel.ZIndex="3">
+            <Border Background="{StaticResource BlackBrush}"
+                    Visibility="{Binding DimmableOverlayVisible, Converter={local:BooleanToVisibilityConverter}}"/>
+        </Border>
 
     </Grid>
     

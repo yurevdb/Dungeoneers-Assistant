@@ -1,4 +1,6 @@
-﻿namespace DnDAssistant.Core
+﻿using System.Windows.Input;
+
+namespace DnDAssistant.Core
 {
     /// <summary>
     /// A view model for a menu item
@@ -19,5 +21,10 @@
         /// The type of this menu item
         /// </summary>
         public MenuItemType Type { get; set; }
+
+        /// <summary>
+        /// The click command action. This will have to be set for each menu item seperatly
+        /// </summary>
+        public ICommand Click { get; set; }
     }
 }

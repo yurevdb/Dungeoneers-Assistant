@@ -1,0 +1,38 @@
+﻿<Window x:Class="DnDAssistant.Wpf.DialogWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DnDAssistant.Wpf"
+        mc:Ignorable="d"
+        Style="{StaticResource DialogWindowStyle}"
+        Title="{Binding Title}"
+        ShowInTaskbar="True"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        SizeToContent="WidthAndHeight"
+        >
+
+    <!--#region Custom Window-->
+
+    <WindowChrome.WindowChrome>
+        <WindowChrome
+            CaptionHeight="{Binding CaptionHeight}"
+            ResizeBorderThickness="{Binding ResizeBorderThickness}"/>
+    </WindowChrome.WindowChrome>
+
+    <!--#endregion-->
+    
+    <!--#region Content-->
+
+    <Border Background="{StaticResource WhiteBrush}"
+            Padding="10"
+            >
+
+        <ContentControl Content="{Binding Content}"/>
+
+    </Border>
+    
+    <!--#endregion-->
+    
+</Window>

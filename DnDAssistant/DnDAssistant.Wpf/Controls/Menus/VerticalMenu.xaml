@@ -32,6 +32,7 @@
                             CornerRadius="8"
                             Visibility="{Binding Type, Converter={local:MenuItemVisibilityConverter}, ConverterParameter=TextAndIcon}">
 
+                        <!-- Trigger -->
                         <Border.Triggers>
                             <!-- Hover over Blue -->
                             <EventTrigger RoutedEvent="MouseEnter">
@@ -52,6 +53,11 @@
                                 </BeginStoryboard>
                             </EventTrigger>
                         </Border.Triggers>
+
+                        <!-- Input Bindings -->
+                        <Border.InputBindings>
+                            <MouseBinding MouseAction="LeftClick" Command="{Binding Click}"/>
+                        </Border.InputBindings>
                         
                         <!-- Grid container for text and icon -->
                         <Grid>

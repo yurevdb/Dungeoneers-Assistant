@@ -90,4 +90,84 @@
         </Setter>
     </Style>
 
+    <Style TargetType="{x:Type local:DialogWindow}" x:Key="DialogWindowStyle">
+        <Setter Property="WindowStyle" Value="None"/>
+        <Setter Property="MinHeight" Value="100"/>
+        <Setter Property="MinWidth" Value="250"/>
+        <Setter Property="AllowsTransparency" Value="True"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Window}">
+                    <!-- Outer border with the dropshadow margin -->
+                    <Border Padding="{Binding OuterMarginSizeThickness}">
+
+                        <!-- Main Window Outline -->
+                        <Grid>
+
+                            <!-- opacity mask for corners on grid -->
+                            <Border x:Name="Container" Background="White" CornerRadius="{Binding WindowCornerRadius}">
+                            </Border>
+
+                            <!-- Window border and dropshadow -->
+                            <Border CornerRadius="{Binding WindowCornerRadius}"
+                                    Background="{StaticResource WhiteBrush}">
+
+                                <!-- Drop shadow -->
+                                <Border.Effect>
+                                    <DropShadowEffect ShadowDepth="2" Opacity="0.5" BlurRadius="10"/>
+                                </Border.Effect>
+                                
+                            </Border>
+
+                            <!--The Main window content -->
+                            <Grid>
+                                <!-- Corner clipping -->
+                                <Grid.OpacityMask>
+                                    <VisualBrush Visual="{Binding ElementName=Container}"/>
+                                </Grid.OpacityMask>
+
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="{Binding InnerContentMarginHeight, FallbackValue=50}"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+
+                                <!-- Title Bar -->
+                                <Grid Panel.ZIndex="10"
+                                      Grid.Row="0"
+                                      Background="Transparent"
+                                      VerticalAlignment="Top" 
+                                      ClipToBounds="True">
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <!-- Title Text -->
+                                    <TextBlock Grid.Column="1" Grid.ColumnSpan="3" Text="{Binding Title, FallbackValue=Dialog}"
+                                               VerticalAlignment="Center" HorizontalAlignment="Center"
+                                               FontSize="{StaticResource FontsizeRegular}"/>
+
+                                    <!-- Window Buttons -->
+                                    <StackPanel Orientation="Horizontal" Grid.Column="2" >
+                                        <Button Style="{StaticResource DialogIconButtonStyle}" Command="{Binding CloseCommand}" Content="X"/>
+                                    </StackPanel>
+
+                                </Grid>
+
+                                <!-- Page Content -->
+                                <Border Grid.Row="1" BorderThickness="0"  >
+                                    <ContentPresenter Content="{TemplateBinding Content}"/>
+                                </Border>
+
+                            </Grid>
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
 </ResourceDictionary>

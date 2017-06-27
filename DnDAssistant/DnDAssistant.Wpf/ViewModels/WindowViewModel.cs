@@ -1,7 +1,6 @@
 ﻿using DnDAssistant.Core;
 using System.Windows;
 using System.Windows.Input;
-using System.ComponentModel;
 
 namespace DnDAssistant.Wpf
 {
@@ -131,6 +130,11 @@ namespace DnDAssistant.Wpf
         public bool AnyPopupVisible => ApplicationMenuVisible;
 
         /// <summary>
+        /// True if we should dim the background
+        /// </summary>
+        public bool DimmableOverlayVisible { get; set; }
+
+        /// <summary>
         /// The view model for the application menu
         /// </summary>
         public ApplicationMenuViewModel AppMenu { get; set; }
@@ -163,18 +167,8 @@ namespace DnDAssistant.Wpf
             // ^= is xor
             MaximizeCommand = new RelayCommand(() => _Window.WindowState ^= WindowState.Maximized);
             CloseCommand = new RelayCommand(() => _Window.Close());
-            MenuCommand = new RelayCommand(() => 
-            {
-                ApplicationMenuVisible ^= true;
-                OnPropertyChanged(nameof(ApplicationMenuVisible));
-                OnPropertyChanged(nameof(AnyPopupVisible));
-            } );
-            PopupClickawayCommand = new RelayCommand(() => 
-            {
-                ApplicationMenuVisible = false;
-                OnPropertyChanged(nameof(ApplicationMenuVisible));
-                OnPropertyChanged(nameof(AnyPopupVisible));
-            } );
+            MenuCommand = new RelayCommand(() => ApplicationMenuVisible ^= true );
+            PopupClickawayCommand = new RelayCommand(() => ApplicationMenuVisible = false );
 
             #endregion
 

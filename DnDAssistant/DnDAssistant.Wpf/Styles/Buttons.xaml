@@ -52,6 +52,18 @@
         </Style.Triggers>
     </Style>
 
+    <!-- Icon style for the dialog window buttons -->
+    <Style x:Key="DialogIconButtonStyle" TargetType="Button" BasedOn="{StaticResource WindowIconButtonStyle}">
+        <Setter Property="Foreground" Value="{StaticResource BlackBrush}"/>
+        <Setter Property="Opacity" Value="1"/>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="Red"/>
+                <Setter Property="Foreground" Value="{StaticResource WhiteBrush}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
     <!-- The application name in the header button -->
     <Style x:Key="ApplicationMenuButton" TargetType="Button" BasedOn="{StaticResource WindowIconButtonStyle}">
         <Setter Property="Template">

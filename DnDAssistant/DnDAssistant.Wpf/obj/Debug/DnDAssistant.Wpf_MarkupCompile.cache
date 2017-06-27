@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\App.xaml
-71968323004
+9-1825291505
 
-152085508607
-151823336236
-Controls\MenuControl\MenuControl.xaml;Controls\Menus\VerticalMenu.xaml;MainWindow.xaml;Styles\Buttons.xaml;Styles\Colors.xaml;Styles\Fonts.xaml;Styles\Window.xaml;
+201607146930
+68-1592855163
+Controls\Dialogs\DialogMessageBox.xaml;Controls\MenuControl\MenuControl.xaml;Controls\Menus\VerticalMenu.xaml;Controls\Dialogs\Base\DialogWindow.xaml;MainWindow.xaml;Styles\Buttons.xaml;Styles\Colors.xaml;Styles\Fonts.xaml;Styles\Window.xaml;
 
 False
 
