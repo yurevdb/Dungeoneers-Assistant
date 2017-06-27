@@ -17,7 +17,7 @@
         public MenuItemDesignModel()
         {
             Text = "Hello World";
-            Icon = IconType.File;
+            Icon = IconType.Cog;
         }
     }
 }

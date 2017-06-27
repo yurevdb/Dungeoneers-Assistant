@@ -72,7 +72,8 @@
                             <TextBlock Name="icon"
                                        Padding="5"
                                        VerticalAlignment="Center"
-                                       Text="Icon"/>
+                                       FontFamily="{StaticResource FontAwasome}"
+                                       Text="{Binding Icon, Converter={local:IconTypeToFontAwesomeConverter}}"/>
                             
                             <!-- Text -->
                             <TextBlock Name="text"

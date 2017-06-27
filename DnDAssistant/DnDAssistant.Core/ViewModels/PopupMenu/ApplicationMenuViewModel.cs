@@ -21,6 +21,7 @@ namespace DnDAssistant.Core
                     new MenuItemViewModel
                     {
                         Text = "Settings",
+                        Icon = IconType.Cog,
                         Click = new RelayCommand(async () => await IoC.UI.ShowMessage(new DialogViewModel
                         {
                             Title = "Settings",

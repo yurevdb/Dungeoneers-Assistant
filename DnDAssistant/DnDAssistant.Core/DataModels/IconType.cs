@@ -7,12 +7,8 @@
     {
         None = 0,
         /// <summary>
-        /// A picture frame
+        /// A cog icon
         /// </summary>
-        Picture = 1,
-        /// <summary>
-        /// A file icon
-        /// </summary>
-        File = 0
+        Cog = 1,
     }
 }

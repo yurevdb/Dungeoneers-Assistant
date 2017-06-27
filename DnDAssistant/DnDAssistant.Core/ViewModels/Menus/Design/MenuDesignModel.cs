@@ -21,7 +21,7 @@ namespace DnDAssistant.Core
             Items = new List<MenuItemViewModel>(new[]
             {
                 new MenuItemViewModel{Type= MenuItemType.Header, Text="Design Settings"},
-                new MenuItemViewModel{Text="Menu Item 1", Icon=IconType.File}
+                new MenuItemViewModel{Text="Menu Item 1", Icon=IconType.Cog}
             });
         }
     }

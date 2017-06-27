@@ -56,6 +56,7 @@
     <Compile Include="Helpers\Characters\Classes.cs" />
     <Compile Include="Helpers\Dice\Dice.cs" />
     <Compile Include="Helpers\Dice\Die.cs" />
+    <Compile Include="Helpers\Extensions\IconTypeExtensions.cs" />
     <Compile Include="Helpers\XmlStream\XmlStream.cs" />
     <Compile Include="IoC\Base\IoC.cs" />
     <Compile Include="IoC\Interfaces\IUIManager.cs" />
