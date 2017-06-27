@@ -27,6 +27,7 @@
 
     <Border Background="{StaticResource WhiteBrush}"
             Padding="10"
+            SnapsToDevicePixels="True"
             >
 
         <ContentControl Content="{Binding Content}"/>

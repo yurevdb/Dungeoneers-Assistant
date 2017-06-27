@@ -9,11 +9,48 @@
     </ResourceDictionary.MergedDictionaries>
 
     <!-- Base button style-->
-    <Style x:Key="BaseButtonStyle" TargetType="{x:Type Button}">
+    <Style TargetType="{x:Type Button}">
+        <Setter Property="Background" Value="{StaticResource BurgundyBrush}"/>
+        <Setter Property="Foreground" Value="{StaticResource WhiteBrush}"/>
+        <Setter Property="Padding" Value="5"/>
+        <Setter Property="Margin" Value="2"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Padding="{TemplateBinding Padding}"
+                            Background="{TemplateBinding Background}"
+                            CornerRadius="10"
+                            >
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="{TemplateBinding Content}"
+                                   FontSize="{StaticResource FontsizeRegular}"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Trigger.EnterActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation Duration="0:0:0.15" To="LightBlue" AccelerationRatio="0.9" Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)"/>
+                            <ColorAnimation Duration="0:0:0.15" To="{StaticResource Black}" AccelerationRatio="0.9" Storyboard.TargetProperty="(Foreground).(SolidColorBrush.Color)"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.EnterActions>
+                <Trigger.ExitActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation Duration="0:0:0.15" To="{StaticResource Burgundy}" AccelerationRatio="0.9" Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)"/>
+                            <ColorAnimation Duration="0:0:0.15" To="{StaticResource White}" AccelerationRatio="0.9" Storyboard.TargetProperty="(Foreground).(SolidColorBrush.Color)"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.ExitActions>
+            </Trigger>
+        </Style.Triggers>
     </Style>
 
     <!-- General icon button style -->
-    <Style x:Key="IconButtonStyle" TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
+    <Style x:Key="IconButtonStyle" TargetType="Button" >
         
     </Style>
 
@@ -58,7 +95,7 @@
         <Setter Property="Opacity" Value="1"/>
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Background" Value="Red"/>
+                <Setter Property="Background" Value="LightBlue"/>
                 <Setter Property="Foreground" Value="{StaticResource WhiteBrush}"/>
             </Trigger>
         </Style.Triggers>

@@ -152,7 +152,10 @@
 
                                     <!-- Window Buttons -->
                                     <StackPanel Orientation="Horizontal" Grid.Column="2" >
-                                        <Button Style="{StaticResource DialogIconButtonStyle}" Command="{Binding CloseCommand}" Content="X"/>
+                                        <Button Style="{StaticResource DialogIconButtonStyle}" 
+                                                SnapsToDevicePixels="True" 
+                                                Command="{Binding CloseCommand}" 
+                                                Content="X"/>
                                     </StackPanel>
 
                                 </Grid>

@@ -8,4 +8,7 @@
     <Color x:Key="White">#ffffff</Color>
     <SolidColorBrush x:Key="WhiteBrush" Color="{StaticResource White}"/>
 
+    <Color x:Key="Burgundy">#800020</Color>
+    <SolidColorBrush x:Key="BurgundyBrush" Color="{StaticResource Burgundy}"/>
+
 </ResourceDictionary>
