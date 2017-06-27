@@ -1,6 +1,7 @@
 ﻿using DnDAssistant.Core;
 using System.Windows;
 using System.Windows.Input;
+using System.ComponentModel;
 
 namespace DnDAssistant.Wpf
 {
@@ -122,7 +123,7 @@ namespace DnDAssistant.Wpf
         /// <summary>
         /// True when the application menu should be visible, false when not
         /// </summary>
-        public bool ApplicationMenuVisible { get; set; } = true;
+        public bool ApplicationMenuVisible { get; set; }
 
         /// <summary>
         /// True when a popup menu is visible
@@ -162,16 +163,18 @@ namespace DnDAssistant.Wpf
             // ^= is xor
             MaximizeCommand = new RelayCommand(() => _Window.WindowState ^= WindowState.Maximized);
             CloseCommand = new RelayCommand(() => _Window.Close());
-            MenuCommand = new RelayCommand(() =>
+            MenuCommand = new RelayCommand(() => 
             {
                 ApplicationMenuVisible ^= true;
                 OnPropertyChanged(nameof(ApplicationMenuVisible));
-            });
-            PopupClickawayCommand = new RelayCommand(() =>
+                OnPropertyChanged(nameof(AnyPopupVisible));
+            } );
+            PopupClickawayCommand = new RelayCommand(() => 
             {
                 ApplicationMenuVisible = false;
                 OnPropertyChanged(nameof(ApplicationMenuVisible));
-            });
+                OnPropertyChanged(nameof(AnyPopupVisible));
+            } );
 
             #endregion
 

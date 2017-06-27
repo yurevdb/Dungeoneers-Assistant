@@ -29,7 +29,7 @@
     <Grid>
         
         <!-- Popup Overlay for closing any popup of the window -->
-        <Border Background="red"
+        <Border Background="Transparent"
                 Panel.ZIndex="1"
                 Visibility="{Binding AnyPopupVisible, Converter={local:BooleanToVisibilityConverter}}">
             <Border.InputBindings>

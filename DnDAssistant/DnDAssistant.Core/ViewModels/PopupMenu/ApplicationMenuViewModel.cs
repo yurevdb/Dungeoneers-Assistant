@@ -18,8 +18,8 @@ namespace DnDAssistant.Core
             {
                 Items = new List<MenuItemViewModel>(new[]
                 {
-                    new MenuItemViewModel { Text = "Settings", Type = MenuItemType.Header },
-                    new MenuItemViewModel { Text = "Log Out", Icon = IconType.File },
+                    new MenuItemViewModel { Text = "Settings" },
+                    new MenuItemViewModel { Text = "Log Out", Icon = IconType.None },
                 })
             };
         }

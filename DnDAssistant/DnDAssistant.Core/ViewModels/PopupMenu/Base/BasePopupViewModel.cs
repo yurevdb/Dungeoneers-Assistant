@@ -3,7 +3,7 @@
     /// <summary>
     /// A view model for any popup menus
     /// </summary>
-    public class BasePopupViewModel
+    public class BasePopupViewModel : BaseViewModel
     {
         #region Public Properties
 

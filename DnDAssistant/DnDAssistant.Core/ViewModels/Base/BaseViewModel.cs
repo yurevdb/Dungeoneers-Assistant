@@ -2,33 +2,30 @@
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
+using PropertyChanged;
 
 namespace DnDAssistant.Core
 {
     /// <summary>
     /// A base for every viewmodel. Use OnPropertyChanged for a property to update it
     /// </summary>
+    [AddINotifyPropertyChangedInterface]
     public class BaseViewModel : INotifyPropertyChanged
     {
-        #region INotifyPropertyChanged Implementation
-
         /// <summary>
-        /// The propertychanged event delegate
+        /// The event to notify the ui that a property has been changed
         /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
 
         /// <summary>
-        /// The function the update the view with OnPropertyChanged
+        /// Fires the <see cref="PropertyChanged"/> event
         /// </summary>
-        /// <param name="PropertyName">The name of the property to update</param>
-        protected void OnPropertyChanged([CallerMemberName]string PropertyName = null)
+        /// <param name="name"></param>
+        public void OnPropertyChanged([CallerMemberName]string name = null)
         {
-            // Call the property changed event
-            PropertyChanged(this, new PropertyChangedEventArgs(PropertyName));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
 
-        #endregion
-        
         // All methods here must be protected instead of public
         // Only made usable for the ViewModels
         #region Protected Helper Methods
