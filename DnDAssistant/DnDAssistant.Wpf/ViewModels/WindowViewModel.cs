@@ -101,7 +101,7 @@ namespace DnDAssistant.Wpf
         /// <summary>
         /// The height of the title bar
         /// </summary>
-        public int TitleHeight { get; set; } = 50;
+        public int TitleHeight { get; set; } = 40;
 
         /// <summary>
         /// The padding of the content
@@ -116,7 +116,7 @@ namespace DnDAssistant.Wpf
         /// <summary>
         /// The height of the caption bar
         /// </summary>
-        public double CaptionHeight => TitleHeight + ResizeBorder;
+        public double CaptionHeight => TitleHeight + ResizeBorder - 2;
         #endregion
 
         /// <summary>

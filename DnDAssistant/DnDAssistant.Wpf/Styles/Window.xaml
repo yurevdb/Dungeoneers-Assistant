@@ -44,7 +44,7 @@
                                 </Grid.OpacityMask>
 
                                 <Grid.RowDefinitions>
-                                    <RowDefinition Height="{Binding InnerContentMarginHeight, FallbackValue=50}"/>
+                                    <RowDefinition Height="{Binding CaptionHeight, FallbackValue=50}"/>
                                     <RowDefinition Height="*"/>
                                 </Grid.RowDefinitions>
 
@@ -52,7 +52,7 @@
                                 <Grid Panel.ZIndex="10"
                                       Grid.Row="0"
                                       Background="{StaticResource GrayBrush}"
-                                      Opacity="0.65"
+                                      Opacity="0.8"
                                       VerticalAlignment="Top" 
                                       ClipToBounds="True">
 
@@ -79,8 +79,30 @@
                                 </Grid>
 
                                 <!-- Page Content -->
-                                <Border Grid.Row="1" BorderThickness="0"  >
-                                    <ContentPresenter Content="{TemplateBinding Content}"/>
+                                <Border Grid.Row="1" BorderThickness="0">
+                                    <Grid>
+                                        <!-- Fancy border underneath the title bar -->
+                                        <Border Background="Transparent" Height="7" VerticalAlignment="Top">
+                                            <Grid>
+                                                <!-- Left design -->
+                                                <Path HorizontalAlignment="Left" 
+                                                      Fill="{StaticResource GrayBrush}"
+                                                      Opacity="0.8"
+                                                      Data="M 0,0 L 100,0 L 93,7 L 0,7"
+                                                      />
+                                                
+                                                <!-- Right design -->
+                                                <Path HorizontalAlignment="Right"
+                                                      Fill="{StaticResource GrayBrush}"
+                                                      Opacity="0.8"
+                                                      Data="M 0,0 L -100,0 L -93,7 L 0,7"
+                                                      />
+                                            </Grid>
+                                        </Border>
+
+                                        <!-- The actual content of the window -->
+                                        <ContentPresenter Content="{TemplateBinding Content}"/>
+                                    </Grid>
                                 </Border>
 
                             </Grid>

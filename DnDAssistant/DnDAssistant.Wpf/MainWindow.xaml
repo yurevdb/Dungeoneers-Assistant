@@ -18,7 +18,7 @@
 
     <WindowChrome.WindowChrome>
         <WindowChrome
-            CaptionHeight="{Binding CaptionHeight}"
+            CaptionHeight="{Binding TitleHeight}"
             ResizeBorderThickness="{Binding ResizeBorderThickness}"/>
     </WindowChrome.WindowChrome>
 
