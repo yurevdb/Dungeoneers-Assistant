@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 using System.Threading.Tasks;
 
-namespace DnDAssistant.Wpf.Animations.Base
+namespace DnDAssistant.Wpf
 {
     /// <summary>
     /// An interface for animating a <see cref="FrameworkElement"/>

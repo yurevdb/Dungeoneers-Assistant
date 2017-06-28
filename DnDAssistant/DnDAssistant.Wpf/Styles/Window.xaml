@@ -5,6 +5,8 @@
 
     <Style TargetType="{x:Type local:MainWindow}" x:Key="CustomWindowStyle">
         <Setter Property="WindowStyle" Value="None"/>
+        <Setter Property="MinHeight" Value="{Binding MinimumWindowHeight}"/>
+        <Setter Property="MinWidth" Value="{Binding MinimumWindowWidth}"/>
         <Setter Property="AllowsTransparency" Value="True"/>
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="Template">

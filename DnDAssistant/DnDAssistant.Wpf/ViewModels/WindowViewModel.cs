@@ -60,6 +60,17 @@ namespace DnDAssistant.Wpf
         #region Public Properties
 
         #region Window Ui Properties
+
+        /// <summary>
+        /// The minimum height of the window
+        /// </summary>
+        public int MinimumWindowHeight { get; set; } = 350;
+
+        /// <summary>
+        /// The minimum width of the window
+        /// </summary>
+        public int MinimumWindowWidth { get; set; } = 400;
+
         /// <summary>
         /// The size of the resizeborder around the window
         /// </summary>
@@ -118,6 +129,8 @@ namespace DnDAssistant.Wpf
         /// </summary>
         public double CaptionHeight => TitleHeight + ResizeBorder - 2;
         #endregion
+        
+        #region Other
 
         /// <summary>
         /// True when the application menu should be visible, false when not
@@ -143,6 +156,8 @@ namespace DnDAssistant.Wpf
         /// The background of the window. The name should be in the Resources folder of the application.
         /// </summary>
         public string Background { get; set; } = "Wallpaper.jpg";
+
+        #endregion
 
         #endregion
 
