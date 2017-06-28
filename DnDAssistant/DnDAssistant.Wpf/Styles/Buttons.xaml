@@ -10,7 +10,7 @@
 
     <!-- Base button style-->
     <Style TargetType="{x:Type Button}">
-        <Setter Property="Background" Value="{StaticResource BurgundyBrush}"/>
+        <Setter Property="Background" Value="{StaticResource BronzeBrush}"/>
         <Setter Property="Foreground" Value="{StaticResource WhiteBrush}"/>
         <Setter Property="Padding" Value="5"/>
         <Setter Property="Margin" Value="2"/>
@@ -32,16 +32,14 @@
                 <Trigger.EnterActions>
                     <BeginStoryboard>
                         <Storyboard>
-                            <ColorAnimation Duration="0:0:0.15" To="LightBlue" AccelerationRatio="0.9" Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)"/>
-                            <ColorAnimation Duration="0:0:0.15" To="{StaticResource Black}" AccelerationRatio="0.9" Storyboard.TargetProperty="(Foreground).(SolidColorBrush.Color)"/>
+                            <ColorAnimation Duration="0:0:0.15" To="{StaticResource Burgundy}" AccelerationRatio="0.9" Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)"/>
                         </Storyboard>
                     </BeginStoryboard>
                 </Trigger.EnterActions>
                 <Trigger.ExitActions>
                     <BeginStoryboard>
                         <Storyboard>
-                            <ColorAnimation Duration="0:0:0.15" To="{StaticResource Burgundy}" AccelerationRatio="0.9" Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)"/>
-                            <ColorAnimation Duration="0:0:0.15" To="{StaticResource White}" AccelerationRatio="0.9" Storyboard.TargetProperty="(Foreground).(SolidColorBrush.Color)"/>
+                            <ColorAnimation Duration="0:0:0.15" To="{StaticResource Bronze}" AccelerationRatio="0.9" Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)"/>
                         </Storyboard>
                     </BeginStoryboard>
                 </Trigger.ExitActions>
@@ -93,7 +91,7 @@
         <Setter Property="Opacity" Value="1"/>
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Background" Value="LightBlue"/>
+                <Setter Property="Background" Value="{StaticResource BronzeBrush}"/>
                 <Setter Property="Foreground" Value="{StaticResource WhiteBrush}"/>
             </Trigger>
         </Style.Triggers>

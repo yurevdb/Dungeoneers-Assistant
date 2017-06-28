@@ -139,6 +139,11 @@ namespace DnDAssistant.Wpf
         /// </summary>
         public ApplicationMenuViewModel AppMenu { get; set; }
 
+        /// <summary>
+        /// The background of the window. The name should be in the Resources folder of the application.
+        /// </summary>
+        public string Background { get; set; } = "Wallpaper.jpg";
+
         #endregion
 
         #region Constructor
