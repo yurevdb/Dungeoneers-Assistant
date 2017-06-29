@@ -9,6 +9,8 @@ namespace DnDAssistant.Wpf
     /// </summary>
     public static class StoryboardHelpers
     {
+        #region Slide in / to top
+
         /// <summary>
         /// Adds a slide in from top animation
         /// </summary>
@@ -33,5 +35,80 @@ namespace DnDAssistant.Wpf
             // Add the animation to the storyboard
             storyboard.Children.Add(animation);
         }
+
+        /// <summary>
+        /// Adds a slide out to top animation
+        /// </summary>
+        /// <param name="storyboard">The storyboard to add the animation to</param>
+        /// <param name="seconds">The time the animation will take</param>
+        /// <param name="offset">The offset of the animation</param>
+        /// <param name="decelerationRatio"></param>
+        public static void AddSlideOutToTop(this Storyboard storyboard, float seconds, double offset, float decelerationRatio = 0.9f)
+        {
+            // Create the margin animation to slide in from top
+            var animation = new ThicknessAnimation
+            {
+                Duration = new Duration(TimeSpan.FromSeconds(seconds)),
+                From = new Thickness(0),
+                To = new Thickness(0, -offset, 0, offset),
+                DecelerationRatio = decelerationRatio
+            };
+
+            // Set the property for the animation to animate
+            Storyboard.SetTargetProperty(animation, new PropertyPath("Margin"));
+
+            // Add the animation to the storyboard
+            storyboard.Children.Add(animation);
+        }
+
+        #endregion
+
+        #region Fade in / out
+
+        /// <summary>
+        /// Adds a fade in animation
+        /// </summary>
+        /// <param name="storyboard">The storyboard to add the animation to</param>
+        /// <param name="seconds">The time the animation will take</param>
+        public static void AddFadeIn(this Storyboard storyboard, float seconds)
+        {
+            // Create the margin animation to slide in from top
+            var animation = new DoubleAnimation
+            {
+                Duration = new Duration(TimeSpan.FromSeconds(seconds)),
+                From = 0,
+                To = 1,
+            };
+
+            // Set the property for the animation to animate
+            Storyboard.SetTargetProperty(animation, new PropertyPath("Opacity"));
+
+            // Add the animation to the storyboard
+            storyboard.Children.Add(animation);
+        }
+
+        /// <summary>
+        /// Adds a fade out animation
+        /// </summary>
+        /// <param name="storyboard">The storyboard to add the animation to</param>
+        /// <param name="seconds">The time the animation will take</param>
+        public static void AddFadeOut(this Storyboard storyboard, float seconds)
+        {
+            // Create the margin animation to slide in from top
+            var animation = new DoubleAnimation
+            {
+                Duration = new Duration(TimeSpan.FromSeconds(seconds)),
+                From = 1,
+                To = 0,
+            };
+
+            // Set the property for the animation to animate
+            Storyboard.SetTargetProperty(animation, new PropertyPath("Opacity"));
+
+            // Add the animation to the storyboard
+            storyboard.Children.Add(animation);
+        }
+
+        #endregion
     }
 }

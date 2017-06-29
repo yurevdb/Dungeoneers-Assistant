@@ -39,16 +39,19 @@
 
         <!-- Application Menu -->
         <local:MenuControl VerticalAlignment="Top"
+                           local:AnimateFadeInOut.Value="{Binding DataContext.ApplicationMenuVisible, RelativeSource={RelativeSource AncestorType=Window}}"
                            Panel.ZIndex="2"
                            DataContext="{Binding AppMenu}"
                            HorizontalAlignment="Left"
-                           Width="275"
-                           Visibility="{Binding DataContext.ApplicationMenuVisible, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Window}, Converter={local:BooleanToVisibilityConverter}}">
+                           Width="275">
+
+            <!-- Dropshadow effect -->
             <local:MenuControl.Effect>
                 <DropShadowEffect BlurRadius="6"
                                   ShadowDepth="2"
                                   Color="Black"/>
             </local:MenuControl.Effect>
+            
         </local:MenuControl>
         
         <!-- Dimmed Overlay -->

@@ -187,7 +187,7 @@ namespace DnDAssistant.Wpf
             // ^= is xor
             MaximizeCommand = new RelayCommand(() => _Window.WindowState ^= WindowState.Maximized);
             CloseCommand = new RelayCommand(() => _Window.Close());
-            MenuCommand = new RelayCommand(() => ApplicationMenuVisible ^= true );
+            MenuCommand = new RelayCommand(() => ApplicationMenuVisible ^= true);
             PopupClickawayCommand = new RelayCommand(() => ApplicationMenuVisible = false );
 
             #endregion

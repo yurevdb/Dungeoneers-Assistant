@@ -63,9 +63,12 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Animations\Base\Animation.cs" />
-    <Compile Include="Animations\Base\Animations.cs" />
+    <Compile Include="Animations\Animations.cs" />
     <Compile Include="Animations\Base\Helpers\StoryboardHelpers.cs" />
-    <Compile Include="Animations\Base\IAnimate.cs" />
+    <Compile Include="Animations\Base\IAnimateIn.cs" />
+    <Compile Include="Animations\Base\IAnimateOut.cs" />
+    <Compile Include="Attached Properties\FrameworkElementAttachedProperties.cs" />
+    <Compile Include="Attached Properties\Base\BaseAttachedProperty.cs" />
     <Compile Include="Controls\Dialogs\Base\BaseDialogUserControl.cs" />
     <Compile Include="Controls\Dialogs\DialogMessageBox.xaml.cs">
       <DependentUpon>DialogMessageBox.xaml</DependentUpon>
@@ -172,7 +175,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Attached Properties\" />
     <Folder Include="Helpers\" />
   </ItemGroup>
   <ItemGroup>

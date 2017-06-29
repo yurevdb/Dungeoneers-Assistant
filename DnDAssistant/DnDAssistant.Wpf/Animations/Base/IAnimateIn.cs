@@ -4,20 +4,14 @@ using System.Threading.Tasks;
 namespace DnDAssistant.Wpf
 {
     /// <summary>
-    /// An interface for animating a <see cref="FrameworkElement"/>
+    /// An interface for animating a <see cref="FrameworkElement"/> in
     /// </summary>
-    public interface IAnimate
+    public interface IAnimateIn
     {
         /// <summary>
         /// Animates a <see cref="FrameworkElement"/> in asynchronously
         /// </summary>
         /// <returns></returns>
         Task AnimateInAsync(Animation animation);
-
-        /// <summary>
-        /// Animates a <see cref="FrameworkElement"/> out asynchronously
-        /// </summary>
-        /// <returns></returns>
-        Task AnimateOutAsync(Animation animation);
     }
 }
