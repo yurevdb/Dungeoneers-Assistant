@@ -34,7 +34,6 @@ namespace DnDAssistant.Core
                     {
                         Title = "Log Out Failed",
                         Message = "You were supposed to log me out",
-                        OkText = "Cry little girl, Cry"
                     })) },
                 })
             };

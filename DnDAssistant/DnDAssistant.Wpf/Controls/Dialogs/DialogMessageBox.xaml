@@ -4,13 +4,14 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DnDAssistant.Wpf"
-             mc:Ignorable="d" >
+             mc:Ignorable="d">
     
     <StackPanel Background="{StaticResource WhiteBrush}">
         
         <TextBlock Text="{Binding Message}" Padding="5"/>
 
         <Button Content="{Binding OkText}"
+                Visibility="{Binding OkText, Converter={local:StringToVisibilityConverter}}"
                 FontSize="{StaticResource FontsizeRegular}"
                 HorizontalAlignment="Center"
                 Command="{Binding CloseCommand, RelativeSource={RelativeSource AncestorType=local:BaseDialogUserControl}}"/>

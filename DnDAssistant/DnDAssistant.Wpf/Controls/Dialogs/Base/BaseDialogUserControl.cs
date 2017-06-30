@@ -65,6 +65,9 @@ namespace DnDAssistant.Wpf
             _DialogWindow = new DialogWindow();
             _DialogWindow.ViewModel = new DialogWindowViewModel(_DialogWindow);
 
+            // Set the owner of the Dialog control to the mainwindow of the application
+            _DialogWindow.Owner = Application.Current.MainWindow;
+
             //Create close command
             CloseCommand = new RelayCommand(() => _DialogWindow.Close());
         }
