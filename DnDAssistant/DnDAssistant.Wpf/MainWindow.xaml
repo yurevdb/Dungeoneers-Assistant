@@ -39,6 +39,7 @@
 
         <!-- Application Menu -->
         <local:MenuControl VerticalAlignment="Top"
+                           Visibility="Hidden"
                            local:AnimateFadeInOut.Value="{Binding DataContext.ApplicationMenuVisible, RelativeSource={RelativeSource AncestorType=Window}}"
                            Panel.ZIndex="2"
                            DataContext="{Binding AppMenu}"

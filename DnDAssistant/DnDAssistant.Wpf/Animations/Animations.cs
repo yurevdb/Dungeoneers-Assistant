@@ -88,13 +88,18 @@ namespace DnDAssistant.Wpf
         }
 
         /// <summary>
-        /// Adds a fade out animation to the <see cref="FrameworkElement"/>
+        /// Adds a fade out animation to the <see cref="FrameworkElement"/> if its <see cref="Visibility"/> isn't hidden or collapsed
         /// </summary>
         /// <param name="element">The <see cref="FrameworkElement"/> to add the animation to</param>
         /// <param name="seconds">The time the animation should take</param>
         /// <returns></returns>
         public static async Task FadeOutAsync(this FrameworkElement element, float seconds = 0.2f)
         {
+            // If the element is hidden or collapsed...
+            if (element.Visibility == Visibility.Collapsed || element.Visibility == Visibility.Hidden)
+                // Do nothing
+                return;
+
             // Create the storyboard
             var sb = new Storyboard();
 
