@@ -3,6 +3,7 @@
                     xmlns:local="clr-namespace:DnDAssistant.Wpf">
 
 
+    <!-- Main Window -->
     <Style TargetType="{x:Type local:MainWindow}" x:Key="CustomWindowStyle">
         <Setter Property="WindowStyle" Value="None"/>
         <Setter Property="MinHeight" Value="{Binding MinimumWindowHeight}"/>
@@ -51,62 +52,75 @@
                                 </Grid.RowDefinitions>
 
                                 <!-- Title Bar -->
-                                <Grid Panel.ZIndex="10"
-                                      Grid.Row="0"
-                                      Background="{StaticResource GrayBrush}"
-                                      Opacity="0.8"
-                                      VerticalAlignment="Top" 
-                                      ClipToBounds="True">
-
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="Auto"/>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="Auto"/>
-                                    </Grid.ColumnDefinitions>
-
-                                    <!-- Title Text -->
-                                    <Viewbox Grid.Column="0" Margin="0">
-                                        <Button Content="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Title, FallbackValue='Dungeoneers Assistant'}"
-                                                Command="{Binding MenuCommand}"
-                                                Style="{StaticResource ApplicationMenuButton}"/>
-                                    </Viewbox>
-
-                                    <!-- Window Buttons -->
-                                    <StackPanel Orientation="Horizontal" Grid.Column="2" >
-                                        <Button Style="{StaticResource WindowIconButtonStyle}" Command="{Binding MinimizeCommand}" Content="_"/>
-                                        <Button Style="{StaticResource WindowIconButtonStyle}" Command="{Binding MaximizeCommand}" Content="[ ]"/>
-                                        <Button Style="{StaticResource WindowIconButtonStyle}" Command="{Binding CloseCommand}" Content="X"/>
-                                    </StackPanel>
+                                <Grid Grid.Row="0">
                                     
+                                    <!-- Fancy background -->
+                                    <Grid Background="Transparent"
+                                                VerticalAlignment="Top"
+                                                Height="{Binding CaptionHeight, FallbackValue=50}"
+                                                >
+
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="7"/>
+                                            <RowDefinition Height="*"/>
+                                        </Grid.RowDefinitions>
+                                        
+                                        <Grid Grid.Row="0">
+                                            <!-- Left design -->
+                                            <Path HorizontalAlignment="Left" 
+                                                      Fill="{StaticResource GrayBrush}"
+                                                      Opacity="0.8"
+                                                      Data="M 0,0 L 93,0 L 100,7 L 0,7"
+                                                      />
+
+                                            <!-- Right design -->
+                                            <Path HorizontalAlignment="Right"
+                                                      Fill="{StaticResource GrayBrush}"
+                                                      Opacity="0.8"
+                                                      Data="M 0,0 L -93,0 L -100,7 L 0,7"
+                                                      />
+                                        </Grid>
+                                        
+                                        <Border Grid.Row="1" Background="{StaticResource GrayBrush}" Opacity="0.8"/>
+                                        
+                                    </Grid>
+
+                                    <!-- Buttons and Title -->
+                                    <Grid Panel.ZIndex="10"
+                                          Background="Transparent"
+                                          VerticalAlignment="Top" 
+                                          ClipToBounds="True">
+
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <!-- Title Text -->
+                                        <Viewbox Grid.Column="0" Margin="0">
+                                            <Button Content="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Title, FallbackValue='Dungeoneers Assistant'}"
+                                                    Command="{Binding MenuCommand}"
+                                                    Style="{StaticResource ApplicationMenuButton}"/>
+                                        </Viewbox>
+
+                                        <!-- Window Buttons -->
+                                        <Viewbox Grid.Column="2">
+                                            <StackPanel Orientation="Horizontal"  >
+                                                <Button Style="{StaticResource WindowIconButtonStyle}" Command="{Binding MinimizeCommand}" Content="_"/>
+                                                <Button Style="{StaticResource WindowIconButtonStyle}" Command="{Binding MaximizeCommand}" Content="[ ]"/>
+                                                <Button Style="{StaticResource WindowIconButtonStyle}" Command="{Binding CloseCommand}" Content="X"/>
+                                            </StackPanel>
+                                        </Viewbox>
+
+                                    </Grid>
+
                                 </Grid>
 
                                 <!-- Page Content -->
                                 <Border Grid.Row="1" BorderThickness="0">
-                                    <Grid>
-                                        <!-- Fancy border underneath the title bar -->
-                                        <Border Background="Transparent" Height="7" 
-                                                VerticalAlignment="Top"
-                                                >
-                                            <Grid>
-                                                <!-- Left design -->
-                                                <Path HorizontalAlignment="Left" 
-                                                      Fill="{StaticResource GrayBrush}"
-                                                      Opacity="0.8"
-                                                      Data="M 0,0 L 100,0 L 93,7 L 0,7"
-                                                      />
-                                                
-                                                <!-- Right design -->
-                                                <Path HorizontalAlignment="Right"
-                                                      Fill="{StaticResource GrayBrush}"
-                                                      Opacity="0.8"
-                                                      Data="M 0,0 L -100,0 L -93,7 L 0,7"
-                                                      />
-                                            </Grid>
-                                        </Border>
-
-                                        <!-- The actual content of the window -->
-                                        <ContentPresenter Content="{TemplateBinding Content}"/>
-                                    </Grid>
+                                    <!-- The actual content of the window -->
+                                    <ContentPresenter Content="{TemplateBinding Content}"/>
                                 </Border>
 
                             </Grid>
@@ -117,6 +131,7 @@
         </Setter>
     </Style>
 
+    <!-- Dialog Window -->
     <Style TargetType="{x:Type local:DialogWindow}" x:Key="DialogWindowStyle">
         <Setter Property="WindowStyle" Value="None"/>
         <Setter Property="MinHeight" Value="100"/>
