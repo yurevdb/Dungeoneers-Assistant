@@ -19,6 +19,11 @@ namespace DnDAssistant.Core
         /// </summary>
         public static IUIManager UI => Get<IUIManager>();
 
+        /// <summary>
+        /// A shortcut to acces the <see cref="ApplicationViewModel"/>
+        /// </summary>
+        public static ApplicationViewModel Application => Get<ApplicationViewModel>();
+
         #endregion
 
         #region Construction

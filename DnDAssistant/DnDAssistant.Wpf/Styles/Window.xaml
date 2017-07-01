@@ -84,7 +84,9 @@
                                 <Border Grid.Row="1" BorderThickness="0">
                                     <Grid>
                                         <!-- Fancy border underneath the title bar -->
-                                        <Border Background="Transparent" Height="7" VerticalAlignment="Top">
+                                        <Border Background="Transparent" Height="7" 
+                                                VerticalAlignment="Top"
+                                                >
                                             <Grid>
                                                 <!-- Left design -->
                                                 <Path HorizontalAlignment="Left" 

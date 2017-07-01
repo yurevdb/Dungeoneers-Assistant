@@ -14,6 +14,22 @@ namespace DnDAssistant.Core
         /// </summary>
         public string BaseDataPath => Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Dungeoneers Assistant";
 
+        /// <summary>
+        /// The current page of the application
+        /// </summary>
+        public ApplicationPage CurrentPage { get; private set; } = ApplicationPage.Test;
+
         #endregion
+
+        /// <summary>
+        /// Function to set the current page of the application
+        /// </summary>
+        /// <param name="page">The page to go to</param>
+        public void GoTo(ApplicationPage page)
+        {
+            // Set the current page of the application
+            CurrentPage = page;
+
+        }
     }
 }
