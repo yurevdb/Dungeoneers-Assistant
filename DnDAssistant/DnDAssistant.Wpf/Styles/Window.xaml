@@ -105,13 +105,12 @@
                                         </Viewbox>
 
                                         <!-- Window Buttons -->
-                                        <Viewbox Grid.Column="2">
-                                            <StackPanel Orientation="Horizontal"  >
-                                                <Button Style="{StaticResource WindowIconButtonStyle}" Command="{Binding MinimizeCommand}" Content="_"/>
-                                                <Button Style="{StaticResource WindowIconButtonStyle}" Command="{Binding MaximizeCommand}" Content="[ ]"/>
-                                                <Button Style="{StaticResource WindowIconButtonStyle}" Command="{Binding CloseCommand}" Content="X"/>
-                                            </StackPanel>
-                                        </Viewbox>
+                                        <StackPanel Orientation="Horizontal" Grid.Column="2" >
+                                            <Button Style="{StaticResource WindowIconButtonStyle}" Command="{Binding MinimizeCommand}" Content="{StaticResource FontAwesomeMinimizeIcon}"/>
+                                            <Button Style="{StaticResource WindowIconButtonStyle}" Command="{Binding MaximizeCommand}" Content="{Binding WindowStateIcon}"/>
+                                            <Button Style="{StaticResource WindowIconCloseButtonStyle}" Command="{Binding CloseCommand}" Content="{StaticResource FontAwesomeCloseIcon}"/>
+                                        </StackPanel>
+                                    
 
                                     </Grid>
 

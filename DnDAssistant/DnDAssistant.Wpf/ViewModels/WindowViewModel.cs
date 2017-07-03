@@ -59,6 +59,11 @@ namespace DnDAssistant.Wpf
 
         #region Public Properties
 
+        /// <summary>
+        /// The font awesome text for the window state icon. Changes by changing the window state (i.e. maximized or normal)
+        /// </summary>
+        public string WindowStateIcon { get; set; } = "\uf2d0";
+
         #region Window Ui Properties
 
         /// <summary>
@@ -185,7 +190,11 @@ namespace DnDAssistant.Wpf
 
             MinimizeCommand = new RelayCommand(() => _Window.WindowState = WindowState.Minimized);
             // ^= is xor
-            MaximizeCommand = new RelayCommand(() => _Window.WindowState ^= WindowState.Maximized);
+            MaximizeCommand = new RelayCommand(() => 
+            {
+                _Window.WindowState ^= WindowState.Maximized;
+                WindowStateIcon = (_Window.WindowState == WindowState.Maximized) ? "\uf2d2" : "\uf2d0";
+            });
             CloseCommand = new RelayCommand(() => _Window.Close());
             MenuCommand = new RelayCommand(() => ApplicationMenuVisible ^= true);
             PopupClickawayCommand = new RelayCommand(() => ApplicationMenuVisible = false );

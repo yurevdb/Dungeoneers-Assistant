@@ -7,10 +7,14 @@
     <FontFamily x:Key="FontAwasome">pack://application;,,,/Fonts/#FontAwesome</FontFamily>
 
     <!-- Fontsizes -->
+    <system:Double x:Key="FontsizeExtraSmall">8</system:Double>
+    <system:Double x:Key="FontsizeSmall">12</system:Double>
     <system:Double x:Key="FontsizeRegular">18</system:Double>
     <system:Double x:Key="FontsizeExtraLarge">42</system:Double>
 
     <!-- FontAwesome Strings -->
     <system:String x:Key="FontAwesomeCogIcon">&#xf013;</system:String>
+    <system:String x:Key="FontAwesomeMinimizeIcon">&#xf2d1;</system:String>
+    <system:String x:Key="FontAwesomeCloseIcon">&#xf00d;</system:String>
 
 </ResourceDictionary>

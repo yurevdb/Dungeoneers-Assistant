@@ -57,7 +57,9 @@
         <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True"/>
         <Setter Property="Padding" Value="10"/>
         <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="FontFamily" Value="{StaticResource FontAwasome}"/>
         <Setter Property="Foreground" Value="{StaticResource BlackBrush}"/>
+        <Setter Property="FontSize" Value="{StaticResource FontsizeSmall}"/>
         <Setter Property="BorderThickness" Value="0"/>
         <Setter Property="Template">
             <Setter.Value>
@@ -65,13 +67,30 @@
                     <Border Padding="{TemplateBinding Padding}"
                             Background="{TemplateBinding Background}">
                         <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="{TemplateBinding Content}"
-                                   FontSize="{StaticResource FontsizeRegular}"/>
+                                   FontSize="{TemplateBinding FontSize}"/>
                     </Border>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Effect">
+                    <Setter.Value>
+                        <DropShadowEffect ShadowDepth="2"
+                                          Direction="270"
+                                          Color="{StaticResource White}"
+                                          Opacity="1"
+                                          BlurRadius="10"/>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="WindowIconCloseButtonStyle" TargetType="Button" BasedOn="{StaticResource WindowIconButtonStyle}">
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Foreground" Value="Red"/>
                 <Setter Property="Effect">
                     <Setter.Value>
                         <DropShadowEffect ShadowDepth="2"
@@ -99,6 +118,7 @@
 
     <!-- The application name in the header button -->
     <Style x:Key="ApplicationMenuButton" TargetType="Button" BasedOn="{StaticResource WindowIconButtonStyle}">
+        <Setter Property="Foreground" Value="{StaticResource BlackBrush}"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
