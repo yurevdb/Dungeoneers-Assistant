@@ -6,7 +6,29 @@
              xmlns:local="clr-namespace:DnDAssistant.Wpf"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
-    <Grid>
-            
-    </Grid>
+
+    <Border BorderBrush="{StaticResource BronzeBrush}"
+            BorderThickness="5"
+            >
+        <Grid Background="{StaticResource BronzeBrush}"
+              Opacity="0.6">
+
+
+        <!-- For displaying the buttons -->
+        <ItemsControl ItemsSource="{Binding Items}">
+
+            <!-- Style the items (The navigation buttons) -->
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+
+
+
+        </Grid>
+
+    </Border>
+
 </UserControl>

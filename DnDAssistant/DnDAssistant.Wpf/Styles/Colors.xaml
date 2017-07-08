@@ -10,11 +10,11 @@
 
     <Color x:Key="White">#ffffff</Color>
     <SolidColorBrush x:Key="WhiteBrush" Color="{StaticResource White}"/>
-
-    <Color x:Key="Burgundy">#cd3e32</Color>
-    <SolidColorBrush x:Key="BurgundyBrush" Color="{StaticResource Burgundy}"/>
-
-    <Color x:Key="Bronze">#cd7f32</Color>
+    
+    <Color x:Key="Bronze">#cd7232</Color>
     <SolidColorBrush x:Key="BronzeBrush" Color="{StaticResource Bronze}"/>
+
+    <Color x:Key="Blue">#328dcd</Color>
+    <SolidColorBrush x:Key="BlueBrush" Color="{StaticResource Blue}"/>
 
 </ResourceDictionary>

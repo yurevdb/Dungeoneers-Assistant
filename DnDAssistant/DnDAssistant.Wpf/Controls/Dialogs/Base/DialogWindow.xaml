@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Style="{StaticResource DialogWindowStyle}"
         Title="{Binding Title}"
-        ShowInTaskbar="True"
+        ShowInTaskbar="False"
         WindowStartupLocation="CenterOwner"
         ResizeMode="NoResize"
         SizeToContent="WidthAndHeight"

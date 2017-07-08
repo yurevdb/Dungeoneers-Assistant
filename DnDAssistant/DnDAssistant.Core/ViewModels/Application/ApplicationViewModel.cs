@@ -17,7 +17,7 @@ namespace DnDAssistant.Core
         /// <summary>
         /// The current page of the application
         /// </summary>
-        public ApplicationPage CurrentPage { get; private set; } = ApplicationPage.Test;
+        public ApplicationPage CurrentPage { get; private set; } = ApplicationPage.Startup;
 
         #endregion
 

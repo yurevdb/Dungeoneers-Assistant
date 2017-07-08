@@ -32,7 +32,7 @@
                 <Trigger.EnterActions>
                     <BeginStoryboard>
                         <Storyboard>
-                            <ColorAnimation Duration="0:0:0.15" To="{StaticResource Burgundy}" AccelerationRatio="0.9" Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)"/>
+                            <ColorAnimation Duration="0:0:0.15" To="{StaticResource Blue}" AccelerationRatio="0.9" Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)"/>
                         </Storyboard>
                     </BeginStoryboard>
                 </Trigger.EnterActions>
@@ -58,8 +58,9 @@
         <Setter Property="Padding" Value="10"/>
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="FontFamily" Value="{StaticResource FontAwasome}"/>
-        <Setter Property="Foreground" Value="{StaticResource BlackBrush}"/>
-        <Setter Property="FontSize" Value="{StaticResource FontsizeSmall}"/>
+        <Setter Property="Foreground" Value="{StaticResource WhiteBrush}"/>
+        <Setter Property="Opacity" Value="0.6"/>
+        <Setter Property="FontSize" Value="{StaticResource FontsizeExtraSmall}"/>
         <Setter Property="BorderThickness" Value="0"/>
         <Setter Property="Template">
             <Setter.Value>
@@ -74,6 +75,7 @@
         </Setter>
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Opacity" Value="0.8"/>
                 <Setter Property="Effect">
                     <Setter.Value>
                         <DropShadowEffect ShadowDepth="2"
@@ -86,7 +88,8 @@
             </Trigger>
         </Style.Triggers>
     </Style>
-
+    
+    <!-- The close button -->
     <Style x:Key="WindowIconCloseButtonStyle" TargetType="Button" BasedOn="{StaticResource WindowIconButtonStyle}">
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
@@ -95,7 +98,7 @@
                     <Setter.Value>
                         <DropShadowEffect ShadowDepth="2"
                                           Direction="270"
-                                          Color="{StaticResource White}"
+                                          Color="Red"
                                           Opacity="1"
                                           BlurRadius="10"/>
                     </Setter.Value>
@@ -110,7 +113,7 @@
         <Setter Property="Opacity" Value="1"/>
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Background" Value="{StaticResource BronzeBrush}"/>
+                <Setter Property="Background" Value="{StaticResource BlueBrush}"/>
                 <Setter Property="Foreground" Value="{StaticResource WhiteBrush}"/>
             </Trigger>
         </Style.Triggers>
@@ -118,7 +121,8 @@
 
     <!-- The application name in the header button -->
     <Style x:Key="ApplicationMenuButton" TargetType="Button" BasedOn="{StaticResource WindowIconButtonStyle}">
-        <Setter Property="Foreground" Value="{StaticResource BlackBrush}"/>
+        <Setter Property="Foreground" Value="{StaticResource BlueBrush}"/>
+        <Setter Property="Opacity" Value="1"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
@@ -130,6 +134,19 @@
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Effect">
+                    <Setter.Value>
+                        <DropShadowEffect Color="{StaticResource Blue}" 
+                                          Direction="270"
+                                          ShadowDepth="3"
+                                          BlurRadius="10"
+                                          Opacity="1"/>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+        </Style.Triggers>
     </Style>
 
 </ResourceDictionary>

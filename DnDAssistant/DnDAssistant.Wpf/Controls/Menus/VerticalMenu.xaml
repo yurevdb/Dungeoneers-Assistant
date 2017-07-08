@@ -38,7 +38,7 @@
                             <EventTrigger RoutedEvent="MouseEnter">
                                 <BeginStoryboard>
                                     <Storyboard>
-                                        <ColorAnimation To="LightBlue" Duration="0:0:0"
+                                        <ColorAnimation To="{StaticResource Blue}" Duration="0:0:0"
                                                         Storyboard.TargetProperty="Background.Color"/>
                                     </Storyboard>
                                 </BeginStoryboard>
@@ -79,6 +79,7 @@
                             
                                 <!-- Text -->
                                 <TextBlock Name="text"
+                                           Foreground="{StaticResource BlackBrush}"
                                            Grid.Column="1"
                                            VerticalAlignment="Center"
                                            HorizontalAlignment="Left"

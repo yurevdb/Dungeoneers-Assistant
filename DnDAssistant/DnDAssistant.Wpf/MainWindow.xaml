@@ -69,8 +69,20 @@
         
         <!--#region Actual Content-->
 
-        <local:PageHost DataContext="{Binding ApplicationViewModel.CurrentPage, Source={x:Static local:ViewModelLocator.Instance}, Converter={local:ApplicationPageToPageConverter}}"
-                        CurrentPage="{Binding}"/>
+        <Grid>
+        
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <local:NavigationMenu Grid.Column="0"
+                                  Width="250"/>
+
+            <local:PageHost DataContext="{Binding ApplicationViewModel.CurrentPage, Source={x:Static local:ViewModelLocator.Instance}, Converter={local:ApplicationPageToPageConverter}}"
+                            CurrentPage="{Binding}" Grid.Column="1"/>
+
+        </Grid>
 
         <!--#endregion-->
 
