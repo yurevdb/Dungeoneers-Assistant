@@ -12,9 +12,9 @@
             >
         <!-- Border children grid -->
         <Grid>
-            <!--<Path HorizontalAlignment="Stretch"
+            <Path HorizontalAlignment="Stretch"
                   Fill="{StaticResource BronzeBrush}"
-                  Data="{Binding RelativeSource={RelativeSource AncestorType=local:NavigationMenu}, Converter={local:WidthToNavigationCenterLineConverter}}"/>-->
+                  Data="{Binding RelativeSource={RelativeSource AncestorType=local:NavigationMenu}, Converter={local:WidthToNavigationCenterLineConverter}}"/>
 
             <Grid Background="{StaticResource BronzeBrush}"
                   Opacity="0.6">
