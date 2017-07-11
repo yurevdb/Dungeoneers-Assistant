@@ -73,6 +73,11 @@
                                                   Data="{StaticResource TitleBarDecoEnd}"
                                                   />
 
+                                            <Path HorizontalAlignment="Stretch"
+                                                  Fill="{StaticResource BronzeBrush}"
+                                                  Data="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Window}, Converter={local:WidthToStringPathDataConverter}}"
+                                                  />
+
                                             <!--Right design-->
                                             <Path HorizontalAlignment="Right"
                                                   Fill="{StaticResource GrayBrush}"

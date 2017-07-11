@@ -101,6 +101,7 @@
     <Compile Include="ValueConverters\StringToImagesourceConverter.cs" />
     <Compile Include="ValueConverters\StringToVisibilityConverter.cs" />
     <Compile Include="Helpers\WindowResizer.cs" />
+    <Compile Include="ValueConverters\WidthToStringPathDataConverter.cs" />
     <Compile Include="ViewModels\DialogWindowViewModel.cs" />
     <Compile Include="ViewModels\Helpers\ViewModelLocator.cs" />
     <Compile Include="ViewModels\WindowViewModel.cs" />

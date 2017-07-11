@@ -20,6 +20,8 @@
             <!-- Style the items (The navigation buttons) -->
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
+                    
+                    
 
                 </DataTemplate>
             </ItemsControl.ItemTemplate>

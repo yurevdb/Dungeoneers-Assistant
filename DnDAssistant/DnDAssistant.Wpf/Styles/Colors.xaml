@@ -10,8 +10,8 @@
 
     <Color x:Key="White">#ffffff</Color>
     <SolidColorBrush x:Key="WhiteBrush" Color="{StaticResource White}"/>
-    
-    <Color x:Key="Bronze">#cd7232</Color>
+
+    <Color x:Key="Bronze">#98641A</Color>
     <SolidColorBrush x:Key="BronzeBrush" Color="{StaticResource Bronze}"/>
 
     <Color x:Key="Blue">#328dcd</Color>
