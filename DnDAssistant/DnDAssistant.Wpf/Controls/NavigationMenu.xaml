@@ -10,27 +10,33 @@
     <Border BorderBrush="{StaticResource BronzeBrush}"
             BorderThickness="5"
             >
-        <Grid Background="{StaticResource BronzeBrush}"
-              Opacity="0.6">
+        <!-- Border children grid -->
+        <Grid>
+            <!--<Path HorizontalAlignment="Stretch"
+                  Fill="{StaticResource BronzeBrush}"
+                  Data="{Binding RelativeSource={RelativeSource AncestorType=local:NavigationMenu}, Converter={local:WidthToNavigationCenterLineConverter}}"/>-->
+
+            <Grid Background="{StaticResource BronzeBrush}"
+                  Opacity="0.6">
 
 
-        <!-- For displaying the buttons -->
-        <ItemsControl ItemsSource="{Binding Items}">
+            <!-- For displaying the buttons -->
+            <ItemsControl ItemsSource="{Binding Items}">
 
-            <!-- Style the items (The navigation buttons) -->
-            <ItemsControl.ItemTemplate>
-                <DataTemplate>
+                <!-- Style the items (The navigation buttons) -->
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
                     
                     
 
-                </DataTemplate>
-            </ItemsControl.ItemTemplate>
-        </ItemsControl>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
 
 
 
+            </Grid>
         </Grid>
-
     </Border>
 
 </UserControl>

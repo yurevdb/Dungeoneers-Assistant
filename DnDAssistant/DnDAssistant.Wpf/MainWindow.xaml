@@ -77,7 +77,7 @@
             </Grid.ColumnDefinitions>
 
             <local:NavigationMenu Grid.Column="0"
-                                  Width="250"/>
+                                  Width="100"/>
 
             <local:PageHost DataContext="{Binding ApplicationViewModel.CurrentPage, Source={x:Static local:ViewModelLocator.Instance}, Converter={local:ApplicationPageToPageConverter}}"
                             CurrentPage="{Binding}" Grid.Column="1"/>

@@ -75,7 +75,7 @@
 
                                             <Path HorizontalAlignment="Stretch"
                                                   Fill="{StaticResource BronzeBrush}"
-                                                  Data="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Window}, Converter={local:WidthToStringPathDataConverter}}"
+                                                  Data="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Window}, Converter={local:WidthToCenterTitleBarDesignConverter}}"
                                                   />
 
                                             <!--Right design-->

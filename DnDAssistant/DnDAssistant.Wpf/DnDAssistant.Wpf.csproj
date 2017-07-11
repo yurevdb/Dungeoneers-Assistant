@@ -96,12 +96,13 @@
     <Compile Include="ValueConverters\IconTypeToMarginConverter.cs" />
     <Compile Include="ValueConverters\MenuItemVisibilityConverter.cs" />
     <Compile Include="ValueConverters\HorizontalAlignmentConverter.cs" />
+    <Compile Include="ValueConverters\PathConverters\WidthToCenterTitleBarDesignConverter.cs" />
+    <Compile Include="ValueConverters\PathConverters\WidthToNavigationCenterLineConverter.cs" />
     <Compile Include="ValueConverters\PopupContentConverter.cs" />
     <Compile Include="ValueConverters\StringRGBToBrushConverter.cs" />
     <Compile Include="ValueConverters\StringToImagesourceConverter.cs" />
     <Compile Include="ValueConverters\StringToVisibilityConverter.cs" />
     <Compile Include="Helpers\WindowResizer.cs" />
-    <Compile Include="ValueConverters\WidthToStringPathDataConverter.cs" />
     <Compile Include="ViewModels\DialogWindowViewModel.cs" />
     <Compile Include="ViewModels\Helpers\ViewModelLocator.cs" />
     <Compile Include="ViewModels\WindowViewModel.cs" />

@@ -7,7 +7,7 @@ namespace DnDAssistant.Wpf
     /// <summary>
     /// Returns the colored design in the title bar, depending on the width of the window
     /// </summary>
-    public class WidthToStringPathDataConverter : BaseValueConverter<WidthToStringPathDataConverter>
+    public class WidthToCenterTitleBarDesignConverter : BaseValueConverter<WidthToCenterTitleBarDesignConverter>
     {
         public override object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
