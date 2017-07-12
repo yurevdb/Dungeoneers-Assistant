@@ -124,15 +124,43 @@
                                         <!-- Title Text -->
                                         <Viewbox Grid.Column="0" Margin="0">
                                             <Button Content="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Title, FallbackValue='Dungeoneers Assistant'}"
-                                                    Command="{Binding MenuCommand}"
+                                                    
                                                     Style="{StaticResource ApplicationMenuButton}"/>
                                         </Viewbox>
 
                                         <!-- Window Buttons -->
-                                        <StackPanel Orientation="Horizontal" Grid.Column="2" >
-                                            <Button Style="{StaticResource WindowIconButtonStyle}" Command="{Binding MinimizeCommand}" Content="{StaticResource FontAwesomeMinimizeIcon}"/>
-                                            <Button Style="{StaticResource WindowIconButtonStyle}" Command="{Binding MaximizeCommand}" Content="{Binding WindowStateIcon}"/>
-                                            <Button Style="{StaticResource WindowIconCloseButtonStyle}" Command="{Binding CloseCommand}" Content="{StaticResource FontAwesomeCloseIcon}"/>
+                                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Grid.Column="2" >
+                                            <!-- Window minimize button-->
+                                            <Button Style="{StaticResource GenericContentButtonStyle}" 
+                                                    Command="{Binding MinimizeCommand}"
+                                                    ToolTip="Minimize">
+                                                <Path Stroke="{StaticResource BlackBrush}"
+                                                      StrokeThickness="2"
+                                                      Data="M0,15 L15,15"/>
+                                            </Button>
+
+                                            <!-- Window state button-->
+                                            <Button Style="{StaticResource GenericContentButtonStyle}" 
+                                                    Command="{Binding MaximizeCommand}"
+                                                    ToolTip="{Binding WindowStateButtonTooltipText}">
+                                                <Path Stroke="{StaticResource BlackBrush}"
+                                                      StrokeThickness="2"
+                                                      Data="M0,0 L15,0 L15,15 L0,15 Z"/>
+                                            </Button>
+                                            
+                                            <!-- Window close button-->
+                                            <Button Style="{StaticResource GenericContentButtonStyle}" 
+                                                    Command="{Binding CloseCommand}" 
+                                                    ToolTip="Close">
+                                                <Grid>
+                                                    <Path Stroke="{StaticResource BlackBrush}"
+                                                          StrokeThickness="2"
+                                                          Data="M0,0 L15,15"/>
+                                                    <Path Stroke="{StaticResource BlackBrush}"
+                                                          StrokeThickness="2"
+                                                          Data="M15,0 L0,15"/>
+                                                </Grid>
+                                            </Button>
                                         </StackPanel>
                                     
 

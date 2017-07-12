@@ -1,24 +1,3 @@
-D:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Repository\DnDAssistant\DnDAssistant.Wpf\bin\Debug\Resources\Wallpaper.jpg
-D:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Repository\DnDAssistant\DnDAssistant.Wpf\bin\Debug\DnDAssistant.Wpf.exe.config
-D:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Repository\DnDAssistant\DnDAssistant.Wpf\bin\Debug\DnDAssistant.Wpf.exe
-D:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Repository\DnDAssistant\DnDAssistant.Wpf\bin\Debug\DnDAssistant.Wpf.pdb
-D:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Repository\DnDAssistant\DnDAssistant.Wpf\bin\Debug\DnDAssistant.Core.dll
-D:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Repository\DnDAssistant\DnDAssistant.Wpf\bin\Debug\DnDAssistant.Core.pdb
-D:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Repository\DnDAssistant\DnDAssistant.Wpf\obj\Debug\DnDAssistant.Wpf.csprojResolveAssemblyReference.cache
-D:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Repository\DnDAssistant\DnDAssistant.Wpf\obj\Debug\MainWindow.g.cs
-D:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Repository\DnDAssistant\DnDAssistant.Wpf\obj\Debug\App.g.cs
-D:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Repository\DnDAssistant\DnDAssistant.Wpf\obj\Debug\GeneratedInternalTypeHelper.g.cs
-D:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Repository\DnDAssistant\DnDAssistant.Wpf\obj\Debug\DnDAssistant.Wpf_MarkupCompile.cache
-D:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Repository\DnDAssistant\DnDAssistant.Wpf\obj\Debug\DnDAssistant.Wpf_MarkupCompile.lref
-D:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Repository\DnDAssistant\DnDAssistant.Wpf\obj\Debug\App.baml
-D:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Repository\DnDAssistant\DnDAssistant.Wpf\obj\Debug\MainWindow.baml
-D:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Repository\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Styles\Buttons.baml
-D:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Repository\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Styles\Window.baml
-D:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Repository\DnDAssistant\DnDAssistant.Wpf\obj\Debug\DnDAssistant.Wpf.g.resources
-D:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Repository\DnDAssistant\DnDAssistant.Wpf\obj\Debug\DnDAssistant.Wpf.Properties.Resources.resources
-D:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Repository\DnDAssistant\DnDAssistant.Wpf\obj\Debug\DnDAssistant.Wpf.csproj.GenerateResource.Cache
-D:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Repository\DnDAssistant\DnDAssistant.Wpf\obj\Debug\DnDAssistant.Wpf.exe
-D:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Repository\DnDAssistant\DnDAssistant.Wpf\obj\Debug\DnDAssistant.Wpf.pdb
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\bin\Debug\Resources\Wallpaper.jpg
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\bin\Debug\Resources\ParchmentTexture.jpg
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\bin\Debug\DnDAssistant.Wpf.exe.config
@@ -26,6 +5,7 @@ C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\bin\Debug\DnDAssistant.Wpf.pdb
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\bin\Debug\DnDAssistant.Core.dll
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\bin\Debug\DnDAssistant.Core.pdb
+C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\bin\Debug\Ninject.xml
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\DnDAssistant.Wpf.csprojResolveAssemblyReference.cache
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\Dialogs\DialogMessageBox.g.cs
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\MenuControl\MenuControl.g.cs
