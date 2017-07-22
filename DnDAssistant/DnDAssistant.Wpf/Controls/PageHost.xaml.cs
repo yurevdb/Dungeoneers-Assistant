@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using DnDAssistant.Core;
@@ -65,12 +66,12 @@ namespace DnDAssistant.Wpf
                 // Tell old page to animate out
                 //oldPage.ShouldAnimateOut = true;
 
-                // Once it is done, remove it
-                //Task.Delay((int)(oldPage.SlideSeconds * 1000)).ContinueWith((t) =>
-                //{
-                //    // Remove old page
-                //    Application.Current.Dispatcher.Invoke(() => oldPageFrame.Content = null);
-                //});
+                //Once it is done, remove it
+                Task.Delay((int)(oldPage.SlideSeconds * 1000)).ContinueWith((t) =>
+                {
+                    // Remove old page
+                    Application.Current.Dispatcher.Invoke(() => oldPageFrame.Content = null);
+                });
             }
 
             // Set the new page content

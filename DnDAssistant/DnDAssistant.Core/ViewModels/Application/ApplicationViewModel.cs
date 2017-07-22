@@ -17,7 +17,7 @@ namespace DnDAssistant.Core
         /// <summary>
         /// The current page of the application
         /// </summary>
-        public static ApplicationPage CurrentPage { get; private set; } = ApplicationPage.Startup;
+        public ApplicationPage CurrentPage { get; private set; } = ApplicationPage.Startup;
 
         #endregion
 
@@ -25,7 +25,7 @@ namespace DnDAssistant.Core
         /// Function to set the current page of the application
         /// </summary>
         /// <param name="page">The page to go to</param>
-        public static void GoTo(ApplicationPage page)
+        public void GoTo(ApplicationPage page)
         {
             // Set the current page of the application
             CurrentPage = page;
