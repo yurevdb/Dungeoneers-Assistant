@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Style="{StaticResource CustomWindowStyle}"
         Title="Dungeoneers Assistant" 
-        Height="450"
-        Width="700"
+        Height="720"
+        Width="1200"
         ShowInTaskbar="True"
         WindowStartupLocation="CenterScreen"
         ResizeMode="CanResize"
@@ -30,42 +30,17 @@
     <Grid>
         
         <!--#region Overlays and Menus-->
-        
+
         <!-- Popup Overlay for closing any popup of the window -->
         <Border Background="Transparent"
-                Panel.ZIndex="1"
+                Panel.ZIndex="-1"
                 Visibility="{Binding AnyPopupVisible, Converter={local:BooleanToVisibilityConverter}}">
             <Border.InputBindings>
                 <MouseBinding MouseAction="LeftClick" Command="{Binding PopupClickawayCommand}"/>
             </Border.InputBindings>
         </Border>
 
-        <!-- Application Menu -->
-        <local:MenuControl VerticalAlignment="Top"
-                           Margin="97 0 0 0"
-                           Visibility="Hidden"
-                           local:AnimateFadeInOut.Value="{Binding DataContext.ApplicationMenuVisible, RelativeSource={RelativeSource AncestorType=Window}}"
-                           Panel.ZIndex="2"
-                           DataContext="{Binding AppMenu}"
-                           HorizontalAlignment="Left"
-                           Width="200">
 
-            <!-- Dropshadow effect -->
-            <local:MenuControl.Effect>
-                <DropShadowEffect BlurRadius="6"
-                                  ShadowDepth="2"
-                                  Color="Black"/>
-            </local:MenuControl.Effect>
-            
-        </local:MenuControl>
-        
-        <!-- Dimmed Overlay -->
-        <Border Opacity="0.3" 
-                Panel.ZIndex="3">
-            <Border Background="{StaticResource BlackBrush}"
-                    Visibility="{Binding DimmableOverlayVisible, Converter={local:BooleanToVisibilityConverter}}"/>
-        </Border>
-        
         <!--#endregion-->
         
         <!--#region Actual Content-->
@@ -78,6 +53,7 @@
             </Grid.ColumnDefinitions>
 
             <local:NavigationMenu Grid.Column="0"
+                                  DataContext="{Binding NavigationViewModel.Items, Source={x:Static local:ViewModelLocator.Instance}}"
                                   Width="100"/>
 
             <local:PageHost DataContext="{Binding ApplicationViewModel.CurrentPage, Source={x:Static local:ViewModelLocator.Instance}, Converter={local:ApplicationPageToPageConverter}}"

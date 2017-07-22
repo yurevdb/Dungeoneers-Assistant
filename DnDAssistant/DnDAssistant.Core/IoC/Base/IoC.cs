@@ -24,6 +24,11 @@ namespace DnDAssistant.Core
         /// </summary>
         public static ApplicationViewModel Application => Get<ApplicationViewModel>();
 
+        /// <summary>
+        /// A shortcut to acces the <see cref="NavigationMenuViewModel"/>
+        /// </summary>
+        public static NavigationMenuViewModel NavigationMenu => Get<NavigationMenuViewModel>();
+
         #endregion
 
         #region Construction
@@ -46,6 +51,7 @@ namespace DnDAssistant.Core
         {
             // Bind to a single instance of Application view model
             Kernel.Bind<ApplicationViewModel>().ToConstant(new ApplicationViewModel());
+            Kernel.Bind<NavigationMenuViewModel>().ToConstant(new NavigationMenuViewModel());
         }
 
         #endregion

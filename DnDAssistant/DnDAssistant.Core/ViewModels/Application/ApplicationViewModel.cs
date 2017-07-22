@@ -5,7 +5,7 @@ namespace DnDAssistant.Core
     /// <summary>
     /// A viewmodel that holds the solution wide accessible data
     /// </summary>
-    public class ApplicationViewModel
+    public class ApplicationViewModel : BaseViewModel
     {
         #region Public Properties
 
@@ -17,7 +17,7 @@ namespace DnDAssistant.Core
         /// <summary>
         /// The current page of the application
         /// </summary>
-        public ApplicationPage CurrentPage { get; private set; } = ApplicationPage.Startup;
+        public static ApplicationPage CurrentPage { get; private set; } = ApplicationPage.Startup;
 
         #endregion
 
@@ -25,11 +25,10 @@ namespace DnDAssistant.Core
         /// Function to set the current page of the application
         /// </summary>
         /// <param name="page">The page to go to</param>
-        public void GoTo(ApplicationPage page)
+        public static void GoTo(ApplicationPage page)
         {
             // Set the current page of the application
             CurrentPage = page;
-
         }
     }
 }

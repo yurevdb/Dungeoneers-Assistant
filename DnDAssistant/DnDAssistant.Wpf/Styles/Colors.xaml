@@ -11,6 +11,9 @@
     <Color x:Key="White">#ffffff</Color>
     <SolidColorBrush x:Key="WhiteBrush" Color="{StaticResource White}"/>
 
+    <Color x:Key="SmokeWhite">#f5f5f5</Color>
+    <SolidColorBrush x:Key="SmokeWhiteBrush" Color="{StaticResource SmokeWhite}"/>
+
     <Color x:Key="Bronze">#98641A</Color>
     <SolidColorBrush x:Key="BronzeBrush" Color="{StaticResource Bronze}"/>
 

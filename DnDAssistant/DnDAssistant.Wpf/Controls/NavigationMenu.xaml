@@ -5,7 +5,8 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DnDAssistant.Wpf"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+             d:DesignHeight="300" d:DesignWidth="300"
+             d:DataContext="{}">
 
     <Border BorderBrush="{StaticResource BronzeBrush}"
             BorderThickness="5"
@@ -21,14 +22,16 @@
 
 
             <!-- For displaying the buttons -->
-            <ItemsControl ItemsSource="{Binding Items}">
+            <ItemsControl ItemsSource="{Binding}">
 
                 <!-- Style the items (The navigation buttons) -->
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
-                    
-                    
+                        <Border>
 
+                            <Button Content="{Binding Title}" Command="{Binding Click}" Padding="0 10"/>
+
+                        </Border>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
             </ItemsControl>

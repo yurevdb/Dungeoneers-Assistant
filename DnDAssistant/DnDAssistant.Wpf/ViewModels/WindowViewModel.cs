@@ -59,11 +59,6 @@ namespace DnDAssistant.Wpf
 
         #region Public Properties
 
-        /// <summary>
-        /// The tooltip text of the maximize and normalize window state button
-        /// </summary>
-        public string WindowStateButtonTooltipText { get; set; } = "Maximize";
-
         #region Window Ui Properties
 
         /// <summary>
@@ -117,7 +112,7 @@ namespace DnDAssistant.Wpf
         /// <summary>
         /// The height of the title bar
         /// </summary>
-        public int TitleHeight { get; set; } = 40;
+        public int TitleHeight { get; set; } = 60;
 
         /// <summary>
         /// The padding of the content
@@ -161,6 +156,11 @@ namespace DnDAssistant.Wpf
         /// The background of the window. The name should be in the Resources folder of the application.
         /// </summary>
         public string Background { get; set; } = "Wallpaper.jpg";
+
+        /// <summary>
+        /// The tooltip text of the maximize and normalize window state button
+        /// </summary>
+        public string WindowStateButtonTooltipText { get; set; } = "Maximize";
 
         #endregion
 

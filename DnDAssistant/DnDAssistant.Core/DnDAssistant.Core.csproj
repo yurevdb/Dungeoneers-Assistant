@@ -71,6 +71,8 @@
     <Compile Include="ViewModels\Menus\Design\MenuItemDesignModel.cs" />
     <Compile Include="ViewModels\Menus\MenuViewModel.cs" />
     <Compile Include="ViewModels\Menus\MenuItemViewModel.cs" />
+    <Compile Include="ViewModels\Navigation\NavigationMenuItemViewModel.cs" />
+    <Compile Include="ViewModels\Navigation\NavigationMenuViewModel.cs" />
     <Compile Include="ViewModels\PopupMenu\Design\ApplicationMenuDesignModel.cs" />
     <Compile Include="ViewModels\PopupMenu\ApplicationMenuViewModel.cs" />
     <Compile Include="ViewModels\PopupMenu\Base\BasePopupViewModel.cs" />

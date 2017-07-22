@@ -35,7 +35,7 @@
             // Set default values
             // TODO: Move colors into core and use it here
             MenuBackground = "ffffff";
-            ArrowAlignment = ElementHorizontalAlignment.Right;
+            ArrowAlignment = ElementHorizontalAlignment.Center;
         }
 
         #endregion

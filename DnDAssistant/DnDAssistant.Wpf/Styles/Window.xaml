@@ -46,7 +46,7 @@
                                 </Grid.OpacityMask>
 
                                 <Grid.RowDefinitions>
-                                    <RowDefinition Height="{Binding CaptionHeight, FallbackValue=50}"/>
+                                    <RowDefinition Height="{Binding TitleHeight, FallbackValue=50}"/>
                                     <RowDefinition Height="*"/>
                                 </Grid.RowDefinitions>
 
@@ -55,9 +55,9 @@
                                     
                                     <!-- Fancy background -->
                                     <Grid Background="Transparent"
-                                                VerticalAlignment="Top"
-                                                Height="{Binding CaptionHeight, FallbackValue=50}"
-                                                >
+                                          VerticalAlignment="Top"
+                                          Height="{Binding CaptionHeight, FallbackValue=50}"
+                                          >
 
                                         <Grid.RowDefinitions>
                                             <RowDefinition Height="7"/>
@@ -68,8 +68,8 @@
 
                                             <!--Left design-->
                                             <Path HorizontalAlignment="Left"
-                                                  Fill="{StaticResource GrayBrush}"
-                                                  Opacity="0.8"
+                                                  Fill="{StaticResource SmokeWhiteBrush}"
+                                                  Opacity="1"
                                                   Data="{StaticResource TitleBarDecoEnd}"
                                                   />
 
@@ -80,8 +80,8 @@
 
                                             <!--Right design-->
                                             <Path HorizontalAlignment="Right"
-                                                  Fill="{StaticResource GrayBrush}"
-                                                  Opacity="0.8"
+                                                  Fill="{StaticResource SmokeWhiteBrush}"
+                                                  Opacity="1"
                                                   Data="{StaticResource TitleBarDecoEnd}"
                                                   >
                                                 <Path.LayoutTransform>
@@ -91,7 +91,7 @@
 
                                         </Grid>
                                         
-                                        <Border Grid.Row="1" Background="{StaticResource GrayBrush}" Opacity="0.8"/>
+                                        <Border Grid.Row="1" Background="{StaticResource SmokeWhiteBrush}" Opacity="1"/>
 
                                         <!--<Viewbox>
                                             <Path HorizontalAlignment="Center" 
@@ -112,7 +112,8 @@
                                     <!-- Buttons and Title -->
                                     <Grid Panel.ZIndex="10"
                                           Background="Transparent"
-                                          VerticalAlignment="Top" 
+                                          VerticalAlignment="Top"
+                                          Height="{Binding CaptionHeight, FallbackValue=50}"
                                           ClipToBounds="True">
 
                                         <Grid.ColumnDefinitions>
@@ -122,30 +123,30 @@
                                         </Grid.ColumnDefinitions>
 
                                         <!-- Title Text -->
-                                        <Viewbox Grid.Column="0" Margin="0">
+                                        <Viewbox Width="300" VerticalAlignment="Bottom"
+                                                 Margin="5 5">
                                             <Button Content="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Title, FallbackValue='Dungeoneers Assistant'}"
-                                                    
                                                     Style="{StaticResource ApplicationMenuButton}"/>
                                         </Viewbox>
 
                                         <!-- Window Buttons -->
-                                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Grid.Column="2" >
+                                        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Grid.Column="2" >
                                             <!-- Window minimize button-->
                                             <Button Style="{StaticResource GenericContentButtonStyle}" 
                                                     Command="{Binding MinimizeCommand}"
                                                     ToolTip="Minimize">
-                                                <Path Stroke="{StaticResource BlackBrush}"
+                                                <Path Stroke="{StaticResource GrayBrush}"
                                                       StrokeThickness="2"
-                                                      Data="M0,15 L15,15"/>
+                                                      Data="M0,7 L7,7"/>
                                             </Button>
 
                                             <!-- Window state button-->
                                             <Button Style="{StaticResource GenericContentButtonStyle}" 
                                                     Command="{Binding MaximizeCommand}"
                                                     ToolTip="{Binding WindowStateButtonTooltipText}">
-                                                <Path Stroke="{StaticResource BlackBrush}"
+                                                <Path Stroke="{StaticResource GrayBrush}"
                                                       StrokeThickness="2"
-                                                      Data="M0,0 L15,0 L15,15 L0,15 Z"/>
+                                                      Data="M0,0 L7,0 L7,7 L0,7 Z"/>
                                             </Button>
                                             
                                             <!-- Window close button-->
@@ -153,12 +154,12 @@
                                                     Command="{Binding CloseCommand}" 
                                                     ToolTip="Close">
                                                 <Grid>
-                                                    <Path Stroke="{StaticResource BlackBrush}"
+                                                    <Path Stroke="{StaticResource GrayBrush}"
                                                           StrokeThickness="2"
-                                                          Data="M0,0 L15,15"/>
-                                                    <Path Stroke="{StaticResource BlackBrush}"
+                                                          Data="M0,0 L7,7"/>
+                                                    <Path Stroke="{StaticResource GrayBrush}"
                                                           StrokeThickness="2"
-                                                          Data="M15,0 L0,15"/>
+                                                          Data="M7,0 L0,7"/>
                                                 </Grid>
                                             </Button>
                                         </StackPanel>
@@ -173,6 +174,35 @@
                                     <!-- The actual content of the window -->
                                     <ContentPresenter Content="{TemplateBinding Content}"/>
                                 </Border>
+                                
+                                <!-- Miscelaneous Things -->
+                                <Grid Grid.RowSpan="2">
+                                    <!-- Application Menu -->
+                                    <local:MenuControl VerticalAlignment="Top"
+                                                       Margin="225 50 0 0"
+                                                       Visibility="Collapsed"
+                                                       local:AnimateFadeInOut.Value="{Binding DataContext.ApplicationMenuVisible, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                       Panel.ZIndex="99"
+                                                       DataContext="{Binding AppMenu}"
+                                                       HorizontalAlignment="Left"
+                                                       Width="150">
+
+                                        <!-- Dropshadow effect -->
+                                        <local:MenuControl.Effect>
+                                            <DropShadowEffect BlurRadius="6"
+                                                              ShadowDepth="2"
+                                                              Color="Black"/>
+                                        </local:MenuControl.Effect>
+
+                                    </local:MenuControl>
+
+                                    <!-- Dimmed Overlay -->
+                                    <Border Opacity="0.3" 
+                                            Panel.ZIndex="3">
+                                        <Border Background="{StaticResource BlackBrush}"
+                                                Visibility="{Binding DimmableOverlayVisible, Converter={local:BooleanToVisibilityConverter}}"/>
+                                    </Border>
+                                </Grid>
 
                             </Grid>
                         </Grid>
