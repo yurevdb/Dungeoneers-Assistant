@@ -134,7 +134,8 @@
                                             <!-- Window minimize button-->
                                             <Button Style="{StaticResource GenericContentButtonStyle}" 
                                                     Command="{Binding MinimizeCommand}"
-                                                    ToolTip="Minimize">
+                                                    ToolTip="Minimize"
+                                                    ToolTipService.InitialShowDelay="1000">
                                                 <Path Stroke="{StaticResource GrayBrush}"
                                                       StrokeThickness="2"
                                                       Data="M0,7 L7,7"/>
@@ -143,7 +144,8 @@
                                             <!-- Window state button-->
                                             <Button Style="{StaticResource GenericContentButtonStyle}" 
                                                     Command="{Binding MaximizeCommand}"
-                                                    ToolTip="{Binding WindowStateButtonTooltipText}">
+                                                    ToolTip="{Binding WindowStateButtonTooltipText}"
+                                                    ToolTipService.InitialShowDelay="1000">
                                                 <Path Stroke="{StaticResource GrayBrush}"
                                                       StrokeThickness="2"
                                                       Data="M0,0 L7,0 L7,7 L0,7 Z"/>
@@ -152,7 +154,8 @@
                                             <!-- Window close button-->
                                             <Button Style="{StaticResource GenericContentButtonStyle}" 
                                                     Command="{Binding CloseCommand}" 
-                                                    ToolTip="Close">
+                                                    ToolTip="Close"
+                                                    ToolTipService.InitialShowDelay="1000">
                                                 <Grid>
                                                     <Path Stroke="{StaticResource GrayBrush}"
                                                           StrokeThickness="2"

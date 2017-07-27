@@ -9,6 +9,7 @@
                 <ResourceDictionary Source="Styles/Buttons.xaml"/>
                 <ResourceDictionary Source="Styles/SVG.xaml"/>
                 <ResourceDictionary Source="Styles/Window.xaml"/>
+                <ResourceDictionary Source="Styles/Miscellaneous.xaml"/>
                 <ResourceDictionary Source="Styles/Fonts.xaml"/>
                 <ResourceDictionary Source="Styles/Colors.xaml"/>
             </ResourceDictionary.MergedDictionaries>
