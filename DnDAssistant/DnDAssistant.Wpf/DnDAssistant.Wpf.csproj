@@ -68,6 +68,7 @@
     <Compile Include="Animations\Base\Helpers\StoryboardHelpers.cs" />
     <Compile Include="Animations\Base\IAnimateIn.cs" />
     <Compile Include="Animations\Base\IAnimateOut.cs" />
+    <Compile Include="Animations\SlideDirection.cs" />
     <Compile Include="Attached Properties\FrameworkElementAttachedProperties.cs" />
     <Compile Include="Attached Properties\Base\BaseAttachedProperty.cs" />
     <Compile Include="Controls\Dialogs\Base\BaseDialogUserControl.cs" />

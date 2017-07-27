@@ -9,21 +9,36 @@ namespace DnDAssistant.Wpf
     /// </summary>
     public static class Animations
     {
-        #region Slide in / to Top
+        #region Slide in / to
 
         /// <summary>
         /// Adds a slide in from top animation to the element
         /// </summary>
         /// <param name="element">The <see cref="FrameworkElement"/> to add the animation to</param>
         /// <param name="seconds">The time the animation should take</param>
+        /// <param name="direction">The <see cref="SlideDirection"/> from wich the slide should happen</param>
         /// <returns></returns>
-        public static async Task SlideInFromTopAsync(this FrameworkElement element, float seconds)
+        public static async Task SlideInAsync(this FrameworkElement element, SlideDirection direction, float seconds)
         {
             // Create the storyboard
             var sb = new Storyboard();
 
-            // Add slide in from top animation
-            sb.AddSlideInFromTop(seconds, element.ActualHeight);
+            // Add slide in animation
+            switch (direction)
+            {
+                case SlideDirection.Top:
+                    sb.AddSlideInFromTop(seconds, element.ActualHeight);
+                    break;
+                case SlideDirection.Right:
+                    sb.AddSlideInFromRight(seconds, element.ActualWidth);
+                    break;
+                case SlideDirection.Bottom:
+                    sb.AddSlideInFromRight(seconds, element.ActualHeight);
+                    break;
+                case SlideDirection.Left:
+                    sb.AddSlideInFromRight(seconds, element.ActualWidth);
+                    break;
+            }
 
             // Start the animation
             sb.Begin(element);
@@ -40,15 +55,30 @@ namespace DnDAssistant.Wpf
         /// </summary>
         /// <param name="element">The <see cref="FrameworkElement"/> to add the animation to</param>
         /// <param name="seconds">The time the animation should take</param>
+        /// <param name="direction">The <see cref="SlideDirection"/> to wich the slide should happen</param>
         /// <returns></returns>
-        public static async Task SlideOutToTopAsync(this FrameworkElement element, float seconds)
+        public static async Task SlideOutAsync(this FrameworkElement element, SlideDirection direction, float seconds)
         {
             // Create the storyboard
             var sb = new Storyboard();
 
-            // Add slide in from top animation
-            sb.AddSlideOutToTop(seconds, element.ActualHeight);
-
+            // Add slide in animation
+            switch (direction)
+            {
+                case SlideDirection.Top:
+                    sb.AddSlideOutToTop(seconds, element.ActualHeight);
+                    break;
+                case SlideDirection.Right:
+                    sb.AddSlideOutToRight(seconds, element.ActualWidth);
+                    break;
+                case SlideDirection.Bottom:
+                    sb.AddSlideOutToBottom(seconds, element.ActualHeight);
+                    break;
+                case SlideDirection.Left:
+                    sb.AddSlideOutToLeft(seconds, element.ActualWidth);
+                    break;
+            }
+            
             // Start the animation
             sb.Begin(element);
 
@@ -118,22 +148,37 @@ namespace DnDAssistant.Wpf
 
         #endregion
 
-        #region Slide and fade in / to Top
+        #region Slide and fade in / to
 
         /// <summary>
         /// Adds a slide in from top animation to the element
         /// </summary>
         /// <param name="element">The <see cref="FrameworkElement"/> to add the animation to</param>
         /// <param name="seconds">The time the animation should take</param>
+        /// <param name="direction">The <see cref="SlideDirection"/> from wich the slide should happen</param>
         /// <returns></returns>
-        public static async Task SlideAndFadeInFromTopAsync(this FrameworkElement element, float seconds)
+        public static async Task SlideAndFadeInAsync(this FrameworkElement element, SlideDirection direction, float seconds)
         {
             // Create the storyboard
             var sb = new Storyboard();
 
-            // Add slide in from top animation
-            sb.AddSlideInFromTop(seconds, element.ActualHeight);
-
+            // Add slide in animation
+            switch (direction)
+            {
+                case SlideDirection.Top:
+                    sb.AddSlideInFromTop(seconds, element.ActualHeight);
+                    break;
+                case SlideDirection.Right:
+                    sb.AddSlideInFromRight(seconds, element.ActualWidth);
+                    break;
+                case SlideDirection.Bottom:
+                    sb.AddSlideInFromRight(seconds, element.ActualHeight);
+                    break;
+                case SlideDirection.Left:
+                    sb.AddSlideInFromRight(seconds, element.ActualWidth);
+                    break;
+            }
+            
             // Add fade in animation
             sb.AddFadeIn(seconds);
 
@@ -152,14 +197,29 @@ namespace DnDAssistant.Wpf
         /// </summary>
         /// <param name="element">The <see cref="FrameworkElement"/> to add the animation to</param>
         /// <param name="seconds">The time the animation should take</param>
+        /// <param name="direction">The <see cref="SlideDirection"/> to wich the slide should happen</param>
         /// <returns></returns>
-        public static async Task SlideAndFadeOutToTopAsync(this FrameworkElement element, float seconds)
+        public static async Task SlideAndFadeOutAsync(this FrameworkElement element, SlideDirection direction, float seconds)
         {
             // Create the storyboard
             var sb = new Storyboard();
 
-            // Add slide in from top animation
-            sb.AddSlideOutToTop(seconds, element.ActualHeight);
+            // Add slide in animation
+            switch (direction)
+            {
+                case SlideDirection.Top:
+                    sb.AddSlideOutToTop(seconds, element.ActualHeight);
+                    break;
+                case SlideDirection.Right:
+                    sb.AddSlideOutToRight(seconds, element.ActualWidth);
+                    break;
+                case SlideDirection.Bottom:
+                    sb.AddSlideOutToBottom(seconds, element.ActualHeight);
+                    break;
+                case SlideDirection.Left:
+                    sb.AddSlideOutToLeft(seconds, element.ActualWidth);
+                    break;
+            }
 
             // Add fade out animation
             sb.AddFadeOut(seconds);

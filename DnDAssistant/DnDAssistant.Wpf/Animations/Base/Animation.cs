@@ -19,5 +19,15 @@
         /// Slide and Fade animation from bottom to top
         /// </summary>
         SlideAndFadeOutToTop = 2,
+
+        /// <summary>
+        /// Slide and Fade animation from right
+        /// </summary>
+        SlideAndFadeFromRight = 3,
+
+        /// <summary>
+        /// Slide and Fade animation to bottom
+        /// </summary>
+        SlideAndFadeToBottom = 3,
     }
 }

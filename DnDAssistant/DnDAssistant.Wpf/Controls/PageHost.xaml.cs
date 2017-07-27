@@ -64,7 +64,7 @@ namespace DnDAssistant.Wpf
             if (oldPageContent is BasePage oldPage)
             {
                 // Tell old page to animate out
-                //oldPage.ShouldAnimateOut = true;
+                oldPage.ShouldAnimateOut = true;
 
                 //Once it is done, remove it
                 Task.Delay((int)(oldPage.SlideSeconds * 1000)).ContinueWith((t) =>

@@ -33,7 +33,7 @@
 
         <!-- Popup Overlay for closing any popup of the window -->
         <Border Background="Transparent"
-                Panel.ZIndex="-1"
+                Panel.ZIndex="10"
                 Visibility="{Binding AnyPopupVisible, Converter={local:BooleanToVisibilityConverter}}">
             <Border.InputBindings>
                 <MouseBinding MouseAction="LeftClick" Command="{Binding PopupClickawayCommand}"/>
