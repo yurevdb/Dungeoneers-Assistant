@@ -52,8 +52,8 @@
     <Compile Include="DataModels\ElementHorizontalAlignment.cs" />
     <Compile Include="DataModels\IconType.cs" />
     <Compile Include="DataModels\MenuItemType.cs" />
-    <Compile Include="Helpers\Characters\Character.cs" />
-    <Compile Include="Helpers\Characters\Classes.cs" />
+    <Compile Include="Characters\Character.cs" />
+    <Compile Include="Characters\Classes.cs" />
     <Compile Include="Helpers\Dice\Dice.cs" />
     <Compile Include="Helpers\Dice\Die.cs" />
     <Compile Include="Helpers\Extensions\IconTypeExtensions.cs" />
