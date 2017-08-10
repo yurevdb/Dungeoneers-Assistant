@@ -1,6 +1,4 @@
 ﻿using DnDAssistant.Core;
-using System;
-using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Input;
 
@@ -52,14 +50,31 @@ namespace DnDAssistant.Wpf
         /// </summary>
         public ICommand MenuCommand { get; set; }
 
+        /// <summary>
+        /// The command for when any area around the popup is clicked
+        /// </summary>
+        public ICommand PopupClickawayCommand { get; set; }
+
         #endregion
 
         #region Public Properties
 
+        #region Window Ui Properties
+
+        /// <summary>
+        /// The minimum height of the window
+        /// </summary>
+        public int MinimumWindowHeight { get; set; } = 350;
+
+        /// <summary>
+        /// The minimum width of the window
+        /// </summary>
+        public int MinimumWindowWidth { get; set; } = 400;
+
         /// <summary>
         /// The size of the resizeborder around the window
         /// </summary>
-        public int ResizeBorder { get; set; } = 2;
+        public int ResizeBorder { get; set; } = 5;
 
         /// <summary>
         /// The size of the resize border around the window, taking into account the outer margin
@@ -97,7 +112,7 @@ namespace DnDAssistant.Wpf
         /// <summary>
         /// The height of the title bar
         /// </summary>
-        public int TitleHeight { get; set; } = 35;
+        public int TitleHeight { get; set; } = 60;
 
         /// <summary>
         /// The padding of the content
@@ -112,7 +127,42 @@ namespace DnDAssistant.Wpf
         /// <summary>
         /// The height of the caption bar
         /// </summary>
-        public double CaptionHeight => TitleHeight + ResizeBorder;
+        public double CaptionHeight => TitleHeight + ResizeBorder - 2;
+        #endregion
+        
+        #region Other
+
+        /// <summary>
+        /// True when the application menu should be visible, false when not
+        /// </summary>
+        public bool ApplicationMenuVisible { get; set; }
+
+        /// <summary>
+        /// True when a popup menu is visible
+        /// </summary>
+        public bool AnyPopupVisible => ApplicationMenuVisible;
+
+        /// <summary>
+        /// True if we should dim the background
+        /// </summary>
+        public bool DimmableOverlayVisible { get; set; }
+
+        /// <summary>
+        /// The view model for the application menu
+        /// </summary>
+        public ApplicationMenuViewModel AppMenu { get; set; }
+
+        /// <summary>
+        /// The background of the window. The name should be in the Resources folder of the application.
+        /// </summary>
+        public string Background { get; set; } = "Wallpaper.jpg";
+
+        /// <summary>
+        /// The tooltip text of the maximize and normalize window state button
+        /// </summary>
+        public string WindowStateButtonTooltipText { get; set; } = "Maximize";
+
+        #endregion
 
         #endregion
 
@@ -140,35 +190,27 @@ namespace DnDAssistant.Wpf
 
             MinimizeCommand = new RelayCommand(() => _Window.WindowState = WindowState.Minimized);
             // ^= is xor
-            MaximizeCommand = new RelayCommand(() => _Window.WindowState ^= WindowState.Maximized);
+            MaximizeCommand = new RelayCommand(() => 
+            {
+                _Window.WindowState ^= WindowState.Maximized;
+                WindowStateButtonTooltipText = (_Window.WindowState == WindowState.Maximized) ? "Normalize" : "Maximize";
+            });
             CloseCommand = new RelayCommand(() => _Window.Close());
-            MenuCommand = new RelayCommand(() => SystemCommands.ShowSystemMenu(_Window, GetMousePosition()));
-            
+            MenuCommand = new RelayCommand(() => ApplicationMenuVisible ^= true);
+            PopupClickawayCommand = new RelayCommand(() => ApplicationMenuVisible = false );
+
+            #endregion
+
+            #region Menu
+
+            AppMenu = new ApplicationMenuViewModel();
+
             #endregion
 
             // Fix window resize issue
             var resizer = new WindowResizer(_Window);
         }
 
-        #endregion
-
-        #region Private Helpers
-        [DllImport("user32.dll")]
-        [return: MarshalAs(UnmanagedType.Bool)]
-        internal static extern bool GetCursorPos(ref Win32Point pt);
-
-        [StructLayout(LayoutKind.Sequential)]
-        internal struct Win32Point
-        {
-            public Int32 X;
-            public Int32 Y;
-        };
-        private static Point GetMousePosition()
-        {
-            Win32Point w32Mouse = new Win32Point();
-            GetCursorPos(ref w32Mouse);
-            return new Point(w32Mouse.X, w32Mouse.Y);
-        }
         #endregion
     }
 }

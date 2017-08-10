@@ -63,6 +63,16 @@ namespace DnDAssistant.Wpf.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap ParchmentTexture {
+            get {
+                object obj = ResourceManager.GetObject("ParchmentTexture", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap Wallpaper {
             get {
                 object obj = ResourceManager.GetObject("Wallpaper", resourceCulture);

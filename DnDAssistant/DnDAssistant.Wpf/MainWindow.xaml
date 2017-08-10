@@ -7,26 +7,64 @@
         mc:Ignorable="d"
         Style="{StaticResource CustomWindowStyle}"
         Title="Dungeoneers Assistant" 
-        Height="450"
+        Height="720"
+        Width="1200"
+        ShowInTaskbar="True"
         WindowStartupLocation="CenterScreen"
-        ResizeMode="CanMinimize"
-        Width="700">
+        ResizeMode="CanResize"
+        >
+
 
     <!--#region Custom Window-->
 
     <WindowChrome.WindowChrome>
         <WindowChrome
-            CaptionHeight="{Binding CaptionHeight}"/>
+            CaptionHeight="{Binding TitleHeight}"
+            ResizeBorderThickness="{Binding ResizeBorderThickness}"/>
     </WindowChrome.WindowChrome>
 
     <!--#endregion-->
     
-    <!--#region Content-->
+   <!--#region Content-->
 
-    <Border>
+    <Grid>
         
-    </Border>
+        <!--#region Overlays and Menus-->
+
+        <!-- Popup Overlay for closing any popup of the window -->
+        <Border Background="Transparent"
+                Panel.ZIndex="10"
+                Visibility="{Binding AnyPopupVisible, Converter={local:BooleanToVisibilityConverter}}">
+            <Border.InputBindings>
+                <MouseBinding MouseAction="LeftClick" Command="{Binding PopupClickawayCommand}"/>
+            </Border.InputBindings>
+        </Border>
+
+
+        <!--#endregion-->
+        
+        <!--#region Actual Content-->
+
+        <Grid>
+        
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <local:NavigationMenu Grid.Column="0"
+                                  DataContext="{Binding NavigationViewModel.Items, Source={x:Static local:ViewModelLocator.Instance}}"
+                                  Width="100"/>
+
+            <local:PageHost DataContext="{Binding ApplicationViewModel.CurrentPage, Source={x:Static local:ViewModelLocator.Instance}, Converter={local:ApplicationPageToPageConverter}}"
+                            CurrentPage="{Binding}" Grid.Column="1"/>
+
+        </Grid>
+
+        <!--#endregion-->
+
+    </Grid>
     
     <!--#endregion-->
-    
+
 </Window>

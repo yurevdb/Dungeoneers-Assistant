@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Windows;
 using DnDAssistant.Core;
 
@@ -18,17 +19,27 @@ namespace DnDAssistant.Wpf
             // Let it do it's thang
             base.OnStartup(e);
 
+            // Setup the main application
+            ApplicationSetup();
+
             // Create the main window
             Current.MainWindow = new MainWindow();
+            Current.MainWindow.Show();
+        }
 
+        /// <summary>
+        /// Configure the application ready for use
+        /// </summary>
+        private void ApplicationSetup()
+        {
             // Setup the binding of the solution wide accessible viewmodels
             IoC.Setup();
 
             // Check if the appdata folder is set up for the application
             SetupAppdata();
 
-            // Show the main window
-            Current.MainWindow.Show();
+            // Bind the ui manager
+            IoC.Kernel.Bind<IUIManager>().ToConstant(new UIManager());
         }
 
         /// <summary>

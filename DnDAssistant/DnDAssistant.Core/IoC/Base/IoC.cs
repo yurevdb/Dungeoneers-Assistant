@@ -14,6 +14,21 @@ namespace DnDAssistant.Core
         /// </summary>
         public static IKernel Kernel { get; private set; } = new StandardKernel();
 
+        /// <summary>
+        /// A shortcut to access the <see cref="IUIManager"/>
+        /// </summary>
+        public static IUIManager UI => Get<IUIManager>();
+
+        /// <summary>
+        /// A shortcut to acces the <see cref="ApplicationViewModel"/>
+        /// </summary>
+        public static ApplicationViewModel Application => Get<ApplicationViewModel>();
+
+        /// <summary>
+        /// A shortcut to acces the <see cref="NavigationMenuViewModel"/>
+        /// </summary>
+        public static NavigationMenuViewModel NavigationMenu => Get<NavigationMenuViewModel>();
+
         #endregion
 
         #region Construction
@@ -36,6 +51,7 @@ namespace DnDAssistant.Core
         {
             // Bind to a single instance of Application view model
             Kernel.Bind<ApplicationViewModel>().ToConstant(new ApplicationViewModel());
+            Kernel.Bind<NavigationMenuViewModel>().ToConstant(new NavigationMenuViewModel());
         }
 
         #endregion
