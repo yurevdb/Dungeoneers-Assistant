@@ -14,17 +14,17 @@ namespace DnDAssistant.Wpf
         /// <summary>
         /// The height of the title bar of the window
         /// </summary>
-        private int _TitlebarHeight = 60;
+        private static int _TitlebarHeight = 60;
 
         /// <summary>
         ///  The margin around the window to allow for a drop shadow
         /// </summary>
-        private int _OuterBorderSize = 10;
+        private static int _OuterBorderSize = 10;
 
         /// <summary>
         /// the radius of the edges from the window
         /// </summary>
-        private int _WindowRadius = 0;
+        private static int _WindowRadius = 0;
 
         #endregion
 
@@ -123,7 +123,7 @@ namespace DnDAssistant.Wpf
         /// <summary>
         /// The height of the title bar
         /// </summary>
-        public int TitleHeight { get; set; } = 60;
+        public int TitleHeight { get; set; } = _TitlebarHeight;
 
         /// <summary>
         /// The padding of the content

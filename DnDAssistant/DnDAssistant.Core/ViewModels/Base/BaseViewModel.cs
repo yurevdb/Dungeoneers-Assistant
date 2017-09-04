@@ -1,4 +1,6 @@
 ﻿using System;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using PropertyChanged;
 
@@ -10,19 +12,19 @@ namespace DnDAssistant.Core
     [AddINotifyPropertyChangedInterface]
     public class BaseViewModel /*: INotifyPropertyChanged*/
     {
-        //    /// <summary>
-        //    /// The event to notify the ui that a property has been changed
-        //    /// </summary>
-        //    public event PropertyChangedEventHandler PropertyChanged = (sender, e) => { };
+        /// <summary>
+        /// The event to notify the ui that a property has been changed
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged = (sender, e) => { };
 
-        //    /// <summary>
-        //    /// Fires the <see cref="PropertyChanged"/> event
-        //    /// </summary>
-        //    /// <param name="name"></param>
-        //    public void OnPropertyChanged([CallerMemberName]string name = null)
-        //    {
-        //        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
-        //    }
+        /// <summary>
+        /// Fires the <see cref="PropertyChanged"/> event
+        /// </summary>
+        /// <param name="name"></param>
+        public void OnPropertyChanged([CallerMemberName]string name = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+        }
 
         // All methods here must be protected instead of public
         // Only made usable for the ViewModels
