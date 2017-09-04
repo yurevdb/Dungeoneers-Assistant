@@ -28,3 +28,19 @@ C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.UnitTester\obj\Debug\DnDAssistant.UnitTester.csprojResolveAssemblyReference.cache
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.UnitTester\obj\Debug\DnDAssistant.UnitTester.dll
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.UnitTester\obj\Debug\DnDAssistant.UnitTester.pdb
+D:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Newest_Version\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.UnitTester\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+D:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Newest_Version\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.UnitTester\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+D:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Newest_Version\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.UnitTester\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+D:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Newest_Version\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.UnitTester\bin\Debug\DnDAssistant.UnitTester.dll
+D:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Newest_Version\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.UnitTester\bin\Debug\DnDAssistant.UnitTester.pdb
+D:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Newest_Version\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.UnitTester\bin\Debug\DnDAssistant.Core.dll
+D:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Newest_Version\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.UnitTester\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+D:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Newest_Version\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.UnitTester\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+D:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Newest_Version\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.UnitTester\bin\Debug\Ninject.dll
+D:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Newest_Version\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.UnitTester\bin\Debug\DnDAssistant.Core.pdb
+D:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Newest_Version\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.UnitTester\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+D:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Newest_Version\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.UnitTester\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+D:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Newest_Version\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.UnitTester\bin\Debug\Ninject.xml
+D:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Newest_Version\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.UnitTester\obj\Debug\DnDAssistant.UnitTester.csprojResolveAssemblyReference.cache
+D:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Newest_Version\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.UnitTester\obj\Debug\DnDAssistant.UnitTester.dll
+D:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Newest_Version\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.UnitTester\obj\Debug\DnDAssistant.UnitTester.pdb

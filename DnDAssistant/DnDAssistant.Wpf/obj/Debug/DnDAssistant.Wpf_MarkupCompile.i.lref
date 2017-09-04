@@ -1,19 +1,20 @@
-﻿C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\GeneratedInternalTypeHelper.g.i.cs
-FC:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\App.xaml;;
-FC:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Controls\Dialogs\DialogMessageBox.xaml;;
-FC:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Controls\MenuControl\MenuControl.xaml;;
-FC:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Controls\Menus\VerticalMenu.xaml;;
-FC:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Controls\Dialogs\Base\DialogWindow.xaml;;
-FC:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Controls\NavigationMenu.xaml;;
-FC:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Controls\PageHost.xaml;;
-FC:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\MainWindow.xaml;;
-FC:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Styles\Buttons.xaml;;
-FC:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Styles\Colors.xaml;;
-FC:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Styles\Fonts.xaml;;
-FC:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Styles\Miscellaneous.xaml;;
-FC:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Styles\SVG.xaml;;
-FC:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Styles\Window.xaml;;
-FC:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Views\CharacterCreatorPage.xaml;;
-FC:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Views\StartupPage.xaml;;
-FC:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Views\Test\TestPage.xaml;;
+﻿D:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Newest_Version\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\GeneratedInternalTypeHelper.g.i.cs
+FD:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Newest_Version\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\App.xaml;;
+FD:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Newest_Version\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Controls\Dialogs\DialogMessageBox.xaml;;
+FD:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Newest_Version\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Controls\MenuControl\MenuControl.xaml;;
+FD:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Newest_Version\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Controls\Menus\VerticalMenu.xaml;;
+FD:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Newest_Version\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Controls\Dialogs\Base\DialogWindow.xaml;;
+FD:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Newest_Version\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Controls\NavigationMenu.xaml;;
+FD:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Newest_Version\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Controls\PageHost.xaml;;
+FD:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Newest_Version\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\MainWindow.xaml;;
+FD:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Newest_Version\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Styles\Buttons.xaml;;
+FD:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Newest_Version\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Styles\Colors.xaml;;
+FD:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Newest_Version\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Styles\Fonts.xaml;;
+FD:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Newest_Version\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Styles\Miscellaneous.xaml;;
+FD:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Newest_Version\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Styles\SVG.xaml;;
+FD:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Newest_Version\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Styles\Window.xaml;;
+FD:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Newest_Version\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Views\CharacterCreatorPage.xaml;;
+FD:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Newest_Version\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Views\CharacterCreator\StatsPage.xaml;;
+FD:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Newest_Version\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Views\StartupPage.xaml;;
+FD:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Newest_Version\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Views\Test\TestPage.xaml;;
 
