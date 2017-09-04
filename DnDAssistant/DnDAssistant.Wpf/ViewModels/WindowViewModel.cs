@@ -9,23 +9,34 @@ namespace DnDAssistant.Wpf
     /// </summary>
     public class WindowViewModel : BaseViewModel
     {
-        #region Private Member
+        #region Options
 
         /// <summary>
-        /// the window
+        /// The height of the title bar of the window
         /// </summary>
-        private Window _Window;
+        private int _TitlebarHeight = 60;
 
         /// <summary>
         ///  The margin around the window to allow for a drop shadow
         /// </summary>
-        private int _OuterMarginSize = 10;
+        private int _OuterBorderSize = 10;
 
         /// <summary>
         /// the radius of the edges from the window
         /// </summary>
         private int _WindowRadius = 0;
 
+        #endregion
+
+        #region Private Area
+
+        #region Private Member
+
+        /// <summary>
+        /// the window
+        /// </summary>
+        private Window _Window;
+        
         #endregion
 
         #region Commands
@@ -86,8 +97,8 @@ namespace DnDAssistant.Wpf
         /// </summary>
         public int OuterMarginSize
         {
-            get => _Window.WindowState == WindowState.Maximized ? 0 : _OuterMarginSize;
-            set => _OuterMarginSize = value;
+            get => _Window.WindowState == WindowState.Maximized ? 0 : _OuterBorderSize;
+            set => _OuterBorderSize = value;
         }
 
         /// <summary>
@@ -212,5 +223,9 @@ namespace DnDAssistant.Wpf
         }
 
         #endregion
+
+        #endregion
+
+        
     }
 }
