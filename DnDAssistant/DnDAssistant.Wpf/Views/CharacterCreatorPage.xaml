@@ -8,7 +8,8 @@
       d:DesignHeight="300" d:DesignWidth="300"
       >
 
-    <Grid Background="{StaticResource BlueBrush}">
-        
+    <Grid>
+        <local:PageHost DataContext="{Binding CharacterCreatorPageViewModel.CurrentCreatorPage, Source={x:Static local:ViewModelLocator.Instance}, Converter={local:CharacterCreatorPageToPageConverter}}"
+                        CurrentPage="{Binding}"/>
     </Grid>
 </local:BasePage>

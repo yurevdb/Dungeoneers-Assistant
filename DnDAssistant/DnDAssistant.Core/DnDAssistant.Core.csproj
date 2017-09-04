@@ -61,10 +61,12 @@
     <Compile Include="IoC\Base\IoC.cs" />
     <Compile Include="IoC\Interfaces\IUIManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\Character Creator\CreatorPage.cs" />
     <Compile Include="ViewModels\Application\ApplicationPage.cs" />
     <Compile Include="ViewModels\Application\ApplicationViewModel.cs" />
     <Compile Include="ViewModels\Base\BaseViewModel.cs" />
     <Compile Include="ViewModels\Base\RelayCommand.cs" />
+    <Compile Include="ViewModels\Character Creator\CharacterCreatorPageViewModel.cs" />
     <Compile Include="ViewModels\Dialogs\BaseDialogViewModel.cs" />
     <Compile Include="ViewModels\Dialogs\DialogViewModel.cs" />
     <Compile Include="ViewModels\Menus\Design\MenuDesignModel.cs" />

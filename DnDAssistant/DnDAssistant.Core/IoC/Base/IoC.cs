@@ -29,6 +29,11 @@ namespace DnDAssistant.Core
         /// </summary>
         public static NavigationMenuViewModel NavigationMenu => Get<NavigationMenuViewModel>();
 
+        /// <summary>
+        /// A shortcut to access the <see cref="CharacterCreatorPageViewModel"/>
+        /// </summary>
+        public static CharacterCreatorPageViewModel CharacterCreatorPage => Get<CharacterCreatorPageViewModel>();
+
         #endregion
 
         #region Construction
@@ -52,6 +57,7 @@ namespace DnDAssistant.Core
             // Bind to a single instance of Application view model
             Kernel.Bind<ApplicationViewModel>().ToConstant(new ApplicationViewModel());
             Kernel.Bind<NavigationMenuViewModel>().ToConstant(new NavigationMenuViewModel());
+            Kernel.Bind<CharacterCreatorPageViewModel>().ToConstant(new CharacterCreatorPageViewModel());
         }
 
         #endregion

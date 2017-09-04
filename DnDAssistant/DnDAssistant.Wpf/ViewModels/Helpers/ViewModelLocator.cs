@@ -15,6 +15,8 @@ namespace DnDAssistant.Wpf
 
         public static NavigationMenuViewModel NavigationViewModel => IoC.NavigationMenu;
 
+        public static CharacterCreatorPageViewModel CharacterCreatorPageViewModel => IoC.CharacterCreatorPage;
+
         #endregion
     }
 }
