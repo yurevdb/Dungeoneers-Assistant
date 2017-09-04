@@ -28,9 +28,7 @@
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
                         <Border>
-
                             <Button Content="{Binding Title}" Command="{Binding Click}" Padding="0 10"/>
-
                         </Border>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
