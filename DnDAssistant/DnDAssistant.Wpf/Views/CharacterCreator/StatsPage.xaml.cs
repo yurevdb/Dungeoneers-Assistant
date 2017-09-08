@@ -10,7 +10,7 @@ namespace DnDAssistant.Wpf.Views.CharacterCreator
         public StatsPage()
         {
             InitializeComponent();
-            DataContext = new ViewModels.BasicCreatorViewModel();
+            DataContext = new BasicCreatorViewModel();
         }
     }
 }

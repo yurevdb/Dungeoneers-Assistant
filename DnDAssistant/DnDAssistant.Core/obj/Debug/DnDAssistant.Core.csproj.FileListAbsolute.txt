@@ -15,6 +15,5 @@ D:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Newest_Version\D
 D:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Newest_Version\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Core\bin\Debug\DnDAssistant.Core.pdb
 D:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Newest_Version\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Core\bin\Debug\Ninject.dll
 D:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Newest_Version\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Core\bin\Debug\Ninject.xml
-D:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Newest_Version\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Core\obj\Debug\DnDAssistant.Core.csprojResolveAssemblyReference.cache
 D:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Newest_Version\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Core\obj\Debug\DnDAssistant.Core.dll
 D:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Newest_Version\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Core\obj\Debug\DnDAssistant.Core.pdb

@@ -233,7 +233,9 @@
       <Name>DnDAssistant.Core</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="TestFolder\" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Wallpaper.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DnDAssistant.Wpf.ViewModels
+namespace DnDAssistant.Wpf
 {
-    class BasicCreatorViewModel
+    public class BasicCreatorViewModel
     {
 #region Public properties
         /// <summary>
