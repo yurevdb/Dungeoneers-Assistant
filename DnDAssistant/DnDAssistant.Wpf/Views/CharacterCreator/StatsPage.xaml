@@ -31,7 +31,7 @@
                 <ColumnDefinition Width="1*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <Label Content="Name:" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            <TextBox Text="TestNaam" Grid.Column="1" Grid.Row="0" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Width="80" Height="20"/>
+            <TextBox Text="{Binding PlayerName}" Grid.Column="1" Grid.Row="0" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Width="80" Height="20"/>
         </Grid>
     </Grid>
 </Page>
