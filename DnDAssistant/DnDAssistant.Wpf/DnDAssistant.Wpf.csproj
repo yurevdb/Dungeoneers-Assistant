@@ -106,6 +106,7 @@
     <Compile Include="Helpers\WindowResizer.cs" />
     <Compile Include="ViewModels\BasicCreatorViewModel.cs" />
     <Compile Include="ViewModels\DialogWindowViewModel.cs" />
+    <Compile Include="ViewModels\Helpers\RacialBonusChecker.cs" />
     <Compile Include="ViewModels\Helpers\ViewModelLocator.cs" />
     <Compile Include="ViewModels\WindowViewModel.cs" />
     <Compile Include="Views\Base\ApplicationPageToPageConverter.cs" />
