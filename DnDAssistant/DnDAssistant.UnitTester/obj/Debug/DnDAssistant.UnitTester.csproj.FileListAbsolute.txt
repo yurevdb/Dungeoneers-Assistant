@@ -28,3 +28,4 @@ C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.UnitTester\obj\Debug\DnDAssistant.UnitTester.csprojResolveAssemblyReference.cache
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.UnitTester\obj\Debug\DnDAssistant.UnitTester.dll
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.UnitTester\obj\Debug\DnDAssistant.UnitTester.pdb
+C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.UnitTester\obj\Debug\DnDAssistant.UnitTester.csproj.CoreCompileInputs.cache

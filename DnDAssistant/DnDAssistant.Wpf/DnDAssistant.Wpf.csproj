@@ -109,9 +109,15 @@
     <Compile Include="ViewModels\WindowViewModel.cs" />
     <Compile Include="Views\Base\ApplicationPageToPageConverter.cs" />
     <Compile Include="Views\Base\BasePage.cs" />
-    <Compile Include="Views\CharacterCreatorPage.xaml.cs">
+    <Compile Include="Views\Character Creator\CharPagetoPageConverter.cs" />
+    <Compile Include="Views\Character Creator\CharacterCreatorPage.xaml.cs">
       <DependentUpon>CharacterCreatorPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Character Creator\CharPage.xaml.cs">
+      <DependentUpon>CharPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Character Creator\CharPages.cs" />
+    <Compile Include="Views\Character Creator\CharPageViemModel.cs" />
     <Compile Include="Views\StartupPage.xaml.cs">
       <DependentUpon>StartupPage.xaml</DependentUpon>
     </Compile>
@@ -178,7 +184,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\CharacterCreatorPage.xaml">
+    <Page Include="Views\Character Creator\CharacterCreatorPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Character Creator\CharPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

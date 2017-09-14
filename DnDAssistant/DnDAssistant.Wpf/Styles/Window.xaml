@@ -138,7 +138,8 @@
                                                     ToolTipService.InitialShowDelay="1000">
                                                 <Path Stroke="{StaticResource GrayBrush}"
                                                       StrokeThickness="2"
-                                                      Data="M0,7 L7,7"/>
+                                                      VerticalAlignment="Center"
+                                                      Data="M0,3 L7,3"/>
                                             </Button>
 
                                             <!-- Window state button-->
