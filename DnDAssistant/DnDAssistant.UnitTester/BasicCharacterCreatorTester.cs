@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using DnDAssistant.Core;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace DnDAssistant.UnitTester
 {
@@ -14,6 +15,9 @@ namespace DnDAssistant.UnitTester
 
         //}
 
+        /// <summary>
+            /// Method to check if the Subrace Lookup works
+            /// </summary>
         [TestMethod]
         public void CheckSubRacePicker()
         {
@@ -36,11 +40,21 @@ namespace DnDAssistant.UnitTester
                 Assert.AreEqual(CompareList2[i], TestList[i]);
                 i++;
             }
+        }
 
+        /// <summary>
+        /// Method to check if the Statsbonus Helper works
+        /// </summary>
+        [TestMethod]
+        public void StatsBonusChecker()
+        {
+            var StatsArray = new int[] { 10, 10, 12, 11, 10, 10 };
+            var ToTestArray = new int[] { 10, 10, 10, 10, 10, 10 };
 
+            ToTestArray = RacialBonusChecker.StatsBonus(StatsArray, "Dwarf", "Hill Dwarf");
 
-
-
+            if (!StatsArray.SequenceEqual(ToTestArray))
+                Assert.Fail();
         }
 
 
