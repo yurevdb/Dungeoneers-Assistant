@@ -49,3 +49,25 @@ D:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Newest_Version\D
 D:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Newest_Version\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.UnitTester\bin\Debug\DnDAssistant.Wpf.exe
 D:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Newest_Version\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.UnitTester\bin\Debug\DnDAssistant.Wpf.pdb
 D:\Documenten\Spare time\Eigen projectjes\Dungeoneers-Assistant\Newest_Version\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.UnitTester\bin\Debug\DnDAssistant.Wpf.exe.config
+C:\Users\Giova\source\repos\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.UnitTester\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Giova\source\repos\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.UnitTester\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Giova\source\repos\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.UnitTester\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Giova\source\repos\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.UnitTester\bin\Debug\Resources\Wallpaper.jpg
+C:\Users\Giova\source\repos\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.UnitTester\bin\Debug\Resources\ParchmentTexture.jpg
+C:\Users\Giova\source\repos\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.UnitTester\bin\Debug\DnDAssistant.UnitTester.dll
+C:\Users\Giova\source\repos\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.UnitTester\bin\Debug\DnDAssistant.UnitTester.pdb
+C:\Users\Giova\source\repos\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.UnitTester\bin\Debug\DnDAssistant.Core.dll
+C:\Users\Giova\source\repos\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.UnitTester\bin\Debug\DnDAssistant.Wpf.exe
+C:\Users\Giova\source\repos\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.UnitTester\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\Giova\source\repos\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.UnitTester\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\Giova\source\repos\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.UnitTester\bin\Debug\Ninject.dll
+C:\Users\Giova\source\repos\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.UnitTester\bin\Debug\DnDAssistant.Core.pdb
+C:\Users\Giova\source\repos\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.UnitTester\bin\Debug\DnDAssistant.Wpf.pdb
+C:\Users\Giova\source\repos\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.UnitTester\bin\Debug\DnDAssistant.Wpf.exe.config
+C:\Users\Giova\source\repos\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.UnitTester\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\Giova\source\repos\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.UnitTester\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\Giova\source\repos\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.UnitTester\bin\Debug\Ninject.xml
+C:\Users\Giova\source\repos\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.UnitTester\obj\Debug\DnDAssistant.UnitTester.csprojResolveAssemblyReference.cache
+C:\Users\Giova\source\repos\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.UnitTester\obj\Debug\DnDAssistant.UnitTester.csproj.CoreCompileInputs.cache
+C:\Users\Giova\source\repos\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.UnitTester\obj\Debug\DnDAssistant.UnitTester.dll
+C:\Users\Giova\source\repos\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.UnitTester\obj\Debug\DnDAssistant.UnitTester.pdb

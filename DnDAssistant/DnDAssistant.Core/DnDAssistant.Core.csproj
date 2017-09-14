@@ -65,6 +65,8 @@
     <Compile Include="ViewModels\Application\ApplicationViewModel.cs" />
     <Compile Include="ViewModels\Base\BaseViewModel.cs" />
     <Compile Include="ViewModels\Base\RelayCommand.cs" />
+    <Compile Include="ViewModels\CharacterCreator\Basic\BasicCreatorViewModel.cs" />
+    <Compile Include="ViewModels\CharacterCreator\Helpers\RacialBonusChecker.cs" />
     <Compile Include="ViewModels\Dialogs\BaseDialogViewModel.cs" />
     <Compile Include="ViewModels\Dialogs\DialogViewModel.cs" />
     <Compile Include="ViewModels\Menus\Design\MenuDesignModel.cs" />

@@ -1,6 +1,6 @@
 ﻿using System.Windows.Controls;
 
-namespace DnDAssistant.Wpf.Views.CharacterCreator
+namespace DnDAssistant.Wpf
 {
     /// <summary>
     /// The page containing the basic information in the basic character generator
