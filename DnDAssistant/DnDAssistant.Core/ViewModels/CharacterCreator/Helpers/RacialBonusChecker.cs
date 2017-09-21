@@ -14,7 +14,7 @@ namespace DnDAssistant.Core
         /// <summary>
         /// List containing the subraces of the Elf Race
         /// </summary>
-        private static readonly List<string> _SubElf = new List<string>() { "High Elf", "Wood Elf" };
+        private static readonly List<string> _SubElf = new List<string>() { "Drow", "High Elf", "Wood Elf" };
         /// <summary>
         /// List containing the subraces of the Halfling Race
         /// </summary>
@@ -55,10 +55,17 @@ namespace DnDAssistant.Core
                         Stats[0] = Stats[0] + 1;
                     return Stats;
 
+                case "Dragonborn":
+                    Stats[0] = Stats[0] + 2;
+                    Stats[5] = Stats[5] + 1;
+                    return Stats;
+
                 case "Elf":
                     Stats[1] = Stats[1] + 2;
                     if (SubRace == "High Elf")
                         Stats[4] = Stats[4] + 1;
+                    if (SubRace == "Drow")
+                        Stats[5] = Stats[5] + 1;
                     else
                         Stats[3] = Stats[3] + 1;
                     return Stats;
