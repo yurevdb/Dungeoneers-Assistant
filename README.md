@@ -1,6 +1,6 @@
-#Welcome Traveler
+# Welcome Traveler
 
-## Introduction
+##Introduction
 
 Dungeoneers Assistant is an application aimed to help the lesser experienced and very experienced players and Dungeon Master alike.
 We try to make an intuitive program to create characters, establish worlds and fight out battles.
@@ -13,8 +13,8 @@ First and foremost the aim for Dungeoneers Assistant is to create a comprehensiv
 This will include:
 
 -  Tutorial character creator
-- Standard creator
-- Custom creator
+-  Standard creator
+-  Custom creator
 
 When these goals are reached the aim will be to maintain an up to date version of the character creator and add premade character for easy one-shots and newer players just wanting to try out DnD. 
 
