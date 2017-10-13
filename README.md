@@ -1,6 +1,6 @@
 # Welcome Traveler
 
-##Introduction
+## Introduction
 
 Dungeoneers Assistant is an application aimed to help the lesser experienced and very experienced players and Dungeon Master alike.
 We try to make an intuitive program to create characters, establish worlds and fight out battles.
