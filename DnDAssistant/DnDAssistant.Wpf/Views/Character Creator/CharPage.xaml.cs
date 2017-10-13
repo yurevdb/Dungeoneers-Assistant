@@ -8,6 +8,11 @@
         public CharPage()
         {
             InitializeComponent();
+
+            // The page animation options
+            PageLoadAnimation = Animation.None;
+            PageUnloadAnimation = Animation.None;
+            SlideSeconds = 0f;
         }
     }
 }

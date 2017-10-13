@@ -235,7 +235,9 @@
       <Name>DnDAssistant.Core</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <SplashScreen Include="dungeons-dragons-dice-roller-6275.jpg" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Wallpaper.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
