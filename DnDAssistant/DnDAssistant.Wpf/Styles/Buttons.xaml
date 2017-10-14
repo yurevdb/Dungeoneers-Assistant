@@ -57,6 +57,8 @@
 
     <!-- A button that contains something else than text -->
     <Style x:Key="GenericContentButtonStyle" TargetType="Button">
+        <Setter Property="Width" Value="35"/>
+        <Setter Property="Height" Value="35"/>
         <Setter Property="Opacity" Value="1"/>
         <Setter Property="BorderThickness" Value="0"/>
         <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True"/>
@@ -93,19 +95,23 @@
     </Style>
     
     <!-- The close button -->
-    <Style x:Key="WindowIconCloseButtonStyle" TargetType="Button" BasedOn="{StaticResource WindowIconButtonStyle}">
+    <Style x:Key="WindowIconCloseButtonStyle" TargetType="Button" BasedOn="{StaticResource GenericContentButtonStyle}">
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Foreground" Value="Red"/>
-                <Setter Property="Effect">
-                    <Setter.Value>
-                        <DropShadowEffect ShadowDepth="2"
-                                          Direction="270"
-                                          Color="Red"
-                                          Opacity="1"
-                                          BlurRadius="10"/>
-                    </Setter.Value>
-                </Setter>
+                <Trigger.EnterActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation Duration="0:0:0.15" To="{StaticResource Red}" AccelerationRatio="0.9" Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.EnterActions>
+                <Trigger.ExitActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation Duration="0:0:0.15" To="Transparent" AccelerationRatio="0.9" Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.ExitActions>
             </Trigger>
         </Style.Triggers>
     </Style>
@@ -162,7 +168,7 @@
                                        FontSize="{StaticResource FontsizeExtraLarge}"
                                        />
 
-                            <Border Grid.Column="1"
+                            <!--<Border Grid.Column="1"
                                     Background="Transparent"
                                     >
 
@@ -172,11 +178,11 @@
                                       StrokeThickness="4"
                                       Data="M0,20 L8,30 L16,20"/>
 
-                            </Border>
+                            </Border>-->
 
-                            <Grid.InputBindings>
+                            <!--<Grid.InputBindings>
                                 <MouseBinding MouseAction="LeftClick" Command="{Binding MenuCommand}"/>
-                            </Grid.InputBindings>
+                            </Grid.InputBindings>-->
 
                         </Grid>
                         

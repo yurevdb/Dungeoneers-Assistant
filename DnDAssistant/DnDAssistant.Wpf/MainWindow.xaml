@@ -6,9 +6,9 @@
         xmlns:local="clr-namespace:DnDAssistant.Wpf"
         mc:Ignorable="d"
         Style="{StaticResource CustomWindowStyle}"
-        Title="Dungeoneers Assistant" 
-        Height="720"
-        Width="1200"
+        Title="Dungeoneers Assistant"
+        MinHeight="{Binding MinimumWindowHeight}"
+        MinWidth="{Binding MinimumWindowWidth}"
         ShowInTaskbar="True"
         WindowStartupLocation="CenterScreen"
         ResizeMode="CanResize"
@@ -19,7 +19,7 @@
 
     <WindowChrome.WindowChrome>
         <WindowChrome
-            CaptionHeight="{Binding TitleHeight}"
+            CaptionHeight="{Binding CaptionHeight}"
             ResizeBorderThickness="{Binding ResizeBorderThickness}"/>
     </WindowChrome.WindowChrome>
 

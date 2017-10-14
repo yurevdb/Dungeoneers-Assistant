@@ -64,12 +64,12 @@ namespace DnDAssistant.Wpf
         /// <summary>
         /// The minimum height of the window
         /// </summary>
-        public int MinimumWindowHeight { get; set; } = 350;
+        public double MinimumWindowHeight { get; set; } = 400;
 
         /// <summary>
         /// The minimum width of the window
         /// </summary>
-        public int MinimumWindowWidth { get; set; } = 400;
+        public double MinimumWindowWidth { get; set; } = 750;
 
         /// <summary>
         /// The size of the resizeborder around the window
@@ -108,12 +108,7 @@ namespace DnDAssistant.Wpf
         /// The radius of the edges from the window
         /// </summary>
         public CornerRadius WindowCornerRadius => new CornerRadius(WindowRadius);
-
-        /// <summary>
-        /// The height of the title bar
-        /// </summary>
-        public int TitleHeight { get; set; } = 60;
-
+        
         /// <summary>
         /// The padding of the content
         /// </summary>
@@ -125,9 +120,14 @@ namespace DnDAssistant.Wpf
         public double InnerContentMarginHeight => TitleHeight + ResizeBorder - 7;
 
         /// <summary>
+        /// The height of the title bar
+        /// </summary>
+        public int TitleHeight { get; set; } = 50;
+
+        /// <summary>
         /// The height of the caption bar
         /// </summary>
-        public double CaptionHeight => TitleHeight + ResizeBorder - 2;
+        public double CaptionHeight => TitleHeight - 14;
         #endregion
         
         #region Other

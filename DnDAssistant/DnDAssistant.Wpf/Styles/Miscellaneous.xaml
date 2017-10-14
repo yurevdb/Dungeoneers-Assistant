@@ -12,5 +12,7 @@
         <Setter Property="Background" Value="{StaticResource WhiteBrush}"/>
         <Setter Property="BorderBrush" Value="{StaticResource BronzeBrush}"/>
     </Style>
-    
+
+    <ImageBrush x:Key="AppIconImage" ImageSource="/DnDAssistant.Wpf;component/app.png"/>
+
 </ResourceDictionary>

@@ -56,17 +56,17 @@
                                     <!-- Fancy background -->
                                     <Grid Background="Transparent"
                                           VerticalAlignment="Top"
-                                          Height="{Binding CaptionHeight, FallbackValue=50}"
+                                          Height="{Binding TitleHeight, FallbackValue=50}"
                                           >
 
                                         <Grid.RowDefinitions>
-                                            <RowDefinition Height="7"/>
+                                            <!--<RowDefinition Height="7"/>-->
                                             <RowDefinition Height="*"/>
                                         </Grid.RowDefinitions>
 
-                                        <Grid Grid.Row="0">
+                                        <!--<Grid Grid.Row="0">
 
-                                            <!--Left design-->
+                                            --><!--Left design--><!--
                                             <Path HorizontalAlignment="Left"
                                                   Fill="{StaticResource SmokeWhiteBrush}"
                                                   Opacity="1"
@@ -78,7 +78,7 @@
                                                   Data="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Window}, Converter={local:WidthToCenterTitleBarDesignConverter}}"
                                                   />
 
-                                            <!--Right design-->
+                                            --><!--Right design--><!--
                                             <Path HorizontalAlignment="Right"
                                                   Fill="{StaticResource SmokeWhiteBrush}"
                                                   Opacity="1"
@@ -89,23 +89,9 @@
                                                 </Path.LayoutTransform>
                                             </Path>
 
-                                        </Grid>
+                                        </Grid>-->
                                         
-                                        <Border Grid.Row="1" Background="{StaticResource SmokeWhiteBrush}" Opacity="1"/>
-
-                                        <!--<Viewbox>
-                                            <Path HorizontalAlignment="Center" 
-                                                  Fill="{StaticResource GrayBrush}" 
-                                                  Opacity="0.8"
-                                                  Name="Dragon"
-                                                  Data="{StaticResource DragonHead}"
-                                                  />
-                                        </Viewbox>
-
-                                        <Border Background="{StaticResource WhiteBrush}"
-                                                Opacity="0.6"
-                                                >
-                                        </Border>-->
+                                        <Border Grid.Row="0" Background="{StaticResource SmokeWhiteBrush}" Opacity="1"/>
 
                                     </Grid>
 
@@ -113,7 +99,7 @@
                                     <Grid Panel.ZIndex="10"
                                           Background="Transparent"
                                           VerticalAlignment="Top"
-                                          Height="{Binding CaptionHeight, FallbackValue=50}"
+                                          Height="{Binding TitleHeight, FallbackValue=50}"
                                           ClipToBounds="True">
 
                                         <Grid.ColumnDefinitions>
@@ -121,49 +107,59 @@
                                             <ColumnDefinition Width="*"/>
                                             <ColumnDefinition Width="Auto"/>
                                         </Grid.ColumnDefinitions>
+                                        
+                                        <!--Icon-->
+                                        <Button Background="{StaticResource AppIconImage}"
+                                                Width="50"
+                                                Height="50"
+                                                Margin="0"
+                                                Padding="0"
+                                                />
 
                                         <!-- Title Text -->
-                                        <Viewbox Width="300" VerticalAlignment="Bottom"
-                                                 Margin="5 5">
-                                            <Button Content="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Title, FallbackValue='Dungeoneers Assistant'}"
-                                                    Style="{StaticResource ApplicationMenuButton}"/>
+                                        <Viewbox Width="300" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1" Grid.ColumnSpan="3"
+                                                 Margin="0">
+                                            <TextBlock Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Title, FallbackValue='Dungeoneers Assistant'}"
+                                                       Foreground="{StaticResource BronzeBrush}"/>
+                                            <!--<Button Content="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Title, FallbackValue='Dungeoneers Assistant'}"
+                                                    Style="{StaticResource ApplicationMenuButton}"/>-->
                                         </Viewbox>
 
                                         <!-- Window Buttons -->
-                                        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Grid.Column="2" >
+                                        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Grid.Column="2" Margin="5" >
                                             <!-- Window minimize button-->
-                                            <Button Style="{StaticResource GenericContentButtonStyle}" 
+                                            <Button Style="{StaticResource GenericContentButtonStyle}"
                                                     Command="{Binding MinimizeCommand}"
                                                     ToolTip="Minimize"
                                                     ToolTipService.InitialShowDelay="1000">
                                                 <Path Stroke="{StaticResource GrayBrush}"
-                                                      StrokeThickness="2"
+                                                      StrokeThickness="1"
                                                       VerticalAlignment="Center"
-                                                      Data="M0,3 L7,3"/>
+                                                      Data="M0,4 L10,4"/>
                                             </Button>
 
                                             <!-- Window state button-->
-                                            <Button Style="{StaticResource GenericContentButtonStyle}" 
+                                            <Button Style="{StaticResource GenericContentButtonStyle}"
                                                     Command="{Binding MaximizeCommand}"
                                                     ToolTip="{Binding WindowStateButtonTooltipText}"
                                                     ToolTipService.InitialShowDelay="1000">
                                                 <Path Stroke="{StaticResource GrayBrush}"
-                                                      StrokeThickness="2"
-                                                      Data="M0,0 L7,0 L7,7 L0,7 Z"/>
+                                                      StrokeThickness="1"
+                                                      Data="M0,0 L10,0 L10,10 L0,10 Z"/>
                                             </Button>
                                             
                                             <!-- Window close button-->
-                                            <Button Style="{StaticResource GenericContentButtonStyle}" 
+                                            <Button Style="{StaticResource WindowIconCloseButtonStyle}"
                                                     Command="{Binding CloseCommand}" 
                                                     ToolTip="Close"
                                                     ToolTipService.InitialShowDelay="1000">
                                                 <Grid>
                                                     <Path Stroke="{StaticResource GrayBrush}"
-                                                          StrokeThickness="2"
-                                                          Data="M0,0 L7,7"/>
+                                                          StrokeThickness="1"
+                                                          Data="M0,0 L10,10"/>
                                                     <Path Stroke="{StaticResource GrayBrush}"
-                                                          StrokeThickness="2"
-                                                          Data="M7,0 L0,7"/>
+                                                          StrokeThickness="1"
+                                                          Data="M10,0 L0,10"/>
                                                 </Grid>
                                             </Button>
                                         </StackPanel>

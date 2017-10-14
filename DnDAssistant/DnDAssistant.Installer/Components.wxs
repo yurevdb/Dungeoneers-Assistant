@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+
+  <Fragment>
+    
+    <!-- Product Components-->
+    <ComponentGroup Id="ProductComponents">
+
+      <!-- Shortcut -->
+      <ComponentRef Id="MainAppShortcut" />
+      
+    </ComponentGroup>
+
+    <!-- Installed Files -->
+    <DirectoryRef Id ="INSTALLFOLDER" FileSource="..\ConsoleApp1\bin\Debug\netcoreapp2.0\win-$(var.Platform)\publish\">
+      
+      <!--Shortcut-->
+      <Component Id="MainAppShortcut" Guid="{15263104-49BE-453B-A525-63A7CE023F0D}">
+        
+        <Shortcut Id="MainAppShortcut" 
+                  Name="!(loc.ProductName_$(var.Platform))"
+                  Target="[INSTALLFOLDER]ConsoleApp1.exe"
+                  Directory="InstallProgramMenuFolder"
+                  WorkingDirectory="INSTALLFOLDER"
+                  Icon="icon.ico"
+                  />
+
+        <!-- Our unique key for this component-->
+        <RegistryValue Id="RegShortcutKey" Root="HKCU" Key="SOFTWARE\!(loc.ProductFolderName)" Name="Shortcut" Value="1" Type="integer" KeyPath="yes"/>
+        
+        <!-- Remove start menu items -->
+      <RemoveFolder Id="RemoveStartMenu" Directory="InstallProgramMenuFolder" On="uninstall"/>
+      </Component>
+    </DirectoryRef>
+    
+  </Fragment>
+
+</Wix>
