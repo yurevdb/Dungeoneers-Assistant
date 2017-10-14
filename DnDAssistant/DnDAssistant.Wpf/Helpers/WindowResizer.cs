@@ -16,7 +16,7 @@ namespace DnDAssistant.Wpf
         /// <summary>
         /// The window to handle the resizing for
         /// </summary>
-        private Window mWindow;
+        private Window _MWindow;
 
         #endregion
 
@@ -43,10 +43,10 @@ namespace DnDAssistant.Wpf
         /// <param name="adjustSize">The callback for the host to adjust the maximum available size if needed</param>
         public WindowResizer(Window window)
         {
-            mWindow = window;
+            _MWindow = window;
 
             // Listen out for source initialized to setup
-            mWindow.SourceInitialized += Window_SourceInitialized;
+            _MWindow.SourceInitialized += Window_SourceInitialized;
         }
 
         #endregion
@@ -61,7 +61,7 @@ namespace DnDAssistant.Wpf
         private void Window_SourceInitialized(object sender, System.EventArgs e)
         {
             // Get the handle of this window
-            var handle = (new WindowInteropHelper(mWindow)).Handle;
+            var handle = (new WindowInteropHelper(_MWindow)).Handle;
             var handleSource = HwndSource.FromHwnd(handle);
 
             // If not found, end
@@ -92,7 +92,7 @@ namespace DnDAssistant.Wpf
                 // Handle the GetMinMaxInfo of the Window
                 case 0x0024:/* WM_GETMINMAXINFO */
                     WmGetMinMaxInfo(hwnd, lParam);
-                    handled = true;
+                    handled = false;
                     break;
             }
 

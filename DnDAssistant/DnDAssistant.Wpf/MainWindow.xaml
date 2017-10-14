@@ -5,13 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DnDAssistant.Wpf"
         mc:Ignorable="d"
-        Style="{StaticResource CustomWindowStyle}"
         Title="Dungeoneers Assistant"
+        WindowStyle="None"
+        AllowsTransparency="True"
         MinHeight="{Binding MinimumWindowHeight}"
         MinWidth="{Binding MinimumWindowWidth}"
         ShowInTaskbar="True"
         WindowStartupLocation="CenterScreen"
-        ResizeMode="CanResize"
+        Style="{StaticResource CustomWindowStyle}"
+        Height="800" Width="1300"
         >
 
 
