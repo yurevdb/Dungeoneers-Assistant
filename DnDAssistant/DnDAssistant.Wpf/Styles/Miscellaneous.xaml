@@ -13,6 +13,6 @@
         <Setter Property="BorderBrush" Value="{StaticResource BronzeBrush}"/>
     </Style>
 
-    <ImageBrush x:Key="AppIconImage" ImageSource="/DnDAssistant.Wpf;component/app.png"/>
+    <ImageBrush x:Key="AppIconImage" ImageSource="/DnDAssistant.Wpf;component/app.ico" Stretch="Uniform"/>
 
 </ResourceDictionary>
