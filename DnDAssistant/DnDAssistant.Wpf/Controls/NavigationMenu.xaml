@@ -10,13 +10,11 @@
 
     <Border BorderBrush="{StaticResource BronzeBrush}"
             BorderThickness="5"
+            Opacity="1"
             >
         <!-- Border children grid -->
-        <Grid>
-            <Path HorizontalAlignment="Stretch"
-                  Fill="{StaticResource BronzeBrush}"
-                  Data="{Binding RelativeSource={RelativeSource AncestorType=local:NavigationMenu}, Converter={local:WidthToNavigationCenterLineConverter}}"/>
-
+        <Grid Opacity="1">
+            
             <Grid Background="{StaticResource BronzeBrush}"
                   Opacity="0.6">
 
@@ -29,7 +27,10 @@
                     <DataTemplate>
                         <Border>
 
-                            <Button Content="{Binding Title}" Command="{Binding Click}" Padding="0 10"/>
+                            <Button Content="{Binding Title}" 
+                                    Command="{Binding Click}" 
+                                    Padding="0 10"
+                                    Opacity="1"/>
 
                         </Border>
                     </DataTemplate>
