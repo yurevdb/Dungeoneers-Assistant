@@ -1,6 +1,8 @@
 ﻿using System;
 using System.IO;
+using System.Threading;
 using System.Windows;
+using System.Windows.Threading;
 using DnDAssistant.Core;
 
 namespace DnDAssistant.Wpf
@@ -8,8 +10,49 @@ namespace DnDAssistant.Wpf
     /// <summary>
     /// Interaction logic for App.xaml
     /// </summary>
+    internal delegate void Invoker();
     public partial class App : Application
     {
+        #region Splash Screen
+
+        public App()
+        {
+            _ApplicationInitialize = _applicationInitialize;
+        }
+
+        public static new App Current => Application.Current as App;
+
+        internal delegate void ApplicationInitializeDelegate(Splash splashWindow);
+        internal ApplicationInitializeDelegate _ApplicationInitialize;
+
+        private void _applicationInitialize(Splash splashWindow)
+        {
+            // fake workload, but with progress updates.
+            Thread.Sleep(1000);
+            splashWindow.SetProgress(20);
+
+            Thread.Sleep(1000);
+            splashWindow.SetProgress(40);
+
+            Thread.Sleep(1000);
+            splashWindow.SetProgress(60);
+
+            Thread.Sleep(1000);
+            splashWindow.SetProgress(80);
+
+            Thread.Sleep(1000);
+            splashWindow.SetProgress(100);
+
+            // Create the main window, but on the UI thread.
+            Dispatcher.BeginInvoke(DispatcherPriority.Normal, (Invoker)delegate
+            {
+                MainWindow = new MainWindow();
+                MainWindow.Show();
+            });
+        } 
+
+        #endregion
+
         /// <summary>
         /// Custom start up so we load our IoC before anything else
         /// </summary>
@@ -23,7 +66,7 @@ namespace DnDAssistant.Wpf
             ApplicationSetup();
 
             // Create the main window
-            Current.MainWindow = new MainWindow();
+            Current.MainWindow = new Splash();
             Current.MainWindow.Show();
         }
 
