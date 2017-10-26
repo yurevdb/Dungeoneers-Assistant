@@ -10,7 +10,7 @@
 
     <!-- Base button style-->
     <Style TargetType="{x:Type Button}">
-        <Setter Property="Background" Value="{StaticResource BronzeBrush}"/>
+        <Setter Property="Background" Value="{StaticResource RedBrush}"/>
         <Setter Property="Foreground" Value="{StaticResource WhiteBrush}"/>
         <Setter Property="Padding" Value="5"/>
         <Setter Property="Margin" Value="2"/>
@@ -35,14 +35,14 @@
                 <Trigger.EnterActions>
                     <BeginStoryboard>
                         <Storyboard>
-                            <ColorAnimation Duration="0:0:0.15" To="{StaticResource Blue}" AccelerationRatio="0.9" Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)"/>
+                            <ColorAnimation Duration="0:0:0.15" To="{StaticResource DarkRed}" AccelerationRatio="0.9" Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)"/>
                         </Storyboard>
                     </BeginStoryboard>
                 </Trigger.EnterActions>
                 <Trigger.ExitActions>
                     <BeginStoryboard>
                         <Storyboard>
-                            <ColorAnimation Duration="0:0:0.15" To="{StaticResource Bronze}" AccelerationRatio="0.9" Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)"/>
+                            <ColorAnimation Duration="0:0:0.15" To="{StaticResource Red}" AccelerationRatio="0.9" Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)"/>
                         </Storyboard>
                     </BeginStoryboard>
                 </Trigger.ExitActions>

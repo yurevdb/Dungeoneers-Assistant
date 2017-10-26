@@ -29,11 +29,11 @@ namespace DnDAssistant.Wpf
                     var sb = new Storyboard();
 
                     sb.AddFadeOut(animationTime);
-
-                    sb.Begin(element);
-
+                    
                     element.Visibility = Visibility.Visible;
 
+                    sb.Begin(element);
+                    
                     await Task.Delay((int)((animationTime/elements.Length) * 1000));
                 }
             }

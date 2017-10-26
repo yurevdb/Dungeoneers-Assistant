@@ -28,12 +28,12 @@ namespace DnDAssistant.Wpf
 
         private void _applicationInitialize(Splash splashWindow)
         {
-            Thread.Sleep(30000);
+            Thread.Sleep(10000);
 
             // Create the main window, but on the UI thread.
             Dispatcher.BeginInvoke(DispatcherPriority.Normal, (Invoker)delegate
             {
-                MainWindow = new MainWindow();
+                MainWindow = new CampaignSelect();
                 MainWindow.Show();
             });
         } 

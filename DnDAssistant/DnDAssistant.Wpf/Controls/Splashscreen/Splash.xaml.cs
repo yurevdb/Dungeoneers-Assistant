@@ -2,6 +2,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Media.Animation;
 using System.Windows.Threading;
 
 namespace DnDAssistant.Wpf
@@ -35,7 +36,13 @@ namespace DnDAssistant.Wpf
                 App.Current._ApplicationInitialize.EndInvoke(result);
 
                 // Ensure we call close on the UI Thread.
-                Dispatcher.BeginInvoke(DispatcherPriority.Normal, (Invoker)delegate { Close(); });
+                Dispatcher.BeginInvoke(DispatcherPriority.Normal, (Invoker)delegate
+                {
+                    // Fade out the window
+                    var anim = new DoubleAnimation(0, TimeSpan.FromSeconds(1));
+                    anim.Completed += (s, _) => Close();
+                    BeginAnimation(OpacityProperty, anim);
+                });
             };
 
             // This starts the initialization process on the Application

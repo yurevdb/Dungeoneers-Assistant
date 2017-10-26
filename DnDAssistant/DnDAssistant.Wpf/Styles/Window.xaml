@@ -116,7 +116,7 @@
                                         <Viewbox Width="300" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1" Grid.ColumnSpan="3"
                                                  Margin="0">
                                             <TextBlock Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Title, FallbackValue='Dungeoneers Assistant'}"
-                                                       Foreground="{StaticResource BronzeBrush}"/>
+                                                       Foreground="{StaticResource RedBrush}"/>
                                             <!--<Button Content="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Title, FallbackValue='Dungeoneers Assistant'}"
                                                     Style="{StaticResource ApplicationMenuButton}"/>-->
                                         </Viewbox>
