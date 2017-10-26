@@ -28,7 +28,7 @@ namespace DnDAssistant.Wpf
                 {
                     var sb = new Storyboard();
 
-                    sb.AddFadeIn(animationTime);
+                    sb.AddFadeOut(animationTime);
 
                     sb.Begin(element);
 

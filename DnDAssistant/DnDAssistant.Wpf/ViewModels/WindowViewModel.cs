@@ -64,12 +64,12 @@ namespace DnDAssistant.Wpf
         /// <summary>
         /// The minimum height of the window
         /// </summary>
-        public int MinimumWindowHeight { get; set; } = 400;
+        public int MinimumWindowHeight { get; set; } = 550;
 
         /// <summary>
         /// The minimum width of the window
         /// </summary>
-        public int MinimumWindowWidth { get; set; } = 750;
+        public int MinimumWindowWidth { get; set; } = 900;
 
         /// <summary>
         /// The size of the resizeborder around the window

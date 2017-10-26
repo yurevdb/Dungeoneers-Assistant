@@ -24,8 +24,8 @@
 
         <local:SplashAnimation Grid.Column="1" 
                                Grid.Row="1"
-                               Width="300" 
-                               Height="300"
+                               Width="250" 
+                               Height="{Binding ActualWidth, RelativeSource={RelativeSource Self}}"
                                />
 
     </Grid>
