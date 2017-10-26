@@ -7,10 +7,11 @@ using DnDAssistant.Core;
 
 namespace DnDAssistant.Wpf
 {
+    internal delegate void Invoker();
+
     /// <summary>
     /// Interaction logic for App.xaml
     /// </summary>
-    internal delegate void Invoker();
     public partial class App : Application
     {
         #region Splash Screen
@@ -27,21 +28,7 @@ namespace DnDAssistant.Wpf
 
         private void _applicationInitialize(Splash splashWindow)
         {
-            // fake workload, but with progress updates.
-            Thread.Sleep(1000);
-            splashWindow.SetProgress(20);
-
-            Thread.Sleep(1000);
-            splashWindow.SetProgress(40);
-
-            Thread.Sleep(1000);
-            splashWindow.SetProgress(60);
-
-            Thread.Sleep(1000);
-            splashWindow.SetProgress(80);
-
-            Thread.Sleep(1000);
-            splashWindow.SetProgress(100);
+            Thread.Sleep(30000);
 
             // Create the main window, but on the UI thread.
             Dispatcher.BeginInvoke(DispatcherPriority.Normal, (Invoker)delegate

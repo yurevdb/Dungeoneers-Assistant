@@ -1,0 +1,76 @@
+﻿<UserControl x:Class="DnDAssistant.Wpf.SplashAnimation"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DnDAssistant.Wpf"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+
+    <Border>
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            
+            <!--Top Dice-->
+            <Rectangle x:Name="rectTop"
+                       Grid.Row="0" 
+                       Grid.Column="1"
+                       Width="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=UserControl}, Converter={local:ParentWidthToElementWidthConverter}}"
+                       Height="{Binding ActualWidth, RelativeSource={RelativeSource Self}}"
+                       Fill="{StaticResource SmokeWhiteBrush}"
+                       >
+                <Rectangle.RenderTransform>
+                    <RotateTransform Angle="45" />
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <!--Right Dice-->
+            <Rectangle x:Name="rectRight"
+                       Grid.Row="1" 
+                       Grid.Column="2"
+                       Width="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=UserControl}, Converter={local:ParentWidthToElementWidthConverter}}"
+                       Height="{Binding ActualWidth, RelativeSource={RelativeSource Self}}"
+                       Fill="{StaticResource SmokeWhiteBrush}"
+                       >
+                <Rectangle.RenderTransform>
+                    <RotateTransform Angle="45" />
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <!--Bottom Dice-->
+            <Rectangle x:Name="rectBottom"
+                       Grid.Row="2" 
+                       Grid.Column="1"
+                       Width="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=UserControl}, Converter={local:ParentWidthToElementWidthConverter}}"
+                       Height="{Binding ActualWidth, RelativeSource={RelativeSource Self}}"
+                       Fill="{StaticResource SmokeWhiteBrush}"
+                       >
+                <Rectangle.RenderTransform>
+                    <RotateTransform Angle="45" />
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <!--Left Dice-->
+            <Rectangle x:Name="rectLeft"
+                       Grid.Row="1" 
+                       Grid.Column="0"
+                       Width="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=UserControl}, Converter={local:ParentWidthToElementWidthConverter}}"
+                       Height="{Binding ActualWidth, RelativeSource={RelativeSource Self}}"
+                       Fill="{StaticResource SmokeWhiteBrush}"
+                       >
+                <Rectangle.RenderTransform>
+                    <RotateTransform Angle="45" />
+                </Rectangle.RenderTransform>
+            </Rectangle>
+        </Grid>
+    </Border>
+    
+</UserControl>

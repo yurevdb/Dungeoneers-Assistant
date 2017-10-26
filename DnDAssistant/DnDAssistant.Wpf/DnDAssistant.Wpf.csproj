@@ -71,6 +71,7 @@
     <Compile Include="Animations\Base\Helpers\StoryboardHelpers.cs" />
     <Compile Include="Animations\Base\IAnimateIn.cs" />
     <Compile Include="Animations\Base\IAnimateOut.cs" />
+    <Compile Include="Animations\GroupAnimations.cs" />
     <Compile Include="Animations\SlideDirection.cs" />
     <Compile Include="Attached Properties\FrameworkElementAttachedProperties.cs" />
     <Compile Include="Attached Properties\Base\BaseAttachedProperty.cs" />
@@ -90,8 +91,11 @@
     <Compile Include="Controls\PageHost.xaml.cs">
       <DependentUpon>PageHost.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\Splash.xaml.cs">
+    <Compile Include="Controls\Splashscreen\Splash.xaml.cs">
       <DependentUpon>Splash.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Splashscreen\SplashAnimation.xaml.cs">
+      <DependentUpon>SplashAnimation.xaml</DependentUpon>
     </Compile>
     <Compile Include="IoC\UIManager.cs" />
     <Compile Include="Controls\Dialogs\Base\DialogWindow.xaml.cs">
@@ -106,6 +110,7 @@
     <Compile Include="ValueConverters\PathConverters\WidthToCenterTitleBarDesignConverter.cs" />
     <Compile Include="ValueConverters\PathConverters\WidthToNavigationCenterLineConverter.cs" />
     <Compile Include="ValueConverters\PopupContentConverter.cs" />
+    <Compile Include="ValueConverters\ParentWidthToElementWidthConverter.cs" />
     <Compile Include="ValueConverters\StringRGBToBrushConverter.cs" />
     <Compile Include="ValueConverters\StringToImagesourceConverter.cs" />
     <Compile Include="ValueConverters\StringToVisibilityConverter.cs" />
@@ -154,7 +159,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\Splash.xaml">
+    <Page Include="Controls\Splashscreen\Splash.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Splashscreen\SplashAnimation.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
