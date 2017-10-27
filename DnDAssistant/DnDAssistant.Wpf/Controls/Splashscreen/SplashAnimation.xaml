@@ -27,12 +27,13 @@
                        Grid.Row="0" 
                        Grid.Column="1"
                        Visibility="Collapsed"
+                       RenderTransformOrigin="0.5 0.5"
                        Width="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=UserControl}, Converter={local:ParentWidthToElementWidthConverter}}"
                        Height="{Binding ActualWidth, RelativeSource={RelativeSource Self}}"
                        Fill="{StaticResource SmokeWhiteBrush}"
                        >
                 <Rectangle.RenderTransform>
-                    <RotateTransform Angle="45" />
+                    <RotateTransform Angle="45" CenterX="0" CenterY="0"/>
                 </Rectangle.RenderTransform>
             </Rectangle>
             <!--Right Dice-->
@@ -40,12 +41,13 @@
                        Grid.Row="1" 
                        Grid.Column="2"
                        Visibility="Collapsed"
+                       RenderTransformOrigin="0.5 0.5"
                        Width="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=UserControl}, Converter={local:ParentWidthToElementWidthConverter}}"
                        Height="{Binding ActualWidth, RelativeSource={RelativeSource Self}}"
                        Fill="{StaticResource SmokeWhiteBrush}"
                        >
                 <Rectangle.RenderTransform>
-                    <RotateTransform Angle="45" />
+                    <RotateTransform Angle="45" CenterX="0" CenterY="0"/>
                 </Rectangle.RenderTransform>
             </Rectangle>
             <!--Bottom Dice-->
@@ -53,12 +55,13 @@
                        Grid.Row="2" 
                        Grid.Column="1"
                        Visibility="Collapsed"
+                       RenderTransformOrigin="0.5 0.5"
                        Width="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=UserControl}, Converter={local:ParentWidthToElementWidthConverter}}"
                        Height="{Binding ActualWidth, RelativeSource={RelativeSource Self}}"
                        Fill="{StaticResource SmokeWhiteBrush}"
                        >
                 <Rectangle.RenderTransform>
-                    <RotateTransform Angle="45" />
+                    <RotateTransform Angle="45"/>
                 </Rectangle.RenderTransform>
             </Rectangle>
             <!--Left Dice-->
@@ -66,12 +69,13 @@
                        Grid.Row="1" 
                        Grid.Column="0"
                        Visibility="Collapsed"
+                       RenderTransformOrigin="0.5 0.5"
                        Width="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=UserControl}, Converter={local:ParentWidthToElementWidthConverter}}"
                        Height="{Binding ActualWidth, RelativeSource={RelativeSource Self}}"
                        Fill="{StaticResource SmokeWhiteBrush}"
                        >
                 <Rectangle.RenderTransform>
-                    <RotateTransform Angle="45" />
+                    <RotateTransform Angle="45" CenterX="0" CenterY="0"/>
                 </Rectangle.RenderTransform>
             </Rectangle>
         </Grid>

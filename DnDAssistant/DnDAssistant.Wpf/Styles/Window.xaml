@@ -3,7 +3,7 @@
                     xmlns:local="clr-namespace:DnDAssistant.Wpf">
     
     <!-- Main Window -->
-    <Style TargetType="{x:Type local:MainWindow}" x:Key="CustomWindowStyle">
+    <Style TargetType="{x:Type local:MainWindow}" x:Key="CustomWindowStyle" BasedOn="{StaticResource BaseStyle}">
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="Template">
             <Setter.Value>
@@ -116,9 +116,9 @@
                                         <Viewbox Width="300" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1" Grid.ColumnSpan="3"
                                                  Margin="0">
                                             <TextBlock Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Title, FallbackValue='Dungeoneers Assistant'}"
-                                                       Foreground="{StaticResource RedBrush}"/>
-                                            <!--<Button Content="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Title, FallbackValue='Dungeoneers Assistant'}"
-                                                    Style="{StaticResource ApplicationMenuButton}"/>-->
+                                                       FontFamily="{StaticResource Bold}"
+                                                       Foreground="{StaticResource RedBrush}"
+                                                       />
                                         </Viewbox>
 
                                         <!-- Window Buttons -->
@@ -209,7 +209,7 @@
     </Style>
 
     <!-- Dialog Window -->
-    <Style TargetType="{x:Type local:DialogWindow}" x:Key="DialogWindowStyle">
+    <Style TargetType="{x:Type local:DialogWindow}" x:Key="DialogWindowStyle" BasedOn="{StaticResource BaseStyle}">
         <Setter Property="WindowStyle" Value="None"/>
         <Setter Property="MinHeight" Value="100"/>
         <Setter Property="MinWidth" Value="250"/>

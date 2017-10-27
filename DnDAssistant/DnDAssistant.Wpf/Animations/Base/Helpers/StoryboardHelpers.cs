@@ -228,6 +228,7 @@ namespace DnDAssistant.Wpf
                 Duration = new Duration(TimeSpan.FromSeconds(seconds)),
                 From = 0,
                 To = 1,
+                DecelerationRatio = 0.9
             };
 
             // Set the property for the animation to animate
@@ -250,6 +251,7 @@ namespace DnDAssistant.Wpf
                 Duration = new Duration(TimeSpan.FromSeconds(seconds)),
                 From = 1,
                 To = 0,
+                DecelerationRatio = 0.9
             };
 
             // Set the property for the animation to animate
