@@ -22,7 +22,7 @@ namespace DnDAssistant.Core
         /// <summary>
         /// A shortcut to acces the <see cref="ApplicationViewModel"/>
         /// </summary>
-        public static ApplicationViewModel Application => Get<ApplicationViewModel>();
+        public static ApplicationViewModel App => Get<ApplicationViewModel>();
 
         /// <summary>
         /// A shortcut to acces the <see cref="NavigationMenuViewModel"/>

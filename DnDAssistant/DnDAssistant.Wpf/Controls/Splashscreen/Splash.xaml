@@ -34,12 +34,12 @@
                     Grid.Row="1"
                     VerticalAlignment="Bottom"
                     HorizontalAlignment="Center">
-            <TextBlock Text="Rearanging the Universe" 
+            <TextBlock Text="Overtaking the Universe" 
                        TextAlignment="Center"
                        FontFamily="{StaticResource Bold}"
                        Foreground="{StaticResource SmokeWhiteBrush}"
                        FontSize="{StaticResource FontsizeRegular}"/>
-            <TextBlock Text="Hello" 
+            <TextBlock Text="Signed: The Brain" 
                        TextAlignment="Center"
                        Margin="0 5 0 0"
                        FontFamily="{StaticResource Regular}"

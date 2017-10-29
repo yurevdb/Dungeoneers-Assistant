@@ -19,6 +19,11 @@ namespace DnDAssistant.Core
         /// </summary>
         public ApplicationPage CurrentPage { get; private set; } = ApplicationPage.Startup;
 
+        /// <summary>
+        /// The selected Campaign
+        /// </summary>
+        public CampaignViewModel Campaign { get; private set; }
+        
         #endregion
 
         /// <summary>
@@ -29,6 +34,16 @@ namespace DnDAssistant.Core
         {
             // Set the current page of the application
             CurrentPage = page;
+        }
+
+        /// <summary>
+        /// Function to set the Current Campaign of the application
+        /// </summary>
+        /// <param name="campaign">The Campaign to edit</param>
+        public void SetCampaign(CampaignViewModel campaign)
+        {
+            // Set the Current Campaign of the application
+            Campaign = campaign;
         }
     }
 }

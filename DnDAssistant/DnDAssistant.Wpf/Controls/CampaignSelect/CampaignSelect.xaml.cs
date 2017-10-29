@@ -1,7 +1,12 @@
 ﻿using System;
+using System.IO;
+using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Media.Animation;
+using DnDAssistant.Core;
 
 namespace DnDAssistant.Wpf
 {
@@ -28,7 +33,54 @@ namespace DnDAssistant.Wpf
         /// <param name="e"></param>
         private async void CampaignSelect_LoadedAsync(object sender, RoutedEventArgs e)
         {
-            await Animations.FadeInAsync(tbInspirationText, 2.5f);
+            // Fade in the text
+            await Task.WhenAll(Animations.FadeInAsync(tbInspirationText, 2f), Task.Run(() => Dispatcher.Invoke(() =>GetCampaigns())));
+
+            // Execute multiple Tasks in parallel
+            // Fading in the listview and sliding the text
+            await Task.WhenAll(Animations.SlideAsync(tbInspirationText, SlideDirection.Right, 400, 2f), Animations.FadeInAsync(lvCampaigns, 2f));
+        }
+
+        private void GetCampaigns()
+        {
+            // Add ListviewItems for every campaign saved on the computer
+            foreach(var f in Directory.GetDirectories(IoC.App.BaseDataPath))
+            {
+                var lvi = new ListViewItem
+                {
+                    Content = f.Split('\\').Last(),
+                };
+
+                lvi.MouseDoubleClick += Lvi_MouseDoubleClick;
+
+                lvCampaigns.Items.Add(lvi);
+            }
+
+            // Add the ListviewItem to add a new Campaign
+            var nc = new ListViewItem { Content = "New Campaign" };
+            nc.MouseDoubleClick += Lvi_MouseDoubleClick;
+            lvCampaigns.Items.Add(nc);
+        }
+
+        private void Lvi_MouseDoubleClick(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            // Get the sender as a ListViewItem
+            var lvi = sender as ListViewItem;
+
+            // If the ListViewItem is the New Campaign
+            // Create a New Campaign
+            if((string)lvi.Content == "New Campaign")
+            {
+                // Open the "Create New Campaign"view
+                // And go to the MainWindow for that campaign
+                return;
+            }
+            
+            // Setup the Campaign ViewModel
+            IoC.App.SetCampaign(new CampaignViewModel { Name =  (string)lvi.Content });
+
+            // Open the Window
+            OpenMainWindow();
         }
 
         /// <summary>
@@ -36,14 +88,8 @@ namespace DnDAssistant.Wpf
         /// </summary>
         private void OpenMainWindow()
         {
-            var w = new MainWindow();
-            w.Show();
+            new MainWindow().Show();
             Close();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            OpenMainWindow();
         }
 
         /// <summary>

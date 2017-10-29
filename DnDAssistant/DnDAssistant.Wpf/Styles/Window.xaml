@@ -104,12 +104,11 @@
                                             <ColumnDefinition Width="Auto"/>
                                         </Grid.ColumnDefinitions>
                                         
-                                        <!--Icon-->
-                                        <Button Background="{StaticResource AppIconImage}"
-                                                Width="50"
-                                                Height="50"
-                                                Margin="0"
-                                                Padding="0"
+                                        <!--Campaign Controller-->
+                                        <Button Content="{Binding CampaignName}"
+                                                FontSize="{StaticResource FontsizeSmall}"
+                                                Margin="5"
+                                                WindowChrome.IsHitTestVisibleInChrome="True"
                                                 />
 
                                         <!-- Title Text -->

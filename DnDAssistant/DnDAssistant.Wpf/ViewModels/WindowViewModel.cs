@@ -162,6 +162,11 @@ namespace DnDAssistant.Wpf
         /// </summary>
         public string WindowStateButtonTooltipText { get; set; } = "Maximize";
 
+        /// <summary>
+        /// The Name of the Campaing
+        /// </summary>
+        public string CampaignName => IoC.App.Campaign.Name;
+
         #endregion
 
         #endregion
