@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <DirectoryRef Id="INSTALLFOLDER">
+            <Component Id="cmpD8ACFD45C717BF9077F9AC5A0F8A1570" Guid="{70C5B227-07C7-40C5-A3B9-0F461BEC3BF9}">
+                <File Id="fil53DDFB55BA0B4DACA1A0D95601D1B2FD" KeyPath="yes" Source="$(var.BasePath)\DnDAssistant.Core.dll" />
+            </Component>
+            <Component Id="cmp8A8EF18FD88CFAD3783C4443E4D65EBC" Guid="{F677814C-EE8F-403A-8543-569DBD5ECB2E}">
+                <File Id="filBBF04348B8D03FE9F5A0BD69E0ED8A53" KeyPath="yes" Source="$(var.BasePath)\DnDAssistant.Core.pdb" />
+            </Component>
+            <Component Id="cmp3FEAA74A1C9FDFC99F7E49A6D811CF4E" Guid="{E91779BD-02DC-4DB9-94EA-5EFE636EF9BB}">
+                <File Id="fil4032CB93FE1F9060643583B4D99538AD" KeyPath="yes" Source="$(var.BasePath)\DnDAssistant.Wpf.exe" />
+            </Component>
+            <Component Id="cmpB540AE00A544051224FD9760A5B7F856" Guid="{289EEFF6-3646-4C77-97EB-A3595D756EA1}">
+                <File Id="filE096C9036F162185E2160C64B1B01C90" KeyPath="yes" Source="$(var.BasePath)\DnDAssistant.Wpf.exe.config" />
+            </Component>
+            <Component Id="cmp5273D419DAAB419EA5089B7728D03A62" Guid="{193E53AA-0260-43BC-954B-BE72C509499C}">
+                <File Id="fil1EF581FE08A30F3116CFED1514486541" KeyPath="yes" Source="$(var.BasePath)\DnDAssistant.Wpf.pdb" />
+            </Component>
+            <Component Id="cmp3464F8730E573D338954EC7195CFB4A4" Guid="{CF67CB91-A4FF-4C43-A830-3E7D3096BB30}">
+                <File Id="fil73F07CE42A5EF653313AD307E0E68BDC" KeyPath="yes" Source="$(var.BasePath)\HtmlAgilityPack.dll" />
+            </Component>
+            <Component Id="cmp667CB89A1E43303706D5205D8E0E018B" Guid="{40AFFDE0-5941-49A8-AC25-5C3DA4DEBF93}">
+                <File Id="fil06CC2F39CCEE24EF8EEA281FA58DF9BF" KeyPath="yes" Source="$(var.BasePath)\HtmlAgilityPack.pdb" />
+            </Component>
+            <Component Id="cmp84595EB24158D437D55D4B199DB77E9E" Guid="{1588F8E7-994B-409C-B807-11E84BDF44A4}">
+                <File Id="fil6C8A65D85DCB0034831F2345D27DEF38" KeyPath="yes" Source="$(var.BasePath)\HtmlAgilityPack.xml" />
+            </Component>
+            <Component Id="cmpDA60982F820038280380BE207B6E738E" Guid="{3B0BDF0E-7D2A-4091-8A87-7ED80FAB8621}">
+                <File Id="filFB25B5D44CA54D4D876DD0B5BC0DA0E0" KeyPath="yes" Source="$(var.BasePath)\Ninject.dll" />
+            </Component>
+            <Directory Id="dir41772C233BE465DE0D167364B3BB566C" Name="Resources">
+                <Component Id="cmp094619AA5998FC66E514B1D4C7F94ED6" Guid="{85D35D59-4DB5-4217-815C-5439473E4CEC}">
+                    <File Id="fil61901D4B8019277C01D188BDF5E1CA09" KeyPath="yes" Source="$(var.BasePath)\Resources\ParchmentTexture.jpg" />
+                </Component>
+                <Component Id="cmp165A05F769E1D2E848CF387616653964" Guid="{6B828AC5-9C0A-436C-84E7-8E353A73856E}">
+                    <File Id="fil406A523D900CEE682903D8A6036E55E8" KeyPath="yes" Source="$(var.BasePath)\Resources\Wallpaper.jpg" />
+                </Component>
+            </Directory>
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="PublishedComponents">
+            <ComponentRef Id="cmpD8ACFD45C717BF9077F9AC5A0F8A1570" />
+            <ComponentRef Id="cmp8A8EF18FD88CFAD3783C4443E4D65EBC" />
+            <ComponentRef Id="cmp3FEAA74A1C9FDFC99F7E49A6D811CF4E" />
+            <ComponentRef Id="cmpB540AE00A544051224FD9760A5B7F856" />
+            <ComponentRef Id="cmp5273D419DAAB419EA5089B7728D03A62" />
+            <ComponentRef Id="cmp3464F8730E573D338954EC7195CFB4A4" />
+            <ComponentRef Id="cmp667CB89A1E43303706D5205D8E0E018B" />
+            <ComponentRef Id="cmp84595EB24158D437D55D4B199DB77E9E" />
+            <ComponentRef Id="cmpDA60982F820038280380BE207B6E738E" />
+            <ComponentRef Id="cmp094619AA5998FC66E514B1D4C7F94ED6" />
+            <ComponentRef Id="cmp165A05F769E1D2E848CF387616653964" />
+        </ComponentGroup>
+    </Fragment>
+</Wix>
