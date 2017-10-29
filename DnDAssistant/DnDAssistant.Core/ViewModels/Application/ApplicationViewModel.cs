@@ -15,6 +15,11 @@ namespace DnDAssistant.Core
         public string BaseDataPath => Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Dungeoneers Assistant";
 
         /// <summary>
+        /// The path to the folder for the Campaign data
+        /// </summary>
+        public string CampaignDataPath { get; set; }
+
+        /// <summary>
         /// The current page of the application
         /// </summary>
         public ApplicationPage CurrentPage { get; private set; } = ApplicationPage.Startup;

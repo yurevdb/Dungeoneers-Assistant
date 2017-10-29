@@ -1,4 +1,6 @@
-﻿namespace DnDAssistant.Core
+﻿using System.IO;
+
+namespace DnDAssistant.Core
 {
     /// <summary>
     /// Default class for CampaignViewModel
@@ -36,6 +38,22 @@
         public CampaignViewModel()
         {
 
+        }
+
+        #endregion
+
+        #region Methods
+
+        /// <summary>
+        /// Sets up the Campaign on the computer e.g. creating directories, installing files, etc.
+        /// </summary>
+        public void Setup()
+        {
+            // Setup the path to the root directory of the campaign
+            IoC.App.CampaignDataPath = $"{IoC.App.BaseDataPath}\\{Name}";
+
+            // Create the directory for the campaign
+            Directory.CreateDirectory(IoC.App.CampaignDataPath);
         }
 
         #endregion

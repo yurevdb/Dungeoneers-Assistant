@@ -38,7 +38,7 @@ namespace DnDAssistant.Wpf
 
             // Execute multiple Tasks in parallel
             // Fading in the listview and sliding the text
-            await Task.WhenAll(Animations.SlideAsync(tbInspirationText, SlideDirection.Right, 400, 2f), Animations.FadeInAsync(lvCampaigns, 2f));
+            await Task.WhenAll(Animations.SlideAsync(tbInspirationText, SlideDirection.Right, 400, 2f), Animations.FadeInAsync(lvCampaigns, 3f));
         }
 
         private void GetCampaigns()
@@ -73,6 +73,13 @@ namespace DnDAssistant.Wpf
             {
                 // Open the "Create New Campaign"view
                 // And go to the MainWindow for that campaign
+
+                var cc = new CampaignCreator(this)
+                {
+                    Owner = this
+                };
+                cc.Show();
+
                 return;
             }
             
@@ -86,7 +93,7 @@ namespace DnDAssistant.Wpf
         /// <summary>
         /// Creates the <see cref="MainWindow"/>, opens it and closes this window
         /// </summary>
-        private void OpenMainWindow()
+        public void OpenMainWindow()
         {
             new MainWindow().Show();
             Close();

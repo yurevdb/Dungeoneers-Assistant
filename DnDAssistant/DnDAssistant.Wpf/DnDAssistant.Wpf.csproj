@@ -75,6 +75,9 @@
     <Compile Include="Animations\SlideDirection.cs" />
     <Compile Include="Attached Properties\FrameworkElementAttachedProperties.cs" />
     <Compile Include="Attached Properties\Base\BaseAttachedProperty.cs" />
+    <Compile Include="Controls\CampaignSelect\CampaignCreator.xaml.cs">
+      <DependentUpon>CampaignCreator.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\CampaignSelect\CampaignSelect.xaml.cs">
       <DependentUpon>CampaignSelect.xaml</DependentUpon>
     </Compile>
@@ -138,6 +141,10 @@
     <Compile Include="Views\Test\TestPage.xaml.cs">
       <DependentUpon>TestPage.xaml</DependentUpon>
     </Compile>
+    <Page Include="Controls\CampaignSelect\CampaignCreator.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\CampaignSelect\CampaignSelect.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
