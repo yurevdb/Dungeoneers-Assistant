@@ -9,6 +9,31 @@ namespace DnDAssistant.Wpf
     /// </summary>
     public static class StoryboardHelpers
     {
+        /// <summary>
+        /// Adds a slide with custom Margin
+        /// </summary>
+        /// <param name="storyboard">The storyboard to add the animation to</param>
+        /// <param name="seconds">The time the animation will take</param>
+        /// <param name="thickness">The margin to animate to</param>
+        /// <param name="decelerationRatio"></param>
+        public static void AddSlide(this Storyboard storyboard, float seconds, Thickness thickness, float decelerationRatio = 0.9f)
+        {
+            // Create the margin animation to slide in from top
+            var animation = new ThicknessAnimation
+            {
+                Duration = new Duration(TimeSpan.FromSeconds(seconds)),
+                From = new Thickness(0),
+                To = thickness,
+                DecelerationRatio = decelerationRatio
+            };
+
+            // Set the property for the animation to animate
+            Storyboard.SetTargetProperty(animation, new PropertyPath("Margin"));
+
+            // Add the animation to the storyboard
+            storyboard.Children.Add(animation);
+        }
+
         #region Slide in / to
 
         /// <summary>
@@ -228,6 +253,7 @@ namespace DnDAssistant.Wpf
                 Duration = new Duration(TimeSpan.FromSeconds(seconds)),
                 From = 0,
                 To = 1,
+                DecelerationRatio = 0.9
             };
 
             // Set the property for the animation to animate
@@ -250,6 +276,7 @@ namespace DnDAssistant.Wpf
                 Duration = new Duration(TimeSpan.FromSeconds(seconds)),
                 From = 1,
                 To = 0,
+                DecelerationRatio = 0.9
             };
 
             // Set the property for the animation to animate

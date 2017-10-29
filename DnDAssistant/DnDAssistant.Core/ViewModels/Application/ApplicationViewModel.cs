@@ -15,10 +15,20 @@ namespace DnDAssistant.Core
         public string BaseDataPath => Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Dungeoneers Assistant";
 
         /// <summary>
+        /// The path to the folder for the Campaign data
+        /// </summary>
+        public string CampaignDataPath { get; set; }
+
+        /// <summary>
         /// The current page of the application
         /// </summary>
         public ApplicationPage CurrentPage { get; private set; } = ApplicationPage.Startup;
 
+        /// <summary>
+        /// The selected Campaign
+        /// </summary>
+        public CampaignViewModel Campaign { get; private set; }
+        
         #endregion
 
         /// <summary>
@@ -29,6 +39,16 @@ namespace DnDAssistant.Core
         {
             // Set the current page of the application
             CurrentPage = page;
+        }
+
+        /// <summary>
+        /// Function to set the Current Campaign of the application
+        /// </summary>
+        /// <param name="campaign">The Campaign to edit</param>
+        public void SetCampaign(CampaignViewModel campaign)
+        {
+            // Set the Current Campaign of the application
+            Campaign = campaign;
         }
     }
 }

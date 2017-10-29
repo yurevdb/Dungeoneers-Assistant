@@ -3,17 +3,17 @@
 
   <String Id="Company">Flooftech</String>
 
-  <String Id="ProductFolderName">DungeoneersAssistant</String>
+  <String Id="ProductFolderName">Dungeoneers Assistant</String>
 
   <String Id="ProductName_x86">Dungeoneers Assistant (32bit)</String>
   <String Id="ProductName_x64">Dungeoneers Assistant (64bit)</String>
 
-  <String Id="Description">Dungeoneers Assistant is a complete program for anyone wanting to play Dungeons and Dragons.</String>
+  <String Id="Description">Dungeoneers Assistant is a complete program for the novice Dungeoneer or the master Dungeon Master alike.</String>
+  <String Id="Comments">This is a comment</String>
+  <String Id="Keywords">Dungeons and Dragons</String>
 
   <String Id="DowngradeErrorMessage">A newer version of Dungeoneers Assistant is already installed.</String>
 
   <String Id="Language">1033</String>
   
-  
-
 </WixLocalization>

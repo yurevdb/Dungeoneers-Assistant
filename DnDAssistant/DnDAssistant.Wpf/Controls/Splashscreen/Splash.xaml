@@ -1,0 +1,50 @@
+﻿<Window x:Class="DnDAssistant.Wpf.Splash"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DnDAssistant.Wpf"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        WindowStartupLocation="CenterScreen"
+        Title="Splash" Height="675" Width="1200">
+    <Grid Background="{StaticResource RedBrush}">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <local:SplashAnimation Grid.Column="1" 
+                               Grid.Row="1"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Center"
+                               Width="250"
+                               Height="{Binding ActualWidth, RelativeSource={RelativeSource Self}}"
+                               />
+
+        <StackPanel Grid.Column="1"
+                    Grid.Row="1"
+                    VerticalAlignment="Bottom"
+                    HorizontalAlignment="Center">
+            <TextBlock Text="Overtaking the Universe" 
+                       TextAlignment="Center"
+                       FontFamily="{StaticResource Bold}"
+                       Foreground="{StaticResource SmokeWhiteBrush}"
+                       FontSize="{StaticResource FontsizeRegular}"/>
+            <TextBlock Text="Signed: The Brain" 
+                       TextAlignment="Center"
+                       Margin="0 5 0 0"
+                       FontFamily="{StaticResource Regular}"
+                       Foreground="{StaticResource SmokeWhiteBrush}"
+                       FontSize="{StaticResource FontsizeSmall}"/>
+        </StackPanel>
+    </Grid>
+</Window>

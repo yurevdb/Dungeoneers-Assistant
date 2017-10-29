@@ -1,6 +1,4 @@
-﻿using System.Windows.Controls;
-
-namespace DnDAssistant.Wpf
+﻿namespace DnDAssistant.Wpf
 {
     /// <summary>
     /// Interaction logic for StartupPage.xaml

@@ -3,13 +3,15 @@
   
   <!-- Give product a unique id per platform-->
   <?if $(var.Platform) = x64 ?>
-  <?define ProductCode = "{22829E3D-19E9-41F3-8F95-AE4312803833}"?>
+  <?define ProductCode = "{7F26DF5B-DDEC-4263-B218-F72138FE83FB}"?>
   <?else?>
-  <?define ProductCode = "{5E0B70CC-B778-4902-B098-048E83D4C62D}"?>
+  <?define ProductCode = "{B00EA411-2991-4245-BD25-3B5E47637A0D}"?>
   <?endif?>
   
   <!-- Fixed upgrade id-->
-  <?define UpgradeCode = "{59F19DF7-CCCA-43FA-BA12-D8472F9BA059}"?>
+  <?define UpgradeCode = "{94AA90E1-C85A-43BC-BF64-014350845409}"?>
+  
+  <?define BuildVersion = 0.1.0.0 ?>
 
   <!-- Define main product-->
 	<Product Id="$(var.ProductCode)" 
@@ -40,22 +42,27 @@
       />
 
     <!-- Define main icon -->
-    <Icon Id="icon.ico" SourceFile="$(var.ConsoleApp1.ProjectDir)\app.ico"/>
+    <Icon Id="icon.ico" SourceFile="$(var.DnDAssistant.Wpf.ProjectDir)\app.ico"/>
 
     <!-- Use the icon.ico icon for this installer-->
     <Property Id="ARPPRODUCTICON">icon.ico</Property>
-    <!-- Help website -->
+    <!-- Help website (shows in the add/remove programs) -->
     <Property Id="ARPURLINFOABOUT">https://github.com/yurevdb/Dungeoneers-Assistant/wiki</Property>
     
     <!-- Create a basic UI for the installer -->
-    <UIRef Id="WixUI_FeatureTree"/>
-    <!--<WixVariable Id="WixUILicensRtf" Value="$(var.ProjectDir)\assets\Licens.rtf"/>-->
+    <UIRef Id="WixUI_Minimal"/>
+    <!-- License -->
+    <WixVariable Id="WixUILicenseRtf" Value="$(var.ProjectDir)\Assets\License.rtf"/>
+    
+    <!-- Custom banners, bitmap, Background is 493x312, Banner is 493x53 -->
+    <!-- Background -->
+    <!--<WixVariable Id="WixUIDialogBmp" Value="$(var.ProjectDir)\Assets\Background.bmp"/>-->
+    <!--<WixVariable Id="WixUIBannerBmp" Value="$(var.ProjectDir)\Assets\Banner.bmp"/>-->
 
     <!-- Define components, shortcuts, files etc... for installer -->
-		<Feature Id="ProductFeature" Title="ConsoleApp" Level="1">
+		<Feature Id="ProductFeature" Title="Dungeoneers Assistant" Level="1">
       
 			<ComponentGroupRef Id="ProductComponents" />
-      <ComponentGroupRef Id="PublishedComponents" />
       
 		</Feature>
     

@@ -17,8 +17,13 @@
     <Color x:Key="Bronze">#98641A</Color>
     <SolidColorBrush x:Key="BronzeBrush" Color="{StaticResource Bronze}"/>
 
+    <!--The reds-->
+    <Color x:Key="LightRed">#c52e21</Color>
+    <SolidColorBrush x:Key="LightRedBrush" Color="{StaticResource LightRed}"/>
     <Color x:Key="Red">#99241a</Color>
     <SolidColorBrush x:Key="RedBrush" Color="{StaticResource Red}"/>
+    <Color x:Key="DarkRed">#6d1a13</Color>
+    <SolidColorBrush x:Key="DarkRedBrush" Color="{StaticResource DarkRed}"/>
 
     <Color x:Key="Blue">#328dcd</Color>
     <SolidColorBrush x:Key="BlueBrush" Color="{StaticResource Blue}"/>

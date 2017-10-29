@@ -11,7 +11,7 @@ namespace DnDAssistant.Wpf
 
         public static ViewModelLocator Instance => new ViewModelLocator();
 
-        public static ApplicationViewModel ApplicationViewModel => IoC.Application;
+        public static ApplicationViewModel ApplicationViewModel => IoC.App;
 
         public static NavigationMenuViewModel NavigationViewModel => IoC.NavigationMenu;
 

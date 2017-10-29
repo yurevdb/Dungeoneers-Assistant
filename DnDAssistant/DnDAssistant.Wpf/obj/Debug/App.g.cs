@@ -68,8 +68,6 @@ namespace DnDAssistant.Wpf {
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "4.0.0.0")]
         public static void Main() {
-            SplashScreen splashScreen = new SplashScreen("dungeons-dragons-dice-roller-6275.jpg");
-            splashScreen.Show(true);
             DnDAssistant.Wpf.App app = new DnDAssistant.Wpf.App();
             app.InitializeComponent();
             app.Run();

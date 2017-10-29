@@ -64,12 +64,12 @@ namespace DnDAssistant.Wpf
         /// <summary>
         /// The minimum height of the window
         /// </summary>
-        public int MinimumWindowHeight { get; set; } = 400;
+        public int MinimumWindowHeight { get; set; } = 550;
 
         /// <summary>
         /// The minimum width of the window
         /// </summary>
-        public int MinimumWindowWidth { get; set; } = 750;
+        public int MinimumWindowWidth { get; set; } = 900;
 
         /// <summary>
         /// The size of the resizeborder around the window
@@ -161,6 +161,11 @@ namespace DnDAssistant.Wpf
         /// The tooltip text of the maximize and normalize window state button
         /// </summary>
         public string WindowStateButtonTooltipText { get; set; } = "Maximize";
+
+        /// <summary>
+        /// The Name of the Campaing
+        /// </summary>
+        public string CampaignName => IoC.App.Campaign.Name;
 
         #endregion
 

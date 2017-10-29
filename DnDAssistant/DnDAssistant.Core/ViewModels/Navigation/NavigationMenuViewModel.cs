@@ -24,12 +24,12 @@ namespace DnDAssistant.Core
             {
                 new NavigationMenuItemViewModel
                 {
-                    Click = new RelayCommand(()=> IoC.Application.GoTo(ApplicationPage.Startup)),
+                    Click = new RelayCommand(()=> IoC.App.GoTo(ApplicationPage.Startup)),
                     Title = "Startup"
                 },
                 new NavigationMenuItemViewModel
                 {
-                    Click = new RelayCommand(() =>  IoC.Application.GoTo(ApplicationPage.CharacterCreator)),
+                    Click = new RelayCommand(() =>  IoC.App.GoTo(ApplicationPage.CharacterCreator)),
                     Title = "Character Creator"
                 },
             };

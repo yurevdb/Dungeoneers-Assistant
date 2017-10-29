@@ -1,15 +1,45 @@
 ﻿using System;
 using System.IO;
+using System.Threading;
 using System.Windows;
+using System.Windows.Threading;
 using DnDAssistant.Core;
 
 namespace DnDAssistant.Wpf
 {
+    internal delegate void Invoker();
+
     /// <summary>
     /// Interaction logic for App.xaml
     /// </summary>
     public partial class App : Application
     {
+        #region Splash Screen
+
+        public App()
+        {
+            _ApplicationInitialize = _applicationInitialize;
+        }
+
+        public static new App Current => Application.Current as App;
+
+        internal delegate void ApplicationInitializeDelegate(Splash splashWindow);
+        internal ApplicationInitializeDelegate _ApplicationInitialize;
+
+        private void _applicationInitialize(Splash splashWindow)
+        {
+            Thread.Sleep(10000);
+
+            // Create the main window, but on the UI thread.
+            Dispatcher.BeginInvoke(DispatcherPriority.Normal, (Invoker)delegate
+            {
+                MainWindow = new CampaignSelect();
+                MainWindow.Show();
+            });
+        } 
+
+        #endregion
+
         /// <summary>
         /// Custom start up so we load our IoC before anything else
         /// </summary>
@@ -23,7 +53,7 @@ namespace DnDAssistant.Wpf
             ApplicationSetup();
 
             // Create the main window
-            Current.MainWindow = new MainWindow();
+            Current.MainWindow = new Splash();
             Current.MainWindow.Show();
         }
 
