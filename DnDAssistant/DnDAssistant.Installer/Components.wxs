@@ -8,21 +8,6 @@
 
       <!-- Shortcut -->
       <ComponentRef Id="MainAppShortcut" />
-
-      <!-- Add componentref for every file that needs to be installed-->
-      <ComponentRef Id="Exe"/>
-      <ComponentRef Id="DnDAssistant.core.dll"/>
-      <ComponentRef Id="DnDAssistant.core.pdb"/>
-      <ComponentRef Id="DnDAssistant.Wpf.exe.config"/>
-      <ComponentRef Id="DnDAssistant.Wpf.pdb"/>
-      <ComponentRef Id="Ninject.dll"/>
-      <ComponentRef Id="HtmlAgilityPack.dll"/>
-      <ComponentRef Id="HtmlAgilityPack.pdb"/>
-      <ComponentRef Id="HtmlAgilityPack.xml"/>
-
-      <!--Resource files -->
-      <ComponentRef Id="ParchmentTexture.jpg"/>
-      <ComponentRef Id="Wallpaper.jpg"/>
       
     </ComponentGroup>
 
@@ -46,56 +31,6 @@
         <!-- Remove start menu items -->
         <RemoveFolder Id="RemoveStartMenu" Directory="ProgramMenuFolder" On="uninstall"/>
       </Component>
-
-      <!--Exe file-->
-      <Component Id="Exe" Guid="{9530CB33-701E-48E5-BA2E-ECEC3FE00EE6}">
-        <File Id="ExeFile" Name="DnDAssistant.Wpf.exe" KeyPath="yes"/>
-      </Component>
-
-      <Component Id="DnDAssistant.core.dll" Guid="{E2F7BB71-6EDA-41F4-83B2-0ADA35DAF6BA}">
-        <File Id="DnDAssistant.core.dllFile" Name="DnDAssistant.Core.dll" KeyPath="yes"/>
-      </Component>
-
-      <Component Id="DnDAssistant.core.pdb" Guid="{D163EFC2-6CC0-424F-9581-5B97B99499DF}">
-        <File Id="DnDAssistant.core.pdbFile" Name="DnDAssistant.Core.pdb" KeyPath="yes"/>
-      </Component>
-
-      <Component Id="DnDAssistant.Wpf.exe.config" Guid="{3AB140AD-58E5-42E6-A959-35AF5C2C406A}">
-        <File Id="DnDAssistant.Wpf.exe.configFile" Name="DnDAssistant.Wpf.exe.config" KeyPath="yes"/>
-      </Component>
-
-      <Component Id="DnDAssistant.Wpf.pdb" Guid="{C5DCF35C-1111-4F89-BE09-0F20714CC5D3}">
-        <File Id="DnDAssistant.Wpf.pdbFile" Name="DnDAssistant.Wpf.pdb" KeyPath="yes"/>
-      </Component>
-
-      <Component Id="Ninject.dll" Guid="{19FA88AF-7D62-492F-94F5-FB2DE047654C}">
-        <File Id="Ninject.dllFile" Name="Ninject.dll" KeyPath="yes"/>
-      </Component>
-
-      <Component Id="HtmlAgilityPack.pdb" Guid="{29F95D90-E080-4A00-BF4B-60641BA1A648}">
-        <File Id="HtmlAgilityPack.pdbFile" Name="HtmlAgilityPack.pdb" KeyPath="yes"/>
-      </Component>
-    
-      <Component Id="HtmlAgilityPack.dll" Guid="{4E772251-93FF-4D1F-ACF7-C5AD6839806B}">
-        <File Id="HtmlAgilityPack.dllFile" Name="HtmlAgilityPack.dll" KeyPath="yes"/>
-      </Component>
-        
-      <Component Id="HtmlAgilityPack.xml" Guid="{20FA7B79-417F-4F94-BD74-B939F86BF41B}">
-        <File Id="HtmlAgilityPack.xmlFile" Name="HtmlAgilityPack.xml" KeyPath="yes"/>
-      </Component>
-      
-    </DirectoryRef>
-
-    <DirectoryRef Id="INSTALLRESOURCEFOLDER" FileSource="..\DnDAssistant.Wpf\bin\Debug\Resources\">
-
-      <Component Id="ParchmentTexture.jpg" Guid="{AC463442-091F-4805-BF98-970A7AAD82E7}">
-        <File Id="ParchmentTexture.jpgFile" Name="ParchmentTexture.jpg" KeyPath="yes"/>
-      </Component>
-
-      <Component Id="Wallpaper.jpg" Guid="{578C9202-AAFD-4C02-BDB8-585D3351F687}">
-        <File Id="Wallpaper.jpgFile" Name="Wallpaper.jpg" KeyPath="yes"/>
-      </Component>
-      
     </DirectoryRef>
   </Fragment>
 
