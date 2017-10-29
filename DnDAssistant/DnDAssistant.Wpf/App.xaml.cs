@@ -1,9 +1,10 @@
 ﻿using System;
 using System.IO;
-using System.Threading;
+using System.Linq;
 using System.Windows;
 using System.Windows.Threading;
 using DnDAssistant.Core;
+using HtmlAgilityPack;
 
 namespace DnDAssistant.Wpf
 {
@@ -28,7 +29,8 @@ namespace DnDAssistant.Wpf
 
         private void _applicationInitialize(Splash splashWindow)
         {
-            Thread.Sleep(10000);
+            // Check the apllication version
+            CheckVersion();
 
             // Create the main window, but on the UI thread.
             Dispatcher.BeginInvoke(DispatcherPriority.Normal, (Invoker)delegate
@@ -83,6 +85,45 @@ namespace DnDAssistant.Wpf
                 Directory.CreateDirectory(IoC.Get<ApplicationViewModel>().BaseDataPath);
 
             // Add more directories if needed here
+        }
+
+        /// <summary>
+        /// Checks if the current application is the latest version
+        /// </summary>
+        private void CheckVersion()
+        {
+            // Get the assembly Version of this application
+            var currentVersion = System.Reflection.Assembly.GetEntryAssembly().GetName().Version;
+
+            // to get the latest release of the application https://github.com/yurevdb/Dungeoneers-Assistant/releases/latest
+            // Get the latest assembly Version
+
+            // The url to the latest release version of the application
+            var source = "https://github.com/yurevdb/Dungeoneers-Assistant/releases/latest";
+
+            // Creating a htmlweb object
+            var htmlWeb = new HtmlWeb();
+
+            // Get the html of the url provided
+            var documentNode = htmlWeb.Load(source).DocumentNode;
+
+            // Search the html for a span
+            // Search for a span with the class of "css-truncate-target" (this is the span that shows the version number)
+            // Get the first for easy access
+            var versionSpan = documentNode.Descendants("span").Where(d => d.Attributes["class"]?.Value.Contains("css-truncate-target") == true).First();
+            
+            // Create the Version object of the latest version
+            var latestVersion = new Version(versionSpan.InnerHtml);
+
+            // Do the checks
+            if(currentVersion == latestVersion)
+            {
+                // TODO: let user know that the latest version is installed
+            }
+            else
+            {
+                // TODO: do what needs to be done to let the user know that the current version of the application is not the latest version
+            }
         }
     }
 }
