@@ -16,6 +16,9 @@
       <ComponentRef Id="DnDAssistant.Wpf.exe.config"/>
       <ComponentRef Id="DnDAssistant.Wpf.pdb"/>
       <ComponentRef Id="Ninject.dll"/>
+      <ComponentRef Id="HtmlAgilityPack.dll"/>
+      <ComponentRef Id="HtmlAgilityPack.pdb"/>
+      <ComponentRef Id="HtmlAgilityPack.xml"/>
 
       <!--Resource files -->
       <ComponentRef Id="ParchmentTexture.jpg"/>
@@ -67,6 +70,18 @@
 
       <Component Id="Ninject.dll" Guid="{19FA88AF-7D62-492F-94F5-FB2DE047654C}">
         <File Id="Ninject.dllFile" Name="Ninject.dll" KeyPath="yes"/>
+      </Component>
+
+      <Component Id="HtmlAgilityPack.pdb" Guid="{29F95D90-E080-4A00-BF4B-60641BA1A648}">
+        <File Id="HtmlAgilityPack.pdbFile" Name="HtmlAgilityPack.pdb" KeyPath="yes"/>
+      </Component>
+    
+      <Component Id="HtmlAgilityPack.dll" Guid="{4E772251-93FF-4D1F-ACF7-C5AD6839806B}">
+        <File Id="HtmlAgilityPack.dllFile" Name="HtmlAgilityPack.dll" KeyPath="yes"/>
+      </Component>
+        
+      <Component Id="HtmlAgilityPack.xml" Guid="{20FA7B79-417F-4F94-BD74-B939F86BF41B}">
+        <File Id="HtmlAgilityPack.xmlFile" Name="HtmlAgilityPack.xml" KeyPath="yes"/>
       </Component>
       
     </DirectoryRef>
