@@ -8,6 +8,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <OutputName>DungeoneersAssistant-$(Configuration)-$(Platform)</OutputName>
     <OutputType>Package</OutputType>
+    <Cultures>;</Cultures>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <OutputPath>bin\$(Configuration)\</OutputPath>
@@ -87,5 +88,13 @@
       />
   </Target>
   <Target Name="AfterBuild">
+    <GetAssemblyIdentity AssemblyFiles="..\DnDAssistant.Wpf\bin\$(Configuration)\DnDAssistant.Wpf.exe">
+      <Output TaskParameter="Assemblies" ItemName="AssemblyVersion" />
+    </GetAssemblyIdentity>
+    
+    <!-- Rename and move final msi -->
+    <Exec Command="if not exist ..\Installers mkdir ..\Installers"/>
+    <Exec Command="move bin\$(Configuration)\$(OutputName).msi ..\Installers\DungeoneersAssistant-%(AssemblyVersion.Version)-$(Configuration)-$(Platform).msi"/>
+    
   </Target>
 </Project>
