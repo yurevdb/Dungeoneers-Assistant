@@ -120,7 +120,7 @@ namespace DnDAssistant.Wpf
             {
                 // TODO: let user know that the latest version is installed
             }
-            else
+            else if(latestVersion > currentVersion)
             {
                 // TODO: do what needs to be done to let the user know that the current version of the application is not the latest version
             }

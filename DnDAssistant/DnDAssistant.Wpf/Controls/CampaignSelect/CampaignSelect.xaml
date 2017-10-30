@@ -40,6 +40,8 @@
                   BorderBrush="Transparent"
                   Background="Transparent"
                   Panel.ZIndex="1"
+                  ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                  ScrollViewer.VerticalScrollBarVisibility="Hidden"
                   />
 
     </Grid>

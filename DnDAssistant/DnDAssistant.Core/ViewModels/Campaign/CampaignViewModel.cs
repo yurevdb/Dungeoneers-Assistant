@@ -16,12 +16,12 @@ namespace DnDAssistant.Core
         /// <summary>
         /// The name of the Campaign
         /// </summary>
-        public string Name { get; set; }
+        public string Name { get; set; } = null;
 
         /// <summary>
         /// The description of the Campaign
         /// </summary>
-        public string Description { get; set; }
+        public string Description { get; set; } = null;
 
         /// <summary>
         /// The role in the Campaign
@@ -54,6 +54,9 @@ namespace DnDAssistant.Core
 
             // Create the directory for the campaign
             Directory.CreateDirectory(IoC.App.CampaignDataPath);
+
+            // Save the data 
+            new XmlStream(this, $"{IoC.App.CampaignDataPath}\\config.xml").Serialize();
         }
 
         #endregion

@@ -70,7 +70,7 @@ namespace DnDAssistant.Core
             var sr = new XmlSerializer(obj.GetType());
 
             // Serialize the data
-            using (var writer = new FileStream($"{_Path}\\{filename}", FileMode.OpenOrCreate))
+            using (var writer = new FileStream(filename, FileMode.OpenOrCreate))
                 sr.Serialize(writer, obj);
         }
 
@@ -90,7 +90,7 @@ namespace DnDAssistant.Core
             var obj = new T();
 
             // Deserialize the content of the given file to the newly created object
-            using (var reader = new FileStream($"{_Path}\\{filename}", FileMode.Open))
+            using (var reader = new FileStream(filename, FileMode.Open))
                  obj = (T)sr.Deserialize(reader);
 
             // Return the object
@@ -116,7 +116,7 @@ namespace DnDAssistant.Core
         public XmlStream(string filename)
         {
             // Create the filestream
-            _Stream = new FileStream($"{_Path}\\{filename}", FileMode.OpenOrCreate);
+            _Stream = new FileStream(filename, FileMode.OpenOrCreate);
         }
 
         /// <summary>
@@ -130,7 +130,7 @@ namespace DnDAssistant.Core
             _Obj = obj;
 
             // Create the filestream
-            _Stream = new FileStream($"{_Path}\\{filename}", FileMode.OpenOrCreate);
+            _Stream = new FileStream(filename, FileMode.OpenOrCreate);
         }
 
         #endregion
