@@ -17,7 +17,8 @@
 
     <Style TargetType="{x:Type ListViewItem}">
         <Setter Property="Background" Value="Transparent"/>
-        <Setter Property="Height" Value="45"/>
+        <Setter Property="Height" Value="52"/>
+        <Setter Property="Padding" Value="0"/>
         <Setter Property="Margin" Value="0 0 0 5"/>
         <Setter Property="Template">
             <Setter.Value>
@@ -32,15 +33,16 @@
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
 
-                            <Ellipse Width="30" 
-                                     Height="30" 
+                            <Ellipse Width="40" 
+                                     Height="40" 
                                      Grid.Column="0" 
                                      VerticalAlignment="Center"
+                                     HorizontalAlignment="Center"
                                      Stroke="{StaticResource DarkRedBrush}"
                                      StrokeThickness="1"
                                      >
                                 <Ellipse.Fill>
-                                    <ImageBrush ImageSource="{Binding ImageURI}"/>
+                                    <ImageBrush Stretch="Fill" ImageSource="{Binding ImageURI}"/>
                                 </Ellipse.Fill>
                             </Ellipse>
 
@@ -51,7 +53,7 @@
                                        FontSize="{StaticResource FontsizeLarge}"
                                        Foreground="{StaticResource BlackBrush}"
                                        TextTrimming="CharacterEllipsis"
-                                       Margin="5 0 0 0"
+                                       Margin="10 0 0 0"
                                        VerticalAlignment="Center"
                                        ToolTip="{Binding Description}"
                                        ToolTipService.InitialShowDelay="1000"

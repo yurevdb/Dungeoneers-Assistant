@@ -103,22 +103,14 @@ namespace DnDAssistant.Wpf
         public void OpenMainWindow()
         {
             new MainWindow().Show();
-            Close();
+            AnimateOut();
         }
 
         /// <summary>
-        /// Event handler to animate out this window
+        /// Animate out the window
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        private void AnimateOut()
         {
-            // Remove Window_Closing event to prevent endless loop
-            Closing -= Window_Closing;
-
-            // Cancel the closing of the window
-            e.Cancel = true;
-
             // Make topmost so the window is visible during the animation
             Topmost = true;
 

@@ -8,7 +8,6 @@
         WindowStyle="None"
         AllowsTransparency="True"
         WindowStartupLocation="CenterScreen"
-        Closing="Window_Closing"
         Title="CampaignSelect" Height="675" Width="1200">
     
     <Grid Background="{StaticResource SmokeWhiteBrush}" >
@@ -42,6 +41,7 @@
                   Panel.ZIndex="1"
                   ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                   ScrollViewer.VerticalScrollBarVisibility="Hidden"
+                  ScrollViewer.CanContentScroll="False"
                   />
 
     </Grid>

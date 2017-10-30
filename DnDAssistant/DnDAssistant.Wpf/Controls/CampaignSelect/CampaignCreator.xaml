@@ -49,7 +49,8 @@
                     Grid.Row="1"
                     Grid.Column="2"
                     Grid.ColumnSpan="2"
-                    Content="Add Photo"/>
+                    Content="Add Photo"
+                    Click="BtnAddPhoto_Click"/>
 
             <TextBox x:Name="tbxDescription"
                      Grid.Row="2" 
