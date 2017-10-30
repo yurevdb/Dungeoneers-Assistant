@@ -108,6 +108,7 @@
                                         <Button Content="{Binding CampaignName}"
                                                 FontSize="{StaticResource FontsizeSmall}"
                                                 Margin="5"
+                                                Command="{Binding MenuCommand}"
                                                 WindowChrome.IsHitTestVisibleInChrome="True"
                                                 />
 
