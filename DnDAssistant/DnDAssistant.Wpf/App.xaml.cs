@@ -84,11 +84,6 @@ namespace DnDAssistant.Wpf
                 // Create the directory
                 Directory.CreateDirectory(IoC.App.BaseDataPath);
 
-            // If the directory for the resource does not exist...
-            if (!Directory.Exists(IoC.App.ResourcePath))
-                // Create the directory
-                Directory.CreateDirectory(IoC.App.ResourcePath);
-
             // Add more directories if needed here
         }
 
