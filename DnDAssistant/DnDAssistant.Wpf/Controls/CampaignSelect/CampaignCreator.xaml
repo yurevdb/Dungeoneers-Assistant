@@ -15,7 +15,7 @@
 
     <Border Background="{StaticResource WhiteBrush}">
 
-        <Grid Margin="10">
+        <Grid Margin="5">
 
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>

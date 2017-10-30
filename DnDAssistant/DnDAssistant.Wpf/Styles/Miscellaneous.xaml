@@ -22,11 +22,27 @@
             <Setter.Value>
                 <ControlTemplate>
                     <Border Background="{TemplateBinding Background}"
-                            CornerRadius="6"
+                            CornerRadius="0"
                             Padding="6"
                             >
                         <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Ellipse Width="Auto" Height="Auto" Grid.Column="0">
+                                <Ellipse.Fill>
+                                    <ImageBrush>
+                                        <ImageBrush.ImageSource>
+                                            <BitmapImage DecodePixelHeight="50" DecodePixelWidth="50" UriSource="{Binding ImageURI}" />
+                                        </ImageBrush.ImageSource>
+                                    </ImageBrush>
+                                </Ellipse.Fill>
+                            </Ellipse>
+
                             <TextBlock Text="{Binding Name}" 
+                                       Grid.Column="1"
                                        TextWrapping="NoWrap"
                                        FontFamily="{StaticResource Regular}"
                                        FontSize="{StaticResource FontsizeLarge}"
