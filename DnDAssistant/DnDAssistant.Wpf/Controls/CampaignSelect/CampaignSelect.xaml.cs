@@ -46,9 +46,12 @@ namespace DnDAssistant.Wpf
             // Add ListviewItems for every campaign saved on the computer
             foreach(var f in Directory.GetDirectories(IoC.App.BaseDataPath))
             {
+                //TODO: get extra info from the config.xml file in the campaign directory (still needs to be added)
+                var campaignVM = new XmlStream().Deserialize<CampaignViewModel>($"{f}\\config.xml");
+
                 var lvi = new ListViewItem
                 {
-                    Content = f.Split('\\').Last(),
+                    DataContext = campaignVM,
                 };
 
                 lvi.MouseDoubleClick += Lvi_MouseDoubleClick;
@@ -57,7 +60,8 @@ namespace DnDAssistant.Wpf
             }
 
             // Add the ListviewItem to add a new Campaign
-            var nc = new ListViewItem { Content = "New Campaign" };
+            var newCampaignVM = new CampaignViewModel { Name = "New Campaign", Description = "Opens the window to create a new Campaign." };
+            var nc = new ListViewItem { DataContext = newCampaignVM };
             nc.MouseDoubleClick += Lvi_MouseDoubleClick;
             lvCampaigns.Items.Add(nc);
         }
@@ -65,11 +69,11 @@ namespace DnDAssistant.Wpf
         private void Lvi_MouseDoubleClick(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             // Get the sender as a ListViewItem
-            var lvi = sender as ListViewItem;
+            var lvi = (sender as ListViewItem).DataContext as CampaignViewModel;
 
             // If the ListViewItem is the New Campaign
             // Create a New Campaign
-            if((string)lvi.Content == "New Campaign")
+            if(lvi.Name == "New Campaign")
             {
                 // Open the "Create New Campaign"view
                 // And go to the MainWindow for that campaign
@@ -84,7 +88,7 @@ namespace DnDAssistant.Wpf
             }
             
             // Setup the Campaign ViewModel
-            IoC.App.SetCampaign(new CampaignViewModel { Name =  (string)lvi.Content });
+            IoC.App.SetCampaign(lvi);
 
             // Open the Window
             OpenMainWindow();

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Media.Animation;
 using DnDAssistant.Core;
 
@@ -20,11 +21,18 @@ namespace DnDAssistant.Wpf
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            if ((string)(sender as Button).Content == "X")
+            {
+                Close();
+                return;
+            }
+
             // Create a new Campaign with the given data
             var nc = new CampaignViewModel
             {
                 Name = tbxName.Text,
-                Description = tbxDescription.Text
+                Description = tbxDescription.Text,
+                Role = (bool)cbRole.IsChecked ? CampaingRole.DungeonMaster : CampaingRole.Player,
             };
 
             // Setup the campaign structure on the computer
@@ -42,7 +50,7 @@ namespace DnDAssistant.Wpf
         #region Window Event Handlers
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            var anim = new DoubleAnimation(1, TimeSpan.FromMilliseconds(600));
+            var anim = new DoubleAnimation(1, TimeSpan.FromMilliseconds(400));
 
             BeginAnimation(OpacityProperty, anim);
         }
@@ -60,7 +68,7 @@ namespace DnDAssistant.Wpf
             Topmost = true;
 
             // Create the fade out animation
-            var anim = new DoubleAnimation(0, TimeSpan.FromSeconds(1));
+            var anim = new DoubleAnimation(0, TimeSpan.FromMilliseconds(400));
 
             // When the animation is completed, close the window
             anim.Completed += (s, _) => Close();

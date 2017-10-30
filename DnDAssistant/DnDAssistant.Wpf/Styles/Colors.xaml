@@ -5,7 +5,7 @@
     <Color x:Key="Black">#000000</Color>
     <SolidColorBrush x:Key="BlackBrush" Color="{StaticResource Black}"/>
 
-    <Color x:Key="Gray">#a9a9a9</Color>
+    <Color x:Key="Gray">#b5b5b5</Color>
     <SolidColorBrush x:Key="GrayBrush" Color="{StaticResource Gray}"/>
 
     <Color x:Key="White">#ffffff</Color>
