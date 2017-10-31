@@ -102,7 +102,9 @@ namespace DnDAssistant.Wpf
         /// </summary>
         public void OpenMainWindow()
         {
-            new MainWindow().Show();
+            var mw = new MainWindow();
+            Application.Current.MainWindow = mw;
+            mw.Show();
             AnimateOut();
         }
 
@@ -122,6 +124,11 @@ namespace DnDAssistant.Wpf
 
             // Begin the animation
             BeginAnimation(OpacityProperty, anim);
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }

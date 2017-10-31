@@ -58,6 +58,78 @@
 
     </Style>
 
+    <!-- A random button -->
+    <Style x:Key="RandomButton" TargetType="Button" BasedOn="{StaticResource BaseStyle}">
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True"/>
+        <Setter Property="Padding" Value="0"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Margin" Value="5"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Padding="{TemplateBinding Padding}"
+                            Background="{TemplateBinding Background}"
+                            CornerRadius="0"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            >
+                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="true">
+                <Setter Property="Cursor" Value="Hand"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="CogButton" TargetType="Button" BasedOn="{StaticResource RandomButton}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Padding="{TemplateBinding Padding}"
+                            Background="{TemplateBinding Background}"
+                            CornerRadius="0"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            >
+                        <ContentPresenter VerticalAlignment="Center" 
+                                          HorizontalAlignment="Center"
+                                          Name="Content"
+                                          RenderTransformOrigin="0.5 0.5"
+                                          >
+                            <ContentPresenter.RenderTransform>
+                                <RotateTransform Angle="0"/>
+                            </ContentPresenter.RenderTransform>
+                        </ContentPresenter>
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Trigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation To="30" DecelerationRatio="0.9" Duration="0:0:0.1" Storyboard.TargetName="Content" Storyboard.TargetProperty="(RenderTransform).(RotateTransform.Angle)" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation To="0" DecelerationRatio="0.9" Duration="0:0:0.1" Storyboard.TargetName="Content" Storyboard.TargetProperty="(RenderTransform).(RotateTransform.Angle)" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.ExitActions>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
     <!-- A button that contains something else than text -->
     <Style x:Key="GenericContentButtonStyle" TargetType="Button" BasedOn="{StaticResource BaseStyle}">
         <Setter Property="Width" Value="35"/>
@@ -122,10 +194,11 @@
     <!-- Icon style for the dialog window buttons -->
     <Style x:Key="DialogIconButtonStyle" TargetType="Button" BasedOn="{StaticResource BaseStyle}">
         <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True"/>
-        <Setter Property="Padding" Value="10"/>
+        <Setter Property="Padding" Value="2"/>
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="Foreground" Value="{StaticResource BlackBrush}"/>
         <Setter Property="Opacity" Value="1"/>
+        <Setter Property="Width" Value="{Binding ActualHeight, RelativeSource={RelativeSource Self}}"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
@@ -139,8 +212,8 @@
         </Setter>
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Background" Value="{StaticResource BlueBrush}"/>
-                <Setter Property="Foreground" Value="{StaticResource WhiteBrush}"/>
+                <Setter Property="Background" Value="{StaticResource LightRedBrush}"/>
+                <Setter Property="Foreground" Value="{StaticResource SmokeWhiteBrush}"/>
             </Trigger>
         </Style.Triggers>
     </Style>

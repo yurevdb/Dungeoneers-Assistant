@@ -1,0 +1,78 @@
+﻿<UserControl x:Class="DnDAssistant.Wpf.ControlHub"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DnDAssistant.Wpf"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <!--Campaign Image-->
+        <Ellipse Height="40"
+                 Width="{Binding ActualHeight, RelativeSource={RelativeSource Self}}"
+                 Grid.Column="0" 
+                 VerticalAlignment="Center"
+                 HorizontalAlignment="Center"
+                 Margin="5 0 0 0"
+                 Stroke="{StaticResource DarkRedBrush}"
+                 StrokeThickness="1"
+                 SnapsToDevicePixels="True"
+                 Panel.ZIndex="5"
+                 >
+            <Ellipse.Fill>
+                <ImageBrush Stretch="Fill" ImageSource="{Binding ImageURI}"/>
+            </Ellipse.Fill>
+        </Ellipse>
+
+        <!--Fancy Border-->
+        <Border Grid.ColumnSpan="3"
+                SnapsToDevicePixels="True"
+                BorderBrush="{StaticResource DarkRedBrush}"
+                BorderThickness="1"
+                Height="25"
+                Margin="10 0 0 0"
+                VerticalAlignment="Center"
+                Panel.ZIndex="1"
+                />
+
+        <!--Campaign Name-->
+        <TextBlock Text="{Binding Name}"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Left"
+                   TextTrimming="CharacterEllipsis"
+                   TextWrapping="NoWrap"
+                   Margin="5 0 0 0"
+                   Padding="0"
+                   Grid.Column="1"
+                   Height="25"
+                   FontSize="{StaticResource FontsizeRegular}"
+                   FontFamily="{StaticResource Bold}"
+                   SnapsToDevicePixels="True"
+                   Panel.ZIndex="5"
+                   />
+
+        <!--Option/Settings Button-->
+        <Button Style="{StaticResource CogButton}"
+                Width="25"
+                Height="25"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                Grid.Column="2"
+                Click="Button_Click"
+                SnapsToDevicePixels="True"
+                Content="{StaticResource FontAwesomeCogIcon}"
+                FontSize="{StaticResource FontsizeRegular}"
+                FontFamily="{StaticResource FontAwasome}"
+                Foreground="{StaticResource GrayBrush}"
+                Panel.ZIndex="5"
+                BorderBrush="{StaticResource DarkRedBrush}"
+                BorderThickness="1 0 0 0"
+                />
+    </Grid>
+</UserControl>

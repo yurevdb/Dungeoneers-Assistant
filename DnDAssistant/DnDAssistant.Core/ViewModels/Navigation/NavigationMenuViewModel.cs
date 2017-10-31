@@ -9,7 +9,15 @@ namespace DnDAssistant.Core
     {
         #region Public Properties
 
+        /// <summary>
+        /// The <see cref="NavigationMenuViewModel"/> items
+        /// </summary>
         public List<NavigationMenuItemViewModel> Items { get; set; }
+
+        /// <summary>
+        /// The <see cref="NavigationMenuViewModel"/> singleton
+        /// </summary>
+        public static NavigationMenuViewModel Instance => new NavigationMenuViewModel();
 
         #endregion
 
@@ -18,8 +26,9 @@ namespace DnDAssistant.Core
         /// <summary>
         /// Default constructor
         /// </summary>
-        public NavigationMenuViewModel()
+        private NavigationMenuViewModel()
         {
+
             Items = new List<NavigationMenuItemViewModel>
             {
                 new NavigationMenuItemViewModel
@@ -33,6 +42,14 @@ namespace DnDAssistant.Core
                     Title = "Character Creator"
                 },
             };
+
+
+            if (IoC.App.Campaign.Role == CampaingRole.DungeonMaster)
+                Items.Insert(0, new NavigationMenuItemViewModel
+                {
+                    Click = new RelayCommand(() => IoC.UI.ShowMessage(new DialogViewModel { Title = "Error", Message = "This feature is not yet implemented", OkText = "Close" })),
+                    Title = "DM Tools"
+                });
         }
 
         #endregion

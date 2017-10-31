@@ -105,15 +105,13 @@
                                         </Grid.ColumnDefinitions>
                                         
                                         <!--Campaign Controller-->
-                                        <Button Content="{Binding CampaignName}"
-                                                FontSize="{StaticResource FontsizeSmall}"
-                                                Margin="5"
-                                                Command="{Binding MenuCommand}"
-                                                WindowChrome.IsHitTestVisibleInChrome="True"
-                                                />
+                                        <local:ControlHub Grid.Column="0"
+                                                          Width="Auto"
+                                                          WindowChrome.IsHitTestVisibleInChrome="True"
+                                                          />
 
                                         <!-- Title Text -->
-                                        <Viewbox Width="300" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1" Grid.ColumnSpan="3"
+                                        <Viewbox Width="300" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="0" Grid.ColumnSpan="3"
                                                  Margin="0">
                                             <TextBlock Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Title, FallbackValue='Dungeoneers Assistant'}"
                                                        FontFamily="{StaticResource Bold}"
@@ -272,7 +270,7 @@
                                     <!-- Window Buttons -->
                                     <StackPanel Orientation="Horizontal" Grid.Column="2" >
                                         <Button Style="{StaticResource DialogIconButtonStyle}" 
-                                                SnapsToDevicePixels="True" 
+                                                SnapsToDevicePixels="True"
                                                 Command="{Binding CloseCommand}" 
                                                 Content="X"/>
                                     </StackPanel>

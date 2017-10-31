@@ -44,6 +44,14 @@
                   ScrollViewer.CanContentScroll="False"
                   />
 
+        <Button Content="Close"
+                Foreground="{StaticResource GrayBrush}"
+                Style="{StaticResource RandomButton}"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Right"
+                Click="Button_Click"
+                />
+
     </Grid>
     
 </Window>

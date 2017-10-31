@@ -8,7 +8,7 @@
         WindowStyle="None"
         AllowsTransparency="True"
         WindowStartupLocation="CenterScreen"
-        Title="Splash" Height="675" Width="1200">
+        Title="SplashScreen" Height="675" Width="1200">
     <Grid Background="{StaticResource RedBrush}">
 
         <Grid.RowDefinitions>

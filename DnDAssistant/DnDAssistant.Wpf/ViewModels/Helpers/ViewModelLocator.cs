@@ -13,8 +13,6 @@ namespace DnDAssistant.Wpf
 
         public static ApplicationViewModel ApplicationViewModel => IoC.App;
 
-        public static NavigationMenuViewModel NavigationViewModel => IoC.NavigationMenu;
-
         public static CharPageViemModel CharPageViewModel => new CharPageViemModel();
 
         #endregion
