@@ -30,11 +30,18 @@ namespace DnDAssistant.Core
                         }
                         ))
                     },
-                    new MenuItemViewModel { Text = "Log Out", Icon = IconType.None, Click = new RelayCommand(async () => await IoC.UI.ShowMessage(new DialogViewModel
-                    {
-                        Title = "Log Out Failed",
-                        Message = "You were supposed to log me out",
-                    })) },
+
+                    new MenuItemViewModel {
+                        Text = "Switch Campaign",
+                        Icon = IconType.None,
+                        Click = new RelayCommand(async () => await IoC.UI.ShowMessage(new DialogViewModel
+                        {
+                            Title = "Switch Campaign",
+                            Message = "This feature is not yet implemented",
+                            OkText = "Ok"
+                        }
+                        ))
+                    },
                 })
             };
         }

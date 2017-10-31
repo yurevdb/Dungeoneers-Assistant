@@ -7,6 +7,7 @@ namespace DnDAssistant.Core
     /// </summary>
     public class ApplicationViewModel : BaseViewModel
     {
+
         #region Public Properties
 
         /// <summary>
@@ -33,6 +34,16 @@ namespace DnDAssistant.Core
         /// The selected Campaign
         /// </summary>
         public CampaignViewModel Campaign { get; private set; }
+
+        /// <summary>
+        /// Indicating wether the Campaign dropdown menu is visible or not
+        /// </summary>
+        public bool CampaignMenuVisible { get; set; } = false;
+
+        /// <summary>
+        /// Indicating wether any popup is visible
+        /// </summary>
+        public bool AnyPopUpVisible => CampaignMenuVisible;
         
         #endregion
 

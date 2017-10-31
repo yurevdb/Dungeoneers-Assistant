@@ -63,7 +63,12 @@ namespace DnDAssistant.Wpf
             }
 
             // Add the ListviewItem to add a new Campaign
-            var newCampaignVM = new CampaignViewModel { Name = "New Campaign", Description = "Opens the window to create a new Campaign." };
+            var newCampaignVM = new CampaignViewModel
+            {
+                Name = "New Campaign",
+                Description = "Opens the window to create a new Campaign.",
+                ImageURI = "pack://siteoforigin:,,,/Resources/plus.ico"
+            };
             var nc = new ListViewItem { DataContext = newCampaignVM };
             nc.MouseDoubleClick += Lvi_MouseDoubleClick;
             lvCampaigns.Items.Add(nc);

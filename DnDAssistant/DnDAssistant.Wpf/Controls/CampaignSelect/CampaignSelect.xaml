@@ -8,8 +8,9 @@
         WindowStyle="None"
         AllowsTransparency="True"
         WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
         Title="CampaignSelect" Height="675" Width="1200">
-    
+
     <Grid Background="{StaticResource SmokeWhiteBrush}" >
 
 
@@ -28,6 +29,7 @@
                    />
         
         <!-- Listview with the Campaigns-->
+        <!-- TODO: Style to fade in at top and bottom -->
         <ListView x:Name="lvCampaigns"
                   Margin="400 0 0 0"
                   Visibility="Collapsed"
@@ -35,13 +37,12 @@
                   Height="{Binding ActualHeight, ElementName=tbInspirationText}"
                   VerticalAlignment="Center"
                   HorizontalAlignment="Center"
-                  BorderThickness="0"
                   BorderBrush="Transparent"
+                  BorderThickness="0"
                   Background="Transparent"
-                  Panel.ZIndex="1"
-                  ScrollViewer.HorizontalScrollBarVisibility="Disabled"
-                  ScrollViewer.VerticalScrollBarVisibility="Hidden"
                   ScrollViewer.CanContentScroll="False"
+                  ScrollViewer.VerticalScrollBarVisibility="Hidden"
+                  ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                   />
 
         <Button Content="Close"

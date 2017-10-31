@@ -9,7 +9,7 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="120"/>
             <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
 
@@ -29,14 +29,26 @@
                 <ImageBrush Stretch="Fill" ImageSource="{Binding ImageURI}"/>
             </Ellipse.Fill>
         </Ellipse>
+        
+        <!-- Background circle -->
+        <Ellipse Height="40"
+                 Width="{Binding ActualHeight, RelativeSource={RelativeSource Self}}"
+                 Grid.Column="0" 
+                 VerticalAlignment="Center"
+                 HorizontalAlignment="Center"
+                 Margin="5 0 0 0"
+                 SnapsToDevicePixels="True"
+                 Panel.ZIndex="4"
+                 Fill="White"
+                 />
 
         <!--Fancy Border-->
         <Border Grid.ColumnSpan="3"
                 SnapsToDevicePixels="True"
                 BorderBrush="{StaticResource DarkRedBrush}"
                 BorderThickness="1"
-                Height="25"
-                Margin="10 0 0 0"
+                Height="30"
+                Margin="13 0 0 0"
                 VerticalAlignment="Center"
                 Panel.ZIndex="1"
                 />
@@ -44,7 +56,7 @@
         <!--Campaign Name-->
         <TextBlock Text="{Binding Name}"
                    VerticalAlignment="Center"
-                   HorizontalAlignment="Left"
+                   HorizontalAlignment="Center"
                    TextTrimming="CharacterEllipsis"
                    TextWrapping="NoWrap"
                    Margin="5 0 0 0"
@@ -59,8 +71,8 @@
 
         <!--Option/Settings Button-->
         <Button Style="{StaticResource CogButton}"
-                Width="25"
-                Height="25"
+                Width="30"
+                Height="30"
                 VerticalAlignment="Center"
                 HorizontalAlignment="Center"
                 Grid.Column="2"

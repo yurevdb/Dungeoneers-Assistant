@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="DnDAssistant.Wpf.DiceOne"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DnDAssistant.Wpf"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid Width="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=UserControl}}"
+          Height="{Binding ActualHeight, RelativeSource={RelativeSource AncestorType=UserControl}}"
+          >
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Ellipse Fill="Black"
+                 Grid.Row="1"
+                 Grid.Column="1"
+                 Width="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=UserControl}, Converter={local:ParentSizeToDieSizeConverter}}"
+                 Height="{Binding ActualHeight, RelativeSource={RelativeSource AncestorType=UserControl}, Converter={local:ParentSizeToDieSizeConverter}}"
+                 VerticalAlignment="Center"
+                 HorizontalAlignment="Center"
+                 />
+    </Grid>
+</UserControl>

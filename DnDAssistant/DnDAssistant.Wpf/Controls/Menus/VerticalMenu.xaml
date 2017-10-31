@@ -29,7 +29,7 @@
                     
                     <!-- Menu Item -->
                     <Border Background="Transparent"
-                            CornerRadius="8"
+                            CornerRadius="0"
                             Visibility="{Binding Type, Converter={local:MenuItemVisibilityConverter}, ConverterParameter=TextAndIcon}">
 
                         <!-- Trigger -->
@@ -38,7 +38,7 @@
                             <EventTrigger RoutedEvent="MouseEnter">
                                 <BeginStoryboard>
                                     <Storyboard>
-                                        <ColorAnimation To="{StaticResource Blue}" Duration="0:0:0"
+                                        <ColorAnimation To="{StaticResource LightRed}" Duration="0:0:0"
                                                         Storyboard.TargetProperty="Background.Color"/>
                                     </Storyboard>
                                 </BeginStoryboard>
@@ -81,6 +81,8 @@
                                 <TextBlock Name="text"
                                            Foreground="{StaticResource BlackBrush}"
                                            Grid.Column="1"
+                                           FontFamily="{StaticResource Regular}"
+                                           FontSize="{StaticResource FontsizeBigSmall}"
                                            VerticalAlignment="Center"
                                            HorizontalAlignment="Left"
                                            Text="{Binding Text}"/>

@@ -22,13 +22,13 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <local:SplashAnimation Grid.Column="1" 
-                               Grid.Row="1"
-                               VerticalAlignment="Center"
-                               HorizontalAlignment="Center"
-                               Width="250"
-                               Height="{Binding ActualWidth, RelativeSource={RelativeSource Self}}"
-                               />
+        <local:LoadingAnimation Grid.Column="1" 
+                                Grid.Row="1"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Center"
+                                Width="250"
+                                Height="{Binding ActualWidth, RelativeSource={RelativeSource Self}}"
+                                />
 
         <StackPanel Grid.Column="1"
                     Grid.Row="1"

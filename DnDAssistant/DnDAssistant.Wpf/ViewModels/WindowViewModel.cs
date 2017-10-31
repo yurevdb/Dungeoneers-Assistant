@@ -129,18 +129,8 @@ namespace DnDAssistant.Wpf
         /// </summary>
         public double CaptionHeight => TitleHeight - 14;
         #endregion
-        
+
         #region Other
-
-        /// <summary>
-        /// True when the application menu should be visible, false when not
-        /// </summary>
-        public bool ApplicationMenuVisible { get; set; }
-
-        /// <summary>
-        /// True when a popup menu is visible
-        /// </summary>
-        public bool AnyPopupVisible => ApplicationMenuVisible;
 
         /// <summary>
         /// True if we should dim the background
@@ -202,7 +192,7 @@ namespace DnDAssistant.Wpf
             });
             CloseCommand = new RelayCommand(() => _Window.Close());
             MenuCommand = new RelayCommand(() => { new CampaignSelect().Show(); _Window.Close(); });
-            PopupClickawayCommand = new RelayCommand(() => ApplicationMenuVisible = false );
+            PopupClickawayCommand = new RelayCommand(() => IoC.App.CampaignMenuVisible = false );
 
             #endregion
 

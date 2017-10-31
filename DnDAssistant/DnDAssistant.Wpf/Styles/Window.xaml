@@ -173,13 +173,15 @@
                                 <Grid Grid.RowSpan="2">
                                     <!-- Application Menu -->
                                     <local:MenuControl VerticalAlignment="Top"
-                                                       Margin="225 50 0 0"
+                                                       Margin="116 40 0 0"
                                                        Visibility="Collapsed"
-                                                       local:AnimateFadeInOut.Value="{Binding DataContext.ApplicationMenuVisible, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                       local:AnimateFadeInOut.Value="{Binding ApplicationViewModel.CampaignMenuVisible, Source={x:Static local:ViewModelLocator.Instance}}"
                                                        Panel.ZIndex="99"
                                                        DataContext="{Binding AppMenu}"
                                                        HorizontalAlignment="Left"
                                                        Width="150">
+
+                                        <!--local:AnimateFadeInOut.Value="{Binding DataContext.CampaignMenuVisible, RelativeSource={RelativeSource AncestorType=Window}}"-->
 
                                         <!-- Dropshadow effect -->
                                         <local:MenuControl.Effect>

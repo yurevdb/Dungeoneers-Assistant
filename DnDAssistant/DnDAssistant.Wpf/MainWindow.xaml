@@ -36,7 +36,7 @@
         <!-- Popup Overlay for closing any popup of the window -->
         <Border Background="Transparent"
                 Panel.ZIndex="10"
-                Visibility="{Binding AnyPopupVisible, Converter={local:BooleanToVisibilityConverter}}">
+                Visibility="{Binding ApplicationViewModel.AnyPopUpVisible, Source={x:Static local:ViewModelLocator.Instance}, Converter={local:BooleanToVisibilityConverter}}">
             <Border.InputBindings>
                 <MouseBinding MouseAction="LeftClick" Command="{Binding PopupClickawayCommand}"/>
             </Border.InputBindings>
@@ -55,7 +55,7 @@
             </Grid.ColumnDefinitions>
 
             <local:NavigationMenu Grid.Column="0"
-                                  Width="100"/>
+                                  Width="120"/>
 
             <local:PageHost DataContext="{Binding ApplicationViewModel.CurrentPage, Source={x:Static local:ViewModelLocator.Instance}, Converter={local:ApplicationPageToPageConverter}}"
                             CurrentPage="{Binding}" Grid.Column="1"/>

@@ -126,6 +126,26 @@
     <Compile Include="Controls\Dialogs\DialogMessageBox.xaml.cs">
       <DependentUpon>DialogMessageBox.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\LoadingAnimation\DiceSelector.cs" />
+    <Compile Include="Controls\LoadingAnimation\Dice\DiceSix.xaml.cs">
+      <DependentUpon>DiceSix.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LoadingAnimation\Dice\DiceFive.xaml.cs">
+      <DependentUpon>DiceFive.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LoadingAnimation\Dice\DiceFour.xaml.cs">
+      <DependentUpon>DiceFour.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LoadingAnimation\Dice\DiceThree.xaml.cs">
+      <DependentUpon>DiceThree.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LoadingAnimation\Dice\DiceTwo.xaml.cs">
+      <DependentUpon>DiceTwo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LoadingAnimation\Dice\DiceOne.xaml.cs">
+      <DependentUpon>DiceOne.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LoadingAnimation\Dice\ParentSizeToDieSizeConverter.cs" />
     <Compile Include="Controls\MenuControl\MenuControl.xaml.cs">
       <DependentUpon>MenuControl.xaml</DependentUpon>
     </Compile>
@@ -141,8 +161,8 @@
     <Compile Include="Controls\Splashscreen\Splash.xaml.cs">
       <DependentUpon>Splash.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\Splashscreen\SplashAnimation.xaml.cs">
-      <DependentUpon>SplashAnimation.xaml</DependentUpon>
+    <Compile Include="Controls\LoadingAnimation\LoadingAnimation.xaml.cs">
+      <DependentUpon>LoadingAnimation.xaml</DependentUpon>
     </Compile>
     <Compile Include="IoC\UIManager.cs" />
     <Compile Include="Controls\Dialogs\Base\DialogWindow.xaml.cs">
@@ -198,6 +218,30 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Controls\LoadingAnimation\Dice\DiceSix.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\LoadingAnimation\Dice\DiceFive.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\LoadingAnimation\Dice\DiceFour.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\LoadingAnimation\Dice\DiceThree.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\LoadingAnimation\Dice\DiceTwo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\LoadingAnimation\Dice\DiceOne.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\MenuControl\MenuControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -222,7 +266,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\Splashscreen\SplashAnimation.xaml">
+    <Page Include="Controls\LoadingAnimation\LoadingAnimation.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -357,6 +401,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\dnd.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
