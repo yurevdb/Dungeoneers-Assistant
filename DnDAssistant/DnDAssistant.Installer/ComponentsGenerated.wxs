@@ -2,38 +2,41 @@
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
     <Fragment>
         <DirectoryRef Id="INSTALLFOLDER">
-            <Component Id="cmpD8ACFD45C717BF9077F9AC5A0F8A1570" Guid="{931D8678-9997-400D-AF35-9F8011BCE252}">
+            <Component Id="cmpD8ACFD45C717BF9077F9AC5A0F8A1570" Guid="{8F82DC33-E123-4442-8A61-ADEBABE472CA}">
                 <File Id="fil53DDFB55BA0B4DACA1A0D95601D1B2FD" KeyPath="yes" Source="$(var.BasePath)\DnDAssistant.Core.dll" />
             </Component>
-            <Component Id="cmp8A8EF18FD88CFAD3783C4443E4D65EBC" Guid="{06F450A7-96D9-48E3-9D71-13F6A89C0B2E}">
+            <Component Id="cmp8A8EF18FD88CFAD3783C4443E4D65EBC" Guid="{1EF208BF-92D1-4258-8EF3-D8EFF1B227B9}">
                 <File Id="filBBF04348B8D03FE9F5A0BD69E0ED8A53" KeyPath="yes" Source="$(var.BasePath)\DnDAssistant.Core.pdb" />
             </Component>
-            <Component Id="cmp3FEAA74A1C9FDFC99F7E49A6D811CF4E" Guid="{CD006E5F-72FF-4CEC-B85D-0F9741AFD777}">
+            <Component Id="cmp3FEAA74A1C9FDFC99F7E49A6D811CF4E" Guid="{403587FA-B479-40F0-9A65-815CCA537DBC}">
                 <File Id="fil4032CB93FE1F9060643583B4D99538AD" KeyPath="yes" Source="$(var.BasePath)\DnDAssistant.Wpf.exe" />
             </Component>
-            <Component Id="cmpB540AE00A544051224FD9760A5B7F856" Guid="{C9CEA5E9-D97D-455C-950F-6C990CAAA71C}">
+            <Component Id="cmpB540AE00A544051224FD9760A5B7F856" Guid="{37F844E1-3ABE-49F6-812B-025E6B175C9A}">
                 <File Id="filE096C9036F162185E2160C64B1B01C90" KeyPath="yes" Source="$(var.BasePath)\DnDAssistant.Wpf.exe.config" />
             </Component>
-            <Component Id="cmp5273D419DAAB419EA5089B7728D03A62" Guid="{DCD1DDE1-C9A4-4BC2-81B2-FCAFAD8D38E5}">
+            <Component Id="cmp5273D419DAAB419EA5089B7728D03A62" Guid="{17B9EB59-F0BB-4B89-B7E2-78D5EC8ADADB}">
                 <File Id="fil1EF581FE08A30F3116CFED1514486541" KeyPath="yes" Source="$(var.BasePath)\DnDAssistant.Wpf.pdb" />
             </Component>
-            <Component Id="cmp3464F8730E573D338954EC7195CFB4A4" Guid="{C4B96102-775C-4713-BB48-80AF204C654D}">
+            <Component Id="cmp3464F8730E573D338954EC7195CFB4A4" Guid="{A16CCC1A-FE06-4C75-B153-4A7ECAD6DF50}">
                 <File Id="fil73F07CE42A5EF653313AD307E0E68BDC" KeyPath="yes" Source="$(var.BasePath)\HtmlAgilityPack.dll" />
             </Component>
-            <Component Id="cmp667CB89A1E43303706D5205D8E0E018B" Guid="{6B6DDCA2-074E-4380-937D-A7D753166CD0}">
+            <Component Id="cmp667CB89A1E43303706D5205D8E0E018B" Guid="{4521D29A-2217-4BF2-9A32-68E6A5E3148A}">
                 <File Id="fil06CC2F39CCEE24EF8EEA281FA58DF9BF" KeyPath="yes" Source="$(var.BasePath)\HtmlAgilityPack.pdb" />
             </Component>
-            <Component Id="cmp84595EB24158D437D55D4B199DB77E9E" Guid="{B4C00197-B7F9-4AC4-8EFC-34E95443CA53}">
+            <Component Id="cmp84595EB24158D437D55D4B199DB77E9E" Guid="{950FAB1B-F7DD-437B-A752-170C188DFFD6}">
                 <File Id="fil6C8A65D85DCB0034831F2345D27DEF38" KeyPath="yes" Source="$(var.BasePath)\HtmlAgilityPack.xml" />
             </Component>
-            <Component Id="cmpDA60982F820038280380BE207B6E738E" Guid="{81EC0F43-00EF-43C5-B9AA-8FC9624D9511}">
+            <Component Id="cmpDA60982F820038280380BE207B6E738E" Guid="{1817F46A-76DA-49BB-A8B6-82A4A65E71AA}">
                 <File Id="filFB25B5D44CA54D4D876DD0B5BC0DA0E0" KeyPath="yes" Source="$(var.BasePath)\Ninject.dll" />
             </Component>
             <Directory Id="dir41772C233BE465DE0D167364B3BB566C" Name="Resources">
-                <Component Id="cmp094619AA5998FC66E514B1D4C7F94ED6" Guid="{7605DACD-5546-4802-AB72-9D7426A70D1C}">
+                <Component Id="cmpBC13567A85F32549CED6750D3E740DD3" Guid="{9E8E1CBC-8758-4EBF-9D56-D68A59E35DB7}">
+                    <File Id="filCDBC2A86DD3E787F7CF642690CD36438" KeyPath="yes" Source="$(var.BasePath)\Resources\dnd.jpg" />
+                </Component>
+                <Component Id="cmp094619AA5998FC66E514B1D4C7F94ED6" Guid="{920A2650-8658-443A-BECB-F128B71340CB}">
                     <File Id="fil61901D4B8019277C01D188BDF5E1CA09" KeyPath="yes" Source="$(var.BasePath)\Resources\ParchmentTexture.jpg" />
                 </Component>
-                <Component Id="cmp165A05F769E1D2E848CF387616653964" Guid="{7A203EA2-3C10-4DEE-8E9B-FCDD3FD85F0B}">
+                <Component Id="cmp165A05F769E1D2E848CF387616653964" Guid="{4B04763A-CF1A-4510-AE9C-A53951864E35}">
                     <File Id="fil406A523D900CEE682903D8A6036E55E8" KeyPath="yes" Source="$(var.BasePath)\Resources\Wallpaper.jpg" />
                 </Component>
             </Directory>
@@ -50,6 +53,7 @@
             <ComponentRef Id="cmp667CB89A1E43303706D5205D8E0E018B" />
             <ComponentRef Id="cmp84595EB24158D437D55D4B199DB77E9E" />
             <ComponentRef Id="cmpDA60982F820038280380BE207B6E738E" />
+            <ComponentRef Id="cmpBC13567A85F32549CED6750D3E740DD3" />
             <ComponentRef Id="cmp094619AA5998FC66E514B1D4C7F94ED6" />
             <ComponentRef Id="cmp165A05F769E1D2E848CF387616653964" />
         </ComponentGroup>

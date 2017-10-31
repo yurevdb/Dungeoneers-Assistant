@@ -5,8 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DnDAssistant.Wpf"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300"
-             d:DataContext="{}">
+             d:DesignHeight="300" d:DesignWidth="300">
 
     <Border BorderBrush="{StaticResource BronzeBrush}"
             BorderThickness="5"
@@ -14,31 +13,30 @@
             >
         <!-- Border children grid -->
         <Grid Opacity="1">
-            
+
             <Grid Background="{StaticResource BronzeBrush}"
-                  Opacity="0.6">
+                  Opacity="0.5"/>
 
 
             <!-- For displaying the buttons -->
-            <ItemsControl ItemsSource="{Binding}">
+            <Grid Opacity="1"
+                  Background="Transparent">
+                <ItemsControl ItemsSource="{Binding}">
 
-                <!-- Style the items (The navigation buttons) -->
-                <ItemsControl.ItemTemplate>
-                    <DataTemplate>
-                        <Border>
+                    <!-- Style the items (The navigation buttons) -->
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Border>
 
-                            <Button Content="{Binding Title}" 
+                                <Button Content="{Binding Title}" 
                                     Command="{Binding Click}" 
                                     Padding="0 10"
                                     Opacity="1"/>
 
-                        </Border>
-                    </DataTemplate>
-                </ItemsControl.ItemTemplate>
-            </ItemsControl>
-
-
-
+                            </Border>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
             </Grid>
         </Grid>
     </Border>

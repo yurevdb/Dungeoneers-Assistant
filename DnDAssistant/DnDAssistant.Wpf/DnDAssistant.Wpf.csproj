@@ -119,6 +119,9 @@
     <Compile Include="Controls\CampaignSelect\CampaignSelect.xaml.cs">
       <DependentUpon>CampaignSelect.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\ControlHub\ControlHub.xaml.cs">
+      <DependentUpon>ControlHub.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Dialogs\Base\BaseDialogUserControl.cs" />
     <Compile Include="Controls\Dialogs\DialogMessageBox.xaml.cs">
       <DependentUpon>DialogMessageBox.xaml</DependentUpon>
@@ -154,7 +157,7 @@
     <Compile Include="ValueConverters\PathConverters\WidthToCenterTitleBarDesignConverter.cs" />
     <Compile Include="ValueConverters\PathConverters\WidthToNavigationCenterLineConverter.cs" />
     <Compile Include="ValueConverters\PopupContentConverter.cs" />
-    <Compile Include="ValueConverters\ParentWidthToElementWidthConverter.cs" />
+    <Compile Include="ValueConverters\ParentSizeToElementSizeConverter.cs" />
     <Compile Include="ValueConverters\StringRGBToBrushConverter.cs" />
     <Compile Include="ValueConverters\StringToImagesourceConverter.cs" />
     <Compile Include="ValueConverters\StringToVisibilityConverter.cs" />
@@ -184,6 +187,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\CampaignSelect\CampaignSelect.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ControlHub\ControlHub.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -347,6 +354,11 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dnd.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Fody.2.2.0\build\net452\Fody.targets" Condition="Exists('..\packages\Fody.2.2.0\build\net452\Fody.targets')" />

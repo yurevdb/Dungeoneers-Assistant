@@ -17,7 +17,7 @@ namespace DnDAssistant.Core
         /// <summary>
         /// The path to the resource folder
         /// </summary>
-        public string ResourcePath => BaseDataPath + "\\Resources";
+        public string ResourcePath => $"{CampaignDataPath}\\Resources";
 
         /// <summary>
         /// The path to the folder for the Campaign data

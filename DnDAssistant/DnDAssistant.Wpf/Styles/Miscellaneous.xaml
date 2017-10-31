@@ -17,6 +17,8 @@
 
     <Style TargetType="{x:Type ListViewItem}">
         <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Height" Value="52"/>
+        <Setter Property="Padding" Value="0"/>
         <Setter Property="Margin" Value="0 0 0 5"/>
         <Setter Property="Template">
             <Setter.Value>
@@ -31,13 +33,16 @@
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
 
-                            <Ellipse Width="Auto" Height="Auto" Grid.Column="0">
+                            <Ellipse Width="40" 
+                                     Height="40" 
+                                     Grid.Column="0" 
+                                     VerticalAlignment="Center"
+                                     HorizontalAlignment="Center"
+                                     Stroke="{StaticResource DarkRedBrush}"
+                                     StrokeThickness="1"
+                                     >
                                 <Ellipse.Fill>
-                                    <ImageBrush>
-                                        <ImageBrush.ImageSource>
-                                            <BitmapImage DecodePixelHeight="50" DecodePixelWidth="50" UriSource="{Binding ImageURI}" />
-                                        </ImageBrush.ImageSource>
-                                    </ImageBrush>
+                                    <ImageBrush Stretch="Fill" ImageSource="{Binding ImageURI}"/>
                                 </Ellipse.Fill>
                             </Ellipse>
 
@@ -48,6 +53,8 @@
                                        FontSize="{StaticResource FontsizeLarge}"
                                        Foreground="{StaticResource BlackBrush}"
                                        TextTrimming="CharacterEllipsis"
+                                       Margin="10 0 0 0"
+                                       VerticalAlignment="Center"
                                        ToolTip="{Binding Description}"
                                        ToolTipService.InitialShowDelay="1000"
                                        />

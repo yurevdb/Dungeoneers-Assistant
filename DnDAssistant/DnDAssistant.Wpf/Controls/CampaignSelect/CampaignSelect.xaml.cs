@@ -46,17 +46,20 @@ namespace DnDAssistant.Wpf
             // Add ListviewItems for every campaign saved on the computer
             foreach(var f in Directory.GetDirectories(IoC.App.BaseDataPath))
             {
-                //TODO: get extra info from the config.xml file in the campaign directory (still needs to be added)
-                var campaignVM = new XmlStream().Deserialize<CampaignViewModel>($"{f}\\config.xml");
-
-                var lvi = new ListViewItem
+                if (File.Exists($"{f}\\config.xml"))
                 {
-                    DataContext = campaignVM,
-                };
+                    //TODO: get extra info from the config.xml file in the campaign directory (still needs to be added)
+                    var campaignVM = new XmlStream().Deserialize<CampaignViewModel>($"{f}\\config.xml");
 
-                lvi.MouseDoubleClick += Lvi_MouseDoubleClick;
+                    var lvi = new ListViewItem
+                    {
+                        DataContext = campaignVM,
+                    };
 
-                lvCampaigns.Items.Add(lvi);
+                    lvi.MouseDoubleClick += Lvi_MouseDoubleClick;
+
+                    lvCampaigns.Items.Add(lvi);
+                }
             }
 
             // Add the ListviewItem to add a new Campaign
@@ -99,23 +102,17 @@ namespace DnDAssistant.Wpf
         /// </summary>
         public void OpenMainWindow()
         {
-            new MainWindow().Show();
-            Close();
+            var mw = new MainWindow();
+            Application.Current.MainWindow = mw;
+            mw.Show();
+            AnimateOut();
         }
 
         /// <summary>
-        /// Event handler to animate out this window
+        /// Animate out the window
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        private void AnimateOut()
         {
-            // Remove Window_Closing event to prevent endless loop
-            Closing -= Window_Closing;
-
-            // Cancel the closing of the window
-            e.Cancel = true;
-
             // Make topmost so the window is visible during the animation
             Topmost = true;
 
@@ -127,6 +124,11 @@ namespace DnDAssistant.Wpf
 
             // Begin the animation
             BeginAnimation(OpacityProperty, anim);
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }

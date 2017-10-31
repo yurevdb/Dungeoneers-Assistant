@@ -201,7 +201,7 @@ namespace DnDAssistant.Wpf
                 WindowStateButtonTooltipText = (_Window.WindowState == WindowState.Maximized) ? "Normalize" : "Maximize";
             });
             CloseCommand = new RelayCommand(() => _Window.Close());
-            MenuCommand = new RelayCommand(() => ApplicationMenuVisible ^= true);
+            MenuCommand = new RelayCommand(() => { new CampaignSelect().Show(); _Window.Close(); });
             PopupClickawayCommand = new RelayCommand(() => ApplicationMenuVisible = false );
 
             #endregion

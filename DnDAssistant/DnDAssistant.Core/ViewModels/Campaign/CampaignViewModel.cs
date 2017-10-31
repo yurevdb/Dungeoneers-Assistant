@@ -31,7 +31,7 @@ namespace DnDAssistant.Core
         /// <summary>
         /// The URI to the image
         /// </summary>
-        public string ImageURI { get; set; }
+        public string ImageURI { get; set; } = $"pack://siteoforigin:,,,/Resources/dnd.jpg";
 
         #endregion
 
