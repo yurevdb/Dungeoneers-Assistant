@@ -113,11 +113,21 @@
     <Compile Include="Animations\SlideDirection.cs" />
     <Compile Include="Attached Properties\FrameworkElementAttachedProperties.cs" />
     <Compile Include="Attached Properties\Base\BaseAttachedProperty.cs" />
-    <Compile Include="Controls\CampaignSelect\CampaignCreator.xaml.cs">
+    <Compile Include="Controls\CampaignSelect\Redundant\CampaignCreator.xaml.cs">
       <DependentUpon>CampaignCreator.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\CampaignSelect\CampaignSelect.xaml.cs">
+    <Compile Include="Controls\CampaignSelect\CampaignHostWindow.xaml.cs">
+      <DependentUpon>CampaignHostWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CampaignSelect\Redundant\CampaignSelect.xaml.cs">
       <DependentUpon>CampaignSelect.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CampaignSelect\CampaignHostWindowsToPageConverter.cs" />
+    <Compile Include="Controls\CampaignSelect\Pages\Creator.xaml.cs">
+      <DependentUpon>Creator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CampaignSelect\Pages\Selector.xaml.cs">
+      <DependentUpon>Selector.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\ControlHub\ControlHub.xaml.cs">
       <DependentUpon>ControlHub.xaml</DependentUpon>
@@ -202,11 +212,23 @@
     <Compile Include="Views\Test\TestPage.xaml.cs">
       <DependentUpon>TestPage.xaml</DependentUpon>
     </Compile>
-    <Page Include="Controls\CampaignSelect\CampaignCreator.xaml">
+    <Page Include="Controls\CampaignSelect\Redundant\CampaignCreator.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\CampaignSelect\CampaignSelect.xaml">
+    <Page Include="Controls\CampaignSelect\CampaignHostWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\CampaignSelect\Redundant\CampaignSelect.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\CampaignSelect\Pages\Creator.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\CampaignSelect\Pages\Selector.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

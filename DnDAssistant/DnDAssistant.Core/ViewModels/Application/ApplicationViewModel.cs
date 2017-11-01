@@ -31,6 +31,11 @@ namespace DnDAssistant.Core
         public ApplicationPage CurrentPage { get; private set; } = ApplicationPage.Startup;
 
         /// <summary>
+        /// The current page of the campaignhost window
+        /// </summary>
+        public CampaignHostWindows CurrentCampaignPage { get; private set; } = CampaignHostWindows.Selector;
+
+        /// <summary>
         /// The selected Campaign
         /// </summary>
         public CampaignViewModel Campaign { get; private set; }
@@ -55,6 +60,16 @@ namespace DnDAssistant.Core
         {
             // Set the current page of the application
             CurrentPage = page;
+        }
+
+        /// <summary>
+        /// Function to set the current page of the campaign window
+        /// </summary>
+        /// <param name="page">The page to go to</param>
+        public void GoTo(CampaignHostWindows page)
+        {
+            // Set the current page of the application
+            CurrentCampaignPage = page;
         }
 
         /// <summary>

@@ -220,10 +220,10 @@ namespace DnDAssistant.Wpf
                     sb.AddSlideInFromRight(seconds, element.ActualWidth);
                     break;
                 case SlideDirection.Bottom:
-                    sb.AddSlideInFromRight(seconds, element.ActualHeight);
+                    sb.AddSlideInFromBottom(seconds, element.ActualHeight);
                     break;
                 case SlideDirection.Left:
-                    sb.AddSlideInFromRight(seconds, element.ActualWidth);
+                    sb.AddSlideInFromLeft(seconds, element.ActualWidth);
                     break;
             }
             

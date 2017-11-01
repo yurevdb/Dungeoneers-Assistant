@@ -36,7 +36,7 @@ namespace DnDAssistant.Wpf
             // Create the main window, but on the UI thread.
             Dispatcher.BeginInvoke(DispatcherPriority.Normal, (Invoker)delegate
             {
-                MainWindow = new CampaignSelect();
+                MainWindow = new CampaignHostWindow();
                 MainWindow.Show();
             });
         } 

@@ -1,7 +1,10 @@
 ﻿
 FC:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\App.xaml;;
-FC:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Controls\CampaignSelect\CampaignCreator.xaml;;
-FC:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Controls\CampaignSelect\CampaignSelect.xaml;;
+FC:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Controls\CampaignSelect\Redundant\CampaignCreator.xaml;;
+FC:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Controls\CampaignSelect\CampaignHostWindow.xaml;;
+FC:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Controls\CampaignSelect\Redundant\CampaignSelect.xaml;;
+FC:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Controls\CampaignSelect\Pages\Creator.xaml;;
+FC:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Controls\CampaignSelect\Pages\Selector.xaml;;
 FC:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Controls\ControlHub\ControlHub.xaml;;
 FC:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Controls\Dialogs\DialogMessageBox.xaml;;
 FC:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Controls\LoadingAnimation\Dice\DiceSix.xaml;;

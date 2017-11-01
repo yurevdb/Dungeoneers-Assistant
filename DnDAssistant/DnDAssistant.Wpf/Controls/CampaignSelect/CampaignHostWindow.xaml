@@ -1,0 +1,17 @@
+﻿<Window x:Class="DnDAssistant.Wpf.CampaignHostWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DnDAssistant.Wpf"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Title="CampaignHostWindow" Height="675" Width="1200">
+    <Grid Background="{StaticResource SmokeWhiteBrush}">
+        <local:PageHost DataContext="{Binding ApplicationViewModel.CurrentCampaignPage, Source={x:Static local:ViewModelLocator.Instance}, Converter={local:CampaignHostWindowsToPageConverter}}"
+                        CurrentPage="{Binding}"/>
+    </Grid>
+</Window>

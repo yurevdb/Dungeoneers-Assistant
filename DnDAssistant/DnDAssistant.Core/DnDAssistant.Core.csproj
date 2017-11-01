@@ -83,6 +83,7 @@
     <Compile Include="ViewModels\Application\ApplicationViewModel.cs" />
     <Compile Include="ViewModels\Base\BaseViewModel.cs" />
     <Compile Include="ViewModels\Base\RelayCommand.cs" />
+    <Compile Include="ViewModels\Campaign\CampaignHostWindow\CampaignHostWindows.cs" />
     <Compile Include="ViewModels\Campaign\CampaignViewModel.cs" />
     <Compile Include="ViewModels\Campaign\CampaingRole.cs" />
     <Compile Include="ViewModels\Dialogs\BaseDialogViewModel.cs" />
