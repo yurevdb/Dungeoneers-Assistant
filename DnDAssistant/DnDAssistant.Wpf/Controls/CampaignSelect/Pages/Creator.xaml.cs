@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 using System.Windows.Media.Animation;
+using System.Windows.Media.Imaging;
 using DnDAssistant.Core;
 using Microsoft.Win32;
 
@@ -18,12 +21,22 @@ namespace DnDAssistant.Wpf
         private Bitmap _Image;
         private Window _Window;
 
+        public ICommand Click { get; set; }
+
         public Creator()
         {
             InitializeComponent();
 
+            // Page Animations
             PageLoadAnimation = Animation.SlideAndFadeInFromBottom;
             PageUnloadAnimation = Animation.SlideAndFadeOutToBottom;
+
+            // CLick command
+            Click = new RelayCommand(() => AddPhoto());
+            DataContext = Click;
+            
+            // Image Source
+            imgCampaign.ImageSource = new BitmapImage(new Uri("pack://siteoforigin:,,,/Resources/dnd.jpg"));
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -31,6 +44,17 @@ namespace DnDAssistant.Wpf
             if ((string)(sender as Button).Content == "X")
             {
                 IoC.App.GoTo(CampaignHostWindows.Selector);
+                return;
+            }
+
+            if(tbxName.Text == "" || IsInUse(tbxName.Text))
+            {
+                IoC.UI.ShowMessage(new DialogViewModel
+                {
+                    Title = "Error",
+                    OkText = "Close",
+                    Message = (tbxName.Text == "") ? "Please enter a name for your campaign." : "A campaign with that name already exists."
+                });
                 return;
             }
 
@@ -59,24 +83,40 @@ namespace DnDAssistant.Wpf
         }
 
         /// <summary>
+        /// Check wether the name is already been used for a campaign
+        /// </summary>
+        /// <param name="Name">The name to check</param>
+        /// <returns><see cref="bool"/></returns>
+        private bool IsInUse(string Name)
+        {
+            foreach(var file in Directory.GetDirectories(IoC.App.BaseDataPath))
+            {
+                if (Name == file.Split('\\').Last())
+                    return true;
+            }
+
+            return false;
+        }
+
+        /// <summary>
         /// Event handler for the add photo button
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void BtnAddPhoto_Click(object sender, RoutedEventArgs e)
+        private void AddPhoto()
         {
             // Create a OpenFileDialog to open a file, duh
             var ofd = new OpenFileDialog
             {
                 InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),
                 Title = "Choose Image",
-                Multiselect = false
+                Multiselect = false,
+                Filter = "Image Files(*.BMP;*.JPG;*.PNG)|*.BMP;*.JPG;*.PNG|All files (*.*)|*.*"
             };
 
             // Open the ofd and if nothing was selected, do fuck all
             if (ofd.ShowDialog() == false) return;
 
             _Image = new Bitmap(ofd.FileName);
+            imgCampaign.ImageSource = new BitmapImage(new Uri(ofd.FileName));
             _ImageName = ofd.FileName.Split('\\').Last();
         }
 

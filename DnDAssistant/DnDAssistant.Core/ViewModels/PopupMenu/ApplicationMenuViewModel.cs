@@ -24,7 +24,7 @@ namespace DnDAssistant.Core
                         Icon = IconType.Cog,
                         Click = new RelayCommand(async () => await IoC.UI.ShowMessage(new DialogViewModel
                         {
-                            Title = "Settings",
+                            Title = "Error",
                             Message = "This should take you to the settings menu",
                             OkText = "Close"
                         }
@@ -34,13 +34,15 @@ namespace DnDAssistant.Core
                     new MenuItemViewModel {
                         Text = "Switch Campaign",
                         Icon = IconType.None,
-                        Click = new RelayCommand(async () => await IoC.UI.ShowMessage(new DialogViewModel
+                        Click = new RelayCommand(()=>
                         {
-                            Title = "Switch Campaign",
-                            Message = "This feature is not yet implemented",
-                            OkText = "Ok"
-                        }
-                        ))
+                            IoC.UI.ShowMessage(new DialogViewModel
+                            {
+                                Title = "Error",
+                                Message = "This feature is not yet implemented",
+                                OkText = "Close"
+                            });
+                        })
                     },
                 })
             };

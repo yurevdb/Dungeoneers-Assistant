@@ -94,7 +94,7 @@
                                     <!-- Buttons and Title -->
                                     <Grid Panel.ZIndex="10"
                                           Background="Transparent"
-                                          VerticalAlignment="Top"
+                                          VerticalAlignment="Center"
                                           Height="{Binding TitleHeight, FallbackValue=50}"
                                           ClipToBounds="True">
 
@@ -120,7 +120,7 @@
                                         </Viewbox>
 
                                         <!-- Window Buttons -->
-                                        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Grid.Column="2" Margin="5" >
+                                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Grid.Column="2" Margin="5" >
                                             <!-- Window minimize button-->
                                             <Button Style="{StaticResource GenericContentButtonStyle}"
                                                     Command="{Binding MinimizeCommand}"
@@ -173,7 +173,7 @@
                                 <Grid Grid.RowSpan="2">
                                     <!-- Application Menu -->
                                     <local:MenuControl VerticalAlignment="Top"
-                                                       Margin="116 40 0 0"
+                                                       Margin="113 43 0 0"
                                                        Visibility="Collapsed"
                                                        local:AnimateFadeInOut.Value="{Binding ApplicationViewModel.CampaignMenuVisible, Source={x:Static local:ViewModelLocator.Instance}}"
                                                        Panel.ZIndex="99"

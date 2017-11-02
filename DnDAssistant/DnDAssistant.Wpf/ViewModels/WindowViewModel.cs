@@ -122,7 +122,7 @@ namespace DnDAssistant.Wpf
         /// <summary>
         /// The height of the title bar
         /// </summary>
-        public int TitleHeight { get; set; } = 50;
+        public int TitleHeight { get; set; } = 55;
 
         /// <summary>
         /// The height of the caption bar

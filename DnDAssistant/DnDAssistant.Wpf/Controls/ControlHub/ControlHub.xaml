@@ -9,12 +9,12 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="110"/>
             <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
 
         <!--Campaign Image-->
-        <Ellipse Height="40"
+        <Ellipse Height="48"
                  Width="{Binding ActualHeight, RelativeSource={RelativeSource Self}}"
                  Grid.Column="0" 
                  VerticalAlignment="Center"
@@ -26,12 +26,17 @@
                  Panel.ZIndex="10"
                  >
             <Ellipse.Fill>
-                <ImageBrush Stretch="Fill" ImageSource="{Binding Campaign.ImageURI}"/>
+                <ImageBrush Stretch="Fill" 
+                            ImageSource="{Binding Campaign.ImageURI}"
+                            />
             </Ellipse.Fill>
+            <Ellipse.InputBindings>
+                <MouseBinding MouseAction="LeftClick" Command="{Binding SwitchAroo}"/>
+            </Ellipse.InputBindings>
         </Ellipse>
         
         <!-- Background circle -->
-        <Ellipse Height="40"
+        <Ellipse Height="48"
                  Width="{Binding ActualHeight, RelativeSource={RelativeSource Self}}"
                  Grid.Column="0" 
                  VerticalAlignment="Center"
@@ -52,6 +57,9 @@
                 VerticalAlignment="Center"
                 Panel.ZIndex="4"
                 Background="Transparent"
+                ToolTip="{Binding Campaign.Name}"
+                ToolTipService.InitialShowDelay="1000"
+                Cursor="Hand"
                 >
             <Border.InputBindings>
                 <MouseBinding MouseAction="LeftClick" Command="{Binding OpenDropDown}"/>
@@ -61,13 +69,13 @@
         <!--Campaign Name-->
         <TextBlock Text="{Binding Campaign.Name}"
                    VerticalAlignment="Center"
-                   HorizontalAlignment="Left"
+                   HorizontalAlignment="Center"
                    TextTrimming="CharacterEllipsis"
                    TextWrapping="NoWrap"
-                   Margin="5 0 0 0"
+                   Margin="5 5 0 0"
                    Padding="0"
                    Grid.Column="1"
-                   Height="25"
+                   Height="30"
                    FontSize="{StaticResource FontsizeRegular}"
                    FontFamily="{StaticResource Bold}"
                    SnapsToDevicePixels="True"

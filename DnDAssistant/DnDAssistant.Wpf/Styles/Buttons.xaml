@@ -111,7 +111,7 @@
                     <Border Padding="{TemplateBinding Padding}"
                             Background="{TemplateBinding Background}"
                             CornerRadius="{Binding ActualWidth, RelativeSource={RelativeSource Self}}"
-                            BorderThickness="1"
+                            BorderThickness="2"
                             BorderBrush="{StaticResource RedBrush}"
                             >
                         <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center"

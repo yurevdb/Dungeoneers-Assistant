@@ -6,8 +6,8 @@
     <!-- Fonts -->
     <FontFamily x:Key="FontAwasome">pack://application;,,,/Fonts/#FontAwesome</FontFamily>
     <FontFamily x:Key="Fancy">pack://application;,,,/Fonts/#Vampire Calligraphy</FontFamily>
-    <FontFamily x:Key="Regular">pack://application;,,,/Fonts/#Montserrat-Regular</FontFamily>
-    <FontFamily x:Key="Bold">pack://application;,,,/Fonts/#Montserrat-Bold</FontFamily>
+    <FontFamily x:Key="Regular">pack://application;,,,/Fonts/#Roboto Regular</FontFamily>
+    <FontFamily x:Key="Bold">pack://application;,,,/Fonts/#Roboto Bold</FontFamily>
 
     <!--Set standard fonts-->
     <Style TargetType="{x:Type Control}" x:Key="BaseStyle">
