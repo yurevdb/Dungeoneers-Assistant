@@ -210,6 +210,67 @@
             </Setter.Value>
         </Setter>
     </Style>
+    
+    <!-- Error Button -->
+    <Style x:Key="ErrorButton" TargetType="Button" BasedOn="{StaticResource BaseStyle}">
+        <Setter Property="Margin" Value="0"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="SnapsToDevicePixels" Value="True"/>
+        <Setter Property="IsHitTestVisible" Value="True"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Padding="{TemplateBinding Padding}"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{StaticResource DarkRedBrush}"
+                            BorderThickness="0 2 2 2"
+                            >
+                        <Grid>
+                            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center"
+                                   Text="{TemplateBinding Content}"
+                                   FontSize="{StaticResource FontsizeRegular}"/>
+
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Ellipse Fill="{StaticResource LightRedBrush}" 
+                                         Grid.Row="0" 
+                                         Grid.Column="1"
+                                         Width="12"
+                                         VerticalAlignment="Center"
+                                         HorizontalAlignment="Center"
+                                         Panel.ZIndex="1"
+                                         SnapsToDevicePixels="True"
+                                         Height="{Binding ActualWidth, RelativeSource={RelativeSource Self}}"
+                                         />
+
+                                <TextBlock Text="{TemplateBinding Tag}"
+                                           Grid.Row="0"
+                                           Grid.Column="1"
+                                           Panel.ZIndex="2"
+                                           Margin="1 0 0 0"
+                                           VerticalAlignment="Center"
+                                           HorizontalAlignment="Center"
+                                           SnapsToDevicePixels="True"
+                                           FontFamily="{StaticResource Regular}"
+                                           Foreground="{StaticResource WhiteBrush}"
+                                           FontSize="{StaticResource FontsizeExtraSmall}"
+                                           />
+
+                            </Grid>
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 
     <!-- A button that contains something else than text -->
     <Style x:Key="GenericContentButtonStyle" TargetType="Button" BasedOn="{StaticResource BaseStyle}">

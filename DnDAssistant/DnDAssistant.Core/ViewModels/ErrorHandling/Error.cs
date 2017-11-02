@@ -55,6 +55,19 @@
             Type = type;
             Message = message;
         }
+        
+        /// <summary>
+        /// Constructor with <see cref="ErrorType"/> and <see cref="Message"/> parameter
+        /// </summary>
+        /// <param name="type">The type of error</param>
+        /// <param name="message">The error message</param>
+        /// <param name="needToShow">Indicator to show the error</param>
+        public Error(ErrorType type, string message, bool needToShow)
+        {
+            Type = type;
+            Message = message;
+            NeedToShow = needToShow;
+        }
 
         #endregion
 

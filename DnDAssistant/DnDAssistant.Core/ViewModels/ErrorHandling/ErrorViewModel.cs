@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Windows.Input;
 
 namespace DnDAssistant.Core
 {
@@ -8,8 +10,8 @@ namespace DnDAssistant.Core
     public class ErrorViewModel : BaseViewModel
     {
         #region Private Members
-
-        private List<Error> _Errors = new List<Error>();
+        
+        private ObservableCollection<Error> _Errors = new ObservableCollection<Error>();
 
         #endregion
 
@@ -18,17 +20,31 @@ namespace DnDAssistant.Core
         /// <summary>
         /// The list of errors
         /// </summary>
-        public List<Error> Errors => _Errors;
+        public ObservableCollection<Error> Errors => _Errors;
 
         /// <summary>
         /// Indicator if there is at least 1 error
         /// </summary>
-        public bool AnyError => _Errors.Count > 0;
+        public bool AnyError { get; set; }
 
         /// <summary>
         /// Gets the highest <see cref="ErrorType"/> in the error list
         /// </summary>
         public ErrorType HighestErrorType => CheckErrorTypes();
+
+        /// <summary>
+        /// The amount of unhandled errors in the errorlist
+        /// </summary>
+        public string ShowCount { get; set; }
+
+        #endregion
+
+        #region Command
+
+        /// <summary>
+        /// Command to handle the errors
+        /// </summary>
+        public ICommand OpenErrors { get; set; }
 
         #endregion
 
@@ -39,7 +55,28 @@ namespace DnDAssistant.Core
         /// </summary>
         public ErrorViewModel()
         {
+            _Errors.CollectionChanged += (s,e) => SetThings();
 
+            OpenErrors = new RelayCommand(() =>
+            {
+                var errors = _Errors;
+                foreach (var error in errors)
+                {
+                    if (error.NeedToShow)
+                    {
+                        IoC.UI.ShowMessage(new DialogViewModel
+                        {
+                            Title = error.Type.ToString(),
+                            OkText = "Close",
+                            Message = $"{error.Message}",
+                        });
+
+                        error.NeedToShow = false;
+
+                        SetThings();
+                    }
+                }
+            });
         }
 
         #endregion
@@ -60,7 +97,7 @@ namespace DnDAssistant.Core
         #region Private Methods
 
         /// <summary>
-        /// Add and error to the list of errors
+        /// Get the highest errortype
         /// </summary>
         /// <param name="Error"></param>
         private ErrorType CheckErrorTypes()
@@ -74,6 +111,30 @@ namespace DnDAssistant.Core
             }
 
             return type;
+        }
+
+        /// <summary>
+        /// Get the amount of errors that need to be shown
+        /// </summary>
+        /// <returns></returns>
+        private int CountErrorsToShow()
+        {
+            var count = 0;
+
+            foreach (var e in _Errors)
+                if (e.NeedToShow)
+                    count++;
+
+            return count;
+        }
+
+        /// <summary>
+        /// Sets many of things
+        /// </summary>
+        private void SetThings()
+        {
+            AnyError = (CountErrorsToShow() > 0) ? true : false;
+            ShowCount = CountErrorsToShow().ToString();
         }
 
         #endregion

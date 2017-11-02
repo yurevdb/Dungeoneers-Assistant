@@ -15,13 +15,19 @@ namespace DnDAssistant.Wpf
 
         #region Public Properties
 
+        #region Commands
         public ICommand OpenDropDown { get; set; }
 
-        public ICommand SwitchAroo { get; set; }
+        public ICommand SwitchAroo { get; set; } 
+        #endregion
 
-        public bool ShowError => IoC.Error.AnyError;
+        #region Error Handling
+        //public bool ShowError => IoC.Error.AnyError;
 
-        public ErrorType HighestErrorType => IoC.Error.HighestErrorType;
+        //public ErrorType HighestErrorType => IoC.Error.HighestErrorType;
+
+        //public string ErrorAmount => IoC.Error.ShowCount.ToString();
+        #endregion
 
         public CampaignViewModel Campaign { get; set; }
 
@@ -46,6 +52,7 @@ namespace DnDAssistant.Wpf
                 Application.Current.MainWindow.Show();
                 mw.Close();
             } );
+            
         }
 
         #endregion
