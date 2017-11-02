@@ -10,12 +10,18 @@
     <Grid Background="{StaticResource SmokeWhiteBrush}">
 
         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
         </Grid.ColumnDefinitions>
 
-        <Grid Grid.Column="1" Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Column="1" Grid.Row="1" Margin="5">
 
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
@@ -29,11 +35,12 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
             <TextBox x:Name="tbxName"
                          Grid.Row="0" 
-                         Grid.ColumnSpan="4"
+                         Grid.ColumnSpan="5"
                          Style="{StaticResource LineTextBox}"
                          Tag="Name"
                          Background="{StaticResource SmokeWhiteBrush}"/>
@@ -47,14 +54,14 @@
 
             <Button x:Name="btnAddPhoto"
                         Grid.Row="1"
-                        Grid.Column="2"
+                        Grid.Column="3"
                         Grid.ColumnSpan="2"
                         Content="Add Photo"
                         Click="BtnAddPhoto_Click"/>
 
             <TextBox x:Name="tbxDescription"
                          Grid.Row="2" 
-                         Grid.ColumnSpan="4"
+                         Grid.ColumnSpan="5"
                          Style="{StaticResource MultiLineTextBox}"
                          Tag="Description"
                          Background="{StaticResource SmokeWhiteBrush}" 
@@ -62,23 +69,24 @@
                          />
 
             <Button Grid.Row="3" 
-                        Grid.Column="0"
-                        Grid.ColumnSpan="3"
-                        Content="Create" 
-                        ToolTip="Creates the Campaign and opens the application" 
-                        Click="Button_Click"
-                        IsDefault="True"
-                        Margin="0 5 0 0"
-                        />
+                    Grid.Column="1"
+                    Style="{StaticResource RoundOkButton}"
+                    Content="Ok"
+                    ToolTip="Creates the Campaign and opens the application" 
+                    Click="Button_Click"
+                    IsDefault="True"
+                    Margin="0 10 0 0"
+                    />
 
             <Button Grid.Row="3" 
-                        Grid.Column="3"
-                        Content="X" 
-                        ToolTip="Cancel" 
-                        Click="Button_Click"
-                        IsCancel="True"
-                        Margin="5 5 0 0"
-                        />
+                    Grid.Column="3"
+                    Content="X"
+                    Style="{StaticResource RoundOkButton}"
+                    ToolTip="Cancel" 
+                    Click="Button_Click"
+                    IsCancel="True"
+                    Margin="0 10 0 0"
+                    />
 
         </Grid>
     </Grid>

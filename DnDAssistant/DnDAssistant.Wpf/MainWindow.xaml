@@ -41,8 +41,7 @@
                 <MouseBinding MouseAction="LeftClick" Command="{Binding PopupClickawayCommand}"/>
             </Border.InputBindings>
         </Border>
-
-
+        
         <!--#endregion-->
         
         <!--#region Actual Content-->

@@ -54,8 +54,94 @@
     </Style>
 
     <!-- General icon button style -->
-    <Style x:Key="IconButtonStyle" TargetType="Button" BasedOn="{StaticResource BaseStyle}">
+    <Style x:Key="RoundedButtonStyle" TargetType="Button" BasedOn="{StaticResource BaseStyle}">
+        <Setter Property="Background" Value="{StaticResource RedBrush}"/>
+        <Setter Property="Foreground" Value="{StaticResource SmokeWhiteBrush}"/>
+        <Setter Property="Padding" Value="5"/>
+        <Setter Property="Margin" Value="2"/>
+        <Setter Property="Opacity" Value="1"/>
+        <Setter Property="SnapsToDevicePixels" Value="True"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Padding="{TemplateBinding Padding}"
+                            Background="{TemplateBinding Background}"
+                            CornerRadius="6"
+                            BorderThickness="1"
+                            BorderBrush="{StaticResource DarkRedBrush}"
+                            >
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center"
+                                   TextWrapping="Wrap"
+                                   Text="{TemplateBinding Content}"
+                                   FontSize="{StaticResource FontsizeRegular}"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Trigger.EnterActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation Duration="0:0:0.1" To="{StaticResource LightRed}" AccelerationRatio="0.9" Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.EnterActions>
+                <Trigger.ExitActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation Duration="0:0:0.1" To="{StaticResource Red}" AccelerationRatio="0.9" Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.ExitActions>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
 
+    <Style x:Key="RoundOkButton" TargetType="Button" BasedOn="{StaticResource BaseStyle}">
+        <Setter Property="Background" Value="{StaticResource WhiteBrush}"/>
+        <Setter Property="Foreground" Value="{StaticResource RedBrush}"/>
+        <Setter Property="Width" Value="{Binding ActualHeight, RelativeSource={RelativeSource Self}}"/>
+        <Setter Property="Padding" Value="5"/>
+        <Setter Property="Opacity" Value="1"/>
+        <Setter Property="SnapsToDevicePixels" Value="True"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Padding="{TemplateBinding Padding}"
+                            Background="{TemplateBinding Background}"
+                            CornerRadius="{Binding ActualWidth, RelativeSource={RelativeSource Self}}"
+                            BorderThickness="1"
+                            BorderBrush="{StaticResource RedBrush}"
+                            >
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center"
+                                   TextWrapping="Wrap"
+                                   Text="{TemplateBinding Content}"
+                                   FontSize="{StaticResource FontsizeRegular}"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Trigger.EnterActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation Duration="0:0:0.1" To="{StaticResource LightRed}" AccelerationRatio="0.9" Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)"/>
+                            <ColorAnimation Duration="0:0:0.1" To="{StaticResource White}" AccelerationRatio="0.9" Storyboard.TargetProperty="(Foreground).(SolidColorBrush.Color)"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.EnterActions>
+                <Trigger.ExitActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation Duration="0:0:0.1" To="{StaticResource White}" AccelerationRatio="0.9" Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)"/>
+                            <ColorAnimation Duration="0:0:0.1" To="{StaticResource Red}" AccelerationRatio="0.9" Storyboard.TargetProperty="(Foreground).(SolidColorBrush.Color)"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.ExitActions>
+            </Trigger>
+        </Style.Triggers>
     </Style>
 
     <!-- A random button -->

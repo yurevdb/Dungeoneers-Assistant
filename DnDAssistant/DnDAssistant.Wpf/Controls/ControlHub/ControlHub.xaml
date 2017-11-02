@@ -9,7 +9,7 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="120"/>
+            <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
 
@@ -21,12 +21,12 @@
                  HorizontalAlignment="Center"
                  Margin="5 0 0 0"
                  Stroke="{StaticResource DarkRedBrush}"
-                 StrokeThickness="1"
+                 StrokeThickness="2"
                  SnapsToDevicePixels="True"
-                 Panel.ZIndex="5"
+                 Panel.ZIndex="10"
                  >
             <Ellipse.Fill>
-                <ImageBrush Stretch="Fill" ImageSource="{Binding ImageURI}"/>
+                <ImageBrush Stretch="Fill" ImageSource="{Binding Campaign.ImageURI}"/>
             </Ellipse.Fill>
         </Ellipse>
         
@@ -38,7 +38,7 @@
                  HorizontalAlignment="Center"
                  Margin="5 0 0 0"
                  SnapsToDevicePixels="True"
-                 Panel.ZIndex="4"
+                 Panel.ZIndex="5"
                  Fill="White"
                  />
 
@@ -46,17 +46,22 @@
         <Border Grid.ColumnSpan="3"
                 SnapsToDevicePixels="True"
                 BorderBrush="{StaticResource DarkRedBrush}"
-                BorderThickness="1"
+                BorderThickness="2"
                 Height="30"
                 Margin="13 0 0 0"
                 VerticalAlignment="Center"
-                Panel.ZIndex="1"
-                />
+                Panel.ZIndex="4"
+                Background="Transparent"
+                >
+            <Border.InputBindings>
+                <MouseBinding MouseAction="LeftClick" Command="{Binding OpenDropDown}"/>
+            </Border.InputBindings>
+        </Border>
 
         <!--Campaign Name-->
-        <TextBlock Text="{Binding Name}"
+        <TextBlock Text="{Binding Campaign.Name}"
                    VerticalAlignment="Center"
-                   HorizontalAlignment="Center"
+                   HorizontalAlignment="Left"
                    TextTrimming="CharacterEllipsis"
                    TextWrapping="NoWrap"
                    Margin="5 0 0 0"
@@ -66,25 +71,23 @@
                    FontSize="{StaticResource FontsizeRegular}"
                    FontFamily="{StaticResource Bold}"
                    SnapsToDevicePixels="True"
-                   Panel.ZIndex="5"
+                   Panel.ZIndex="3"
                    />
 
         <!--Option/Settings Button-->
-        <Button Style="{StaticResource CogButton}"
-                Width="30"
+        <Button Style="{StaticResource RandomButton}"
+                Width="25"
                 Height="30"
                 VerticalAlignment="Center"
-                HorizontalAlignment="Center"
+                HorizontalAlignment="Left"
                 Grid.Column="2"
-                Click="Button_Click"
                 SnapsToDevicePixels="True"
-                Content="{StaticResource FontAwesomeCogIcon}"
-                FontSize="{StaticResource FontsizeRegular}"
-                FontFamily="{StaticResource FontAwasome}"
                 Foreground="{StaticResource GrayBrush}"
-                Panel.ZIndex="5"
-                BorderBrush="{StaticResource DarkRedBrush}"
-                BorderThickness="1 0 0 0"
-                />
+                Panel.ZIndex="3"
+                BorderThickness="0"
+                >
+            <Path Stroke="{StaticResource GrayBrush}" StrokeThickness="2"
+                  Data="M0,0 L7,7 L14,0"/>
+        </Button>
     </Grid>
 </UserControl>

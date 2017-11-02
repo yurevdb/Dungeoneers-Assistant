@@ -35,7 +35,7 @@
                             </Border>
 
                             <!--The Main window content -->
-                            <Grid>
+                            <Grid >
                                 <!-- Corner clipping -->
                                 <Grid.OpacityMask>
                                     <VisualBrush Visual="{Binding ElementName=Container}"/>
