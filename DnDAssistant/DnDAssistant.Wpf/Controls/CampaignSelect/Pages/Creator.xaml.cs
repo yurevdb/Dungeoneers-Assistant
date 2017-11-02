@@ -41,12 +41,6 @@ namespace DnDAssistant.Wpf
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if ((string)(sender as Button).Content == "X")
-            {
-                IoC.App.GoTo(CampaignHostWindows.Selector);
-                return;
-            }
-
             if(tbxName.Text == "" || IsInUse(tbxName.Text))
             {
                 IoC.UI.ShowMessage(new DialogViewModel
@@ -80,6 +74,12 @@ namespace DnDAssistant.Wpf
             IoC.App.SetCampaign(nc);
 
             OpenMainWindow();
+        }
+
+        private void ButtonClose_Click(object sender, RoutedEventArgs e)
+        {
+            IoC.App.GoTo(CampaignHostWindows.Selector);
+            return;
         }
 
         /// <summary>
