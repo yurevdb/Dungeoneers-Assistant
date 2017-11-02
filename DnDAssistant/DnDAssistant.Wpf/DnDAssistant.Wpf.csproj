@@ -113,19 +113,44 @@
     <Compile Include="Animations\SlideDirection.cs" />
     <Compile Include="Attached Properties\FrameworkElementAttachedProperties.cs" />
     <Compile Include="Attached Properties\Base\BaseAttachedProperty.cs" />
-    <Compile Include="Controls\CampaignSelect\CampaignCreator.xaml.cs">
-      <DependentUpon>CampaignCreator.xaml</DependentUpon>
+    <Compile Include="Controls\CampaignSelect\CampaignHostWindow.xaml.cs">
+      <DependentUpon>CampaignHostWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\CampaignSelect\CampaignSelect.xaml.cs">
-      <DependentUpon>CampaignSelect.xaml</DependentUpon>
+    <Compile Include="Controls\CampaignSelect\CampaignHostWindowsToPageConverter.cs" />
+    <Compile Include="Controls\CampaignSelect\Pages\Creator.xaml.cs">
+      <DependentUpon>Creator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CampaignSelect\Pages\Selector.xaml.cs">
+      <DependentUpon>Selector.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\ControlHub\ControlHub.xaml.cs">
       <DependentUpon>ControlHub.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\ControlHub\ControlHubViewModel.cs" />
     <Compile Include="Controls\Dialogs\Base\BaseDialogUserControl.cs" />
     <Compile Include="Controls\Dialogs\DialogMessageBox.xaml.cs">
       <DependentUpon>DialogMessageBox.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\LoadingAnimation\DiceSelector.cs" />
+    <Compile Include="Controls\LoadingAnimation\Dice\DiceSix.xaml.cs">
+      <DependentUpon>DiceSix.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LoadingAnimation\Dice\DiceFive.xaml.cs">
+      <DependentUpon>DiceFive.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LoadingAnimation\Dice\DiceFour.xaml.cs">
+      <DependentUpon>DiceFour.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LoadingAnimation\Dice\DiceThree.xaml.cs">
+      <DependentUpon>DiceThree.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LoadingAnimation\Dice\DiceTwo.xaml.cs">
+      <DependentUpon>DiceTwo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LoadingAnimation\Dice\DiceOne.xaml.cs">
+      <DependentUpon>DiceOne.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LoadingAnimation\Dice\ParentSizeToDieSizeConverter.cs" />
     <Compile Include="Controls\MenuControl\MenuControl.xaml.cs">
       <DependentUpon>MenuControl.xaml</DependentUpon>
     </Compile>
@@ -141,14 +166,15 @@
     <Compile Include="Controls\Splashscreen\Splash.xaml.cs">
       <DependentUpon>Splash.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\Splashscreen\SplashAnimation.xaml.cs">
-      <DependentUpon>SplashAnimation.xaml</DependentUpon>
+    <Compile Include="Controls\LoadingAnimation\LoadingAnimation.xaml.cs">
+      <DependentUpon>LoadingAnimation.xaml</DependentUpon>
     </Compile>
     <Compile Include="IoC\UIManager.cs" />
     <Compile Include="Controls\Dialogs\Base\DialogWindow.xaml.cs">
       <DependentUpon>DialogWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="ValueConverters\Base\BaseValueConverter.cs" />
+    <Compile Include="ValueConverters\ErrottypeToFontAwesomeFontConverter.cs" />
     <Compile Include="ValueConverters\BooleanToVisibilityConverter.cs" />
     <Compile Include="ValueConverters\IconTypeToFontAwesomeConverter.cs" />
     <Compile Include="ValueConverters\IconTypeToMarginConverter.cs" />
@@ -182,11 +208,15 @@
     <Compile Include="Views\Test\TestPage.xaml.cs">
       <DependentUpon>TestPage.xaml</DependentUpon>
     </Compile>
-    <Page Include="Controls\CampaignSelect\CampaignCreator.xaml">
+    <Page Include="Controls\CampaignSelect\CampaignHostWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\CampaignSelect\CampaignSelect.xaml">
+    <Page Include="Controls\CampaignSelect\Pages\Creator.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\CampaignSelect\Pages\Selector.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -195,6 +225,30 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\Dialogs\DialogMessageBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\LoadingAnimation\Dice\DiceSix.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\LoadingAnimation\Dice\DiceFive.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\LoadingAnimation\Dice\DiceFour.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\LoadingAnimation\Dice\DiceThree.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\LoadingAnimation\Dice\DiceTwo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\LoadingAnimation\Dice\DiceOne.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -222,7 +276,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\Splashscreen\SplashAnimation.xaml">
+    <Page Include="Controls\LoadingAnimation\LoadingAnimation.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -302,9 +356,10 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <Resource Include="Fonts\fontawesome-webfont.ttf" />
-    <Resource Include="Fonts\Montserrat-Bold.ttf" />
-    <Resource Include="Fonts\Montserrat-Regular.ttf" />
     <Resource Include="Fonts\Vampire Calligraphy - TTF.ttf" />
+    <Resource Include="Fonts\Roboto-Bold.ttf" />
+    <Resource Include="Fonts\Roboto-Black.ttf" />
+    <Resource Include="Fonts\Roboto-Regular.ttf" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -357,6 +412,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\dnd.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

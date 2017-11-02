@@ -17,7 +17,7 @@ namespace DnDAssistant.Wpf
         /// <summary>
         /// the animation to happen when the page unloads
         /// </summary>
-        public Animation PageUnloadAnimation { get; set; } = Animation.SlideAndFadeToBottom;
+        public Animation PageUnloadAnimation { get; set; } = Animation.SlideAndFadeOutToBottom;
 
         /// <summary>
         /// The time for the page animation to take
@@ -79,6 +79,12 @@ namespace DnDAssistant.Wpf
                 case Animation.SlideAndFadeFromRight:
                     await Animations.SlideAndFadeInAsync(this, SlideDirection.Right, SlideSeconds);
                     return;
+                case Animation.SlideAndFadeInFromBottom:
+                    await Animations.SlideAndFadeInAsync(this, SlideDirection.Bottom, SlideSeconds);
+                    return;
+                case Animation.SlideAndFadeInFromTop:
+                    await Animations.SlideAndFadeInAsync(this, SlideDirection.Top, SlideSeconds);
+                    return;
             }
         }
 
@@ -95,8 +101,11 @@ namespace DnDAssistant.Wpf
             // execute the correct animation
             switch (PageUnloadAnimation)
             {
-                case Animation.SlideAndFadeToBottom:
+                case Animation.SlideAndFadeOutToBottom:
                     await Animations.SlideAndFadeOutAsync(this, SlideDirection.Bottom, SlideSeconds);
+                    return;
+                case Animation.SlideAndFadeOutToTop:
+                    await Animations.SlideAndFadeOutAsync(this, SlideDirection.Top, SlideSeconds);
                     return;
             }
         }

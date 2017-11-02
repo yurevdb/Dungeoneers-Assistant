@@ -38,7 +38,13 @@ namespace DnDAssistant.Core
                 },
                 new NavigationMenuItemViewModel
                 {
-                    Click = new RelayCommand(() =>  IoC.App.GoTo(ApplicationPage.CharacterCreator)),
+                    Click = new RelayCommand(() =>
+                    {
+                        IoC.App.GoTo(ApplicationPage.CharacterCreator);
+
+                        //Test for the error handling
+                        IoC.Error.Add(new Error(ErrorType.Message, "Hello"));
+                    }),
                     Title = "Character Creator"
                 },
             };

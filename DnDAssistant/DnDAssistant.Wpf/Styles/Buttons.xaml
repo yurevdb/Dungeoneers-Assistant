@@ -54,8 +54,94 @@
     </Style>
 
     <!-- General icon button style -->
-    <Style x:Key="IconButtonStyle" TargetType="Button" BasedOn="{StaticResource BaseStyle}">
+    <Style x:Key="RoundedButtonStyle" TargetType="Button" BasedOn="{StaticResource BaseStyle}">
+        <Setter Property="Background" Value="{StaticResource RedBrush}"/>
+        <Setter Property="Foreground" Value="{StaticResource SmokeWhiteBrush}"/>
+        <Setter Property="Padding" Value="5"/>
+        <Setter Property="Margin" Value="2"/>
+        <Setter Property="Opacity" Value="1"/>
+        <Setter Property="SnapsToDevicePixels" Value="True"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Padding="{TemplateBinding Padding}"
+                            Background="{TemplateBinding Background}"
+                            CornerRadius="6"
+                            BorderThickness="1"
+                            BorderBrush="{StaticResource DarkRedBrush}"
+                            >
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center"
+                                   TextWrapping="Wrap"
+                                   Text="{TemplateBinding Content}"
+                                   FontSize="{StaticResource FontsizeRegular}"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Trigger.EnterActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation Duration="0:0:0.1" To="{StaticResource LightRed}" AccelerationRatio="0.9" Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.EnterActions>
+                <Trigger.ExitActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation Duration="0:0:0.1" To="{StaticResource Red}" AccelerationRatio="0.9" Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.ExitActions>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
 
+    <Style x:Key="RoundOkButton" TargetType="Button" BasedOn="{StaticResource BaseStyle}">
+        <Setter Property="Background" Value="{StaticResource WhiteBrush}"/>
+        <Setter Property="Foreground" Value="{StaticResource RedBrush}"/>
+        <Setter Property="Width" Value="{Binding ActualHeight, RelativeSource={RelativeSource Self}}"/>
+        <Setter Property="Padding" Value="5"/>
+        <Setter Property="Opacity" Value="1"/>
+        <Setter Property="SnapsToDevicePixels" Value="True"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Padding="{TemplateBinding Padding}"
+                            Background="{TemplateBinding Background}"
+                            CornerRadius="{Binding ActualWidth, RelativeSource={RelativeSource Self}}"
+                            BorderThickness="2"
+                            BorderBrush="{StaticResource RedBrush}"
+                            >
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center"
+                                   TextWrapping="Wrap"
+                                   Text="{TemplateBinding Content}"
+                                   FontSize="{StaticResource FontsizeRegular}"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Trigger.EnterActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation Duration="0:0:0.1" To="{StaticResource LightRed}" AccelerationRatio="0.9" Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)"/>
+                            <ColorAnimation Duration="0:0:0.1" To="{StaticResource White}" AccelerationRatio="0.9" Storyboard.TargetProperty="(Foreground).(SolidColorBrush.Color)"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.EnterActions>
+                <Trigger.ExitActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation Duration="0:0:0.1" To="{StaticResource White}" AccelerationRatio="0.9" Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)"/>
+                            <ColorAnimation Duration="0:0:0.1" To="{StaticResource Red}" AccelerationRatio="0.9" Storyboard.TargetProperty="(Foreground).(SolidColorBrush.Color)"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.ExitActions>
+            </Trigger>
+        </Style.Triggers>
     </Style>
 
     <!-- A random button -->
@@ -79,11 +165,6 @@
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
-        <Style.Triggers>
-            <Trigger Property="IsMouseOver" Value="true">
-                <Setter Property="Cursor" Value="Hand"/>
-            </Trigger>
-        </Style.Triggers>
     </Style>
 
     <Style x:Key="CogButton" TargetType="Button" BasedOn="{StaticResource RandomButton}">
@@ -125,6 +206,67 @@
                             </Trigger.ExitActions>
                         </Trigger>
                     </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <!-- Error Button -->
+    <Style x:Key="ErrorButton" TargetType="Button" BasedOn="{StaticResource BaseStyle}">
+        <Setter Property="Margin" Value="0"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="SnapsToDevicePixels" Value="True"/>
+        <Setter Property="IsHitTestVisible" Value="True"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Padding="{TemplateBinding Padding}"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{StaticResource DarkRedBrush}"
+                            BorderThickness="0 2 2 2"
+                            >
+                        <Grid>
+                            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center"
+                                   Text="{TemplateBinding Content}"
+                                   FontSize="{StaticResource FontsizeRegular}"/>
+
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Ellipse Fill="{StaticResource LightRedBrush}" 
+                                         Grid.Row="0" 
+                                         Grid.Column="1"
+                                         Width="12"
+                                         VerticalAlignment="Center"
+                                         HorizontalAlignment="Center"
+                                         Panel.ZIndex="1"
+                                         SnapsToDevicePixels="True"
+                                         Height="{Binding ActualWidth, RelativeSource={RelativeSource Self}}"
+                                         />
+
+                                <TextBlock Text="{TemplateBinding Tag}"
+                                           Grid.Row="0"
+                                           Grid.Column="1"
+                                           Panel.ZIndex="2"
+                                           Margin="1 0 0 0"
+                                           VerticalAlignment="Center"
+                                           HorizontalAlignment="Center"
+                                           SnapsToDevicePixels="True"
+                                           FontFamily="{StaticResource Regular}"
+                                           Foreground="{StaticResource WhiteBrush}"
+                                           FontSize="{StaticResource FontsizeExtraSmall}"
+                                           />
+
+                            </Grid>
+                        </Grid>
+                    </Border>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>

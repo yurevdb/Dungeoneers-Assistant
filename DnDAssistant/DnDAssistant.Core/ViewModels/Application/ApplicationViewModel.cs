@@ -7,6 +7,7 @@ namespace DnDAssistant.Core
     /// </summary>
     public class ApplicationViewModel : BaseViewModel
     {
+
         #region Public Properties
 
         /// <summary>
@@ -30,9 +31,24 @@ namespace DnDAssistant.Core
         public ApplicationPage CurrentPage { get; private set; } = ApplicationPage.Startup;
 
         /// <summary>
+        /// The current page of the campaignhost window
+        /// </summary>
+        public CampaignHostWindows CurrentCampaignPage { get; private set; } = CampaignHostWindows.Selector;
+
+        /// <summary>
         /// The selected Campaign
         /// </summary>
         public CampaignViewModel Campaign { get; private set; }
+
+        /// <summary>
+        /// Indicating wether the Campaign dropdown menu is visible or not
+        /// </summary>
+        public bool CampaignMenuVisible { get; set; } = false;
+
+        /// <summary>
+        /// Indicating wether any popup is visible
+        /// </summary>
+        public bool AnyPopUpVisible => CampaignMenuVisible;
         
         #endregion
 
@@ -44,6 +60,16 @@ namespace DnDAssistant.Core
         {
             // Set the current page of the application
             CurrentPage = page;
+        }
+
+        /// <summary>
+        /// Function to set the current page of the campaign window
+        /// </summary>
+        /// <param name="page">The page to go to</param>
+        public void GoTo(CampaignHostWindows page)
+        {
+            // Set the current page of the application
+            CurrentCampaignPage = page;
         }
 
         /// <summary>

@@ -15,6 +15,46 @@
 
     <ImageBrush x:Key="AppIconImage" ImageSource="/DnDAssistant.Wpf;component/app.ico" Stretch="Uniform"/>
 
+    <Style TargetType="{x:Type ListView}" x:Key="FadedListView">
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Disabled"/>
+        <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Hidden"/>
+        <Setter Property="ScrollViewer.CanContentScroll" Value="False"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Grid>
+                        <!--Top Gradient-->
+                        <Border Panel.ZIndex="2" VerticalAlignment="Top" Height="20">
+                            <Border.Background>
+                                <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                                    <GradientStop Color="#fff5f5f5" Offset="0"/>
+                                    <GradientStop Color="#00f5f5f5" Offset="0.5"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                        </Border>
+
+                        <!--Content-->
+                        <ScrollContentPresenter Panel.ZIndex="1" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        
+                        <!--Bottom Gradient-->
+                        <Border Panel.ZIndex="2" VerticalAlignment="Bottom" Height="20">
+                            <Border.Background>
+                                <LinearGradientBrush>
+
+                                </LinearGradientBrush>
+                            </Border.Background>
+                        </Border>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
     <Style TargetType="{x:Type ListViewItem}">
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="Height" Value="52"/>
@@ -40,11 +80,21 @@
                                      HorizontalAlignment="Center"
                                      Stroke="{StaticResource DarkRedBrush}"
                                      StrokeThickness="1"
+                                     Panel.ZIndex="5"
                                      >
                                 <Ellipse.Fill>
                                     <ImageBrush Stretch="Fill" ImageSource="{Binding ImageURI}"/>
                                 </Ellipse.Fill>
                             </Ellipse>
+
+                            <Ellipse Width="40" 
+                                     Height="40" 
+                                     Grid.Column="0" 
+                                     VerticalAlignment="Center"
+                                     HorizontalAlignment="Center"
+                                     Fill="White"
+                                     Panel.ZIndex="4"
+                                     />
 
                             <TextBlock Text="{Binding Name}" 
                                        Grid.Column="1"

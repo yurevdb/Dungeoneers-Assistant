@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Media.Animation;
 
 namespace DnDAssistant.Wpf
@@ -26,6 +27,10 @@ namespace DnDAssistant.Wpf
             {
                 foreach (var element in elements)
                 {
+                    // Add dice to the grid of the element
+                    ((element as Grid)?.Children[1] as Grid)?.Children.Clear();
+                    ((element as Grid)?.Children[1] as Grid)?.Children.Add(DiceSelector.GetDice());
+
                     var sb = new Storyboard();
 
                     sb.AddFadeOut(animationTime);

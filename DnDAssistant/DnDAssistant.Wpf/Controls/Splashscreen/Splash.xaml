@@ -22,24 +22,24 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <local:SplashAnimation Grid.Column="1" 
-                               Grid.Row="1"
-                               VerticalAlignment="Center"
-                               HorizontalAlignment="Center"
-                               Width="250"
-                               Height="{Binding ActualWidth, RelativeSource={RelativeSource Self}}"
-                               />
+        <local:LoadingAnimation Grid.Column="1" 
+                                Grid.Row="1"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Center"
+                                Width="250"
+                                Height="{Binding ActualWidth, RelativeSource={RelativeSource Self}}"
+                                />
 
         <StackPanel Grid.Column="1"
                     Grid.Row="1"
                     VerticalAlignment="Bottom"
                     HorizontalAlignment="Center">
-            <TextBlock Text="Overtaking the Universe" 
+            <TextBlock Text="Showing dominance" 
                        TextAlignment="Center"
                        FontFamily="{StaticResource Bold}"
                        Foreground="{StaticResource SmokeWhiteBrush}"
                        FontSize="{StaticResource FontsizeRegular}"/>
-            <TextBlock Text="Signed: The Brain" 
+            <TextBlock Text="Checking for updates" 
                        TextAlignment="Center"
                        Margin="0 5 0 0"
                        FontFamily="{StaticResource Regular}"

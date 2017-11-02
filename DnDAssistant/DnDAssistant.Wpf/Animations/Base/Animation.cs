@@ -28,6 +28,11 @@
         /// <summary>
         /// Slide and Fade animation to bottom
         /// </summary>
-        SlideAndFadeToBottom = 3,
+        SlideAndFadeOutToBottom = 4,
+
+        /// <summary>
+        /// Slide and Fade in from bottom
+        /// </summary>
+        SlideAndFadeInFromBottom = 5,
     }
 }

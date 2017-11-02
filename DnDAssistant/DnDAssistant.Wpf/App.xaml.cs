@@ -35,7 +35,7 @@ namespace DnDAssistant.Wpf
             // Create the main window, but on the UI thread.
             Dispatcher.BeginInvoke(DispatcherPriority.Normal, (Invoker)delegate
             {
-                MainWindow = new CampaignSelect();
+                MainWindow = new CampaignHostWindow();
                 MainWindow.Show();
             });
         } 
@@ -101,19 +101,27 @@ namespace DnDAssistant.Wpf
             // The url to the latest release version of the application
             var source = "https://github.com/yurevdb/Dungeoneers-Assistant/releases/latest";
 
-            // Creating a htmlweb object
-            var htmlWeb = new HtmlWeb();
+            // Create the necessary objects
+            HtmlNode versionSpan = null;
+            Version latestVersion = null;
 
-            // Get the html of the url provided
-            var documentNode = htmlWeb.Load(source).DocumentNode;
+            try
+            {
+                // Search the html for a span
+                // Search for a span with the class of "css-truncate-target" (this is the span that shows the version number)
+                // Get the first for easy access
+                versionSpan = new HtmlWeb().Load(source).DocumentNode?.Descendants("span").Where(d => d.Attributes["class"]?.Value.Contains("css-truncate-target") == true).First();
 
-            // Search the html for a span
-            // Search for a span with the class of "css-truncate-target" (this is the span that shows the version number)
-            // Get the first for easy access
-            var versionSpan = documentNode.Descendants("span").Where(d => d.Attributes["class"]?.Value.Contains("css-truncate-target") == true).First();
-            
-            // Create the Version object of the latest version
-            var latestVersion = new Version(versionSpan.InnerHtml);
+                // Create the Version object of the latest version
+                latestVersion = new Version(versionSpan?.InnerHtml);
+            }
+            catch
+            {
+                IoC.Error.Add(new Error(ErrorType.Message, "Could not check for updates."));
+            }
+
+            if (latestVersion == null)
+                return;
 
             // Do the checks
             if(currentVersion == latestVersion)
@@ -122,7 +130,12 @@ namespace DnDAssistant.Wpf
             }
             else if(latestVersion > currentVersion)
             {
+                IoC.Error.Add(new Error(ErrorType.Message, "A newer version of Dungeoneers Assistant is available."));
                 // TODO: do what needs to be done to let the user know that the current version of the application is not the latest version
+            }
+            else if (latestVersion < currentVersion)
+            {
+                IoC.Error.Add(new Error(ErrorType.Error, "Hold on, You're a programmer?"));
             }
         }
     }

@@ -122,25 +122,15 @@ namespace DnDAssistant.Wpf
         /// <summary>
         /// The height of the title bar
         /// </summary>
-        public int TitleHeight { get; set; } = 50;
+        public int TitleHeight { get; set; } = 55;
 
         /// <summary>
         /// The height of the caption bar
         /// </summary>
         public double CaptionHeight => TitleHeight - 14;
         #endregion
-        
+
         #region Other
-
-        /// <summary>
-        /// True when the application menu should be visible, false when not
-        /// </summary>
-        public bool ApplicationMenuVisible { get; set; }
-
-        /// <summary>
-        /// True when a popup menu is visible
-        /// </summary>
-        public bool AnyPopupVisible => ApplicationMenuVisible;
 
         /// <summary>
         /// True if we should dim the background
@@ -201,8 +191,8 @@ namespace DnDAssistant.Wpf
                 WindowStateButtonTooltipText = (_Window.WindowState == WindowState.Maximized) ? "Normalize" : "Maximize";
             });
             CloseCommand = new RelayCommand(() => _Window.Close());
-            MenuCommand = new RelayCommand(() => { new CampaignSelect().Show(); _Window.Close(); });
-            PopupClickawayCommand = new RelayCommand(() => ApplicationMenuVisible = false );
+            MenuCommand = new RelayCommand(() => { new CampaignHostWindow().Show(); _Window.Close(); });
+            PopupClickawayCommand = new RelayCommand(() => IoC.App.CampaignMenuVisible = false );
 
             #endregion
 

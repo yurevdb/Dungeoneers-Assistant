@@ -9,70 +9,122 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="110"/>
+            <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
 
+        <!--#region Image-->
+        
         <!--Campaign Image-->
-        <Ellipse Height="40"
+        <Ellipse Height="48"
                  Width="{Binding ActualHeight, RelativeSource={RelativeSource Self}}"
                  Grid.Column="0" 
                  VerticalAlignment="Center"
                  HorizontalAlignment="Center"
                  Margin="5 0 0 0"
                  Stroke="{StaticResource DarkRedBrush}"
-                 StrokeThickness="1"
+                 StrokeThickness="2"
                  SnapsToDevicePixels="True"
-                 Panel.ZIndex="5"
+                 Panel.ZIndex="10"
                  >
             <Ellipse.Fill>
-                <ImageBrush Stretch="Fill" ImageSource="{Binding ImageURI}"/>
+                <ImageBrush Stretch="Fill" 
+                            ImageSource="{Binding Campaign.ImageURI}"
+                            />
             </Ellipse.Fill>
+            <Ellipse.InputBindings>
+                <MouseBinding MouseAction="LeftClick" Command="{Binding SwitchAroo}"/>
+            </Ellipse.InputBindings>
         </Ellipse>
+        
+        <!-- Background circle -->
+        <Ellipse Height="48"
+                 Width="{Binding ActualHeight, RelativeSource={RelativeSource Self}}"
+                 Grid.Column="0" 
+                 VerticalAlignment="Center"
+                 HorizontalAlignment="Center"
+                 Margin="5 0 0 0"
+                 SnapsToDevicePixels="True"
+                 Panel.ZIndex="5"
+                 Fill="White"
+                 />
+        
+        <!--#endregion-->
+        
+        <!--#region Border-->
 
         <!--Fancy Border-->
         <Border Grid.ColumnSpan="3"
                 SnapsToDevicePixels="True"
                 BorderBrush="{StaticResource DarkRedBrush}"
-                BorderThickness="1"
-                Height="25"
-                Margin="10 0 0 0"
+                BorderThickness="2"
+                Height="30"
+                Margin="13 0 0 0"
                 VerticalAlignment="Center"
-                Panel.ZIndex="1"
-                />
+                Panel.ZIndex="4"
+                Background="Transparent"
+                ToolTip="{Binding Campaign.Name}"
+                ToolTipService.InitialShowDelay="1000"
+                Cursor="Hand"
+                >
+            <Border.InputBindings>
+                <MouseBinding MouseAction="LeftClick" Command="{Binding OpenDropDown}"/>
+            </Border.InputBindings>
+        </Border>
+        
+        <!--#endregion-->
 
+        <!--#region Name and pointer-->
         <!--Campaign Name-->
-        <TextBlock Text="{Binding Name}"
+        <TextBlock Text="{Binding Campaign.Name}"
                    VerticalAlignment="Center"
-                   HorizontalAlignment="Left"
+                   HorizontalAlignment="Center"
                    TextTrimming="CharacterEllipsis"
                    TextWrapping="NoWrap"
-                   Margin="5 0 0 0"
+                   Margin="5 5 0 0"
                    Padding="0"
                    Grid.Column="1"
-                   Height="25"
+                   Height="30"
                    FontSize="{StaticResource FontsizeRegular}"
                    FontFamily="{StaticResource Bold}"
                    SnapsToDevicePixels="True"
-                   Panel.ZIndex="5"
+                   Panel.ZIndex="3"
                    />
 
         <!--Option/Settings Button-->
-        <Button Style="{StaticResource CogButton}"
+        <Button Style="{StaticResource RandomButton}"
                 Width="25"
-                Height="25"
+                Height="30"
                 VerticalAlignment="Center"
-                HorizontalAlignment="Center"
+                HorizontalAlignment="Left"
                 Grid.Column="2"
-                Click="Button_Click"
                 SnapsToDevicePixels="True"
-                Content="{StaticResource FontAwesomeCogIcon}"
-                FontSize="{StaticResource FontsizeRegular}"
-                FontFamily="{StaticResource FontAwasome}"
                 Foreground="{StaticResource GrayBrush}"
-                Panel.ZIndex="5"
-                BorderBrush="{StaticResource DarkRedBrush}"
-                BorderThickness="1 0 0 0"
+                Panel.ZIndex="3"
+                BorderThickness="0"
+                >
+            <Path Stroke="{StaticResource GrayBrush}" StrokeThickness="2"
+                  Data="M0,0 L7,7 L14,0"/>
+        </Button>
+        
+        <!--#endregion-->
+        
+        <!--#region Error-->
+
+        <Button DataContext="{Binding ErrorViewModel, Source={x:Static local:ViewModelLocator.Instance}}"
+                Visibility="{Binding AnyError, Converter={local:BooleanToVisibilityConverter}}"
+                Style="{StaticResource ErrorButton}"
+                HorizontalAlignment="Left"
+                Grid.Column="3"
+                Height="30"
+                Width="30"
+                Tag="{Binding ShowCount}"
+                Content="{Binding HighestErrorType, Converter={local:ErrottypeToFontAwesomeFontConverter}}"
+                FontFamily="{StaticResource FontAwasome}"
+                Command="{Binding OpenErrors}"
                 />
+
+        <!--#endregion-->
     </Grid>
 </UserControl>

@@ -15,6 +15,8 @@ namespace DnDAssistant.Wpf
 
         public static CharPageViemModel CharPageViewModel => new CharPageViemModel();
 
+        public static ErrorViewModel ErrorViewModel => IoC.Error;
+
         #endregion
     }
 }

@@ -8,7 +8,7 @@
              mc:Ignorable="d"
              d:DataContext="{x:Static core:ApplicationMenuDesignModel.Instance}"
              d:DesignHeight="100" d:DesignWidth="200">
-    <Grid Margin="5 0 0 0">
+    <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -16,8 +16,10 @@
 
         <Border Grid.Row="1"
                 Panel.ZIndex="1"
-                CornerRadius="10"
-                Padding="10"
+                CornerRadius="0"
+                Padding="5"
+                BorderThickness="5"
+                BorderBrush="{StaticResource DarkRedBrush}"
                 Background="{Binding MenuBackground, Converter={local:StringRGBToBrushConverter}}"
                 >
             <!--The Content-->
@@ -31,7 +33,7 @@
               Data="M 0,0 L -10,-10 L -20,0 L 0,0"
               StrokeThickness="0"
               HorizontalAlignment="{Binding ArrowAlignment, Converter={local:HorizontalAlignmentConverter}}"
-              Fill="{Binding MenuBackground, Converter={local:StringRGBToBrushConverter}}">
+              Fill="{StaticResource DarkRedBrush}">
         </Path>
 
     </Grid>

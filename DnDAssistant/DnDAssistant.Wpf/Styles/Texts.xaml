@@ -18,6 +18,7 @@
         <Setter Property="VerticalContentAlignment" Value="Center"/>
         <Setter Property="Background" Value="{StaticResource SmokeWhiteBrush}" />
         <Setter Property="Foreground" Value="{StaticResource BlackBrush}" />
+        <Setter Property="SelectionBrush" Value="{StaticResource LightRedBrush}"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type TextBoxBase}">
