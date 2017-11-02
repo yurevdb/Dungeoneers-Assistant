@@ -11,8 +11,11 @@
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="110"/>
             <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
 
+        <!--#region Image-->
+        
         <!--Campaign Image-->
         <Ellipse Height="48"
                  Width="{Binding ActualHeight, RelativeSource={RelativeSource Self}}"
@@ -46,6 +49,10 @@
                  Panel.ZIndex="5"
                  Fill="White"
                  />
+        
+        <!--#endregion-->
+        
+        <!--#region Border-->
 
         <!--Fancy Border-->
         <Border Grid.ColumnSpan="3"
@@ -65,7 +72,10 @@
                 <MouseBinding MouseAction="LeftClick" Command="{Binding OpenDropDown}"/>
             </Border.InputBindings>
         </Border>
+        
+        <!--#endregion-->
 
+        <!--#region Name and pointer-->
         <!--Campaign Name-->
         <TextBlock Text="{Binding Campaign.Name}"
                    VerticalAlignment="Center"
@@ -97,5 +107,24 @@
             <Path Stroke="{StaticResource GrayBrush}" StrokeThickness="2"
                   Data="M0,0 L7,7 L14,0"/>
         </Button>
+        
+        <!--#endregion-->
+        
+        <!--#region Error-->
+
+        <Button Visibility="{Binding ShowError, Converter={local:BooleanToVisibilityConverter}}"
+                Style="{StaticResource CogButton}"
+                SnapsToDevicePixels="True"
+                HorizontalAlignment="Left"
+                Margin="0"
+                Grid.Column="3"
+                Height="30"
+                Width="30"
+                BorderBrush="{StaticResource DarkRedBrush}"
+                BorderThickness="0 2 2 2"
+                Content="{Binding HighestErrorType, Converter={local:ErrottypeToFontAwesomeFontConverter}}"
+                FontFamily="{StaticResource FontAwasome}"/>
+
+        <!--#endregion-->
     </Grid>
 </UserControl>

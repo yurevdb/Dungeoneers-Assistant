@@ -88,6 +88,9 @@
     <Compile Include="ViewModels\Campaign\CampaingRole.cs" />
     <Compile Include="ViewModels\Dialogs\BaseDialogViewModel.cs" />
     <Compile Include="ViewModels\Dialogs\DialogViewModel.cs" />
+    <Compile Include="ViewModels\ErrorHandling\Error.cs" />
+    <Compile Include="ViewModels\ErrorHandling\ErrorType.cs" />
+    <Compile Include="ViewModels\ErrorHandling\ErrorViewModel.cs" />
     <Compile Include="ViewModels\Menus\Design\MenuDesignModel.cs" />
     <Compile Include="ViewModels\Menus\Design\MenuItemDesignModel.cs" />
     <Compile Include="ViewModels\Menus\MenuViewModel.cs" />

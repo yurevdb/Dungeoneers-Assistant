@@ -12,6 +12,8 @@ namespace DnDAssistant.Wpf
         {
             InitializeComponent();
             DataContext = new ControlHubViewModel { Campaign = IoC.App.Campaign };
+
+            
         }
     }
 }

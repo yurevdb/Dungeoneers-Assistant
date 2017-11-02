@@ -32,6 +32,8 @@
     <!-- FontAwesome Strings -->
     <system:String x:Key="FontAwesomeCogIcon">&#xf013;</system:String>
     <system:String x:Key="FontAwesomeMinimizeIcon">&#xf2d1;</system:String>
-    <system:String x:Key="FontAwesomeCloseIcon">&#xf00d;</system:String>
-
+    <system:String x:Key="FontAwesomeCloseIcon">&#xf00d;</system:String> 
+    <system:String x:Key="FontAwesomeWarningIcon">&#xf071;</system:String>
+    <system:String x:Key="FontAwesomeEnvelopIcon">&#xf199;</system:String>
+    
 </ResourceDictionary>

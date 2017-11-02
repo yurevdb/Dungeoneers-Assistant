@@ -118,7 +118,7 @@ namespace DnDAssistant.Wpf
             }
             catch
             {
-                //TODO: Error Handling for no internet connection, oh so sad :(
+                IoC.Error.Add(new Error(ErrorType.Message, "Could not check for updates."));
             }
 
             if (latestVersion == null)
@@ -131,7 +131,12 @@ namespace DnDAssistant.Wpf
             }
             else if(latestVersion > currentVersion)
             {
+                IoC.Error.Add(new Error(ErrorType.Message, "A newer version of Dungeoneers Assistant is available."));
                 // TODO: do what needs to be done to let the user know that the current version of the application is not the latest version
+            }
+            else if (latestVersion < currentVersion)
+            {
+                IoC.Error.Add(new Error(ErrorType.Error, "Hold on, You're a programmer?"));
             }
         }
     }
