@@ -46,7 +46,7 @@ namespace DnDAssistant.Wpf
                 IoC.UI.ShowMessage(new DialogViewModel
                 {
                     Title = "Error",
-                    OkText = "Close",
+                    Buttons = Buttons.Ok,
                     Message = (tbxName.Text == "") ? "Please enter a name for your campaign." : "A campaign with that name already exists."
                 });
                 return;

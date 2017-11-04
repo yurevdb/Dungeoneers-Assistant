@@ -57,29 +57,33 @@
 
     <Style TargetType="{x:Type ListViewItem}">
         <Setter Property="Background" Value="Transparent"/>
-        <Setter Property="Height" Value="52"/>
-        <Setter Property="Padding" Value="0"/>
+        <Setter Property="Height" Value="50"/>
+        <Setter Property="Padding" Value="5 0 "/>
         <Setter Property="Margin" Value="0 0 0 5"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate>
                     <Border Background="{TemplateBinding Background}"
                             CornerRadius="0"
-                            Padding="6"
+                            Padding="{TemplateBinding Padding}"
+                            BorderBrush="{StaticResource DarkRedBrush}"
+                            BorderThickness="0 0 0 0.5"
                             >
                         <Grid>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="50"/>
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
 
-                            <Ellipse Width="40" 
-                                     Height="40" 
+                            <Ellipse x:Name="cirkel"
+                                     Width="45" 
+                                     Height="45" 
                                      Grid.Column="0" 
                                      VerticalAlignment="Center"
                                      HorizontalAlignment="Center"
                                      Stroke="{StaticResource DarkRedBrush}"
-                                     StrokeThickness="1"
+                                     StrokeThickness="2"
+                                     SnapsToDevicePixels="True"
                                      Panel.ZIndex="5"
                                      >
                                 <Ellipse.Fill>
@@ -87,29 +91,57 @@
                                 </Ellipse.Fill>
                             </Ellipse>
 
-                            <Ellipse Width="40" 
-                                     Height="40" 
+                            <Ellipse x:Name="underlay"
+                                     Width="45" 
+                                     Height="45" 
                                      Grid.Column="0" 
                                      VerticalAlignment="Center"
                                      HorizontalAlignment="Center"
                                      Fill="White"
                                      Panel.ZIndex="4"
+                                     SnapsToDevicePixels="True"
                                      />
 
                             <TextBlock Text="{Binding Name}" 
-                                       Grid.Column="1"
-                                       TextWrapping="NoWrap"
-                                       FontFamily="{StaticResource Regular}"
-                                       FontSize="{StaticResource FontsizeLarge}"
-                                       Foreground="{StaticResource BlackBrush}"
-                                       TextTrimming="CharacterEllipsis"
-                                       Margin="10 0 0 0"
-                                       VerticalAlignment="Center"
-                                       ToolTip="{Binding Description}"
-                                       ToolTipService.InitialShowDelay="1000"
-                                       />
+                                        Grid.Column="1"
+                                        TextWrapping="NoWrap"
+                                        FontFamily="{StaticResource Regular}"
+                                        FontSize="{StaticResource FontsizeLarge}"
+                                        Foreground="{StaticResource BlackBrush}"
+                                        TextTrimming="CharacterEllipsis"
+                                        Margin="10 0 0 0"
+                                        VerticalAlignment="Center"
+                                        ToolTip="{Binding Description}"
+                                        ToolTipService.InitialShowDelay="1000"
+                                        />
                         </Grid>
                     </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Trigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ColorAnimation Duration="0:0:0.15" To="{StaticResource LightRed}" AccelerationRatio="0.9" Storyboard.TargetProperty="(Stroke).(SolidColorBrush.Color)" Storyboard.TargetName="cirkel"/>
+                                        <DoubleAnimation Duration="0:0:0.15" To="48" AccelerationRatio="0.9" Storyboard.TargetProperty="Height" Storyboard.TargetName="cirkel"/>
+                                        <DoubleAnimation Duration="0:0:0.15" To="48" AccelerationRatio="0.9" Storyboard.TargetProperty="Width" Storyboard.TargetName="cirkel"/>
+                                        <DoubleAnimation Duration="0:0:0.15" To="48" AccelerationRatio="0.9" Storyboard.TargetProperty="Height" Storyboard.TargetName="underlay"/>
+                                        <DoubleAnimation Duration="0:0:0.15" To="48" AccelerationRatio="0.9" Storyboard.TargetProperty="Width" Storyboard.TargetName="underlay"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ColorAnimation Duration="0:0:0.15" To="{StaticResource DarkRed}" AccelerationRatio="0.9" Storyboard.TargetProperty="(Stroke).(SolidColorBrush.Color)" Storyboard.TargetName="cirkel"/>
+                                        <DoubleAnimation Duration="0:0:0.15" To="45" AccelerationRatio="0.9" Storyboard.TargetProperty="Height" Storyboard.TargetName="cirkel"/>
+                                        <DoubleAnimation Duration="0:0:0.15" To="45" AccelerationRatio="0.9" Storyboard.TargetProperty="Width" Storyboard.TargetName="cirkel"/>
+                                        <DoubleAnimation Duration="0:0:0.15" To="45" AccelerationRatio="0.9" Storyboard.TargetProperty="Height" Storyboard.TargetName="underlay"/>
+                                        <DoubleAnimation Duration="0:0:0.15" To="45" AccelerationRatio="0.9" Storyboard.TargetProperty="Width" Storyboard.TargetName="underlay"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.ExitActions>
+                        </Trigger>
+                    </ControlTemplate.Triggers> 
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
@@ -122,14 +154,14 @@
                 <MultiTrigger.EnterActions>
                     <BeginStoryboard>
                         <Storyboard>
-                            <ColorAnimation Duration="0:0:0.1" To="{StaticResource LightRed}" AccelerationRatio="0.9" Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)"/>
+                            <ColorAnimation Duration="0:0:0.15" To="{StaticResource LightRed}" AccelerationRatio="0.9" Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)"/>
                         </Storyboard>
                     </BeginStoryboard>
                 </MultiTrigger.EnterActions>
                 <MultiTrigger.ExitActions>
                     <BeginStoryboard>
                         <Storyboard>
-                            <ColorAnimation Duration="0:0:0.1" To="Transparent" AccelerationRatio="0.9" Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)"/>
+                            <ColorAnimation Duration="0:0:0.15" To="Transparent" AccelerationRatio="0.9" Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)"/>
                         </Storyboard>
                     </BeginStoryboard>
                 </MultiTrigger.ExitActions>
@@ -169,12 +201,8 @@
                         <ContentPresenter Margin="4,0,0,0"
                                           VerticalAlignment="Center"
                                           HorizontalAlignment="Left"
-                                          RecognizesAccessKey="True"/>    
+                                          RecognizesAccessKey="True"/>
                     </BulletDecorator>
-                    
-                    
-                    
-                    
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsChecked" Value="false">
                             <Setter TargetName="CheckMark" Property="Visibility" Value="Collapsed"/>

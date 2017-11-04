@@ -86,7 +86,8 @@
     <Compile Include="ViewModels\Campaign\CampaignHostWindow\CampaignHostWindows.cs" />
     <Compile Include="ViewModels\Campaign\CampaignViewModel.cs" />
     <Compile Include="ViewModels\Campaign\CampaingRole.cs" />
-    <Compile Include="ViewModels\Dialogs\BaseDialogViewModel.cs" />
+    <Compile Include="ViewModels\Dialogs\Base\BaseDialogViewModel.cs" />
+    <Compile Include="ViewModels\Dialogs\Base\Buttons.cs" />
     <Compile Include="ViewModels\Dialogs\DialogViewModel.cs" />
     <Compile Include="ViewModels\ErrorHandling\Error.cs" />
     <Compile Include="ViewModels\ErrorHandling\ErrorType.cs" />

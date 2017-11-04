@@ -60,7 +60,7 @@
                 BorderBrush="{StaticResource DarkRedBrush}"
                 BorderThickness="2"
                 Height="30"
-                Margin="13 0 0 0"
+                Margin="15 0 0 0"
                 VerticalAlignment="Center"
                 Panel.ZIndex="4"
                 Background="Transparent"
@@ -123,6 +123,7 @@
                 Content="{Binding HighestErrorType, Converter={local:ErrottypeToFontAwesomeFontConverter}}"
                 FontFamily="{StaticResource FontAwasome}"
                 Command="{Binding OpenErrors}"
+                Cursor="Hand"
                 />
 
         <!--#endregion-->

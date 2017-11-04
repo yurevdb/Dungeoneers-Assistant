@@ -21,14 +21,6 @@ namespace DnDAssistant.Wpf
         public ICommand SwitchAroo { get; set; } 
         #endregion
 
-        #region Error Handling
-        //public bool ShowError => IoC.Error.AnyError;
-
-        //public ErrorType HighestErrorType => IoC.Error.HighestErrorType;
-
-        //public string ErrorAmount => IoC.Error.ShowCount.ToString();
-        #endregion
-
         public CampaignViewModel Campaign { get; set; }
 
         #endregion
@@ -52,7 +44,6 @@ namespace DnDAssistant.Wpf
                 Application.Current.MainWindow.Show();
                 mw.Close();
             } );
-            
         }
 
         #endregion

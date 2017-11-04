@@ -26,7 +26,7 @@ namespace DnDAssistant.Core
                         {
                             Title = "Error",
                             Message = "This should take you to the settings menu",
-                            OkText = "Close"
+                            Buttons = Buttons.Ok
                         }
                         ))
                     },
@@ -40,7 +40,7 @@ namespace DnDAssistant.Core
                             {
                                 Title = "Error",
                                 Message = "This feature is not yet implemented",
-                                OkText = "Close"
+                                Buttons = Buttons.Ok
                             });
                         })
                     },

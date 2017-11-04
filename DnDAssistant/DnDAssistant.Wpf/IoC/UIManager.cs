@@ -1,5 +1,4 @@
 ﻿using System.Threading.Tasks;
-using System.Windows;
 using DnDAssistant.Core;
 
 namespace DnDAssistant.Wpf

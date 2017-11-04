@@ -174,19 +174,23 @@
       <DependentUpon>DialogWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="ValueConverters\Base\BaseValueConverter.cs" />
-    <Compile Include="ValueConverters\ErrottypeToFontAwesomeFontConverter.cs" />
-    <Compile Include="ValueConverters\BooleanToVisibilityConverter.cs" />
-    <Compile Include="ValueConverters\IconTypeToFontAwesomeConverter.cs" />
-    <Compile Include="ValueConverters\IconTypeToMarginConverter.cs" />
-    <Compile Include="ValueConverters\MenuItemVisibilityConverter.cs" />
-    <Compile Include="ValueConverters\HorizontalAlignmentConverter.cs" />
+    <Compile Include="ValueConverters\DialogButtons\YesNoCancelButtonsToVisibilityConverter .cs" />
+    <Compile Include="ValueConverters\DialogButtons\YesNoButtonsToVisibilityConverter.cs" />
+    <Compile Include="ValueConverters\DialogButtons\OkButtonToVisibilityConverter.cs" />
+    <Compile Include="ValueConverters\DialogButtons\ButtonsToStringConverter.cs" />
+    <Compile Include="ValueConverters\Rest\ErrottypeToFontAwesomeFontConverter.cs" />
+    <Compile Include="ValueConverters\Rest\BooleanToVisibilityConverter.cs" />
+    <Compile Include="ValueConverters\Rest\IconTypeToFontAwesomeConverter.cs" />
+    <Compile Include="ValueConverters\Rest\IconTypeToMarginConverter.cs" />
+    <Compile Include="ValueConverters\Rest\MenuItemVisibilityConverter.cs" />
+    <Compile Include="ValueConverters\Rest\HorizontalAlignmentConverter.cs" />
     <Compile Include="ValueConverters\PathConverters\WidthToCenterTitleBarDesignConverter.cs" />
     <Compile Include="ValueConverters\PathConverters\WidthToNavigationCenterLineConverter.cs" />
-    <Compile Include="ValueConverters\PopupContentConverter.cs" />
-    <Compile Include="ValueConverters\ParentSizeToElementSizeConverter.cs" />
-    <Compile Include="ValueConverters\StringRGBToBrushConverter.cs" />
-    <Compile Include="ValueConverters\StringToImagesourceConverter.cs" />
-    <Compile Include="ValueConverters\StringToVisibilityConverter.cs" />
+    <Compile Include="ValueConverters\Rest\PopupContentConverter.cs" />
+    <Compile Include="ValueConverters\Rest\ParentSizeToElementSizeConverter.cs" />
+    <Compile Include="ValueConverters\Rest\StringRGBToBrushConverter.cs" />
+    <Compile Include="ValueConverters\Rest\StringToImagesourceConverter.cs" />
+    <Compile Include="ValueConverters\Rest\StringToVisibilityConverter.cs" />
     <Compile Include="Helpers\WindowResizer.cs" />
     <Compile Include="ViewModels\DialogWindowViewModel.cs" />
     <Compile Include="ViewModels\Helpers\ViewModelLocator.cs" />

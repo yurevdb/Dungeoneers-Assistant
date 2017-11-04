@@ -67,7 +67,7 @@ namespace DnDAssistant.Core
                         IoC.UI.ShowMessage(new DialogViewModel
                         {
                             Title = error.Type.ToString(),
-                            OkText = "Close",
+                            Buttons = Buttons.Ok,
                             Message = $"{error.Message}",
                         });
 

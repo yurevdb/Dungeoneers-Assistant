@@ -53,7 +53,7 @@ namespace DnDAssistant.Core
             if (IoC.App.Campaign.Role == CampaingRole.DungeonMaster)
                 Items.Insert(0, new NavigationMenuItemViewModel
                 {
-                    Click = new RelayCommand(() => IoC.UI.ShowMessage(new DialogViewModel { Title = "Error", Message = "This feature is not yet implemented", OkText = "Close" })),
+                    Click = new RelayCommand(() => IoC.UI.ShowMessage(new DialogViewModel { Title = "Error", Message = "This feature is not yet implemented", Buttons = Buttons.Ok })),
                     Title = "DM Tools"
                 });
         }
