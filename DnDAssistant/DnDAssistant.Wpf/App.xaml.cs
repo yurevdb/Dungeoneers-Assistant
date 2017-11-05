@@ -32,6 +32,8 @@ namespace DnDAssistant.Wpf
             // Check the apllication version
             CheckVersion();
 
+            IoC.CampaignSelector.GetCampaigns();
+
             // Create the main window, but on the UI thread.
             Dispatcher.BeginInvoke(DispatcherPriority.Normal, (Invoker)delegate
             {
@@ -92,6 +94,8 @@ namespace DnDAssistant.Wpf
         /// </summary>
         private void CheckVersion()
         {
+            IoC.Splash.StatusText = "Checking for updates";
+
             // Get the assembly Version of this application
             var currentVersion = System.Reflection.Assembly.GetEntryAssembly().GetName().Version;
 

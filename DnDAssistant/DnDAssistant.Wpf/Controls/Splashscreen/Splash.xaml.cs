@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Media.Animation;
 using System.Windows.Threading;
+using DnDAssistant.Core;
 
 namespace DnDAssistant.Wpf
 {
@@ -19,6 +20,7 @@ namespace DnDAssistant.Wpf
         {
             InitializeComponent();
             Loaded += new RoutedEventHandler(Splash_Loaded);
+            DataContext = IoC.Splash;
         }
 
         /// <summary>

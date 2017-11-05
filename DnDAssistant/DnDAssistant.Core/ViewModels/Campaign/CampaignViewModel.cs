@@ -34,7 +34,7 @@ namespace DnDAssistant.Core
         public string ImageURI { get; set; } = "pack://siteoforigin:,,,/Resources/dnd.jpg";
 
         #endregion
-
+        
         #region Constructor
 
         /// <summary>
@@ -42,7 +42,6 @@ namespace DnDAssistant.Core
         /// </summary>
         public CampaignViewModel()
         {
-
         }
 
         #endregion

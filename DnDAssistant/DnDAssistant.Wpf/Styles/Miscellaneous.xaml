@@ -69,10 +69,18 @@
                             BorderBrush="{StaticResource DarkRedBrush}"
                             BorderThickness="0 0 0 0.5"
                             >
+                        <Border.InputBindings>
+                            <MouseBinding MouseAction="LeftDoubleClick" 
+                                          Command="{Binding OpenCampaign}"
+                                          CommandParameter="{Binding}"
+                                          />
+                        </Border.InputBindings>
+                        
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="50"/>
                                 <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
                             </Grid.ColumnDefinitions>
 
                             <Ellipse x:Name="cirkel"
@@ -103,17 +111,30 @@
                                      />
 
                             <TextBlock Text="{Binding Name}" 
-                                        Grid.Column="1"
-                                        TextWrapping="NoWrap"
-                                        FontFamily="{StaticResource Regular}"
-                                        FontSize="{StaticResource FontsizeLarge}"
-                                        Foreground="{StaticResource BlackBrush}"
-                                        TextTrimming="CharacterEllipsis"
-                                        Margin="10 0 0 0"
-                                        VerticalAlignment="Center"
-                                        ToolTip="{Binding Description}"
-                                        ToolTipService.InitialShowDelay="1000"
-                                        />
+                                       Grid.Column="1"
+                                       TextWrapping="NoWrap"
+                                       FontFamily="{StaticResource Regular}"
+                                       FontSize="{StaticResource FontsizeLarge}"
+                                       Foreground="{StaticResource BlackBrush}"
+                                       TextTrimming="CharacterEllipsis"
+                                       Margin="10 0 0 0"
+                                       VerticalAlignment="Center"
+                                       ToolTip="{Binding Description}"
+                                       ToolTipService.InitialShowDelay="1000"
+                                       />
+
+                            <Button x:Name="button"
+                                    Grid.Column="2"
+                                    Visibility="{Binding ShowDeleteButton, Converter={local:BooleanToVisibilityConverter}}"
+                                    FontFamily="{StaticResource FontAwasome}"
+                                    Content="{StaticResource FontAwesomeCrossIcon}"
+                                    Style="{StaticResource RoundOkButton}"
+                                    Height="35"
+                                    Opacity="0"
+                                    Command="{Binding DeleteCampaign}"
+                                    CommandParameter="{Binding}"
+                                    />
+
                         </Grid>
                     </Border>
                     <ControlTemplate.Triggers>
@@ -126,6 +147,7 @@
                                         <DoubleAnimation Duration="0:0:0.15" To="48" AccelerationRatio="0.9" Storyboard.TargetProperty="Width" Storyboard.TargetName="cirkel"/>
                                         <DoubleAnimation Duration="0:0:0.15" To="48" AccelerationRatio="0.9" Storyboard.TargetProperty="Height" Storyboard.TargetName="underlay"/>
                                         <DoubleAnimation Duration="0:0:0.15" To="48" AccelerationRatio="0.9" Storyboard.TargetProperty="Width" Storyboard.TargetName="underlay"/>
+                                        <DoubleAnimation Duration="0:0:0.15" To="1" AccelerationRatio="0.9" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="button"/>
                                     </Storyboard>
                                 </BeginStoryboard>
                             </Trigger.EnterActions>
@@ -137,6 +159,7 @@
                                         <DoubleAnimation Duration="0:0:0.15" To="45" AccelerationRatio="0.9" Storyboard.TargetProperty="Width" Storyboard.TargetName="cirkel"/>
                                         <DoubleAnimation Duration="0:0:0.15" To="45" AccelerationRatio="0.9" Storyboard.TargetProperty="Height" Storyboard.TargetName="underlay"/>
                                         <DoubleAnimation Duration="0:0:0.15" To="45" AccelerationRatio="0.9" Storyboard.TargetProperty="Width" Storyboard.TargetName="underlay"/>
+                                        <DoubleAnimation Duration="0:0:0.15" To="0" AccelerationRatio="0.9" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="button"/>
                                     </Storyboard>
                                 </BeginStoryboard>
                             </Trigger.ExitActions>

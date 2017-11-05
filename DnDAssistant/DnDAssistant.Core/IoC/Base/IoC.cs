@@ -29,6 +29,16 @@ namespace DnDAssistant.Core
         /// </summary>
         public static ErrorViewModel Error => Get<ErrorViewModel>();
 
+        /// <summary>
+        /// A shortcut to acces the <see cref="SplashViewModel"/>
+        /// </summary>
+        public static SplashViewModel Splash => Get<SplashViewModel>();
+
+        /// <summary>
+        /// A shortcut to acces the <see cref="CampaignSelectorViewModel"/>
+        /// </summary>
+        public static CampaignSelectorViewModel CampaignSelector => Get<CampaignSelectorViewModel>();
+
         #endregion
 
         #region Construction
@@ -52,6 +62,8 @@ namespace DnDAssistant.Core
             // Bind to a single instance of Application view model
             Kernel.Bind<ApplicationViewModel>().ToConstant(new ApplicationViewModel());
             Kernel.Bind<ErrorViewModel>().ToConstant(new ErrorViewModel());
+            Kernel.Bind<SplashViewModel>().ToConstant(new SplashViewModel());
+            Kernel.Bind<CampaignSelectorViewModel>().ToConstant(new CampaignSelectorViewModel());
         }
 
         #endregion

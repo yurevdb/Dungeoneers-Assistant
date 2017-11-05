@@ -83,9 +83,12 @@
     <Compile Include="ViewModels\Application\ApplicationViewModel.cs" />
     <Compile Include="ViewModels\Base\BaseViewModel.cs" />
     <Compile Include="ViewModels\Base\RelayCommand.cs" />
+    <Compile Include="ViewModels\Base\RelayParameterizedCommand.cs" />
     <Compile Include="ViewModels\Campaign\CampaignHostWindow\CampaignHostWindows.cs" />
+    <Compile Include="ViewModels\Campaign\Selector\CampaignListItemViewModel.cs" />
     <Compile Include="ViewModels\Campaign\CampaignViewModel.cs" />
     <Compile Include="ViewModels\Campaign\CampaingRole.cs" />
+    <Compile Include="ViewModels\Campaign\Selector\CampaignSelectorViewModel.cs" />
     <Compile Include="ViewModels\Dialogs\Base\BaseDialogViewModel.cs" />
     <Compile Include="ViewModels\Dialogs\Base\Buttons.cs" />
     <Compile Include="ViewModels\Dialogs\DialogViewModel.cs" />
@@ -101,6 +104,7 @@
     <Compile Include="ViewModels\PopupMenu\Design\ApplicationMenuDesignModel.cs" />
     <Compile Include="ViewModels\PopupMenu\ApplicationMenuViewModel.cs" />
     <Compile Include="ViewModels\PopupMenu\Base\BasePopupViewModel.cs" />
+    <Compile Include="ViewModels\Splash\SplashViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

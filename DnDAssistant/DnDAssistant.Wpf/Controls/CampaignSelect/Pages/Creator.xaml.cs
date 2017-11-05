@@ -66,6 +66,16 @@ namespace DnDAssistant.Wpf
             // Setup the campaign structure on the computer
             nc.Setup();
 
+            // Add the campaign to the list
+            IoC.CampaignSelector.AddCampaign(new CampaignListItemViewModel
+            {
+                Name = nc.Name,
+                Description = nc.Description,
+                Role = nc.Role,
+                ImageURI = nc.ImageURI,
+                ShowDeleteButton = true
+            });
+
             // Save the selected image, if one was selected
             if (!(_Image == null))
                 _Image.Save($"{IoC.App.ResourcePath}\\{_ImageName}");

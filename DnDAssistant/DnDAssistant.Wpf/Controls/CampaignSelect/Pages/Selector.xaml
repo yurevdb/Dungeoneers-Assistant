@@ -29,6 +29,7 @@
         <ListView x:Name="lvCampaigns"
                   Margin="400 0 0 0"
                   Visibility="Collapsed"
+                  ItemsSource="{Binding FilteredCampaigns}"
                   Width="{Binding ActualWidth, ElementName=tbInspirationText}"
                   Height="{Binding ActualHeight, ElementName=tbInspirationText}"
                   VerticalAlignment="Center"
@@ -39,7 +40,114 @@
                   ScrollViewer.CanContentScroll="False"
                   ScrollViewer.VerticalScrollBarVisibility="Hidden"
                   ScrollViewer.HorizontalScrollBarVisibility="Disabled"
-                  />
+                  >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Border Background="Transparent"
+                            CornerRadius="0"
+                            Padding="5 0"
+                            BorderBrush="{StaticResource DarkRedBrush}"
+                            BorderThickness="0 0 0 0.5"
+                            >
+                            <Border.InputBindings>
+                                <MouseBinding MouseAction="LeftDoubleClick" 
+                                          Command="{Binding OpenCampaign}"
+                                          CommandParameter="{Binding}"
+                                          />
+                            </Border.InputBindings>
+
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="50"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Ellipse x:Name="cirkel"
+                                     Width="45" 
+                                     Height="45" 
+                                     Grid.Column="0" 
+                                     VerticalAlignment="Center"
+                                     HorizontalAlignment="Center"
+                                     Stroke="{StaticResource DarkRedBrush}"
+                                     StrokeThickness="2"
+                                     SnapsToDevicePixels="True"
+                                     Panel.ZIndex="5"
+                                     >
+                                    <Ellipse.Fill>
+                                        <ImageBrush Stretch="Fill" ImageSource="{Binding ImageURI}"/>
+                                    </Ellipse.Fill>
+                                </Ellipse>
+
+                                <Ellipse x:Name="underlay"
+                                     Width="45" 
+                                     Height="45" 
+                                     Grid.Column="0" 
+                                     VerticalAlignment="Center"
+                                     HorizontalAlignment="Center"
+                                     Fill="White"
+                                     Panel.ZIndex="4"
+                                     SnapsToDevicePixels="True"
+                                     />
+
+                                <TextBlock Text="{Binding Name}" 
+                                       Grid.Column="1"
+                                       TextWrapping="NoWrap"
+                                       FontFamily="{StaticResource Regular}"
+                                       FontSize="{StaticResource FontsizeLarge}"
+                                       Foreground="{StaticResource BlackBrush}"
+                                       TextTrimming="CharacterEllipsis"
+                                       Margin="10 0 0 0"
+                                       VerticalAlignment="Center"
+                                       ToolTip="{Binding Description}"
+                                       ToolTipService.InitialShowDelay="1000"
+                                       />
+
+                                <Button x:Name="button"
+                                    Grid.Column="2"
+                                    Visibility="{Binding ShowDeleteButton, Converter={local:BooleanToVisibilityConverter}}"
+                                    FontFamily="{StaticResource FontAwasome}"
+                                    Content="{StaticResource FontAwesomeCrossIcon}"
+                                    Style="{StaticResource RoundOkButton}"
+                                    Height="35"
+                                    Opacity="0"
+                                    Command="{Binding DeleteCampaign}"
+                                    CommandParameter="{Binding}"
+                                    />
+
+                            </Grid>
+                        </Border>
+                        <DataTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Trigger.EnterActions>
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <ColorAnimation Duration="0:0:0.15" To="{StaticResource LightRed}" AccelerationRatio="0.9" Storyboard.TargetProperty="(Stroke).(SolidColorBrush.Color)" Storyboard.TargetName="cirkel"/>
+                                            <DoubleAnimation Duration="0:0:0.15" To="48" AccelerationRatio="0.9" Storyboard.TargetProperty="Height" Storyboard.TargetName="cirkel"/>
+                                            <DoubleAnimation Duration="0:0:0.15" To="48" AccelerationRatio="0.9" Storyboard.TargetProperty="Width" Storyboard.TargetName="cirkel"/>
+                                            <DoubleAnimation Duration="0:0:0.15" To="48" AccelerationRatio="0.9" Storyboard.TargetProperty="Height" Storyboard.TargetName="underlay"/>
+                                            <DoubleAnimation Duration="0:0:0.15" To="48" AccelerationRatio="0.9" Storyboard.TargetProperty="Width" Storyboard.TargetName="underlay"/>
+                                            <DoubleAnimation Duration="0:0:0.15" To="1" AccelerationRatio="0.9" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="button"/>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </Trigger.EnterActions>
+                                <Trigger.ExitActions>
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <ColorAnimation Duration="0:0:0.15" To="{StaticResource DarkRed}" AccelerationRatio="0.9" Storyboard.TargetProperty="(Stroke).(SolidColorBrush.Color)" Storyboard.TargetName="cirkel"/>
+                                            <DoubleAnimation Duration="0:0:0.15" To="45" AccelerationRatio="0.9" Storyboard.TargetProperty="Height" Storyboard.TargetName="cirkel"/>
+                                            <DoubleAnimation Duration="0:0:0.15" To="45" AccelerationRatio="0.9" Storyboard.TargetProperty="Width" Storyboard.TargetName="cirkel"/>
+                                            <DoubleAnimation Duration="0:0:0.15" To="45" AccelerationRatio="0.9" Storyboard.TargetProperty="Height" Storyboard.TargetName="underlay"/>
+                                            <DoubleAnimation Duration="0:0:0.15" To="45" AccelerationRatio="0.9" Storyboard.TargetProperty="Width" Storyboard.TargetName="underlay"/>
+                                            <DoubleAnimation Duration="0:0:0.15" To="0" AccelerationRatio="0.9" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="button"/>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </Trigger.ExitActions>
+                            </Trigger>
+                        </DataTemplate.Triggers>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
 
         <Button Content="Close"
                 Foreground="{StaticResource GrayBrush}"

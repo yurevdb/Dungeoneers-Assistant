@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.ObjectModel;
+using System.IO;
+using System.Linq;
 
 namespace DnDAssistant.Core
 {
@@ -7,7 +10,6 @@ namespace DnDAssistant.Core
     /// </summary>
     public class ApplicationViewModel : BaseViewModel
     {
-
         #region Public Properties
 
         /// <summary>
@@ -39,7 +41,7 @@ namespace DnDAssistant.Core
         /// The selected Campaign
         /// </summary>
         public CampaignViewModel Campaign { get; private set; }
-
+        
         /// <summary>
         /// Indicating wether the Campaign dropdown menu is visible or not
         /// </summary>
@@ -49,7 +51,19 @@ namespace DnDAssistant.Core
         /// Indicating wether any popup is visible
         /// </summary>
         public bool AnyPopUpVisible => CampaignMenuVisible;
-        
+
+        #endregion
+
+        #region Constructor
+
+        /// <summary>
+        /// Default constructor
+        /// </summary>
+        public ApplicationViewModel()
+        {
+            
+        } 
+
         #endregion
 
         /// <summary>
