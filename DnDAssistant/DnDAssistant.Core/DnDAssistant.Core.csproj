@@ -105,6 +105,8 @@
     <Compile Include="ViewModels\PopupMenu\ApplicationMenuViewModel.cs" />
     <Compile Include="ViewModels\PopupMenu\Base\BasePopupViewModel.cs" />
     <Compile Include="ViewModels\Splash\SplashViewModel.cs" />
+    <Compile Include="ViewModels\Windows\Windows.cs" />
+    <Compile Include="ViewModels\Windows\WindowsViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

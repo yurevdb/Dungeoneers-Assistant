@@ -1,5 +1,4 @@
-﻿using System.Windows;
-using System.Windows.Input;
+﻿using System.Windows.Input;
 using DnDAssistant.Core;
 
 namespace DnDAssistant.Wpf
@@ -39,10 +38,11 @@ namespace DnDAssistant.Wpf
 
             SwitchAroo = new RelayCommand(() => 
             {
-                var mw = Application.Current.MainWindow;
-                Application.Current.MainWindow = new CampaignHostWindow();
-                Application.Current.MainWindow.Show();
-                mw.Close();
+                //var mw = Application.Current.MainWindow;
+                //Application.Current.MainWindow = new CampaignHostWindow();
+                //Application.Current.MainWindow.Show();
+                //mw.Close();
+                IoC.UI.OpenWindow(new WindowsViewModel { Window = Windows.CampaignSelector });
             } );
         }
 

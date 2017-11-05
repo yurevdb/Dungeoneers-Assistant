@@ -1,4 +1,7 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
+using System.Windows.Media.Animation;
+using DnDAssistant.Core;
 
 namespace DnDAssistant.Wpf
 {

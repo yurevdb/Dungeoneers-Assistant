@@ -13,5 +13,12 @@ namespace DnDAssistant.Core
         /// <param name="viewModel"></param>
         /// <returns></returns>
         Task ShowMessage(DialogViewModel viewModel);
+
+        /// <summary>
+        /// Opens the given window
+        /// </summary>
+        /// <param name="viewModel"></param>
+        /// <returns></returns>
+        void OpenWindow(WindowsViewModel viewModel);
     }
 }

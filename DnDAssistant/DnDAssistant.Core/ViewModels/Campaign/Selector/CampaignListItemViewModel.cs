@@ -35,6 +35,7 @@ namespace DnDAssistant.Core
                     }
 
                     IoC.App.SetCampaign(campaign);
+                    IoC.UI.OpenWindow(new WindowsViewModel { Window = Windows.Main });
                 }
             });
 
