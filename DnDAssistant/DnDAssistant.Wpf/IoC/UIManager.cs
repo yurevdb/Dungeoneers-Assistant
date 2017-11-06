@@ -1,7 +1,5 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Media.Animation;
 using DnDAssistant.Core;
 
 namespace DnDAssistant.Wpf
@@ -18,9 +16,9 @@ namespace DnDAssistant.Wpf
         /// </summary>
         /// <param name="viewModel"></param>
         /// <returns></returns>
-        public void OpenWindow(WindowsViewModel viewModel)
+        public void OpenWindow(Windows window)
         {
-            switch (viewModel.Window)
+            switch (window)
             {
                 case Windows.Main:
                     var mw = new MainWindow();
@@ -65,6 +63,16 @@ namespace DnDAssistant.Wpf
         public Task ShowMessage(DialogViewModel viewModel)
         {
             return new DialogMessageBox().ShowDialog(viewModel);
+        }
+
+        /// <summary>
+        /// Displays a dialog window for the user, options will give a response to the program
+        /// </summary>
+        /// <param name="viewModel"></param>
+        /// <returns></returns>
+        public DialogResponse ShowResponseMessage(DialogViewModel viewModel)
+        {
+            return new DialogMessageBox().ShowResponseDialog(viewModel).Result;
         }
     }
 }

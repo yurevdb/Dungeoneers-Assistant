@@ -17,7 +17,7 @@
                 FontSize="{StaticResource FontsizeRegular}"
                 HorizontalAlignment="Center"
                 Padding="10 5"
-                Command="{Binding CloseCommand, RelativeSource={RelativeSource AncestorType=local:BaseDialogUserControl}}"/>
+                Command="{Binding OkCommand, RelativeSource={RelativeSource AncestorType=local:BaseDialogUserControl}}"/>
 
         <!-- Yes/No -->
         <StackPanel Orientation="Horizontal"
@@ -27,12 +27,12 @@
             <Button Content="{Binding Buttons, Converter={local:ButtonsToStringConverter}, ConverterParameter=Yes}"
                     FontSize="{StaticResource FontsizeRegular}"
                     Padding="10 5"
-                    Command="{Binding CloseCommand, RelativeSource={RelativeSource AncestorType=local:BaseDialogUserControl}}"/>
+                    Command="{Binding YesCommand, RelativeSource={RelativeSource AncestorType=local:BaseDialogUserControl}}"/>
 
             <Button Content="{Binding Buttons, Converter={local:ButtonsToStringConverter}, ConverterParameter=No}"
                     FontSize="{StaticResource FontsizeRegular}"
                     Padding="10 5"
-                    Command="{Binding CloseCommand, RelativeSource={RelativeSource AncestorType=local:BaseDialogUserControl}}"/>
+                    Command="{Binding NoCommand, RelativeSource={RelativeSource AncestorType=local:BaseDialogUserControl}}"/>
 
         </StackPanel>
 
@@ -44,17 +44,17 @@
             <Button Content="{Binding Buttons, Converter={local:ButtonsToStringConverter}, ConverterParameter=Yes}"
                     FontSize="{StaticResource FontsizeRegular}"
                     Padding="10 5"
-                    Command="{Binding CloseCommand, RelativeSource={RelativeSource AncestorType=local:BaseDialogUserControl}}"/>
+                    Command="{Binding YesCommand, RelativeSource={RelativeSource AncestorType=local:BaseDialogUserControl}}"/>
 
             <Button Content="{Binding Buttons, Converter={local:ButtonsToStringConverter}, ConverterParameter=No}"
                     FontSize="{StaticResource FontsizeRegular}"
                     Padding="10 5"
-                    Command="{Binding CloseCommand, RelativeSource={RelativeSource AncestorType=local:BaseDialogUserControl}}"/>
+                    Command="{Binding NoCommand, RelativeSource={RelativeSource AncestorType=local:BaseDialogUserControl}}"/>
 
             <Button Content="{Binding Buttons, Converter={local:ButtonsToStringConverter}, ConverterParameter=Cancel}"
                     FontSize="{StaticResource FontsizeRegular}"
                     Padding="10 5"
-                    Command="{Binding CloseCommand, RelativeSource={RelativeSource AncestorType=local:BaseDialogUserControl}}"/>
+                    Command="{Binding CancelCommand, RelativeSource={RelativeSource AncestorType=local:BaseDialogUserControl}}"/>
 
         </StackPanel>
 

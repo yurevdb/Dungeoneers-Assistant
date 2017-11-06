@@ -38,11 +38,7 @@ namespace DnDAssistant.Wpf
 
             SwitchAroo = new RelayCommand(() => 
             {
-                //var mw = Application.Current.MainWindow;
-                //Application.Current.MainWindow = new CampaignHostWindow();
-                //Application.Current.MainWindow.Show();
-                //mw.Close();
-                IoC.UI.OpenWindow(new WindowsViewModel { Window = Windows.CampaignSelector });
+                IoC.UI.OpenWindow(Windows.CampaignSelector);
             } );
         }
 

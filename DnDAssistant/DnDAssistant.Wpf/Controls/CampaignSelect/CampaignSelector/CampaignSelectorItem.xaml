@@ -9,7 +9,7 @@
 
     <Border Background="Transparent"
             BorderBrush="{StaticResource DarkRedBrush}"
-            BorderThickness="0 0 0 0.5"
+            BorderThickness="0 0 0 0"
             SnapsToDevicePixels="True"
             >
         <Border.InputBindings>
@@ -81,6 +81,8 @@
                     Command="{Binding DeleteCampaign}"
                     Cursor="Hand"
                     CommandParameter="{Binding}"
+                    ToolTip="Hard deletes this campaign without asking permission. BE AWARE"
+                    ToolTipService.InitialShowDelay="1000"
                     />
 
         </Grid>
