@@ -94,7 +94,7 @@ namespace DnDAssistant.Wpf
         #region Slide with certain amount
 
         /// <summary>
-        /// Adds a slide in from top animation to the element
+        /// Adds a slide in animation to the element
         /// </summary>
         /// <param name="element">The <see cref="FrameworkElement"/> to add the animation to</param>
         /// <param name="amount">The amount to slide the <see cref="FrameworkElement"/> (uses the margin to slide)</param>
@@ -126,6 +126,53 @@ namespace DnDAssistant.Wpf
                     sb.AddSlide(seconds, tl);
                     break;
             }
+
+            // Start the animation
+            sb.Begin(element);
+
+            // Make element visible
+            element.Visibility = Visibility.Visible;
+
+            // Wait for it to finish
+            await Task.Delay((int)(seconds * 1000));
+        }
+
+        /// <summary>
+        /// Adds a slide and fade in animation to the element
+        /// </summary>
+        /// <param name="element">The <see cref="FrameworkElement"/> to add the animation to</param>
+        /// <param name="amount">The amount to slide the <see cref="FrameworkElement"/> (uses the margin to slide)</param>
+        /// <param name="seconds">The time the animation should take</param>
+        /// <param name="direction">The side with the amount of margin</param>
+        /// <returns></returns>
+        public static async Task SlideAndFadeInAsync(this FrameworkElement element, SlideDirection direction, double amount, float seconds)
+        {
+            // Create the storyboard
+            var sb = new Storyboard();
+
+            // Add slide in animation
+            switch (direction)
+            {
+                case SlideDirection.Top:
+                    var tt = new Thickness(0, amount, 0, 0);
+                    sb.AddSlide(seconds, tt);
+                    break;
+                case SlideDirection.Right:
+                    var tr = new Thickness(0, 0, amount, 0);
+                    sb.AddSlide(seconds, tr);
+                    break;
+                case SlideDirection.Bottom:
+                    var tb = new Thickness(0, 0, 0, amount);
+                    sb.AddSlide(seconds, tb);
+                    break;
+                case SlideDirection.Left:
+                    var tl = new Thickness(amount, 0, 0, 0);
+                    sb.AddSlide(seconds, tl);
+                    break;
+            }
+
+            // Add fade in
+            sb.AddFadeIn(seconds);
 
             // Start the animation
             sb.Begin(element);

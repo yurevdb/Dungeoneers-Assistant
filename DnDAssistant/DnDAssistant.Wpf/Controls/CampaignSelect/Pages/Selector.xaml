@@ -27,7 +27,6 @@
                                 DataContext="{Binding}"
                                 Visibility="Collapsed"
                                 Width="300"
-                                Margin="400 0 0 0"
                                 VerticalAlignment="Center"
                                 HorizontalAlignment="Center"
                                 BorderBrush="Transparent"

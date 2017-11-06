@@ -41,13 +41,11 @@ namespace DnDAssistant.Wpf
         private async void CampaignSelect_LoadedAsync(object sender, RoutedEventArgs e)
         {
             // Fade in the text
-            //await Task.WhenAll(Animations.FadeInAsync(tbInspirationText, 2f), Task.Run(() => Dispatcher.Invoke(() => GetCampaigns())));
-            await Animations.FadeInAsync(tbInspirationText, 2f);
+            await Animations.FadeInAsync(tbInspirationText, 1.5f);
 
             // Execute multiple Tasks in parallel
             // Fading in the listview and sliding the text
-            await Task.WhenAll(Animations.SlideAsync(tbInspirationText, SlideDirection.Right, 400, 2f), Animations.FadeInAsync(lvCampaigns, 3f));
-            //await Animations.SlideAsync(tbInspirationText, SlideDirection.Right, 400, 2f);
+            await Task.WhenAll(Animations.SlideAsync(tbInspirationText, SlideDirection.Right, 400, 1.5f), Animations.SlideAndFadeInAsync(lvCampaigns, SlideDirection.Left, 400, 1.5f));
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
