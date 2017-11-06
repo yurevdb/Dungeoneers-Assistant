@@ -117,6 +117,12 @@
       <DependentUpon>CampaignHostWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\CampaignSelect\CampaignHostWindowsToPageConverter.cs" />
+    <Compile Include="Controls\CampaignSelect\CampaignSelector\CampaignSelector.xaml.cs">
+      <DependentUpon>CampaignSelector.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CampaignSelect\CampaignSelector\CampaignSelectorItem.xaml.cs">
+      <DependentUpon>CampaignSelectorItem.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\CampaignSelect\Pages\Creator.xaml.cs">
       <DependentUpon>Creator.xaml</DependentUpon>
     </Compile>
@@ -213,6 +219,14 @@
       <DependentUpon>TestPage.xaml</DependentUpon>
     </Compile>
     <Page Include="Controls\CampaignSelect\CampaignHostWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\CampaignSelect\CampaignSelector\CampaignSelector.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\CampaignSelect\CampaignSelector\CampaignSelectorItem.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -47,6 +47,7 @@ namespace DnDAssistant.Wpf
             // Execute multiple Tasks in parallel
             // Fading in the listview and sliding the text
             await Task.WhenAll(Animations.SlideAsync(tbInspirationText, SlideDirection.Right, 400, 2f), Animations.FadeInAsync(lvCampaigns, 3f));
+            //await Animations.SlideAsync(tbInspirationText, SlideDirection.Right, 400, 2f);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
