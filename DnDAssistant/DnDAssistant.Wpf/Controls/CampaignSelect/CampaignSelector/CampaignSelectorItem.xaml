@@ -40,13 +40,15 @@
                              Panel.ZIndex="5"
                              >
                         <Ellipse.Fill>
-                            <ImageBrush Stretch="Fill" ImageSource="{Binding ImageURI}"/>
+                            <ImageBrush Stretch="UniformToFill" 
+                                        ImageSource="{Binding ImageURI}"
+                                        />
                         </Ellipse.Fill>
                     </Ellipse>
 
                     <Ellipse x:Name="underlay"
-                         Width="45" 
-                         Height="45" 
+                         Width="46" 
+                         Height="46" 
                          Grid.Column="0" 
                          VerticalAlignment="Center"
                          HorizontalAlignment="Center"

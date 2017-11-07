@@ -16,8 +16,6 @@ namespace DnDAssistant.Wpf
 
         #region Commands
         public ICommand OpenDropDown { get; set; }
-
-        public ICommand SwitchAroo { get; set; } 
         #endregion
 
         public CampaignViewModel Campaign { get; set; }
@@ -35,11 +33,6 @@ namespace DnDAssistant.Wpf
             {
                 IoC.App.CampaignMenuVisible ^= true;
             });
-
-            SwitchAroo = new RelayCommand(() => 
-            {
-                IoC.UI.OpenWindow(Windows.CampaignSelector);
-            } );
         }
 
         #endregion

@@ -36,12 +36,14 @@ namespace DnDAssistant.Core
                         Icon = IconType.None,
                         Click = new RelayCommand(()=>
                         {
-                            IoC.UI.ShowMessage(new DialogViewModel
-                            {
-                                Title = "Error",
-                                Message = "This feature is not yet implemented",
-                                Buttons = Buttons.Ok
-                            });
+                            // Set the campaignhostwindow to the selector
+                            IoC.App.GoTo(CampaignHostWindows.Selector);
+
+                            // Close the campaign menu
+                            IoC.App.CampaignMenuVisible = false;
+
+                            // Show the campaignhostwindow and close the current window
+                            IoC.UI.OpenWindow(Windows.CampaignSelector);
                         })
                     },
                 })

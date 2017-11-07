@@ -125,8 +125,15 @@ namespace DnDAssistant.Wpf
             // Open the ofd and if nothing was selected, do fuck all
             if (ofd.ShowDialog() == false) return;
 
-            _Image = new Bitmap(ofd.FileName);
+            //Original image
+            var preImage = new Bitmap(ofd.FileName);
+            //Scaling factor
+            var dwdh = (double)preImage.Height / (double)preImage.Width;
+            //Scaled image
+            _Image = new Bitmap(preImage, 48, (int)(48*dwdh));
+            //Preview image
             imgCampaign.ImageSource = new BitmapImage(new Uri(ofd.FileName));
+            //Name to set in the viewmodel
             _ImageName = ofd.FileName.Split('\\').Last();
         }
 

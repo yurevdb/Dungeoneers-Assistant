@@ -29,13 +29,10 @@
                  Panel.ZIndex="10"
                  >
             <Ellipse.Fill>
-                <ImageBrush Stretch="Fill" 
+                <ImageBrush Stretch="UniformToFill" 
                             ImageSource="{Binding Campaign.ImageURI}"
                             />
             </Ellipse.Fill>
-            <Ellipse.InputBindings>
-                <MouseBinding MouseAction="LeftClick" Command="{Binding SwitchAroo}"/>
-            </Ellipse.InputBindings>
         </Ellipse>
         
         <!-- Background circle -->

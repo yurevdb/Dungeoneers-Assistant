@@ -39,7 +39,7 @@
                  >
             <Ellipse.Fill>
                 <ImageBrush x:Name="imgCampaign"
-                            Stretch="Fill"
+                            Stretch="UniformToFill"
                             />
             </Ellipse.Fill>
             <Ellipse.InputBindings>
