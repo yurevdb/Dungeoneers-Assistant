@@ -22,11 +22,12 @@ namespace DnDAssistant.Core
                     {
                         Text = "Settings",
                         Icon = IconType.Cog,
+                        ToolTip = "Show the settings",
                         Click = new RelayCommand(async () => await IoC.UI.ShowMessage(new DialogViewModel
                         {
                             Title = "Error",
                             Message = "This should take you to the settings menu",
-                            Buttons = Buttons.Ok
+                            Buttons = Buttons.Ok,
                         }
                         ))
                     },
@@ -34,6 +35,7 @@ namespace DnDAssistant.Core
                     new MenuItemViewModel {
                         Text = "Switch Campaign",
                         Icon = IconType.None,
+                        ToolTip = "Goes to the Campaign Select",
                         Click = new RelayCommand(()=>
                         {
                             // Set the campaignhostwindow to the selector
@@ -46,6 +48,17 @@ namespace DnDAssistant.Core
                             IoC.UI.OpenWindow(Windows.CampaignSelector);
                         })
                     },
+
+                    new MenuItemViewModel
+                    {
+                        Text = "Show Navigation",
+                        Icon = IconType.None,
+                        ToolTip = "Shift + N",
+                        Click = new RelayCommand(() =>
+                        {
+                            IoC.App.NavigationMenuVisible ^= true;
+                        })
+                    }
                 })
             };
         }

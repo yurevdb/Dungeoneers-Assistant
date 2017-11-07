@@ -16,6 +16,8 @@ namespace DnDAssistant.Wpf
                     return new StartupPage();
                 case ApplicationPage.CharacterCreator:
                     return new CharacterCreatorPage();
+                case ApplicationPage.DMTools:
+                    return new DMToolsPage();
                 default:
                     return new TestPage();
             }

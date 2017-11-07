@@ -53,9 +53,14 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
+            <!-- The navigation menu -->
             <local:NavigationMenu Grid.Column="0"
-                                  Width="120"/>
+                                  Width="120"
+                                  local:AnimateSlideInFromLeftProperty.Value="{Binding ApplicationViewModel.NavigationMenuVisible, Source={x:Static local:ViewModelLocator.Instance}}"
+                                  Visibility="{Binding ApplicationViewModel.NavigationMenuVisible, Source={x:Static local:ViewModelLocator.Instance},Converter={local:BooleanToVisibilityConverter}}"
+                                  />
 
+            <!-- The page Host -->
             <local:PageHost DataContext="{Binding ApplicationViewModel.CurrentPage, Source={x:Static local:ViewModelLocator.Instance}, Converter={local:ApplicationPageToPageConverter}}"
                             CurrentPage="{Binding}" Grid.Column="1"/>
 
@@ -66,5 +71,11 @@
     </Grid>
     
     <!--#endregion-->
+
+    <!-- The window key commands -->
+    <Window.InputBindings>
+        <KeyBinding Key="N" Modifiers="Shift" Command="{Binding ToggleNavigationCommand}"/>
+        <KeyBinding Key="Esc" Command="{Binding PopupClickawayCommand}"/>
+    </Window.InputBindings>
 
 </Window>

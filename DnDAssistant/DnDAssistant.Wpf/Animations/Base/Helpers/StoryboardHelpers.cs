@@ -193,13 +193,13 @@ namespace DnDAssistant.Wpf
         /// <param name="seconds">The time the animation will take</param>
         /// <param name="offset">The offset of the animation</param>
         /// <param name="decelerationRatio"></param>
-        public static void AddSlideInFromLeft(this Storyboard storyboard, float seconds, double offset, float decelerationRatio = 0.9f)
+        public static void AddSlideInFromLeft(this Storyboard storyboard, float seconds, double offset, float decelerationRatio = 0.9f, bool keepMargin = true)
         {
             // Create the margin animation to slide in from top
             var animation = new ThicknessAnimation
             {
                 Duration = new Duration(TimeSpan.FromSeconds(seconds)),
-                From = new Thickness(-offset, 0, offset, 0),
+                From = new Thickness(-offset, 0, keepMargin ? offset : 0, 0),
                 To = new Thickness(0),
                 DecelerationRatio = decelerationRatio
             };
@@ -218,14 +218,14 @@ namespace DnDAssistant.Wpf
         /// <param name="seconds">The time the animation will take</param>
         /// <param name="offset">The offset of the animation</param>
         /// <param name="decelerationRatio"></param>
-        public static void AddSlideOutToLeft(this Storyboard storyboard, float seconds, double offset, float decelerationRatio = 0.9f)
+        public static void AddSlideOutToLeft(this Storyboard storyboard, float seconds, double offset, float decelerationRatio = 0.9f, bool keepMargin = true)
         {
             // Create the margin animation to slide in from top
             var animation = new ThicknessAnimation
             {
                 Duration = new Duration(TimeSpan.FromSeconds(seconds)),
                 From = new Thickness(0),
-                To = new Thickness(-offset, 0, offset, 0),
+                To = new Thickness(-offset, 0, keepMargin ? offset : 0, 0),
                 DecelerationRatio = decelerationRatio
             };
 

@@ -1,5 +1,20 @@
+C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\bin\Debug\Resources\Wallpaper.jpg
+C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\bin\Debug\Resources\ParchmentTexture.jpg
+C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\bin\Debug\Resources\dnd.jpg
+C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\bin\Debug\Resources\plus.ico
+C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\bin\Debug\DnDAssistant.Wpf.exe.config
+C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\bin\Debug\DnDAssistant.Wpf.exe
+C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\bin\Debug\DnDAssistant.Wpf.pdb
+C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\bin\Debug\DnDAssistant.Core.dll
+C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\bin\Debug\HtmlAgilityPack.dll
+C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\bin\Debug\DnDAssistant.Core.pdb
+C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\bin\Debug\HtmlAgilityPack.xml
+C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\bin\Debug\Ninject.xml
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\DnDAssistant.Wpf.csprojResolveAssemblyReference.cache
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\CampaignSelect\CampaignHostWindow.g.cs
+C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\CampaignSelect\CampaignSelector\CampaignSelector.g.cs
+C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\CampaignSelect\CampaignSelector\CampaignSelectorItem.g.cs
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\CampaignSelect\Pages\Creator.g.cs
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\CampaignSelect\Pages\Selector.g.cs
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\ControlHub\ControlHub.g.cs
@@ -13,33 +28,25 @@ C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\MenuControl\MenuControl.g.cs
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\Menus\VerticalMenu.g.cs
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\Dialogs\Base\DialogWindow.g.cs
-C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\NavigationMenu.g.cs
-C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\PageHost.g.cs
+C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\NavigationMenu\NavigationMenu.g.cs
+C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\Extra\PageHost.g.cs
+C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\NavigationMenu\NavigationMenuItem.g.cs
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\Splashscreen\Splash.g.cs
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\LoadingAnimation\LoadingAnimation.g.cs
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\MainWindow.g.cs
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Views\Character Creator\CharacterCreatorPage.g.cs
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Views\Character Creator\CharPage.g.cs
+C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Views\DMToolsPage.g.cs
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Views\StartupPage.g.cs
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Views\Test\TestPage.g.cs
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\App.g.cs
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\DnDAssistant.Wpf_MarkupCompile.cache
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\DnDAssistant.Wpf_MarkupCompile.lref
-C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\bin\Debug\Resources\Wallpaper.jpg
-C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\bin\Debug\Resources\ParchmentTexture.jpg
-C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\bin\Debug\Resources\dnd.jpg
-C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\bin\Debug\Resources\plus.ico
-C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\bin\Debug\DnDAssistant.Wpf.exe.config
-C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\bin\Debug\DnDAssistant.Wpf.exe
-C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\bin\Debug\DnDAssistant.Wpf.pdb
-C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\bin\Debug\DnDAssistant.Core.dll
-C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\bin\Debug\HtmlAgilityPack.dll
-C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\bin\Debug\DnDAssistant.Core.pdb
-C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\bin\Debug\HtmlAgilityPack.pdb
-C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\bin\Debug\HtmlAgilityPack.xml
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\App.baml
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\CampaignSelect\CampaignHostWindow.baml
+C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\CampaignSelect\CampaignSelector\CampaignSelector.baml
+C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\CampaignSelect\CampaignSelector\CampaignSelectorItem.baml
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\CampaignSelect\Pages\Creator.baml
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\CampaignSelect\Pages\Selector.baml
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\ControlHub\ControlHub.baml
@@ -53,8 +60,9 @@ C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\MenuControl\MenuControl.baml
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\Menus\VerticalMenu.baml
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\Dialogs\Base\DialogWindow.baml
-C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\NavigationMenu.baml
-C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\PageHost.baml
+C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\NavigationMenu\NavigationMenu.baml
+C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\Extra\PageHost.baml
+C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\NavigationMenu\NavigationMenuItem.baml
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\Splashscreen\Splash.baml
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\LoadingAnimation\LoadingAnimation.baml
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\MainWindow.baml
@@ -67,6 +75,7 @@ C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Styles\Window.baml
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Views\Character Creator\CharacterCreatorPage.baml
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Views\Character Creator\CharPage.baml
+C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Views\DMToolsPage.baml
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Views\StartupPage.baml
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Views\Test\TestPage.baml
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\DnDAssistant.Wpf.g.resources
@@ -75,7 +84,3 @@ C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\DnDAssistant.Wpf.csproj.CoreCompileInputs.cache
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\DnDAssistant.Wpf.exe
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\DnDAssistant.Wpf.pdb
-C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\CampaignSelect\CampaignSelector\CampaignSelector.g.cs
-C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\CampaignSelect\CampaignSelector\CampaignSelectorItem.g.cs
-C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\CampaignSelect\CampaignSelector\CampaignSelector.baml
-C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\CampaignSelect\CampaignSelector\CampaignSelectorItem.baml

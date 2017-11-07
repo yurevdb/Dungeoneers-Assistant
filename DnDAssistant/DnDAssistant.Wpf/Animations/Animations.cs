@@ -18,7 +18,7 @@ namespace DnDAssistant.Wpf
         /// <param name="seconds">The time the animation should take</param>
         /// <param name="direction">The <see cref="SlideDirection"/> from wich the slide should happen</param>
         /// <returns></returns>
-        public static async Task SlideInAsync(this FrameworkElement element, SlideDirection direction, float seconds)
+        public static async Task SlideInAsync(this FrameworkElement element, SlideDirection direction, float seconds, bool keepMargin = true)
         {
             // Create the storyboard
             var sb = new Storyboard();
@@ -36,7 +36,7 @@ namespace DnDAssistant.Wpf
                     sb.AddSlideInFromRight(seconds, element.ActualHeight);
                     break;
                 case SlideDirection.Left:
-                    sb.AddSlideInFromRight(seconds, element.ActualWidth);
+                    sb.AddSlideInFromLeft(seconds, element.ActualWidth, keepMargin: keepMargin);
                     break;
             }
 
@@ -57,7 +57,7 @@ namespace DnDAssistant.Wpf
         /// <param name="seconds">The time the animation should take</param>
         /// <param name="direction">The <see cref="SlideDirection"/> to wich the slide should happen</param>
         /// <returns></returns>
-        public static async Task SlideOutAsync(this FrameworkElement element, SlideDirection direction, float seconds)
+        public static async Task SlideOutAsync(this FrameworkElement element, SlideDirection direction, float seconds, bool keepMargin = true)
         {
             // Create the storyboard
             var sb = new Storyboard();
@@ -75,7 +75,7 @@ namespace DnDAssistant.Wpf
                     sb.AddSlideOutToBottom(seconds, element.ActualHeight);
                     break;
                 case SlideDirection.Left:
-                    sb.AddSlideOutToLeft(seconds, element.ActualWidth);
+                    sb.AddSlideOutToLeft(seconds, element.ActualWidth, keepMargin: keepMargin);
                     break;
             }
             

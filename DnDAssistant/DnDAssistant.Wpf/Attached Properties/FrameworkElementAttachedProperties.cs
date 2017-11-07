@@ -86,4 +86,21 @@ namespace DnDAssistant.Wpf
                 await element.FadeOutAsync();
         }
     }
+
+    /// <summary>
+    /// Animates a framework element sliding it in from the left on show
+    /// and sliding out to the left on hide
+    /// </summary>
+    public class AnimateSlideInFromLeftProperty : AnimateBaseProperty<AnimateSlideInFromLeftProperty>
+    {
+        protected override async void DoAnimation(FrameworkElement element, bool value)
+        {
+            if (value)
+                // Animate in
+                await element.SlideInAsync(SlideDirection.Left, FirstLoad ? 0 : 0.3f, false);
+            else
+                // Animate out
+                await element.SlideOutAsync(SlideDirection.Left, FirstLoad ? 0 : 0.3f, false);
+        }
+    }
 }

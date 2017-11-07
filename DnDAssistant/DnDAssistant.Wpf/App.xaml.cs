@@ -121,7 +121,7 @@ namespace DnDAssistant.Wpf
             }
             catch
             {
-                IoC.Error.Add(new Error(ErrorType.Message, "Could not check for updates."));
+                IoC.Error.Add(new Error(ErrorType.Warning, "Could not check for updates."));
             }
 
             if (latestVersion == null)
@@ -139,7 +139,7 @@ namespace DnDAssistant.Wpf
             }
             else if (latestVersion < currentVersion)
             {
-                IoC.Error.Add(new Error(ErrorType.Error, "Hold on, You're a programmer?"));
+                IoC.Error.Add(new Error(ErrorType.Message, "Hold on, You're a programmer?"));
             }
         }
     }

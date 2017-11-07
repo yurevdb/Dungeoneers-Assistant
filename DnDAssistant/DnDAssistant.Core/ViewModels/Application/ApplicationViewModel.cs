@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.ObjectModel;
-using System.IO;
-using System.Linq;
 
 namespace DnDAssistant.Core
 {
@@ -46,6 +43,11 @@ namespace DnDAssistant.Core
         /// Indicating wether the Campaign dropdown menu is visible or not
         /// </summary>
         public bool CampaignMenuVisible { get; set; } = false;
+
+        /// <summary>
+        /// Indicating wether the navigation menu should be shown
+        /// </summary>
+        public bool NavigationMenuVisible { get; set; } = true;
 
         /// <summary>
         /// Indicating wether any popup is visible

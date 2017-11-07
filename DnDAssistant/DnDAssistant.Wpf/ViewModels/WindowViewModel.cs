@@ -53,8 +53,13 @@ namespace DnDAssistant.Wpf
         /// <summary>
         /// The command for when any area around the popup is clicked
         /// </summary>
-        public ICommand PopupClickawayCommand { get; set; }
+        public ICommand PopupClickawayCommand { get; set; } 
 
+        /// <summary>
+        /// Toggles the visibility of the navigation menu
+        /// </summary>
+        public ICommand ToggleNavigationCommand { get; set; }
+        
         #endregion
 
         #region Public Properties
@@ -192,7 +197,8 @@ namespace DnDAssistant.Wpf
             });
             CloseCommand = new RelayCommand(() => _Window.Close());
             MenuCommand = new RelayCommand(() => { new CampaignHostWindow().Show(); _Window.Close(); });
-            PopupClickawayCommand = new RelayCommand(() => IoC.App.CampaignMenuVisible = false );
+            PopupClickawayCommand = new RelayCommand(() => IoC.App.CampaignMenuVisible = false);
+            ToggleNavigationCommand = new RelayCommand(() => IoC.App.NavigationMenuVisible ^= true);
 
             #endregion
 

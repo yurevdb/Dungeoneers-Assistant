@@ -113,6 +113,7 @@
                 Visibility="{Binding AnyError, Converter={local:BooleanToVisibilityConverter}}"
                 Style="{StaticResource ErrorButton}"
                 HorizontalAlignment="Left"
+                Foreground="{Binding HighestErrorType, Converter={local:ErrottypeToSolidColorBrushConverter}}"
                 Grid.Column="3"
                 Height="30"
                 Width="30"

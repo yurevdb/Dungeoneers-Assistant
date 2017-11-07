@@ -19,5 +19,10 @@
         /// The character creator page
         /// </summary>
         CharacterCreator = 2,
+
+        /// <summary>
+        /// DM Tools page
+        /// </summary>
+        DMTools = 3,
     }
 }

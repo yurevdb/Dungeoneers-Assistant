@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections.ObjectModel;
 
 namespace DnDAssistant.Core
 {
@@ -12,7 +12,7 @@ namespace DnDAssistant.Core
         /// <summary>
         /// The <see cref="NavigationMenuViewModel"/> items
         /// </summary>
-        public List<NavigationMenuItemViewModel> Items { get; set; }
+        public ObservableCollection<NavigationMenuItemViewModel> Items { get; set; }
 
         /// <summary>
         /// The <see cref="NavigationMenuViewModel"/> singleton
@@ -29,22 +29,11 @@ namespace DnDAssistant.Core
         private NavigationMenuViewModel()
         {
 
-            Items = new List<NavigationMenuItemViewModel>
+            Items = new ObservableCollection<NavigationMenuItemViewModel>
             {
                 new NavigationMenuItemViewModel
                 {
-                    Click = new RelayCommand(()=> IoC.App.GoTo(ApplicationPage.Startup)),
-                    Title = "Startup"
-                },
-                new NavigationMenuItemViewModel
-                {
-                    Click = new RelayCommand(() =>
-                    {
-                        IoC.App.GoTo(ApplicationPage.CharacterCreator);
-
-                        //Test for the error handling
-                        IoC.Error.Add(new Error(ErrorType.Message, "Hello"));
-                    }),
+                    Click = new RelayCommand(() => IoC.App.GoTo(ApplicationPage.CharacterCreator)),
                     Title = "Character Creator"
                 },
             };
@@ -53,11 +42,16 @@ namespace DnDAssistant.Core
             if (IoC.App.Campaign.Role == CampaingRole.DungeonMaster)
                 Items.Insert(0, new NavigationMenuItemViewModel
                 {
-                    Click = new RelayCommand(() => IoC.UI.ShowMessage(new DialogViewModel { Title = "Error", Message = "This feature is not yet implemented", Buttons = Buttons.Ok })),
+                    Click = new RelayCommand(() => IoC.App.GoTo(ApplicationPage.DMTools)),
                     Title = "DM Tools"
                 });
+
+            if (Items.Count <= 1)
+                IoC.App.NavigationMenuVisible = false;
         }
 
         #endregion
+
+        //TODO: add propertychanged way for this list with add and remove functionality
     }
 }
