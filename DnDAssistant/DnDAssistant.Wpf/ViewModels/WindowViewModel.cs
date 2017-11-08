@@ -59,7 +59,26 @@ namespace DnDAssistant.Wpf
         /// Toggles the visibility of the navigation menu
         /// </summary>
         public ICommand ToggleNavigationCommand { get; set; }
-        
+
+        #region Navigation Commands
+
+        /// <summary>
+        /// Go to the widget page (startup)
+        /// </summary>
+        public ICommand GotoWidgetPage { get; set; }
+
+        /// <summary>
+        /// Go to the character creator page
+        /// </summary>
+        public ICommand GotoCharacterCreatorPage { get; set; }
+
+        /// <summary>
+        /// Go to the DMTools page
+        /// </summary>
+        public ICommand GotoDMToolsPage { get; set; }
+
+        #endregion
+
         #endregion
 
         #region Public Properties
@@ -199,6 +218,9 @@ namespace DnDAssistant.Wpf
             MenuCommand = new RelayCommand(() => { new CampaignHostWindow().Show(); _Window.Close(); });
             PopupClickawayCommand = new RelayCommand(() => IoC.App.CampaignMenuVisible = false);
             ToggleNavigationCommand = new RelayCommand(() => IoC.App.NavigationMenuVisible ^= true);
+            GotoWidgetPage = new RelayCommand(() => IoC.App.GoTo(ApplicationPage.Startup));
+            GotoCharacterCreatorPage = new RelayCommand(() => IoC.App.GoTo(ApplicationPage.CharacterCreator));
+            GotoDMToolsPage = new RelayCommand(() => IoC.App.GoTo(ApplicationPage.DMTools));
 
             #endregion
 

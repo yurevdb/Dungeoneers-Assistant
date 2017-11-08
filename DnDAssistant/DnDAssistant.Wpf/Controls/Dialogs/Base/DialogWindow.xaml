@@ -33,6 +33,10 @@
         <ContentControl Content="{Binding Content}"/>
 
     </Border>
+
+    <Window.InputBindings>
+        <KeyBinding Key="Esc" Command="{Binding CloseCommand}"/>
+    </Window.InputBindings>
     
     <!--#endregion-->
     

@@ -1,4 +1,6 @@
-﻿namespace DnDAssistant.Wpf
+﻿using DnDAssistant.Core;
+
+namespace DnDAssistant.Wpf
 {
     /// <summary>
     /// Interaction logic for StartupPage.xaml
@@ -8,6 +10,7 @@
         public StartupPage()
         {
             InitializeComponent();
+            DataContext = new WidgetListViewModel().Widgets;
         }
     }
 }

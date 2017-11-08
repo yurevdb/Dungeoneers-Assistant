@@ -58,6 +58,17 @@ namespace DnDAssistant.Core
                         {
                             IoC.App.NavigationMenuVisible ^= true;
                         })
+                    },
+
+                    new MenuItemViewModel
+                    {
+                        Text = "Show Widgets",
+                        Icon = IconType.None,
+                        ToolTip = "Shift + W",
+                        Click = new RelayCommand(() =>
+                        {
+                            IoC.App.GoTo(ApplicationPage.Startup);
+                        })
                     }
                 })
             };

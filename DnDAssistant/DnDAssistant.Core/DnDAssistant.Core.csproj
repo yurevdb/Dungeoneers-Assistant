@@ -106,6 +106,8 @@
     <Compile Include="ViewModels\PopupMenu\ApplicationMenuViewModel.cs" />
     <Compile Include="ViewModels\PopupMenu\Base\BasePopupViewModel.cs" />
     <Compile Include="ViewModels\Splash\SplashViewModel.cs" />
+    <Compile Include="ViewModels\Widgets\Base\WidgetListViewModel.cs" />
+    <Compile Include="ViewModels\Widgets\Base\WidgetViewModel.cs" />
     <Compile Include="ViewModels\Windows\Windows.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -113,6 +115,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="FodyWeavers.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ViewModels\Widgets\Items\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Fody.2.1.0\build\netstandard1.0\Fody.targets" Condition="Exists('..\packages\Fody.2.1.0\build\netstandard1.0\Fody.targets')" />
