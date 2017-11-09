@@ -47,7 +47,7 @@ namespace DnDAssistant.Core
         /// <summary>
         /// Indicating wether the navigation menu should be shown
         /// </summary>
-        public bool NavigationMenuVisible { get; set; } = true;
+        public bool NavigationMenuVisible { get; set; } = false;
 
         /// <summary>
         /// Indicating wether any popup is visible

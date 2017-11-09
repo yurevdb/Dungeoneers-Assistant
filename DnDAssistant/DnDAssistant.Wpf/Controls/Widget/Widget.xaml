@@ -6,10 +6,46 @@
              xmlns:local="clr-namespace:DnDAssistant.Wpf"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
-    <Grid>
-        <Button Content="{Binding Name}"
-                Command="{Binding Click}"
-                Margin="5"
+    <Grid Cursor="Hand">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Ellipse 
+                Width="75"
+                Height="75"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                Stroke="{StaticResource DarkRedBrush}"
+                StrokeThickness="3"
+                Fill="{Binding BackgroundColor,Converter={local:StringRGBToBrushConverter}}"
+                Visibility="{Binding ImageSet, Converter={local:BooleanToVisibilityConverter}}"
                 />
+
+            <TextBlock Text="{Binding NameInitials}"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
+                       FontFamily="{StaticResource Bold}"
+                       FontSize="{StaticResource FontsizeLarge}"
+                       Visibility="{Binding ImageSet, Converter={local:BooleanToVisibilityConverter}}"
+                       />
+
+        </Grid>
+
+        <TextBlock Grid.Row="1"
+                   Text="{Binding Name}"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   Height="20"
+                   FontFamily="{StaticResource Regular}"
+                   FontSize="{StaticResource FontsizeSmall}"
+                   />
+
+        <Grid.InputBindings>
+            <MouseBinding MouseAction="LeftClick" Command="{Binding Click}"/>
+        </Grid.InputBindings>
+
     </Grid>
 </UserControl>

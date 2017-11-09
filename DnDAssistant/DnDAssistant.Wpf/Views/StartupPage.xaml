@@ -7,24 +7,71 @@
       mc:Ignorable="d" 
       d:DesignHeight="300" d:DesignWidth="300"
       >
-    <!-- TODO: Make background blur the mainwindow background image -->
-    <Grid Background="{StaticResource WhiteBrush}">
+    <Grid>
+        <Border Background="{StaticResource GrayBrush}"
+                Opacity="0.6"
+                Panel.ZIndex="0"
+                />
+        
+        <Border CornerRadius="15"
+                Margin="80 15"
+                Height="30"
+                BorderBrush="{StaticResource WhiteBrush}"
+                BorderThickness="3"
+                VerticalAlignment="Top"
+                Panel.ZIndex="2"
+                Background="{StaticResource GrayBrush}"
+                >
+            <Grid VerticalAlignment="Center">
 
-        <ItemsControl ItemsSource="{Binding}" Padding="60 90">
-            <ItemsControl.ItemTemplate>
-                <DataTemplate>
-                    <local:Widget />
-                </DataTemplate>
-            </ItemsControl.ItemTemplate>
-            <ItemsControl.ItemsPanel>
-                <ItemsPanelTemplate>
-                    <UniformGrid Background="{StaticResource BlueBrush}" 
-                                 Rows="4" 
-                                 Columns="5"
-                                 />
-                </ItemsPanelTemplate>
-            </ItemsControl.ItemsPanel>
-        </ItemsControl>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
 
+                <TextBlock Grid.Column="0" 
+                           VerticalAlignment="Center"
+                           Margin="5 0 5 0"
+                           HorizontalAlignment="Left"
+                           Text="{StaticResource FontAwesomeSearchIcon}" 
+                           FontFamily="{StaticResource FontAwasome}"
+                           FontSize="{StaticResource FontsizeBigSmall}"
+                           Foreground="{StaticResource WhiteBrush}"/>
+                
+                <TextBox Grid.Column="0"
+                         Grid.ColumnSpan="2"
+                         Height="20"
+                         Margin="25 0 5 0"
+                         IsHitTestVisible="True" 
+                         VerticalAlignment="Center"
+                         HorizontalAlignment="Stretch"
+                         Background="Transparent"
+                         BorderThickness="0"
+                         FontFamily="{StaticResource Bold}"
+                         FontSize="{StaticResource FontsizeRegular}"
+                         VerticalContentAlignment="Center"
+                         />
+            </Grid>
+        </Border>
+        
+        
+
+        <!-- TODO: Make background blur the mainwindow background image -->
+        <Grid Panel.ZIndex="2">
+            <ItemsControl ItemsSource="{Binding}" Padding="60 90">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <local:Widget />
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <UniformGrid Rows="4" 
+                                        Columns="5"
+                                        />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+            </ItemsControl>
+        </Grid>
     </Grid>
 </local:BasePage>

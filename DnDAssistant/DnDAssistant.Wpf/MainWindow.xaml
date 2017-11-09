@@ -57,7 +57,7 @@
             <local:NavigationMenu Grid.Column="0"
                                   Width="120"
                                   local:AnimateSlideInFromLeftProperty.Value="{Binding ApplicationViewModel.NavigationMenuVisible, Source={x:Static local:ViewModelLocator.Instance}}"
-                                  Visibility="{Binding ApplicationViewModel.NavigationMenuVisible, Source={x:Static local:ViewModelLocator.Instance},Converter={local:BooleanToVisibilityConverter}}"
+                                  
                                   />
 
             <!-- The page Host -->

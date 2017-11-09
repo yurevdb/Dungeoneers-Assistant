@@ -45,9 +45,6 @@ namespace DnDAssistant.Core
                     Click = new RelayCommand(() => IoC.App.GoTo(ApplicationPage.DMTools)),
                     Title = "DM Tools"
                 });
-
-            if (Items.Count <= 1)
-                IoC.App.NavigationMenuVisible = false;
         }
 
         #endregion
