@@ -75,10 +75,10 @@
     <!-- The window key commands -->
     <Window.InputBindings>
         <!-- Naviagiton shortcuts-->
-        <KeyBinding Key="N" Modifiers="Shift" Command="{Binding ToggleNavigationCommand}"/>
-        <KeyBinding Key="W" Modifiers="Shift" Command="{Binding GotoWidgetPage}"/>
-        <KeyBinding Key="C" Modifiers="Shift" Command="{Binding GotoCharacterCreatorPage}"/>
-        <KeyBinding Key="D" Modifiers="Shift" Command="{Binding GotoDMToolsPage}"/>
+        <KeyBinding Key="N" Modifiers="Ctrl" Command="{Binding ToggleNavigationCommand}"/>
+        <KeyBinding Key="W" Modifiers="Ctrl" Command="{Binding GotoWidgetPage}"/>
+        <KeyBinding Key="C" Modifiers="Ctrl" Command="{Binding GotoCharacterCreatorPage}"/>
+        <KeyBinding Key="D" Modifiers="Ctrl" Command="{Binding GotoDMToolsPage}"/>
 
         <KeyBinding Key="Esc" Command="{Binding PopupClickawayCommand}"/>
     </Window.InputBindings>

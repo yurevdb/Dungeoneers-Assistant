@@ -24,6 +24,31 @@
                 Visibility="{Binding ImageSet, Converter={local:BooleanToVisibilityConverter}}"
                 />
 
+            <Ellipse 
+                Width="75"
+                Height="75"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                Stroke="{StaticResource DarkRedBrush}"
+                StrokeThickness="3"
+                Panel.ZIndex="5"
+                Visibility="{Binding ImageSet, Converter={local:InvertedBooleanToVisibilityConverter}}"
+                >
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="{Binding Image}" Stretch="UniformToFill"/>
+                </Ellipse.Fill>
+            </Ellipse>
+
+            <Ellipse 
+                Width="75"
+                Height="75"
+                Panel.ZIndex="1"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                Fill="White"
+                Visibility="{Binding ImageSet, Converter={local:InvertedBooleanToVisibilityConverter}}"
+                />
+
             <TextBlock Text="{Binding NameInitials}"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"

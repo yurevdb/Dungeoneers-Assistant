@@ -239,6 +239,9 @@ namespace DnDAssistant.Wpf
 
             // Wait for it to finish
             await Task.Delay((int)(seconds * 1000));
+
+            //Set the visibility of the element to collapsed
+            element.Visibility = Visibility.Collapsed;
         }
 
         #endregion

@@ -1,9 +1,10 @@
-﻿<local:BasePage x:Class="DnDAssistant.Wpf.StartupPage"
+﻿<local:BasePage
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:DnDAssistant.Wpf"
+      x:Class="DnDAssistant.Wpf.StartupPage"
       mc:Ignorable="d" 
       d:DesignHeight="300" d:DesignWidth="300"
       >
@@ -12,9 +13,9 @@
                 Opacity="0.6"
                 Panel.ZIndex="0"
                 />
-        
+
         <Border CornerRadius="15"
-                Margin="80 15"
+                Margin="250 30"
                 Height="30"
                 BorderBrush="{StaticResource WhiteBrush}"
                 BorderThickness="3"
@@ -37,11 +38,12 @@
                            FontFamily="{StaticResource FontAwasome}"
                            FontSize="{StaticResource FontsizeBigSmall}"
                            Foreground="{StaticResource WhiteBrush}"/>
-                
+
                 <TextBox Grid.Column="0"
                          Grid.ColumnSpan="2"
-                         Height="20"
+                         Height="30"
                          Margin="25 0 5 0"
+                         Padding="0"
                          IsHitTestVisible="True" 
                          VerticalAlignment="Center"
                          HorizontalAlignment="Stretch"
@@ -50,25 +52,35 @@
                          FontFamily="{StaticResource Bold}"
                          FontSize="{StaticResource FontsizeRegular}"
                          VerticalContentAlignment="Center"
-                         />
+                         Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged}"
+                         >
+                    <TextBox.InputBindings>
+                        <KeyBinding Key="Return" Command="{Binding SearchCommand}"/>
+                        <KeyBinding Key="Esc" Command="{Binding CloseCommand}"/>
+                    </TextBox.InputBindings>
+                </TextBox>
             </Grid>
         </Border>
-        
-        
+
+
 
         <!-- TODO: Make background blur the mainwindow background image -->
-        <Grid Panel.ZIndex="2">
-            <ItemsControl ItemsSource="{Binding}" Padding="60 90">
+        <Grid Panel.ZIndex="2" Margin="200 100 200 30">
+            <ItemsControl ItemsSource="{Binding FilteredWidgets}">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
-                        <local:Widget />
+                        <local:Widget local:AnimateFadeInOut.Value="{Binding ShowWidget}">
+                            <local:Widget.ContextMenu>
+                                <ContextMenu />
+                            </local:Widget.ContextMenu>
+                        </local:Widget>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
                         <UniformGrid Rows="4" 
-                                        Columns="5"
-                                        />
+                                     Columns="5"
+                                     />
                     </ItemsPanelTemplate>
                 </ItemsControl.ItemsPanel>
             </ItemsControl>

@@ -113,6 +113,7 @@
     <Compile Include="Animations\SlideDirection.cs" />
     <Compile Include="Attached Properties\FrameworkElementAttachedProperties.cs" />
     <Compile Include="Attached Properties\Base\BaseAttachedProperty.cs" />
+    <Compile Include="Attached Properties\TextAttachedProperties.cs" />
     <Compile Include="Controls\CampaignSelect\CampaignHostWindow.xaml.cs">
       <DependentUpon>CampaignHostWindow.xaml</DependentUpon>
     </Compile>
@@ -190,6 +191,8 @@
     <Compile Include="ValueConverters\DialogButtons\YesNoButtonsToVisibilityConverter.cs" />
     <Compile Include="ValueConverters\DialogButtons\OkButtonToVisibilityConverter.cs" />
     <Compile Include="ValueConverters\DialogButtons\ButtonsToStringConverter.cs" />
+    <Compile Include="ValueConverters\Rest\CountToVisibilityConverter.cs" />
+    <Compile Include="ValueConverters\Rest\InvertedBooleanToVisibilityConverter.cs" />
     <Compile Include="ValueConverters\Rest\ErrottypeToSolidColorBrushConverter.cs" />
     <Compile Include="ValueConverters\Rest\ErrottypeToFontAwesomeFontConverter.cs" />
     <Compile Include="ValueConverters\Rest\BooleanToVisibilityConverter.cs" />
@@ -457,6 +460,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\plus.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\d20.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

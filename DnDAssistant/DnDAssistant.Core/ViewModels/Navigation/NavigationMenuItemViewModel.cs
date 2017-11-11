@@ -31,6 +31,13 @@ namespace DnDAssistant.Core
 
         }
 
+        public NavigationMenuItemViewModel(WidgetViewModel widget)
+        {
+            Title = widget.Name;
+
+            Click = widget.Click;
+        }
+
         #endregion
     }
 }

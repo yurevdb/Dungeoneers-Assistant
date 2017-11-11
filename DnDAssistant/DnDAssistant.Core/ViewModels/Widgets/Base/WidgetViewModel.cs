@@ -43,12 +43,39 @@ namespace DnDAssistant.Core
         /// <summary>
         /// The string for the rgb background 
         /// </summary>
-        public string BackgroundColor => _Colors[new Random().Next(0, _Colors.Count)];
+        public string BackgroundColor { get; set; }
 
         /// <summary>
         /// Gets the initials of the widget name
         /// </summary>
         public string NameInitials => GetInitials();
+
+        /// <summary>
+        /// Indicator wether to show this widget
+        /// </summary>
+        public bool ShowWidget { get; set; } = true;
+
+        /// <summary>
+        /// Items for the context menu
+        /// </summary>
+        public List<WidgetContextMenuItemViewModel> ContextMenu { get; set; } = 
+            new List<WidgetContextMenuItemViewModel>
+            {
+                new WidgetContextMenuItemViewModel{
+                    Text = "Add Favorite",
+                    Click = new RelayParameterizedCommand((obj)=>IoC.Navigation.Add(new NavigationMenuItemViewModel(obj as WidgetViewModel)))
+                },
+
+                new WidgetContextMenuItemViewModel{
+                    Text = "Remove Favorite",
+                    Click = new RelayParameterizedCommand((obj)=>IoC.Navigation.Remove(new NavigationMenuItemViewModel(obj as WidgetViewModel)))
+                },
+
+                new WidgetContextMenuItemViewModel{
+                    Text = "Remove",
+                    Click = new RelayParameterizedCommand(obj => IoC.Widgets.Remove((obj as WidgetViewModel)))
+                }
+            };
         
         #endregion
 
@@ -59,7 +86,8 @@ namespace DnDAssistant.Core
         /// </summary>
         public WidgetViewModel()
         {
-
+            if (ImageSet)
+                BackgroundColor = SetBackground();
         }
 
         #endregion
@@ -81,6 +109,14 @@ namespace DnDAssistant.Core
                 initials += s.ToUpper().ToCharArray()[0].ToString();
 
             return initials;
+        }
+
+        /// <summary>
+        /// Sets the background color of the widget to that of a random resourced color
+        /// </summary>
+        private string SetBackground()
+        {
+            return _Colors[new Random().Next(0, _Colors.Count)];
         }
 
     }

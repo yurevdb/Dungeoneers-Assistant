@@ -25,17 +25,40 @@
                 <Border Padding="5">
                     <ScrollViewer VerticalScrollBarVisibility="Hidden"
                                   HorizontalScrollBarVisibility="Disabled">
-                        <ItemsControl ItemsSource="{Binding}">
+                        <StackPanel>
+                            <!-- Static navigation items -->
+                            <ItemsControl ItemsSource="{Binding StaticList}">
 
-                            <!-- Style the items (The navigation buttons) -->
-                            <ItemsControl.ItemTemplate>
-                                <DataTemplate>
-                                    <Border>
-                                        <local:NavigationMenuItem />
-                                    </Border>
-                                </DataTemplate>
-                            </ItemsControl.ItemTemplate>
-                        </ItemsControl>
+                                <!-- Style the items (The navigation buttons) -->
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <Border>
+                                            <local:NavigationMenuItem />
+                                        </Border>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                            
+                            <!-- TODO: Style seperator -->
+                            <Separator Visibility="{Binding FilteredItems, Converter={local:CountToVisibilityConverter}}"
+                                       Background="{StaticResource BronzeBrush}"
+                                       Height="10"
+                                       />
+
+                            <!-- Shortcuts -->
+                            <ItemsControl ItemsSource="{Binding FilteredItems}">
+
+                                <!-- Style the items (The navigation buttons) -->
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <Border>
+                                            <local:NavigationMenuItem />
+                                        </Border>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+
+                        </StackPanel>
                     </ScrollViewer>
                 </Border>
             </Grid>

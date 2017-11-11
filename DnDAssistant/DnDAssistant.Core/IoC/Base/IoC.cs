@@ -39,6 +39,16 @@ namespace DnDAssistant.Core
         /// </summary>
         public static CampaignSelectorViewModel CampaignSelector => Get<CampaignSelectorViewModel>();
 
+        /// <summary>
+        /// A shortcut to acces the <see cref="NavigationMenuViewModel"/>
+        /// </summary>
+        public static NavigationMenuViewModel Navigation => Get<NavigationMenuViewModel>();
+
+        /// <summary>
+        /// A shortcut to acces the <see cref="WidgetListViewModel"/>
+        /// </summary>
+        public static WidgetListViewModel Widgets => Get<WidgetListViewModel>();
+
         #endregion
 
         #region Construction
@@ -64,6 +74,8 @@ namespace DnDAssistant.Core
             Kernel.Bind<ErrorViewModel>().ToConstant(new ErrorViewModel());
             Kernel.Bind<SplashViewModel>().ToConstant(new SplashViewModel());
             Kernel.Bind<CampaignSelectorViewModel>().ToConstant(new CampaignSelectorViewModel());
+            Kernel.Bind<NavigationMenuViewModel>().ToConstant(new NavigationMenuViewModel());
+            Kernel.Bind<WidgetListViewModel>().ToConstant(new WidgetListViewModel());
         }
 
         #endregion

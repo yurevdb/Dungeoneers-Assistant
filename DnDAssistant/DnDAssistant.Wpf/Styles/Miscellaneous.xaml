@@ -246,4 +246,75 @@
         </Setter>
     </Style>
 
+    <Style TargetType="{x:Type ContextMenu}">
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="Grid.IsSharedSizeScope" Value="true" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ContextMenu}">
+                    <Border x:Name="Border"
+                            Background="{StaticResource SmokeWhiteBrush}"
+                            BorderBrush="{StaticResource BronzeBrush}"
+                            Cursor="Hand"
+                            BorderThickness="1">
+                        <ItemsControl ItemsSource="{Binding ContextMenu}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Border Padding="10 4">
+
+                                        <Grid Height="23">
+
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <!-- Icon if given -->
+                                            <Border Grid.Row="0"
+                                                    BorderBrush="{StaticResource RedBrush}"
+                                                    BorderThickness="0 0 1 0"
+                                                    Visibility="Collapsed"
+                                                    Margin="0 0 3 0"
+                                                    Width="20"
+                                                    />
+
+                                            <TextBlock Text="{Binding Text}"
+                                                       Grid.Column="1"
+                                                       />
+
+                                        </Grid>
+
+                                        <Border.InputBindings>
+                                            <MouseBinding MouseAction="LeftClick" 
+                                                                  Command="{Binding Click}" 
+                                                                  CommandParameter="{Binding DataContext, RelativeSource={RelativeSource AncestorType=local:Widget}}"/>
+                                        </Border.InputBindings>
+                                    </Border>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+
+                        <Border.Triggers>
+                            <EventTrigger RoutedEvent="MouseEnter">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ColorAnimation To="{StaticResource White}" DecelerationRatio="0.9" Duration="0:0:0.3" Storyboard.TargetName="Border" Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="MouseLeave">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ColorAnimation To="{StaticResource SmokeWhite}" DecelerationRatio="0.9" Duration="0:0:0.3" Storyboard.TargetName="Border" Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </Border.Triggers>
+                    </Border>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
 </ResourceDictionary>

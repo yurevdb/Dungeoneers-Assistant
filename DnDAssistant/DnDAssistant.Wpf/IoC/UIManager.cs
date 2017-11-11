@@ -48,9 +48,7 @@ namespace DnDAssistant.Wpf
             // Make topmost so the window is visible during the animation
             window.Topmost = true;
 
-            window.ShowInTaskbar = false;
-
-            await window.FadeOutAsync(1);
+            await window.FadeOutAsync(0.7f);
 
             window.Close();
         }

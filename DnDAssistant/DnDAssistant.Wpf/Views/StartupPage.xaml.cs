@@ -10,7 +10,9 @@ namespace DnDAssistant.Wpf
         public StartupPage()
         {
             InitializeComponent();
-            DataContext = new WidgetListViewModel().Widgets;
+            DataContext = IoC.Widgets;
+            if(IoC.Widgets.Widgets.Count <= 0)
+                IoC.Widgets.Setup();
         }
     }
 }

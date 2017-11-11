@@ -11,7 +11,8 @@ namespace DnDAssistant.Wpf
         public NavigationMenu()
         {
             InitializeComponent();
-            DataContext = NavigationMenuViewModel.Instance.Items;
+            DataContext = IoC.Navigation;
+            IoC.Navigation.SetupNavigation();
         }
     }
 }
