@@ -12,7 +12,8 @@ namespace DnDAssistant.Wpf
         {
             InitializeComponent();
             DataContext = IoC.Navigation;
-            IoC.Navigation.SetupNavigation();
+            if(!(IoC.Navigation.StaticList.Count > 0))
+                IoC.Navigation.SetupNavigation();
         }
     }
 }

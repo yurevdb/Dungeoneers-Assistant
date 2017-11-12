@@ -14,23 +14,25 @@
 
         <Grid Grid.Row="0">
             <Ellipse 
+                x:Name="backdrop"
                 Width="75"
                 Height="75"
                 VerticalAlignment="Center"
                 HorizontalAlignment="Center"
                 Stroke="{StaticResource DarkRedBrush}"
-                StrokeThickness="3"
+                StrokeThickness="4"
                 Fill="{Binding BackgroundColor,Converter={local:StringRGBToBrushConverter}}"
                 Visibility="{Binding ImageSet, Converter={local:BooleanToVisibilityConverter}}"
                 />
 
             <Ellipse 
+                x:Name="image"
                 Width="75"
                 Height="75"
                 VerticalAlignment="Center"
                 HorizontalAlignment="Center"
                 Stroke="{StaticResource DarkRedBrush}"
-                StrokeThickness="3"
+                StrokeThickness="4"
                 Panel.ZIndex="5"
                 Visibility="{Binding ImageSet, Converter={local:InvertedBooleanToVisibilityConverter}}"
                 >
@@ -40,8 +42,8 @@
             </Ellipse>
 
             <Ellipse 
-                Width="75"
-                Height="75"
+                Width="74"
+                Height="74"
                 Panel.ZIndex="1"
                 VerticalAlignment="Center"
                 HorizontalAlignment="Center"
@@ -59,18 +61,41 @@
 
         </Grid>
 
-        <TextBlock Grid.Row="1"
+        <TextBlock x:Name="text"
+                   Grid.Row="1"
                    Text="{Binding Name}"
                    HorizontalAlignment="Center"
                    VerticalAlignment="Center"
                    Height="20"
-                   FontFamily="{StaticResource Regular}"
-                   FontSize="{StaticResource FontsizeSmall}"
+                   FontFamily="{StaticResource Bold}"
+                   FontSize="{StaticResource FontsizeBigSmall}"
+                   Opacity="0"
                    />
 
         <Grid.InputBindings>
             <MouseBinding MouseAction="LeftClick" Command="{Binding Click}"/>
         </Grid.InputBindings>
+
+        <Grid.Triggers>
+            <EventTrigger RoutedEvent="MouseEnter">
+                <BeginStoryboard>
+                    <Storyboard>
+                        <DoubleAnimation To="1" Duration="0:0:0.3" Storyboard.TargetName="text" Storyboard.TargetProperty="Opacity"/>
+                        <ColorAnimation To="{StaticResource Bronze}" Duration="0:0:0.3" Storyboard.TargetName="backdrop" Storyboard.TargetProperty="(Stroke).(SolidColorBrush.Color)"/>
+                        <ColorAnimation To="{StaticResource Bronze}" Duration="0:0:0.3" Storyboard.TargetName="image" Storyboard.TargetProperty="(Stroke).(SolidColorBrush.Color)"/>
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger>
+            <EventTrigger RoutedEvent="MouseLeave">
+                <BeginStoryboard>
+                    <Storyboard>
+                        <DoubleAnimation To="0" Duration="0:0:0.3" Storyboard.TargetName="text" Storyboard.TargetProperty="Opacity"/>
+                        <ColorAnimation To="{StaticResource DarkRed}" Duration="0:0:0.3" Storyboard.TargetName="backdrop" Storyboard.TargetProperty="(Stroke).(SolidColorBrush.Color)"/>
+                        <ColorAnimation To="{StaticResource DarkRed}" Duration="0:0:0.3" Storyboard.TargetName="image" Storyboard.TargetProperty="(Stroke).(SolidColorBrush.Color)"/>
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger>
+        </Grid.Triggers>
 
     </Grid>
 </UserControl>

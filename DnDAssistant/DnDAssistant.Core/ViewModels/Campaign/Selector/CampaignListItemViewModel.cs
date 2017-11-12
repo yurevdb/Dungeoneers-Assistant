@@ -53,7 +53,7 @@ namespace DnDAssistant.Core
             {
                 if(obj is CampaignListItemViewModel campaign)
                 {
-                    var res = IoC.UI.ShowResponseMessage(new DialogViewModel { Message = "This campaign will be deleted.", Title = "Deleting", Buttons = Buttons.YesNo });
+                    var res = IoC.UI.ShowResponseMessage(new DialogViewModel { Message = "Do you want to delete this campaign?", Title = "Deleting", Buttons = Buttons.YesNo });
 
                     if (res == DialogResponse.No || res == DialogResponse.Cancel)
                         return;

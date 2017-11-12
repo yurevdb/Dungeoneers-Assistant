@@ -125,16 +125,21 @@ namespace DnDAssistant.Wpf
             // Open the ofd and if nothing was selected, do fuck all
             if (ofd.ShowDialog() == false) return;
 
+            GetImage(ofd.FileName);
+        }
+
+        private void GetImage(string imagePath)
+        {
             //Original image
-            var preImage = new Bitmap(ofd.FileName);
+            var preImage = new Bitmap(imagePath);
             //Scaling factor
             var dwdh = (double)preImage.Height / (double)preImage.Width;
             //Scaled image
-            _Image = new Bitmap(preImage, 48, (int)(48*dwdh));
+            _Image = new Bitmap(preImage, 48, (int)(48 * dwdh));
             //Preview image
-            imgCampaign.ImageSource = new BitmapImage(new Uri(ofd.FileName));
+            imgCampaign.ImageSource = new BitmapImage(new Uri(imagePath));
             //Name to set in the viewmodel
-            _ImageName = ofd.FileName.Split('\\').Last();
+            _ImageName = imagePath.Split('\\').Last();
         }
 
         /// <summary>
@@ -167,6 +172,16 @@ namespace DnDAssistant.Wpf
 
             // Begin the animation
             _Window.BeginAnimation(OpacityProperty, anim);
+        }
+
+        private void Ellipse_Drop(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+            {
+                var files = (string[])e.Data.GetData(DataFormats.FileDrop);
+
+                GetImage(files[0]);
+            }
         }
     }
 }
