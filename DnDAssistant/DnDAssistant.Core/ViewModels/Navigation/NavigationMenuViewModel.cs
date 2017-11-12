@@ -12,13 +12,12 @@ namespace DnDAssistant.Core
 
         private ObservableCollection<NavigationMenuItemViewModel> _Items = new ObservableCollection<NavigationMenuItemViewModel>();
 
-
         #endregion
 
         #region Public Properties
 
         /// <summary>
-        /// The <see cref="NavigationMenuViewModel"/> items
+        /// The <see cref="NavigationMenuItemViewModel"/> items
         /// </summary>
         public ObservableCollection<NavigationMenuItemViewModel> Items
         {
@@ -35,6 +34,9 @@ namespace DnDAssistant.Core
             }
         }
 
+        /// <summary>
+        /// The filtered <see cref="NavigationMenuItemViewModel"/> Items
+        /// </summary>
         public ObservableCollection<NavigationMenuItemViewModel> FilteredItems { get; set; }
 
         /// <summary>
@@ -64,8 +66,13 @@ namespace DnDAssistant.Core
             (
                 new NavigationMenuItemViewModel
                 {
-                    Click = new RelayCommand(() => IoC.App.GoTo(ApplicationPage.CharacterCreator)),
-                    Title = "Character Creator"
+                    Click = new RelayParameterizedCommand(obj =>
+                    {
+                        (obj as NavigationMenuItemViewModel).IsSelected ^= true;
+                        IoC.App.GoToAsync(ApplicationPage.CharacterCreator);
+                    }),
+                    Title = "Character Creator",
+                    ConnectedPage = ApplicationPage.CharacterCreator
                 }
             );
 
@@ -73,8 +80,13 @@ namespace DnDAssistant.Core
             if (IoC.App.Campaign?.Role == CampaingRole.DungeonMaster)
                 StaticList.Add(new NavigationMenuItemViewModel
                 {
-                    Click = new RelayCommand(() => IoC.App.GoTo(ApplicationPage.DMTools)),
-                    Title = "DM Tools"
+                    Click = new RelayParameterizedCommand(obj =>
+                    {
+                        (obj as NavigationMenuItemViewModel).IsSelected ^= true;
+                        IoC.App.GoToAsync(ApplicationPage.DMTools);
+                    }),
+                    Title = "DM Tools",
+                    ConnectedPage = ApplicationPage.DMTools
                 });
 
             Items = new ObservableCollection<NavigationMenuItemViewModel>(_Items);
@@ -102,6 +114,9 @@ namespace DnDAssistant.Core
         /// <param name="item">The item to remove</param>
         public void Remove(NavigationMenuItemViewModel item)
         {
+            if ((item as NavigationMenuItemViewModel) == null)
+                return;
+
             if(FilteredItems.Count >= 1)
                 FilteredItems.Remove(Items.Where(c => c.Title == item.Title).Single());
         }

@@ -52,7 +52,11 @@
                                 <ItemsControl.ItemTemplate>
                                     <DataTemplate>
                                         <Border>
-                                            <local:NavigationMenuItem />
+                                            <local:NavigationMenuItem >
+                                                <local:NavigationMenuItem.ContextMenu>
+                                                    <ContextMenu />
+                                                </local:NavigationMenuItem.ContextMenu>
+                                            </local:NavigationMenuItem>
                                         </Border>
                                     </DataTemplate>
                                 </ItemsControl.ItemTemplate>

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 
 namespace DnDAssistant.Core
 {
@@ -72,10 +73,31 @@ namespace DnDAssistant.Core
         /// Function to set the current page of the application
         /// </summary>
         /// <param name="page">The page to go to</param>
-        public void GoTo(ApplicationPage page)
+        public async void GoToAsync(ApplicationPage page)
         {
-            // Set the current page of the application
-            CurrentPage = page;
+            await Task.Run(() =>
+            {
+                // Set the current page of the application
+                CurrentPage = page;
+
+                // Set the selector for the page in the navigation menu (standard items)
+                foreach (var p in IoC.Navigation.StaticList)
+                {
+                    if (p.ConnectedPage == CurrentPage)
+                        p.IsSelected = true;
+                    else
+                        p.IsSelected = false;
+                }
+
+                // Set the selector for the page in the navigation menu (shortcut items)
+                foreach (var p in IoC.Navigation.FilteredItems)
+                {
+                    if (p.ConnectedPage == CurrentPage)
+                        p.IsSelected = true;
+                    else
+                        p.IsSelected = false;
+                }
+            });
         }
 
         /// <summary>

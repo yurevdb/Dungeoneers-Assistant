@@ -15,7 +15,7 @@
                 />
 
         <Border CornerRadius="15"
-                Margin="250 30"
+                Margin="230 30"
                 Height="30"
                 BorderBrush="{StaticResource WhiteBrush}"
                 BorderThickness="3"

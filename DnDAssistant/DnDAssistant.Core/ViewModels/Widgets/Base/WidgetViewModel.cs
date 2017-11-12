@@ -63,16 +63,11 @@ namespace DnDAssistant.Core
             {
                 new WidgetContextMenuItemViewModel{
                     Text = "Add Favorite",
-                    Click = new RelayParameterizedCommand((obj)=>IoC.Navigation.Add(new NavigationMenuItemViewModel(obj as WidgetViewModel)))
+                    Click = new RelayParameterizedCommand((obj)=> IoC.Navigation.Add(new NavigationMenuItemViewModel(obj as WidgetViewModel)))
                 },
 
                 new WidgetContextMenuItemViewModel{
-                    Text = "Remove Favorite",
-                    Click = new RelayParameterizedCommand((obj)=>IoC.Navigation.Remove(new NavigationMenuItemViewModel(obj as WidgetViewModel)))
-                },
-
-                new WidgetContextMenuItemViewModel{
-                    Text = "Remove",
+                    Text = "Remove from widgets",
                     Click = new RelayParameterizedCommand(obj => IoC.Widgets.Remove((obj as WidgetViewModel)))
                 }
             };

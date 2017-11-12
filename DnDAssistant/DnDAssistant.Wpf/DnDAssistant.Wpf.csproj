@@ -191,6 +191,7 @@
     <Compile Include="ValueConverters\DialogButtons\YesNoButtonsToVisibilityConverter.cs" />
     <Compile Include="ValueConverters\DialogButtons\OkButtonToVisibilityConverter.cs" />
     <Compile Include="ValueConverters\DialogButtons\ButtonsToStringConverter.cs" />
+    <Compile Include="ValueConverters\Icons\BooleanToStrokeConverter.cs" />
     <Compile Include="ValueConverters\Rest\CountToVisibilityConverter.cs" />
     <Compile Include="ValueConverters\Rest\InvertedBooleanToVisibilityConverter.cs" />
     <Compile Include="ValueConverters\Rest\ErrottypeToSolidColorBrushConverter.cs" />

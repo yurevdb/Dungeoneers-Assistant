@@ -67,7 +67,7 @@ namespace DnDAssistant.Core
                         ToolTip = "Shift + W",
                         Click = new RelayCommand(() =>
                         {
-                            IoC.App.GoTo(ApplicationPage.Startup);
+                            IoC.App.GoToAsync(ApplicationPage.Startup);
                         })
                     }
                 })

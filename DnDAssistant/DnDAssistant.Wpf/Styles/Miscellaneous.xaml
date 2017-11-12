@@ -280,14 +280,15 @@
 
                                             <TextBlock Text="{Binding Text}"
                                                        Grid.Column="1"
+                                                       VerticalAlignment="Center"
                                                        />
 
                                         </Grid>
 
                                         <Border.InputBindings>
                                             <MouseBinding MouseAction="LeftClick" 
-                                                                  Command="{Binding Click}" 
-                                                                  CommandParameter="{Binding DataContext, RelativeSource={RelativeSource AncestorType=local:Widget}}"/>
+                                                          Command="{Binding Click}" 
+                                                          CommandParameter="{Binding DataContext, RelativeSource={RelativeSource AncestorType=ItemsControl}}"/>
                                         </Border.InputBindings>
                                     </Border>
                                 </DataTemplate>

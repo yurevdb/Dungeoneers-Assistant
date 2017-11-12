@@ -13,7 +13,9 @@
                       CanContentScroll="False"
                       Grid.RowSpan="3"
                       Panel.ZIndex="1"
+                      IsDeferredScrollingEnabled="True"
                       >
+            
             <ItemsControl ItemsSource="{Binding FilteredCampaigns}" >
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
@@ -26,8 +28,8 @@
                 <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
                     <LinearGradientBrush.GradientStops>
                         <GradientStop Offset="0" Color="Transparent"/>
-                        <GradientStop Offset="0.1" Color="Black"/>
-                        <GradientStop Offset="0.9" Color="Black"/>
+                        <GradientStop Offset="0.15" Color="Black"/>
+                        <GradientStop Offset="0.85" Color="Black"/>
                         <GradientStop Offset="1" Color="Transparent"/>
                     </LinearGradientBrush.GradientStops>
                 </LinearGradientBrush>

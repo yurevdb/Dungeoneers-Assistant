@@ -218,9 +218,9 @@ namespace DnDAssistant.Wpf
             MenuCommand = new RelayCommand(() => { new CampaignHostWindow().Show(); _Window.Close(); });
             PopupClickawayCommand = new RelayCommand(() => IoC.App.CampaignMenuVisible = false);
             ToggleNavigationCommand = new RelayCommand(() => IoC.App.NavigationMenuVisible ^= true);
-            GotoWidgetPage = new RelayCommand(() => IoC.App.GoTo(ApplicationPage.Startup));
-            GotoCharacterCreatorPage = new RelayCommand(() => IoC.App.GoTo(ApplicationPage.CharacterCreator));
-            GotoDMToolsPage = new RelayCommand(() => IoC.App.GoTo(ApplicationPage.DMTools));
+            GotoWidgetPage = new RelayCommand(() => IoC.App.GoToAsync(ApplicationPage.Startup));
+            GotoCharacterCreatorPage = new RelayCommand(() => IoC.App.GoToAsync(ApplicationPage.CharacterCreator));
+            GotoDMToolsPage = new RelayCommand(() => IoC.App.GoToAsync(ApplicationPage.DMTools));
 
             #endregion
 

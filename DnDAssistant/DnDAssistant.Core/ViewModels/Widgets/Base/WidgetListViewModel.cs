@@ -17,8 +17,6 @@ namespace DnDAssistant.Core
 
         private string _LastSearchText;
 
-        private bool _SearchIsOpen;
-
         #endregion
 
         #region Public Properties
