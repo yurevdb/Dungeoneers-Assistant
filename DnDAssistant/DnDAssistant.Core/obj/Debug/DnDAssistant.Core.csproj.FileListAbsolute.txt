@@ -24,3 +24,4 @@ C:\Users\Giova\source\repos\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Core
 C:\Users\Giova\source\repos\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Core\obj\Debug\DnDAssistant.Core.csproj.CoreCompileInputs.cache
 C:\Users\Giova\source\repos\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Core\obj\Debug\DnDAssistant.Core.dll
 C:\Users\Giova\source\repos\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Core\obj\Debug\DnDAssistant.Core.pdb
+C:\Users\Giova\source\repos\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Core\obj\Debug\DnDAssistant.Core.csprojResolveAssemblyReference.cache

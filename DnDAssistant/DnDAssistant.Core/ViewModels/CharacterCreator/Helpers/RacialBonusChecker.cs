@@ -15,6 +15,7 @@ namespace DnDAssistant.Core
         /// List containing the subraces of the Elf Race
         /// </summary>
         private static readonly List<string> _SubElf = new List<string>() { "Drow", "High Elf", "Wood Elf" };
+        private static readonly List<string> _SubGnome = new List<string>() { "Forest Gnome", "Rock Gnome", "Deep Gnome" };
         /// <summary>
         /// List containing the subraces of the Halfling Race
         /// </summary>
@@ -69,9 +70,57 @@ namespace DnDAssistant.Core
                     else
                         Stats[3] = Stats[3] + 1;
                     return Stats;
+                case "Gnome":
+                    Stats[4] += 2;
+                    switch(SubRace)
+                    {
+                        case "Forest Gnome":
+                            Stats[1] += 1;
+                            break;
+                        case "Rock Gnome":
+                            Stats[2] += 1;
+                            break;
+                        case "Deep Gnome":
+                            Stats[1] += 1;
+                            break;
+                    }
+                    return Stats;
+
+                case "HalfElf":
+                    Stats[5] += 1;
+                    return Stats;
+
+                case "HalfOrc":
+                    Stats[0] += 2;
+                    Stats[2] += 1;
+                    return Stats;
+
+                case "Halfling":
+                    Stats[2] += 2;
+                    if (SubRace == "Lightfoot")
+                        Stats[5] += 1;
+                    if (SubRace == "Stout")
+                        Stats[2] += 1;
+                    return Stats;
+
+                case "Human":
+                   for(var i =0; i<6; i++)
+                    {
+                        Stats[i] += 1;
+                    }
+                    return Stats;
+
+                case "Tiefling":
+                    Stats[4] += 1;
+                    Stats[5] += 2;
+                    return Stats;
+
+                default:
+                    return null;
+                    
+                            
             }
 
-            return null;
         }
 
         /// <summary>
@@ -94,7 +143,7 @@ namespace DnDAssistant.Core
                 case "Dragonborn":
                     return _SubDragonborn;
                 case "Gnome":
-                    return _NoSub;
+                    return _SubGnome;
                 case "HalfElf":
                     return _NoSub;
                 case "HalfOrc":
