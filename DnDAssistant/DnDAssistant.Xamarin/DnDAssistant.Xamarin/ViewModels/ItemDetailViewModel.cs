@@ -11,11 +11,11 @@ namespace DnDAssistant.Xamarin.ViewModels
 			Item = item;
 		}
 
-		int quantity = 1;
+		int _Quantity = 1;
 		public int Quantity
 		{
-			get { return quantity; }
-			set { SetProperty(ref quantity, value); }
-		}
+            get => _Quantity;
+            set => SetProperty(ref _Quantity, value);
+        }
 	}
 }

@@ -15,24 +15,21 @@ namespace DnDAssistant.Xamarin
 			SetMainPage();
 		}
 
-		public static void SetMainPage()
-		{
-            Current.MainPage = new TabbedPage
-            {
-                Children =
+        public static void SetMainPage() => Current.MainPage = new TabbedPage
+        {
+            Children =
                 {
                     new NavigationPage(new ItemsPage())
                     {
                         Title = "Browse",
-                        Icon = Device.OnPlatform<string>("tab_feed.png",null,null)
+                        //Icon = Device.OnPlatform("tab_feed.png",null,null)
                     },
                     new NavigationPage(new AboutPage())
                     {
                         Title = "About",
-                        Icon = Device.OnPlatform<string>("tab_about.png",null,null)
+                        //Icon = Device.OnPlatform("tab_about.png",null,null)
                     },
                 }
-            };
-        }
-	}
+        };
+    }
 }

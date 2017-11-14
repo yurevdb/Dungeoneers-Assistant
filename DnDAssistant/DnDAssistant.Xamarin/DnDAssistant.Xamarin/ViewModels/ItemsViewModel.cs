@@ -19,7 +19,7 @@ namespace DnDAssistant.Xamarin.ViewModels
 		{
 			Title = "Browse";
 			Items = new ObservableRangeCollection<Item>();
-			LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
+			LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommandAsync());
 
 			MessagingCenter.Subscribe<NewItemPage, Item>(this, "AddItem", async (obj, item) =>
 			{
@@ -29,7 +29,7 @@ namespace DnDAssistant.Xamarin.ViewModels
 			});
 		}
 
-		async Task ExecuteLoadItemsCommand()
+		async Task ExecuteLoadItemsCommandAsync()
 		{
 			if (IsBusy)
 				return;
