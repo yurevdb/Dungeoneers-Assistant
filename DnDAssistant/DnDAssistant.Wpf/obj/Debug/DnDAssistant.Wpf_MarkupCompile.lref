@@ -1,6 +1,8 @@
-﻿C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\GeneratedInternalTypeHelper.g.cs
+﻿
 FC:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\App.xaml;;
 FC:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Controls\CampaignSelect\CampaignHostWindow.xaml;;
+FC:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Controls\CampaignSelect\CampaignSelector\CampaignSelector.xaml;;
+FC:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Controls\CampaignSelect\CampaignSelector\CampaignSelectorItem.xaml;;
 FC:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Controls\CampaignSelect\Pages\Creator.xaml;;
 FC:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Controls\CampaignSelect\Pages\Selector.xaml;;
 FC:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Controls\ControlHub\ControlHub.xaml;;
@@ -14,10 +16,12 @@ FC:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant
 FC:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Controls\MenuControl\MenuControl.xaml;;
 FC:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Controls\Menus\VerticalMenu.xaml;;
 FC:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Controls\Dialogs\Base\DialogWindow.xaml;;
-FC:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Controls\NavigationMenu.xaml;;
-FC:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Controls\PageHost.xaml;;
+FC:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Controls\NavigationMenu\NavigationMenu.xaml;;
+FC:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Controls\Extra\PageHost.xaml;;
+FC:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Controls\NavigationMenu\NavigationMenuItem.xaml;;
 FC:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Controls\Splashscreen\Splash.xaml;;
 FC:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Controls\LoadingAnimation\LoadingAnimation.xaml;;
+FC:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Controls\Widget\Widget.xaml;;
 FC:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\MainWindow.xaml;;
 FC:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Styles\Buttons.xaml;;
 FC:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Styles\Colors.xaml;;
@@ -28,6 +32,9 @@ FC:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant
 FC:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Styles\Window.xaml;;
 FC:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Views\Character Creator\CharacterCreatorPage.xaml;;
 FC:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Views\Character Creator\CharPage.xaml;;
-FC:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Views\StartupPage.xaml;;
+FC:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Views\DM Tools\DMToolsPage.xaml;;
+FC:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Views\Small Widgets\Dice Roller.xaml;;
+FC:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Views\Start Page\StartupPage.xaml;;
 FC:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Views\Test\TestPage.xaml;;
+FC:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Controls\Extra\NumberSelector.xaml;;
 

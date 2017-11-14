@@ -29,13 +29,10 @@
                  Panel.ZIndex="10"
                  >
             <Ellipse.Fill>
-                <ImageBrush Stretch="Fill" 
+                <ImageBrush Stretch="UniformToFill" 
                             ImageSource="{Binding Campaign.ImageURI}"
                             />
             </Ellipse.Fill>
-            <Ellipse.InputBindings>
-                <MouseBinding MouseAction="LeftClick" Command="{Binding SwitchAroo}"/>
-            </Ellipse.InputBindings>
         </Ellipse>
         
         <!-- Background circle -->
@@ -60,7 +57,7 @@
                 BorderBrush="{StaticResource DarkRedBrush}"
                 BorderThickness="2"
                 Height="30"
-                Margin="13 0 0 0"
+                Margin="15 0 0 0"
                 VerticalAlignment="Center"
                 Panel.ZIndex="4"
                 Background="Transparent"
@@ -116,6 +113,7 @@
                 Visibility="{Binding AnyError, Converter={local:BooleanToVisibilityConverter}}"
                 Style="{StaticResource ErrorButton}"
                 HorizontalAlignment="Left"
+                Foreground="{Binding HighestErrorType, Converter={local:ErrottypeToSolidColorBrushConverter}}"
                 Grid.Column="3"
                 Height="30"
                 Width="30"
@@ -123,6 +121,7 @@
                 Content="{Binding HighestErrorType, Converter={local:ErrottypeToFontAwesomeFontConverter}}"
                 FontFamily="{StaticResource FontAwasome}"
                 Command="{Binding OpenErrors}"
+                Cursor="Hand"
                 />
 
         <!--#endregion-->

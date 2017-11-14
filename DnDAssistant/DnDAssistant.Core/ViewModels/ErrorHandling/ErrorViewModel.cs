@@ -19,6 +19,7 @@ namespace DnDAssistant.Core
 
         /// <summary>
         /// The list of errors
+        /// TODO: do this decently
         /// </summary>
         public ObservableCollection<Error> Errors => _Errors;
 
@@ -64,13 +65,16 @@ namespace DnDAssistant.Core
                 {
                     if (error.NeedToShow)
                     {
-                        IoC.UI.ShowMessage(new DialogViewModel
+                        var response = IoC.UI.ShowResponseMessage(new DialogViewModel
                         {
                             Title = error.Type.ToString(),
-                            OkText = "Close",
+                            Buttons = Buttons.YesNo,
                             Message = $"{error.Message}",
                         });
 
+                        if (response == DialogResponse.Cancel || response == DialogResponse.No)
+                            return;
+                        
                         error.NeedToShow = false;
 
                         SetThings();

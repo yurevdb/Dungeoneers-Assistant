@@ -1,0 +1,72 @@
+﻿<UserControl x:Class="DnDAssistant.Wpf.NavigationMenu"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DnDAssistant.Wpf"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+
+    <Border BorderBrush="{StaticResource BronzeBrush}"
+            BorderThickness="5"
+            Opacity="1"
+            >
+        <!-- Border children grid -->
+        <Grid Opacity="1">
+
+            <Grid Background="{StaticResource BronzeBrush}"
+                  Opacity="0.5"/>
+
+
+            <!-- For displaying the buttons -->
+            <Grid Opacity="1"
+                  Background="Transparent"
+                  >
+                <Border Padding="5">
+                    <ScrollViewer VerticalScrollBarVisibility="Hidden"
+                                  HorizontalScrollBarVisibility="Disabled">
+                        <StackPanel>
+                            <!-- Static navigation items -->
+                            <ItemsControl ItemsSource="{Binding StaticList}">
+
+                                <!-- Style the items (The navigation buttons) -->
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <Border>
+                                            <local:NavigationMenuItem />
+                                        </Border>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                            
+                            <!-- TODO: Style seperator -->
+                            <Separator Visibility="{Binding FilteredItems, Converter={local:CountToVisibilityConverter}}"
+                                       Background="{StaticResource BronzeBrush}"
+                                       Height="10"
+                                       />
+
+                            <!-- Shortcuts -->
+                            <ItemsControl ItemsSource="{Binding FilteredItems}">
+
+                                <!-- Style the items (The navigation buttons) -->
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <Border>
+                                            <local:NavigationMenuItem >
+                                                <local:NavigationMenuItem.ContextMenu>
+                                                    <ContextMenu />
+                                                </local:NavigationMenuItem.ContextMenu>
+                                            </local:NavigationMenuItem>
+                                        </Border>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+
+                        </StackPanel>
+                    </ScrollViewer>
+                </Border>
+            </Grid>
+        </Grid>
+    </Border>
+
+</UserControl>

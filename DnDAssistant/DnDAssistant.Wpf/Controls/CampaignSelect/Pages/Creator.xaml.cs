@@ -41,18 +41,12 @@ namespace DnDAssistant.Wpf
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if ((string)(sender as Button).Content == "X")
-            {
-                IoC.App.GoTo(CampaignHostWindows.Selector);
-                return;
-            }
-
             if(tbxName.Text == "" || IsInUse(tbxName.Text))
             {
                 IoC.UI.ShowMessage(new DialogViewModel
                 {
                     Title = "Error",
-                    OkText = "Close",
+                    Buttons = Buttons.Ok,
                     Message = (tbxName.Text == "") ? "Please enter a name for your campaign." : "A campaign with that name already exists."
                 });
                 return;
@@ -72,6 +66,16 @@ namespace DnDAssistant.Wpf
             // Setup the campaign structure on the computer
             nc.Setup();
 
+            // Add the campaign to the list
+            IoC.CampaignSelector.AddCampaign(new CampaignListItemViewModel
+            {
+                Name = nc.Name,
+                Description = nc.Description,
+                Role = nc.Role,
+                ImageURI = nc.ImageURI,
+                ShowDeleteButton = true
+            });
+
             // Save the selected image, if one was selected
             if (!(_Image == null))
                 _Image.Save($"{IoC.App.ResourcePath}\\{_ImageName}");
@@ -80,6 +84,12 @@ namespace DnDAssistant.Wpf
             IoC.App.SetCampaign(nc);
 
             OpenMainWindow();
+        }
+
+        private void ButtonClose_Click(object sender, RoutedEventArgs e)
+        {
+            IoC.App.GoTo(CampaignHostWindows.Selector);
+            return;
         }
 
         /// <summary>
@@ -115,9 +125,21 @@ namespace DnDAssistant.Wpf
             // Open the ofd and if nothing was selected, do fuck all
             if (ofd.ShowDialog() == false) return;
 
-            _Image = new Bitmap(ofd.FileName);
-            imgCampaign.ImageSource = new BitmapImage(new Uri(ofd.FileName));
-            _ImageName = ofd.FileName.Split('\\').Last();
+            GetImage(ofd.FileName);
+        }
+
+        private void GetImage(string imagePath)
+        {
+            //Original image
+            var preImage = new Bitmap(imagePath);
+            //Scaling factor
+            var dwdh = (double)preImage.Height / (double)preImage.Width;
+            //Scaled image
+            _Image = new Bitmap(preImage, 48, (int)(48 * dwdh));
+            //Preview image
+            imgCampaign.ImageSource = new BitmapImage(new Uri(imagePath));
+            //Name to set in the viewmodel
+            _ImageName = imagePath.Split('\\').Last();
         }
 
         /// <summary>
@@ -150,6 +172,16 @@ namespace DnDAssistant.Wpf
 
             // Begin the animation
             _Window.BeginAnimation(OpacityProperty, anim);
+        }
+
+        private void Ellipse_Drop(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+            {
+                var files = (string[])e.Data.GetData(DataFormats.FileDrop);
+
+                GetImage(files[0]);
+            }
         }
     }
 }

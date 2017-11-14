@@ -30,7 +30,8 @@
                     <!-- Menu Item -->
                     <Border Background="Transparent"
                             CornerRadius="0"
-                            Visibility="{Binding Type, Converter={local:MenuItemVisibilityConverter}, ConverterParameter=TextAndIcon}">
+                            Visibility="{Binding Type, Converter={local:MenuItemVisibilityConverter}, ConverterParameter=TextAndIcon}"
+                            ToolTip="{Binding ToolTip}">
 
                         <!-- Trigger -->
                         <Border.Triggers>

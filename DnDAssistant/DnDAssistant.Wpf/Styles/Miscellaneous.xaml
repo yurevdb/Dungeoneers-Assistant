@@ -57,29 +57,41 @@
 
     <Style TargetType="{x:Type ListViewItem}">
         <Setter Property="Background" Value="Transparent"/>
-        <Setter Property="Height" Value="52"/>
-        <Setter Property="Padding" Value="0"/>
+        <Setter Property="Height" Value="50"/>
+        <Setter Property="Padding" Value="5 0 "/>
         <Setter Property="Margin" Value="0 0 0 5"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate>
                     <Border Background="{TemplateBinding Background}"
                             CornerRadius="0"
-                            Padding="6"
+                            Padding="{TemplateBinding Padding}"
+                            BorderBrush="{StaticResource DarkRedBrush}"
+                            BorderThickness="0 0 0 0.5"
                             >
+                        <Border.InputBindings>
+                            <MouseBinding MouseAction="LeftDoubleClick" 
+                                          Command="{Binding OpenCampaign}"
+                                          CommandParameter="{Binding}"
+                                          />
+                        </Border.InputBindings>
+                        
                         <Grid>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="50"/>
                                 <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
                             </Grid.ColumnDefinitions>
 
-                            <Ellipse Width="40" 
-                                     Height="40" 
+                            <Ellipse x:Name="cirkel"
+                                     Width="45" 
+                                     Height="45" 
                                      Grid.Column="0" 
                                      VerticalAlignment="Center"
                                      HorizontalAlignment="Center"
                                      Stroke="{StaticResource DarkRedBrush}"
-                                     StrokeThickness="1"
+                                     StrokeThickness="2"
+                                     SnapsToDevicePixels="True"
                                      Panel.ZIndex="5"
                                      >
                                 <Ellipse.Fill>
@@ -87,13 +99,15 @@
                                 </Ellipse.Fill>
                             </Ellipse>
 
-                            <Ellipse Width="40" 
-                                     Height="40" 
+                            <Ellipse x:Name="underlay"
+                                     Width="45" 
+                                     Height="45" 
                                      Grid.Column="0" 
                                      VerticalAlignment="Center"
                                      HorizontalAlignment="Center"
                                      Fill="White"
                                      Panel.ZIndex="4"
+                                     SnapsToDevicePixels="True"
                                      />
 
                             <TextBlock Text="{Binding Name}" 
@@ -108,8 +122,49 @@
                                        ToolTip="{Binding Description}"
                                        ToolTipService.InitialShowDelay="1000"
                                        />
+
+                            <Button x:Name="button"
+                                    Grid.Column="2"
+                                    Visibility="{Binding ShowDeleteButton, Converter={local:BooleanToVisibilityConverter}}"
+                                    FontFamily="{StaticResource FontAwasome}"
+                                    Content="{StaticResource FontAwesomeCrossIcon}"
+                                    Style="{StaticResource RoundOkButton}"
+                                    Height="35"
+                                    Opacity="0"
+                                    Command="{Binding DeleteCampaign}"
+                                    CommandParameter="{Binding}"
+                                    />
+
                         </Grid>
                     </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Trigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ColorAnimation Duration="0:0:0.15" To="{StaticResource LightRed}" AccelerationRatio="0.9" Storyboard.TargetProperty="(Stroke).(SolidColorBrush.Color)" Storyboard.TargetName="cirkel"/>
+                                        <DoubleAnimation Duration="0:0:0.15" To="48" AccelerationRatio="0.9" Storyboard.TargetProperty="Height" Storyboard.TargetName="cirkel"/>
+                                        <DoubleAnimation Duration="0:0:0.15" To="48" AccelerationRatio="0.9" Storyboard.TargetProperty="Width" Storyboard.TargetName="cirkel"/>
+                                        <DoubleAnimation Duration="0:0:0.15" To="48" AccelerationRatio="0.9" Storyboard.TargetProperty="Height" Storyboard.TargetName="underlay"/>
+                                        <DoubleAnimation Duration="0:0:0.15" To="48" AccelerationRatio="0.9" Storyboard.TargetProperty="Width" Storyboard.TargetName="underlay"/>
+                                        <DoubleAnimation Duration="0:0:0.15" To="1" AccelerationRatio="0.9" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="button"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ColorAnimation Duration="0:0:0.15" To="{StaticResource DarkRed}" AccelerationRatio="0.9" Storyboard.TargetProperty="(Stroke).(SolidColorBrush.Color)" Storyboard.TargetName="cirkel"/>
+                                        <DoubleAnimation Duration="0:0:0.15" To="45" AccelerationRatio="0.9" Storyboard.TargetProperty="Height" Storyboard.TargetName="cirkel"/>
+                                        <DoubleAnimation Duration="0:0:0.15" To="45" AccelerationRatio="0.9" Storyboard.TargetProperty="Width" Storyboard.TargetName="cirkel"/>
+                                        <DoubleAnimation Duration="0:0:0.15" To="45" AccelerationRatio="0.9" Storyboard.TargetProperty="Height" Storyboard.TargetName="underlay"/>
+                                        <DoubleAnimation Duration="0:0:0.15" To="45" AccelerationRatio="0.9" Storyboard.TargetProperty="Width" Storyboard.TargetName="underlay"/>
+                                        <DoubleAnimation Duration="0:0:0.15" To="0" AccelerationRatio="0.9" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="button"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.ExitActions>
+                        </Trigger>
+                    </ControlTemplate.Triggers> 
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
@@ -122,14 +177,14 @@
                 <MultiTrigger.EnterActions>
                     <BeginStoryboard>
                         <Storyboard>
-                            <ColorAnimation Duration="0:0:0.1" To="{StaticResource LightRed}" AccelerationRatio="0.9" Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)"/>
+                            <ColorAnimation Duration="0:0:0.15" To="{StaticResource LightRed}" AccelerationRatio="0.9" Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)"/>
                         </Storyboard>
                     </BeginStoryboard>
                 </MultiTrigger.EnterActions>
                 <MultiTrigger.ExitActions>
                     <BeginStoryboard>
                         <Storyboard>
-                            <ColorAnimation Duration="0:0:0.1" To="Transparent" AccelerationRatio="0.9" Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)"/>
+                            <ColorAnimation Duration="0:0:0.15" To="Transparent" AccelerationRatio="0.9" Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)"/>
                         </Storyboard>
                     </BeginStoryboard>
                 </MultiTrigger.ExitActions>
@@ -169,12 +224,8 @@
                         <ContentPresenter Margin="4,0,0,0"
                                           VerticalAlignment="Center"
                                           HorizontalAlignment="Left"
-                                          RecognizesAccessKey="True"/>    
+                                          RecognizesAccessKey="True"/>
                     </BulletDecorator>
-                    
-                    
-                    
-                    
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsChecked" Value="false">
                             <Setter TargetName="CheckMark" Property="Visibility" Value="Collapsed"/>
@@ -190,6 +241,78 @@
                             <Setter Property="Opacity" Value="0.56"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type ContextMenu}">
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="Grid.IsSharedSizeScope" Value="true" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ContextMenu}">
+                    <Border x:Name="Border"
+                            Background="{StaticResource SmokeWhiteBrush}"
+                            BorderBrush="{StaticResource BronzeBrush}"
+                            Cursor="Hand"
+                            BorderThickness="1">
+                        <ItemsControl ItemsSource="{Binding ContextMenu}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Border Padding="10 4">
+
+                                        <Grid Height="23">
+
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <!-- Icon if given -->
+                                            <Border Grid.Row="0"
+                                                    BorderBrush="{StaticResource RedBrush}"
+                                                    BorderThickness="0 0 1 0"
+                                                    Visibility="Collapsed"
+                                                    Margin="0 0 3 0"
+                                                    Width="20"
+                                                    />
+
+                                            <TextBlock Text="{Binding Text}"
+                                                       Grid.Column="1"
+                                                       VerticalAlignment="Center"
+                                                       />
+
+                                        </Grid>
+
+                                        <Border.InputBindings>
+                                            <MouseBinding MouseAction="LeftClick" 
+                                                          Command="{Binding Click}" 
+                                                          CommandParameter="{Binding DataContext, RelativeSource={RelativeSource AncestorType=ItemsControl}}"/>
+                                        </Border.InputBindings>
+                                    </Border>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+
+                        <Border.Triggers>
+                            <EventTrigger RoutedEvent="MouseEnter">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ColorAnimation To="{StaticResource White}" DecelerationRatio="0.9" Duration="0:0:0.3" Storyboard.TargetName="Border" Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="MouseLeave">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ColorAnimation To="{StaticResource SmokeWhite}" DecelerationRatio="0.9" Duration="0:0:0.3" Storyboard.TargetName="Border" Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </Border.Triggers>
+                    </Border>
+
                 </ControlTemplate>
             </Setter.Value>
         </Setter>

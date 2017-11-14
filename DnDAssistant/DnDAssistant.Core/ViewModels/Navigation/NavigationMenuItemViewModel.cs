@@ -1,4 +1,5 @@
-﻿using System.Windows.Input;
+﻿using System.Collections.ObjectModel;
+using System.Windows.Input;
 
 namespace DnDAssistant.Core
 {
@@ -19,6 +20,38 @@ namespace DnDAssistant.Core
         /// </summary>
         public string Title { get; set; }
 
+        /// <summary>
+        /// The URI of the image
+        /// </summary>
+        public string ImageURI { get; set; } = string.Empty;
+
+        /// <summary>
+        /// Indicator wether an image URI is set
+        /// </summary>
+        public bool IsImageSet => (ImageURI == string.Empty) ? false : true;
+        
+        /// <summary>
+        /// Indicator for when the Navigation Item is selected
+        /// </summary>
+        public bool IsSelected { get; set; } = false;
+
+        /// <summary>
+        /// The connected page to this navigation menu item
+        /// </summary>
+        public ApplicationPage ConnectedPage { get; set; }
+
+        /// <summary>
+        /// The context menu
+        /// </summary>
+        public ObservableCollection<NavigationMenuItemContextMenuViewModel> ContextMenu { get; set; } = new ObservableCollection<NavigationMenuItemContextMenuViewModel>
+        {
+            new NavigationMenuItemContextMenuViewModel
+            {
+                Text = "Remove",
+                Click = new RelayParameterizedCommand(obj => IoC.Navigation.Remove(obj as NavigationMenuItemViewModel))
+            },
+        };
+
         #endregion
 
         #region Constructor
@@ -29,6 +62,19 @@ namespace DnDAssistant.Core
         public NavigationMenuItemViewModel()
         {
 
+        }
+
+        /// <summary>
+        /// Constructor to create a navigation item from a widget
+        /// </summary>
+        /// <param name="widget"></param>
+        public NavigationMenuItemViewModel(WidgetViewModel widget)
+        {
+            Title = widget.Name;
+
+            Click = widget.Click;
+
+            ImageURI = widget.Image;
         }
 
         #endregion

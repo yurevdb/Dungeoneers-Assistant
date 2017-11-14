@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows;
+using System.Windows.Media;
 using System.Windows.Media.Animation;
 
 namespace DnDAssistant.Wpf
@@ -193,13 +194,13 @@ namespace DnDAssistant.Wpf
         /// <param name="seconds">The time the animation will take</param>
         /// <param name="offset">The offset of the animation</param>
         /// <param name="decelerationRatio"></param>
-        public static void AddSlideInFromLeft(this Storyboard storyboard, float seconds, double offset, float decelerationRatio = 0.9f)
+        public static void AddSlideInFromLeft(this Storyboard storyboard, float seconds, double offset, float decelerationRatio = 0.9f, bool keepMargin = true)
         {
             // Create the margin animation to slide in from top
             var animation = new ThicknessAnimation
             {
                 Duration = new Duration(TimeSpan.FromSeconds(seconds)),
-                From = new Thickness(-offset, 0, offset, 0),
+                From = new Thickness(-offset, 0, keepMargin ? offset : 0, 0),
                 To = new Thickness(0),
                 DecelerationRatio = decelerationRatio
             };
@@ -218,14 +219,14 @@ namespace DnDAssistant.Wpf
         /// <param name="seconds">The time the animation will take</param>
         /// <param name="offset">The offset of the animation</param>
         /// <param name="decelerationRatio"></param>
-        public static void AddSlideOutToLeft(this Storyboard storyboard, float seconds, double offset, float decelerationRatio = 0.9f)
+        public static void AddSlideOutToLeft(this Storyboard storyboard, float seconds, double offset, float decelerationRatio = 0.9f, bool keepMargin = true)
         {
             // Create the margin animation to slide in from top
             var animation = new ThicknessAnimation
             {
                 Duration = new Duration(TimeSpan.FromSeconds(seconds)),
                 From = new Thickness(0),
-                To = new Thickness(-offset, 0, offset, 0),
+                To = new Thickness(-offset, 0, keepMargin ? offset : 0, 0),
                 DecelerationRatio = decelerationRatio
             };
 
@@ -283,6 +284,31 @@ namespace DnDAssistant.Wpf
             Storyboard.SetTargetProperty(animation, new PropertyPath("Opacity"));
 
             // Add the animation to the storyboard
+            storyboard.Children.Add(animation);
+        }
+
+        #endregion
+
+        #region Spin
+
+        /// <summary>
+        /// Add a spin effect
+        /// </summary>
+        /// <param name="storyboard"></param>
+        /// <param name="previousAngle">the angle the element is at right now</param>
+        /// <param name="nextAngle">the angle the element needs to go to</param>
+        /// <param name="seconds"></param>
+        public static void AddSpin(this Storyboard storyboard, double previousAngle , double nextAngle, float seconds)
+        {
+            var animation = new DoubleAnimation
+            {
+                From = previousAngle,
+                To = nextAngle,
+                Duration = new Duration(TimeSpan.FromSeconds(seconds)),
+            };
+
+            Storyboard.SetTargetProperty(animation, new PropertyPath("RotateTransform.Angle"));
+
             storyboard.Children.Add(animation);
         }
 

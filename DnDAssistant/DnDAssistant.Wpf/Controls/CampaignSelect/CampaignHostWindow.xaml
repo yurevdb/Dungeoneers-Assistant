@@ -10,6 +10,11 @@
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
         Title="CampaignHostWindow" Height="675" Width="1200">
+
+    <WindowChrome.WindowChrome>
+        <WindowChrome CaptionHeight="30" />
+    </WindowChrome.WindowChrome>
+    
     <Grid Background="{StaticResource SmokeWhiteBrush}">
         <local:PageHost DataContext="{Binding ApplicationViewModel.CurrentCampaignPage, Source={x:Static local:ViewModelLocator.Instance}, Converter={local:CampaignHostWindowsToPageConverter}}"
                         CurrentPage="{Binding}"/>

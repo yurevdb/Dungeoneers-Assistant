@@ -83,10 +83,15 @@
     <Compile Include="ViewModels\Application\ApplicationViewModel.cs" />
     <Compile Include="ViewModels\Base\BaseViewModel.cs" />
     <Compile Include="ViewModels\Base\RelayCommand.cs" />
+    <Compile Include="ViewModels\Base\RelayParameterizedCommand.cs" />
     <Compile Include="ViewModels\Campaign\CampaignHostWindow\CampaignHostWindows.cs" />
+    <Compile Include="ViewModels\Campaign\Selector\CampaignListItemViewModel.cs" />
     <Compile Include="ViewModels\Campaign\CampaignViewModel.cs" />
     <Compile Include="ViewModels\Campaign\CampaingRole.cs" />
-    <Compile Include="ViewModels\Dialogs\BaseDialogViewModel.cs" />
+    <Compile Include="ViewModels\Campaign\Selector\CampaignSelectorViewModel.cs" />
+    <Compile Include="ViewModels\Dialogs\Base\BaseDialogViewModel.cs" />
+    <Compile Include="ViewModels\Dialogs\Base\Buttons.cs" />
+    <Compile Include="ViewModels\Dialogs\Base\DialogResponse.cs" />
     <Compile Include="ViewModels\Dialogs\DialogViewModel.cs" />
     <Compile Include="ViewModels\ErrorHandling\Error.cs" />
     <Compile Include="ViewModels\ErrorHandling\ErrorType.cs" />
@@ -95,17 +100,26 @@
     <Compile Include="ViewModels\Menus\Design\MenuItemDesignModel.cs" />
     <Compile Include="ViewModels\Menus\MenuViewModel.cs" />
     <Compile Include="ViewModels\Menus\MenuItemViewModel.cs" />
+    <Compile Include="ViewModels\Navigation\NavigationMenuItemContextMenuViewModel.cs" />
     <Compile Include="ViewModels\Navigation\NavigationMenuItemViewModel.cs" />
     <Compile Include="ViewModels\Navigation\NavigationMenuViewModel.cs" />
     <Compile Include="ViewModels\PopupMenu\Design\ApplicationMenuDesignModel.cs" />
     <Compile Include="ViewModels\PopupMenu\ApplicationMenuViewModel.cs" />
     <Compile Include="ViewModels\PopupMenu\Base\BasePopupViewModel.cs" />
+    <Compile Include="ViewModels\Splash\SplashViewModel.cs" />
+    <Compile Include="ViewModels\Widgets\Base\WidgetContextMenuItemViewModel.cs" />
+    <Compile Include="ViewModels\Widgets\Base\WidgetListViewModel.cs" />
+    <Compile Include="ViewModels\Widgets\Base\WidgetViewModel.cs" />
+    <Compile Include="ViewModels\Windows\Windows.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <None Include="FodyWeavers.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ViewModels\Widgets\Items\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Fody.2.1.0\build\netstandard1.0\Fody.targets" Condition="Exists('..\packages\Fody.2.1.0\build\netstandard1.0\Fody.targets')" />

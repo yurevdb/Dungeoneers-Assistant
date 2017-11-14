@@ -23,6 +23,11 @@ namespace DnDAssistant.Core
         public MenuItemType Type { get; set; }
 
         /// <summary>
+        /// The tooltip to show for the item
+        /// </summary>
+        public string ToolTip { get; set; } = string.Empty;
+
+        /// <summary>
         /// The click command action. This will have to be set for each menu item seperatly
         /// </summary>
         public ICommand Click { get; set; }

@@ -75,8 +75,8 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="HtmlAgilityPack, Version=1.6.2.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
-      <HintPath>..\packages\HtmlAgilityPack.1.6.2\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    <Reference Include="HtmlAgilityPack, Version=1.6.3.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.6.3\lib\Net45\HtmlAgilityPack.dll</HintPath>
     </Reference>
     <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7" />
     <Reference Include="PropertyChanged, Version=2.1.4.0, Culture=neutral, PublicKeyToken=ee3ee20bcf148ddd, processorArchitecture=MSIL">
@@ -113,10 +113,17 @@
     <Compile Include="Animations\SlideDirection.cs" />
     <Compile Include="Attached Properties\FrameworkElementAttachedProperties.cs" />
     <Compile Include="Attached Properties\Base\BaseAttachedProperty.cs" />
+    <Compile Include="Attached Properties\TextAttachedProperties.cs" />
     <Compile Include="Controls\CampaignSelect\CampaignHostWindow.xaml.cs">
       <DependentUpon>CampaignHostWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\CampaignSelect\CampaignHostWindowsToPageConverter.cs" />
+    <Compile Include="Controls\CampaignSelect\CampaignSelector\CampaignSelector.xaml.cs">
+      <DependentUpon>CampaignSelector.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CampaignSelect\CampaignSelector\CampaignSelectorItem.xaml.cs">
+      <DependentUpon>CampaignSelectorItem.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\CampaignSelect\Pages\Creator.xaml.cs">
       <DependentUpon>Creator.xaml</DependentUpon>
     </Compile>
@@ -130,6 +137,9 @@
     <Compile Include="Controls\Dialogs\Base\BaseDialogUserControl.cs" />
     <Compile Include="Controls\Dialogs\DialogMessageBox.xaml.cs">
       <DependentUpon>DialogMessageBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Extra\NumberSelector.xaml.cs">
+      <DependentUpon>NumberSelector.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\LoadingAnimation\DiceSelector.cs" />
     <Compile Include="Controls\LoadingAnimation\Dice\DiceSix.xaml.cs">
@@ -157,11 +167,14 @@
     <Compile Include="Controls\Menus\VerticalMenu.xaml.cs">
       <DependentUpon>VerticalMenu.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\NavigationMenu.xaml.cs">
+    <Compile Include="Controls\NavigationMenu\NavigationMenu.xaml.cs">
       <DependentUpon>NavigationMenu.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\PageHost.xaml.cs">
+    <Compile Include="Controls\Extra\PageHost.xaml.cs">
       <DependentUpon>PageHost.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\NavigationMenu\NavigationMenuItem.xaml.cs">
+      <DependentUpon>NavigationMenuItem.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\Splashscreen\Splash.xaml.cs">
       <DependentUpon>Splash.xaml</DependentUpon>
@@ -169,24 +182,35 @@
     <Compile Include="Controls\LoadingAnimation\LoadingAnimation.xaml.cs">
       <DependentUpon>LoadingAnimation.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\Widget\Widget.xaml.cs">
+      <DependentUpon>Widget.xaml</DependentUpon>
+    </Compile>
     <Compile Include="IoC\UIManager.cs" />
     <Compile Include="Controls\Dialogs\Base\DialogWindow.xaml.cs">
       <DependentUpon>DialogWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="ValueConverters\Base\BaseValueConverter.cs" />
-    <Compile Include="ValueConverters\ErrottypeToFontAwesomeFontConverter.cs" />
-    <Compile Include="ValueConverters\BooleanToVisibilityConverter.cs" />
-    <Compile Include="ValueConverters\IconTypeToFontAwesomeConverter.cs" />
-    <Compile Include="ValueConverters\IconTypeToMarginConverter.cs" />
-    <Compile Include="ValueConverters\MenuItemVisibilityConverter.cs" />
-    <Compile Include="ValueConverters\HorizontalAlignmentConverter.cs" />
+    <Compile Include="ValueConverters\DialogButtons\YesNoCancelButtonsToVisibilityConverter .cs" />
+    <Compile Include="ValueConverters\DialogButtons\YesNoButtonsToVisibilityConverter.cs" />
+    <Compile Include="ValueConverters\DialogButtons\OkButtonToVisibilityConverter.cs" />
+    <Compile Include="ValueConverters\DialogButtons\ButtonsToStringConverter.cs" />
+    <Compile Include="ValueConverters\Icons\BooleanToStrokeConverter.cs" />
+    <Compile Include="ValueConverters\Rest\CountToVisibilityConverter.cs" />
+    <Compile Include="ValueConverters\Rest\InvertedBooleanToVisibilityConverter.cs" />
+    <Compile Include="ValueConverters\Rest\ErrottypeToSolidColorBrushConverter.cs" />
+    <Compile Include="ValueConverters\Rest\ErrottypeToFontAwesomeFontConverter.cs" />
+    <Compile Include="ValueConverters\Rest\BooleanToVisibilityConverter.cs" />
+    <Compile Include="ValueConverters\Rest\IconTypeToFontAwesomeConverter.cs" />
+    <Compile Include="ValueConverters\Rest\IconTypeToMarginConverter.cs" />
+    <Compile Include="ValueConverters\Rest\MenuItemVisibilityConverter.cs" />
+    <Compile Include="ValueConverters\Rest\HorizontalAlignmentConverter.cs" />
     <Compile Include="ValueConverters\PathConverters\WidthToCenterTitleBarDesignConverter.cs" />
     <Compile Include="ValueConverters\PathConverters\WidthToNavigationCenterLineConverter.cs" />
-    <Compile Include="ValueConverters\PopupContentConverter.cs" />
-    <Compile Include="ValueConverters\ParentSizeToElementSizeConverter.cs" />
-    <Compile Include="ValueConverters\StringRGBToBrushConverter.cs" />
-    <Compile Include="ValueConverters\StringToImagesourceConverter.cs" />
-    <Compile Include="ValueConverters\StringToVisibilityConverter.cs" />
+    <Compile Include="ValueConverters\Rest\PopupContentConverter.cs" />
+    <Compile Include="ValueConverters\Rest\ParentSizeToElementSizeConverter.cs" />
+    <Compile Include="ValueConverters\Rest\StringRGBToBrushConverter.cs" />
+    <Compile Include="ValueConverters\Rest\StringToImagesourceConverter.cs" />
+    <Compile Include="ValueConverters\Rest\StringToVisibilityConverter.cs" />
     <Compile Include="Helpers\WindowResizer.cs" />
     <Compile Include="ViewModels\DialogWindowViewModel.cs" />
     <Compile Include="ViewModels\Helpers\ViewModelLocator.cs" />
@@ -202,13 +226,27 @@
     </Compile>
     <Compile Include="Views\Character Creator\CharPages.cs" />
     <Compile Include="Views\Character Creator\CharPageViemModel.cs" />
-    <Compile Include="Views\StartupPage.xaml.cs">
+    <Compile Include="Views\DM Tools\DMToolsPage.xaml.cs">
+      <DependentUpon>DMToolsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Small Widgets\Dice Roller.xaml.cs">
+      <DependentUpon>Dice Roller.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Start Page\StartupPage.xaml.cs">
       <DependentUpon>StartupPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Test\TestPage.xaml.cs">
       <DependentUpon>TestPage.xaml</DependentUpon>
     </Compile>
     <Page Include="Controls\CampaignSelect\CampaignHostWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\CampaignSelect\CampaignSelector\CampaignSelector.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\CampaignSelect\CampaignSelector\CampaignSelectorItem.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -225,6 +263,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\Dialogs\DialogMessageBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Extra\NumberSelector.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -264,11 +306,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Controls\NavigationMenu.xaml">
+    <Page Include="Controls\NavigationMenu\NavigationMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\PageHost.xaml">
+    <Page Include="Controls\Extra\PageHost.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\NavigationMenu\NavigationMenuItem.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -277,6 +323,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\LoadingAnimation\LoadingAnimation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Widget\Widget.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -328,7 +378,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\StartupPage.xaml">
+    <Page Include="Views\DM Tools\DMToolsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Small Widgets\Dice Roller.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Start Page\StartupPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -417,6 +475,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\plus.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\d20.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red_d20_png.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

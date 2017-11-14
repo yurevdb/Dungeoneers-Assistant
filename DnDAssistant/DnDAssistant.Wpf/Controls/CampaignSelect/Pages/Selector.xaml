@@ -9,7 +9,6 @@
     
     <Grid Background="{StaticResource SmokeWhiteBrush}" >
 
-
         <!-- Intro Screen Text -->
         <TextBlock x:Name="tbInspirationText"
                    TextWrapping="Wrap"
@@ -24,23 +23,18 @@
                    Panel.ZIndex="2"
                    />
 
-        <!-- Listview with the Campaigns-->
-        <!-- TODO: Style to fade in at top and bottom -->
-        <ListView x:Name="lvCampaigns"
-                  Margin="400 0 0 0"
-                  Visibility="Collapsed"
-                  Width="{Binding ActualWidth, ElementName=tbInspirationText}"
-                  Height="{Binding ActualHeight, ElementName=tbInspirationText}"
-                  VerticalAlignment="Center"
-                  HorizontalAlignment="Center"
-                  BorderBrush="Transparent"
-                  BorderThickness="0"
-                  Background="Transparent"
-                  ScrollViewer.CanContentScroll="False"
-                  ScrollViewer.VerticalScrollBarVisibility="Hidden"
-                  ScrollViewer.HorizontalScrollBarVisibility="Disabled"
-                  />
-
+        <local:CampaignSelector x:Name="lvCampaigns"
+                                DataContext="{Binding}"
+                                Visibility="Collapsed"
+                                Width="300"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Center"
+                                BorderBrush="Transparent"
+                                BorderThickness="0"
+                                Background="Transparent"
+                                Height="{Binding ActualHeight, ElementName=tbInspirationText}"
+                                />
+        
         <Button Content="Close"
                 Foreground="{StaticResource GrayBrush}"
                 Style="{StaticResource RandomButton}"

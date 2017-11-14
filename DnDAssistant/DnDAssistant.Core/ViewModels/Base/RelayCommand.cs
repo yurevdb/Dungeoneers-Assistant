@@ -13,7 +13,7 @@ namespace DnDAssistant.Core
         /// <summary>
         /// The action to run
         /// </summary>
-        private Action mAction;
+        private Action _Action;
 
         #endregion
 
@@ -33,7 +33,7 @@ namespace DnDAssistant.Core
         /// </summary>
         public RelayCommand(Action action)
         {
-            mAction = action;
+            _Action = action;
         }
 
         #endregion
@@ -56,7 +56,7 @@ namespace DnDAssistant.Core
         /// <param name="parameter"></param>
         public void Execute(object parameter)
         {
-            mAction();
+            _Action();
         }
 
         #endregion

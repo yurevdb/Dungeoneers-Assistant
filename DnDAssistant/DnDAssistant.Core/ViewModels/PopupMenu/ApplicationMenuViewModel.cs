@@ -22,11 +22,12 @@ namespace DnDAssistant.Core
                     {
                         Text = "Settings",
                         Icon = IconType.Cog,
+                        ToolTip = "Show the settings",
                         Click = new RelayCommand(async () => await IoC.UI.ShowMessage(new DialogViewModel
                         {
                             Title = "Error",
                             Message = "This should take you to the settings menu",
-                            OkText = "Close"
+                            Buttons = Buttons.Ok,
                         }
                         ))
                     },
@@ -34,16 +35,41 @@ namespace DnDAssistant.Core
                     new MenuItemViewModel {
                         Text = "Switch Campaign",
                         Icon = IconType.None,
+                        ToolTip = "Goes to the Campaign Select",
                         Click = new RelayCommand(()=>
                         {
-                            IoC.UI.ShowMessage(new DialogViewModel
-                            {
-                                Title = "Error",
-                                Message = "This feature is not yet implemented",
-                                OkText = "Close"
-                            });
+                            // Set the campaignhostwindow to the selector
+                            IoC.App.GoTo(CampaignHostWindows.Selector);
+
+                            // Close the campaign menu
+                            IoC.App.CampaignMenuVisible = false;
+
+                            // Show the campaignhostwindow and close the current window
+                            IoC.UI.OpenWindow(Windows.CampaignSelector);
                         })
                     },
+
+                    new MenuItemViewModel
+                    {
+                        Text = "Show Navigation",
+                        Icon = IconType.None,
+                        ToolTip = "Shift + N",
+                        Click = new RelayCommand(() =>
+                        {
+                            IoC.App.NavigationMenuVisible ^= true;
+                        })
+                    },
+
+                    new MenuItemViewModel
+                    {
+                        Text = "Show Widgets",
+                        Icon = IconType.None,
+                        ToolTip = "Shift + W",
+                        Click = new RelayCommand(() =>
+                        {
+                            IoC.App.GoToAsync(ApplicationPage.Startup);
+                        })
+                    }
                 })
             };
         }

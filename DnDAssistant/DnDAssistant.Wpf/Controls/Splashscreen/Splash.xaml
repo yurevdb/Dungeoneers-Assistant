@@ -34,12 +34,12 @@
                     Grid.Row="1"
                     VerticalAlignment="Bottom"
                     HorizontalAlignment="Center">
-            <TextBlock Text="Showing dominance" 
+            <TextBlock Text="{Binding EntertainingText}" 
                        TextAlignment="Center"
                        FontFamily="{StaticResource Bold}"
                        Foreground="{StaticResource SmokeWhiteBrush}"
                        FontSize="{StaticResource FontsizeRegular}"/>
-            <TextBlock Text="Checking for updates" 
+            <TextBlock Text="{Binding StatusText}" 
                        TextAlignment="Center"
                        Margin="0 5 0 0"
                        FontFamily="{StaticResource Regular}"

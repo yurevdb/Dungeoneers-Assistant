@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 
 namespace DnDAssistant.Core
 {
@@ -7,7 +8,6 @@ namespace DnDAssistant.Core
     /// </summary>
     public class ApplicationViewModel : BaseViewModel
     {
-
         #region Public Properties
 
         /// <summary>
@@ -39,27 +39,65 @@ namespace DnDAssistant.Core
         /// The selected Campaign
         /// </summary>
         public CampaignViewModel Campaign { get; private set; }
-
+        
         /// <summary>
         /// Indicating wether the Campaign dropdown menu is visible or not
         /// </summary>
         public bool CampaignMenuVisible { get; set; } = false;
 
         /// <summary>
+        /// Indicating wether the navigation menu should be shown
+        /// </summary>
+        public bool NavigationMenuVisible { get; set; } = false;
+
+        /// <summary>
         /// Indicating wether any popup is visible
         /// </summary>
         public bool AnyPopUpVisible => CampaignMenuVisible;
-        
+
+        #endregion
+
+        #region Constructor
+
+        /// <summary>
+        /// Default constructor
+        /// </summary>
+        public ApplicationViewModel()
+        {
+            
+        } 
+
         #endregion
 
         /// <summary>
         /// Function to set the current page of the application
         /// </summary>
         /// <param name="page">The page to go to</param>
-        public void GoTo(ApplicationPage page)
+        public async void GoToAsync(ApplicationPage page)
         {
-            // Set the current page of the application
-            CurrentPage = page;
+            await Task.Run(() =>
+            {
+                // Set the current page of the application
+                CurrentPage = page;
+
+                // Set the selector for the page in the navigation menu (standard items)
+                foreach (var p in IoC.Navigation.StaticList)
+                {
+                    if (p.ConnectedPage == CurrentPage)
+                        p.IsSelected = true;
+                    else
+                        p.IsSelected = false;
+                }
+
+                // Set the selector for the page in the navigation menu (shortcut items)
+                foreach (var p in IoC.Navigation.FilteredItems)
+                {
+                    if (p.ConnectedPage == CurrentPage)
+                        p.IsSelected = true;
+                    else
+                        p.IsSelected = false;
+                }
+            });
         }
 
         /// <summary>

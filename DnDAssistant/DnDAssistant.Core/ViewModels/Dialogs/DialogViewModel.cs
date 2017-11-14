@@ -11,8 +11,8 @@
         public string Message { get; set; }
 
         /// <summary>
-        /// Ok Text
+        /// Buttons to Show
         /// </summary>
-        public string OkText { get; set; }
+        public Buttons Buttons { get; set; } = Buttons.None;
     }
 }

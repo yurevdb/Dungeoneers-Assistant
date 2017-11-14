@@ -25,7 +25,8 @@
                                 <Border.Background>
                                     <ImageBrush ImageSource="{Binding Background, Converter={local:StringToImagesourceConverter}}" 
                                                 AlignmentX="Center" AlignmentY="Center"
-                                                Stretch="UniformToFill"/> 
+                                                Stretch="UniformToFill">
+                                    </ImageBrush>
                                 </Border.Background>
 
                                 <!-- Drop shadow -->

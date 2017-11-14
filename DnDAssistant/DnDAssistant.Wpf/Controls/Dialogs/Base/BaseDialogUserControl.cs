@@ -19,6 +19,11 @@ namespace DnDAssistant.Wpf
         /// <returns></returns>
         private DialogWindow _DialogWindow;
 
+        /// <summary>
+        /// The result of the DialogResponseWindow
+        /// </summary>
+        private DialogResponse _Result;
+
         #endregion
 
         #region Public Commands
@@ -27,6 +32,26 @@ namespace DnDAssistant.Wpf
         /// Closes this dialog
         /// </summary>
         public ICommand CloseCommand { get; set; }
+
+        /// <summary>
+        /// User clicked ok button
+        /// </summary>
+        public ICommand OkCommand { get; set; }
+
+        /// <summary>
+        /// User clicked yes
+        /// </summary>
+        public ICommand YesCommand { get; set; }
+
+        /// <summary>
+        /// User clicked No
+        /// </summary>
+        public ICommand NoCommand { get; set; }
+
+        /// <summary>
+        /// User clicked cancel
+        /// </summary>
+        public ICommand CancelCommand { get; set; }
 
         #endregion
 
@@ -69,13 +94,62 @@ namespace DnDAssistant.Wpf
             _DialogWindow.Owner = Application.Current.MainWindow;
 
             //Create close command
-            CloseCommand = new RelayCommand(() => _DialogWindow.Close());
+            CloseCommand = new RelayCommand(() =>
+            {
+                _Result = DialogResponse.Cancel;
+                _DialogWindow.Close();
+            });
+
+            OkCommand = new RelayCommand(Ok);
+            YesCommand = new RelayCommand(Yes);
+            NoCommand = new RelayCommand(No);
+            CancelCommand = new RelayCommand(Cancel);
         }
 
         #endregion
-        
+
+        #region Command methods
+
+        /// <summary>
+        /// Function to set the result to ok
+        /// </summary>
+        public void Ok()
+        {
+            _Result = DialogResponse.Ok;
+            _DialogWindow.Close();
+        }
+
+        /// <summary>
+        /// Function to set the result to yes
+        /// </summary>
+        public void Yes()
+        {
+            _Result = DialogResponse.Yes;
+            _DialogWindow.Close();
+        }
+
+        /// <summary>
+        /// Function to set the result to no
+        /// </summary>
+        public void No()
+        {
+            _Result = DialogResponse.No;
+            _DialogWindow.Close();
+        }
+
+        /// <summary>
+        /// Function to set the result to cancel
+        /// </summary>
+        public void Cancel()
+        {
+            _Result = DialogResponse.Cancel;
+            _DialogWindow.Close();
+        }
+
+        #endregion
+
         #region Public Dialog Show Methods
-        
+
         /// <summary>
         /// Display a dialog window for the user
         /// </summary>
@@ -114,6 +188,46 @@ namespace DnDAssistant.Wpf
             });
 
             return tcs.Task;
+        }
+
+        /// <summary>
+        /// Display a dialog window for the user
+        /// </summary>
+        /// <param name="viewModel">The view model</param>
+        /// <typeparam name="T">The view model type for this control</typeparam>
+        /// <returns></returns>
+        public Task<DialogResponse> ShowResponseDialog<T>(T viewModel)
+            where T : BaseDialogViewModel
+        {
+            // Create a task to await the dialog closing
+            var tcs = new TaskCompletionSource<DialogResponse>();
+
+            // Run on the ui thread
+            Application.Current.Dispatcher.Invoke(() =>
+            {
+                try
+                {
+                    // Match controls size
+                    _DialogWindow.ViewModel.TitleHeight = TitleHeight;
+                    _DialogWindow.ViewModel.Title = viewModel.Title ?? Title;
+
+                    // Set this control to the dialog window content
+                    _DialogWindow.ViewModel.Content = this;
+
+                    // Setup this controls data context binding to the view model
+                    DataContext = viewModel;
+
+                    // Show dialog
+                    _DialogWindow.ShowDialog();
+                }
+                finally
+                {
+                    // let caller know we finished
+                    tcs.TrySetResult(_Result);
+                }
+            });
+
+             return tcs.Task;
         }
 
         #endregion

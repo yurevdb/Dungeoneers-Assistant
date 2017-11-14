@@ -53,9 +53,14 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
+            <!-- The navigation menu -->
             <local:NavigationMenu Grid.Column="0"
-                                  Width="120"/>
+                                  Width="120"
+                                  local:AnimateSlideInFromLeftProperty.Value="{Binding ApplicationViewModel.NavigationMenuVisible, Source={x:Static local:ViewModelLocator.Instance}}"
+                                  
+                                  />
 
+            <!-- The page Host -->
             <local:PageHost DataContext="{Binding ApplicationViewModel.CurrentPage, Source={x:Static local:ViewModelLocator.Instance}, Converter={local:ApplicationPageToPageConverter}}"
                             CurrentPage="{Binding}" Grid.Column="1"/>
 
@@ -66,5 +71,16 @@
     </Grid>
     
     <!--#endregion-->
+
+    <!-- The window key commands -->
+    <Window.InputBindings>
+        <!-- Naviagiton shortcuts-->
+        <KeyBinding Key="N" Modifiers="Ctrl" Command="{Binding ToggleNavigationCommand}"/>
+        <KeyBinding Key="W" Modifiers="Ctrl" Command="{Binding GotoWidgetPage}"/>
+        <KeyBinding Key="C" Modifiers="Ctrl" Command="{Binding GotoCharacterCreatorPage}"/>
+        <KeyBinding Key="D" Modifiers="Ctrl" Command="{Binding GotoDMToolsPage}"/>
+
+        <KeyBinding Key="Esc" Command="{Binding PopupClickawayCommand}"/>
+    </Window.InputBindings>
 
 </Window>

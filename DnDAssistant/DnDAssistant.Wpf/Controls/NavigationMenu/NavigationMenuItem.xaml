@@ -1,0 +1,89 @@
+﻿<UserControl x:Class="DnDAssistant.Wpf.NavigationMenuItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DnDAssistant.Wpf"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid Margin="5">
+        
+        <!-- Backdrop when no image is set -->
+        <Ellipse x:Name="backdrop"
+                 Width="90"
+                 Height="90"
+                 Stroke="{StaticResource DarkRedBrush}"
+                 StrokeThickness="4"
+                 Fill="{StaticResource LightRedBrush}"
+                 Grid.Row="0"
+                 Visibility="{Binding IsImageSet, Converter={local:InvertedBooleanToVisibilityConverter}}"
+                 />
+
+        <!-- The indicator for when the item is selected -->
+        <Ellipse Width="90"
+                 Height="90"
+                 Stroke="{Binding IsSelected, Converter={local:BooleanToStrokeConverter}}"
+                 StrokeThickness="4"
+                 Fill="Transparent"
+                 Grid.Row="0"
+                 Panel.ZIndex="10"
+                 ToolTip="{Binding Title}"
+                 ToolTipService.InitialShowDelay="1000"
+                 />
+
+        <!-- The title to show when no image is set -->
+        <TextBlock Text="{Binding Title}"
+                   MaxWidth="80"
+                   MaxHeight="80"
+                   Grid.Row="0"
+                   Visibility="{Binding IsImageSet, Converter={local:InvertedBooleanToVisibilityConverter}}"
+                   FontFamily="{StaticResource Bold}"
+                   FontSize="{StaticResource FontsizeRegular}"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   TextTrimming="CharacterEllipsis"
+                   />
+
+        <!-- Image Ellipse -->
+        <Ellipse x:Name="Image"
+                 Width="90"
+                 Height="90"
+                 Stroke="{StaticResource DarkRedBrush}"
+                 StrokeThickness="4"
+                 Grid.Row="0"
+                 Visibility="{Binding IsImageSet, Converter={local:BooleanToVisibilityConverter}}"
+                 ToolTip="{Binding Title}"
+                 ToolTipService.InitialShowDelay="1000"
+                 >
+            <Ellipse.Fill>
+                <ImageBrush ImageSource="{Binding ImageURI}" Stretch="UniformToFill"/>
+            </Ellipse.Fill>
+        </Ellipse>
+
+        <!-- Triggers -->
+        <Grid.Triggers>
+            <EventTrigger RoutedEvent="MouseEnter">
+                <BeginStoryboard>
+                    <Storyboard>
+                        <ColorAnimation To="{StaticResource Bronze}" Duration="0:0:0.3" Storyboard.TargetProperty="(Stroke).(SolidColorBrush.Color)" Storyboard.TargetName="backdrop"/>
+                        <ColorAnimation To="{StaticResource Bronze}" Duration="0:0:0.3" Storyboard.TargetProperty="(Stroke).(SolidColorBrush.Color)" Storyboard.TargetName="Image"/>
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger>
+            <EventTrigger RoutedEvent="MouseLeave">
+                <BeginStoryboard>
+                    <Storyboard>
+                        <ColorAnimation To="{StaticResource DarkRed}" Duration="0:0:0.3" Storyboard.TargetProperty="(Stroke).(SolidColorBrush.Color)" Storyboard.TargetName="backdrop"/>
+                        <ColorAnimation To="{StaticResource DarkRed}" Duration="0:0:0.3" Storyboard.TargetProperty="(Stroke).(SolidColorBrush.Color)" Storyboard.TargetName="Image"/>
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger>
+        </Grid.Triggers>
+
+        <!-- Input Bindings -->
+        <Grid.InputBindings>
+            <MouseBinding MouseAction="LeftClick" Command="{Binding Click}" CommandParameter="{Binding DataContext, RelativeSource={RelativeSource AncestorType=UserControl}}"/>
+        </Grid.InputBindings>
+
+    </Grid>
+</UserControl>
