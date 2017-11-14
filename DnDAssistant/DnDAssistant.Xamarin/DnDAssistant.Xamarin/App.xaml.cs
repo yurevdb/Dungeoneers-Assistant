@@ -29,6 +29,10 @@ namespace DnDAssistant.Xamarin
                         Title = "About",
                         //Icon = Device.OnPlatform("tab_about.png",null,null)
                     },
+                    new NavigationPage(new CampaignSelect())
+                    {
+                        Title = "Campaign Select"
+                    }
                 }
         };
     }

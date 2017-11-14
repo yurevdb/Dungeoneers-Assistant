@@ -9,16 +9,16 @@ namespace DnDAssistant.Xamarin.Views
 {
 	public partial class ItemsPage : ContentPage
 	{
-		ItemsViewModel viewModel;
+		ItemsViewModel _ViewModel;
 
 		public ItemsPage()
 		{
 			InitializeComponent();
 
-			BindingContext = viewModel = new ItemsViewModel();
+			BindingContext = _ViewModel = new ItemsViewModel();
 		}
 
-		async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
+		private async void OnItemSelectedAsync(object sender, SelectedItemChangedEventArgs args)
 		{
 			var item = args.SelectedItem as Item;
 			if (item == null)
@@ -30,7 +30,7 @@ namespace DnDAssistant.Xamarin.Views
 			ItemsListView.SelectedItem = null;
 		}
 
-		async void AddItem_Clicked(object sender, EventArgs e)
+		private async void AddItem_ClickedAsync(object sender, EventArgs e)
 		{
 			await Navigation.PushAsync(new NewItemPage());
 		}
@@ -39,8 +39,8 @@ namespace DnDAssistant.Xamarin.Views
 		{
 			base.OnAppearing();
 
-			if (viewModel.Items.Count == 0)
-				viewModel.LoadItemsCommand.Execute(null);
+			if (_ViewModel.Items.Count == 0)
+				_ViewModel.LoadItemsCommand.Execute(null);
 		}
 	}
 }

@@ -144,7 +144,12 @@
       <InProject>false</InProject>
     </ImageAsset>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\DnDAssistant.Core\DnDAssistant.Core.csproj">
+      <Project>{fc905f7d-da4a-46a4-b2ca-78cb93209c19}</Project>
+      <Name>DnDAssistant.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
   </ItemGroup>

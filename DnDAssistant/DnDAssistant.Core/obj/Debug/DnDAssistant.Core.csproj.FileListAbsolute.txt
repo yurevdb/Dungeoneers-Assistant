@@ -6,3 +6,11 @@ C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Core\obj\Debug\DnDAssistant.Core.dll
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Core\obj\Debug\DnDAssistant.Core.pdb
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Core\obj\Debug\DnDAssistant.Core.csprojResolveAssemblyReference.cache
+C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Core\bin\Debug\DnDAssistant.Core.dll
+C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Core\bin\Debug\DnDAssistant.Core.pdb
+C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Core\bin\Debug\Ninject.dll
+C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Core\bin\Debug\Ninject.xml
+C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Core\obj\Debug\DnDAssistant.Core.csprojResolveAssemblyReference.cache
+C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Core\obj\Debug\DnDAssistant.Core.csproj.CoreCompileInputs.cache
+C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Core\obj\Debug\DnDAssistant.Core.dll
+C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Core\obj\Debug\DnDAssistant.Core.pdb
