@@ -24,5 +24,10 @@
         /// DM Tools page
         /// </summary>
         DMTools = 3,
+
+        /// <summary>
+        /// Dice Roller Widget
+        /// </summary>
+        DiceRoller = 4,
     }
 }

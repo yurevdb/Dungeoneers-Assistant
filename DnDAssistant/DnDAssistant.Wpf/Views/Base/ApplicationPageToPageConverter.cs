@@ -18,6 +18,8 @@ namespace DnDAssistant.Wpf
                     return new CharacterCreatorPage();
                 case ApplicationPage.DMTools:
                     return new DMToolsPage();
+                case ApplicationPage.DiceRoller:
+                    return new Dice_Roller();
                 default:
                     return new TestPage();
             }

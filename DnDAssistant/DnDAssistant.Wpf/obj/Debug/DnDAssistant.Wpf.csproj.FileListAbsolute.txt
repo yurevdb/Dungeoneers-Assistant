@@ -37,8 +37,6 @@ C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\MainWindow.g.cs
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Views\Character Creator\CharacterCreatorPage.g.cs
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Views\Character Creator\CharPage.g.cs
-C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Views\DMToolsPage.g.cs
-C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Views\StartupPage.g.cs
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Views\Test\TestPage.g.cs
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\App.g.cs
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\GeneratedInternalTypeHelper.g.cs
@@ -77,8 +75,6 @@ C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Styles\Window.baml
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Views\Character Creator\CharacterCreatorPage.baml
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Views\Character Creator\CharPage.baml
-C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Views\DMToolsPage.baml
-C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Views\StartupPage.baml
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Views\Test\TestPage.baml
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\DnDAssistant.Wpf.g.resources
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\DnDAssistant.Wpf.Properties.Resources.resources
@@ -86,3 +82,12 @@ C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\DnDAssistant.Wpf.csproj.CoreCompileInputs.cache
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\DnDAssistant.Wpf.exe
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\DnDAssistant.Wpf.pdb
+C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Views\DM Tools\DMToolsPage.g.cs
+C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Views\Small Widgets\Dice Roller.g.cs
+C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Views\Start Page\StartupPage.g.cs
+C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Views\DM Tools\DMToolsPage.baml
+C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Views\Small Widgets\Dice Roller.baml
+C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Views\Start Page\StartupPage.baml
+C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\bin\Debug\Resources\red_d20_png.png
+C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\Extra\NumberSelector.g.cs
+C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\Extra\NumberSelector.baml

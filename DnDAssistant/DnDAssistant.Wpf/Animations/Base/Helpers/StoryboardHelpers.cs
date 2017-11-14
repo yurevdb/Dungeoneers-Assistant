@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows;
+using System.Windows.Media;
 using System.Windows.Media.Animation;
 
 namespace DnDAssistant.Wpf
@@ -283,6 +284,31 @@ namespace DnDAssistant.Wpf
             Storyboard.SetTargetProperty(animation, new PropertyPath("Opacity"));
 
             // Add the animation to the storyboard
+            storyboard.Children.Add(animation);
+        }
+
+        #endregion
+
+        #region Spin
+
+        /// <summary>
+        /// Add a spin effect
+        /// </summary>
+        /// <param name="storyboard"></param>
+        /// <param name="previousAngle">the angle the element is at right now</param>
+        /// <param name="nextAngle">the angle the element needs to go to</param>
+        /// <param name="seconds"></param>
+        public static void AddSpin(this Storyboard storyboard, double previousAngle , double nextAngle, float seconds)
+        {
+            var animation = new DoubleAnimation
+            {
+                From = previousAngle,
+                To = nextAngle,
+                Duration = new Duration(TimeSpan.FromSeconds(seconds)),
+            };
+
+            Storyboard.SetTargetProperty(animation, new PropertyPath("RotateTransform.Angle"));
+
             storyboard.Children.Add(animation);
         }
 

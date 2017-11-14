@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\App.xaml
-35-1780161366
+37586507425
 
-79775086191
+81-318475389
 71921306638
-Controls\CampaignSelect\CampaignHostWindow.xaml;Controls\CampaignSelect\CampaignSelector\CampaignSelector.xaml;Controls\CampaignSelect\CampaignSelector\CampaignSelectorItem.xaml;Controls\CampaignSelect\Pages\Creator.xaml;Controls\CampaignSelect\Pages\Selector.xaml;Controls\ControlHub\ControlHub.xaml;Controls\Dialogs\DialogMessageBox.xaml;Controls\LoadingAnimation\Dice\DiceSix.xaml;Controls\LoadingAnimation\Dice\DiceFive.xaml;Controls\LoadingAnimation\Dice\DiceFour.xaml;Controls\LoadingAnimation\Dice\DiceThree.xaml;Controls\LoadingAnimation\Dice\DiceTwo.xaml;Controls\LoadingAnimation\Dice\DiceOne.xaml;Controls\MenuControl\MenuControl.xaml;Controls\Menus\VerticalMenu.xaml;Controls\Dialogs\Base\DialogWindow.xaml;Controls\NavigationMenu\NavigationMenu.xaml;Controls\Extra\PageHost.xaml;Controls\NavigationMenu\NavigationMenuItem.xaml;Controls\Splashscreen\Splash.xaml;Controls\LoadingAnimation\LoadingAnimation.xaml;Controls\Widget\Widget.xaml;MainWindow.xaml;Styles\Buttons.xaml;Styles\Colors.xaml;Styles\Fonts.xaml;Styles\Miscellaneous.xaml;Styles\SVG.xaml;Styles\Texts.xaml;Styles\Window.xaml;Views\Character Creator\CharacterCreatorPage.xaml;Views\Character Creator\CharPage.xaml;Views\DMToolsPage.xaml;Views\StartupPage.xaml;Views\Test\TestPage.xaml;
+Controls\CampaignSelect\CampaignHostWindow.xaml;Controls\CampaignSelect\CampaignSelector\CampaignSelector.xaml;Controls\CampaignSelect\CampaignSelector\CampaignSelectorItem.xaml;Controls\CampaignSelect\Pages\Creator.xaml;Controls\CampaignSelect\Pages\Selector.xaml;Controls\ControlHub\ControlHub.xaml;Controls\Dialogs\DialogMessageBox.xaml;Controls\Extra\NumberSelector.xaml;Controls\LoadingAnimation\Dice\DiceSix.xaml;Controls\LoadingAnimation\Dice\DiceFive.xaml;Controls\LoadingAnimation\Dice\DiceFour.xaml;Controls\LoadingAnimation\Dice\DiceThree.xaml;Controls\LoadingAnimation\Dice\DiceTwo.xaml;Controls\LoadingAnimation\Dice\DiceOne.xaml;Controls\MenuControl\MenuControl.xaml;Controls\Menus\VerticalMenu.xaml;Controls\Dialogs\Base\DialogWindow.xaml;Controls\NavigationMenu\NavigationMenu.xaml;Controls\Extra\PageHost.xaml;Controls\NavigationMenu\NavigationMenuItem.xaml;Controls\Splashscreen\Splash.xaml;Controls\LoadingAnimation\LoadingAnimation.xaml;Controls\Widget\Widget.xaml;MainWindow.xaml;Styles\Buttons.xaml;Styles\Colors.xaml;Styles\Fonts.xaml;Styles\Miscellaneous.xaml;Styles\SVG.xaml;Styles\Texts.xaml;Styles\Window.xaml;Views\Character Creator\CharacterCreatorPage.xaml;Views\Character Creator\CharPage.xaml;Views\DM Tools\DMToolsPage.xaml;Views\Small Widgets\Dice Roller.xaml;Views\Start Page\StartupPage.xaml;Views\Test\TestPage.xaml;
 
 False
 

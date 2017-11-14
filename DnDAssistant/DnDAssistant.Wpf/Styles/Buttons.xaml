@@ -410,4 +410,36 @@
         </Setter>
     </Style>
 
+    <Style x:Key="UpButton" TargetType="Button" BasedOn="{StaticResource GenericContentButtonStyle}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Padding="{TemplateBinding Padding}"
+                            Background="{TemplateBinding Background}">
+                        <Viewbox>
+                            <TextBlock FontFamily="{StaticResource FontAwasome}"
+                                       Text="{StaticResource FontAwesomeUpIcon}"/>
+                        </Viewbox>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="DownButton" TargetType="Button" BasedOn="{StaticResource GenericContentButtonStyle}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Padding="{TemplateBinding Padding}"
+                            Background="{TemplateBinding Background}">
+                        <Viewbox>
+                            <TextBlock FontFamily="{StaticResource FontAwasome}"
+                                       Text="{StaticResource FontAwesomeDownIcon}"/>
+                        </Viewbox>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
 </ResourceDictionary>

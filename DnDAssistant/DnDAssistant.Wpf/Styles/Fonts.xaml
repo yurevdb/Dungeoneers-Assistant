@@ -37,5 +37,7 @@
     <system:String x:Key="FontAwesomeCheckIcon">&#xf00c;</system:String>
     <system:String x:Key="FontAwesomeCrossIcon">&#xf00d;</system:String>
     <system:String x:Key="FontAwesomeSearchIcon">&#xf002;</system:String>
-    
+    <system:String x:Key="FontAwesomeUpIcon">&#xf106;</system:String>
+    <system:String x:Key="FontAwesomeDownIcon">&#xf107;</system:String>
+
 </ResourceDictionary>

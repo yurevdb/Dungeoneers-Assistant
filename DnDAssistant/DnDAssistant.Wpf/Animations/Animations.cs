@@ -1,5 +1,6 @@
 ﻿using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Media;
 using System.Windows.Media.Animation;
 
 namespace DnDAssistant.Wpf
@@ -329,6 +330,39 @@ namespace DnDAssistant.Wpf
             element.Visibility = Visibility.Visible;
 
             // Wait for it to finish
+            await Task.Delay((int)(seconds * 1000));
+        }
+
+        #endregion
+
+        #region Spin Animation
+
+        /// <summary>
+        /// An animation to spin the <see cref="FrameworkElement"/> a certain angle in the given time
+        /// </summary>
+        /// <param name="element">The element to spin</param>
+        /// <param name="angle">The angle to spin the element</param>
+        /// <param name="seconds">The amount of time to animate</param>
+        /// <returns></returns>
+        public static async Task SpinAnimationAsync(this FrameworkElement element, double angle, float seconds)
+        {
+            var sb = new Storyboard();
+
+            element.RenderTransformOrigin = new Point(0.5, 0.5);
+
+            element.RenderTransform = new RotateTransform { Angle = 0 };
+            
+            sb.AddSpin((element.RenderTransform as RotateTransform).Angle ,angle , seconds);
+
+            element.Visibility = Visibility.Visible;
+
+            await Task.Delay((int)(seconds * 1000));
+        }
+        
+        public static async Task SpinAnimationEndlessAsync(this FrameworkElement element, int angle, float seconds)
+        {
+
+
             await Task.Delay((int)(seconds * 1000));
         }
 

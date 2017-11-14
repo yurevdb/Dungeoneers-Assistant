@@ -138,6 +138,9 @@
     <Compile Include="Controls\Dialogs\DialogMessageBox.xaml.cs">
       <DependentUpon>DialogMessageBox.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\Extra\NumberSelector.xaml.cs">
+      <DependentUpon>NumberSelector.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\LoadingAnimation\DiceSelector.cs" />
     <Compile Include="Controls\LoadingAnimation\Dice\DiceSix.xaml.cs">
       <DependentUpon>DiceSix.xaml</DependentUpon>
@@ -223,10 +226,13 @@
     </Compile>
     <Compile Include="Views\Character Creator\CharPages.cs" />
     <Compile Include="Views\Character Creator\CharPageViemModel.cs" />
-    <Compile Include="Views\DMToolsPage.xaml.cs">
+    <Compile Include="Views\DM Tools\DMToolsPage.xaml.cs">
       <DependentUpon>DMToolsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\StartupPage.xaml.cs">
+    <Compile Include="Views\Small Widgets\Dice Roller.xaml.cs">
+      <DependentUpon>Dice Roller.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Start Page\StartupPage.xaml.cs">
       <DependentUpon>StartupPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Test\TestPage.xaml.cs">
@@ -257,6 +263,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\Dialogs\DialogMessageBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Extra\NumberSelector.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -368,11 +378,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\DMToolsPage.xaml">
+    <Page Include="Views\DM Tools\DMToolsPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Views\StartupPage.xaml">
+    <Page Include="Views\Small Widgets\Dice Roller.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Start Page\StartupPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -466,6 +480,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\d20.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red_d20_png.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
