@@ -3,62 +3,33 @@
   <PropertyGroup>
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
     <HasSharedItems>true</HasSharedItems>
-    <SharedGUID>{874256e1-530a-46fe-a782-83f608be5f88}</SharedGUID>
+    <SharedGUID>e7812f40-79fb-4c2a-9a1d-3418eed9b3bb</SharedGUID>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
     <Import_RootNamespace>DnDAssistant.Xamarin</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\AboutPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ItemsPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ItemDetailPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\NewItemPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Models\BaseDataObject.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Views\AboutPage.xaml.cs">
-      <DependentUpon>AboutPage.xaml</DependentUpon>
-    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\CampaignViewModelXam.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\CampaignSelect.xaml.cs">
       <DependentUpon>CampaignSelect.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Views\ItemsPage.xaml.cs">
-      <DependentUpon>ItemsPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BaseViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ItemsViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Services\MockDataStore.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Services\IDataStore.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Item.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Helpers\ObservableObject.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Helpers\ObservableRangeCollection.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Helpers\MessengingCenterAlert.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AboutViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Views\ItemDetailPage.xaml.cs">
-      <DependentUpon>ItemDetailPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ItemDetailViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Views\NewItemPage.xaml.cs">
-      <DependentUpon>NewItemPage.xaml</DependentUpon>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)Services\" />
-    <Folder Include="$(MSBuildThisFileDirectory)ViewModels\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Helpers\" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\CampaignSelect.xaml">

@@ -1,14 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
-    <ProjectGuid>{72AEC742-9AA4-4B0F-B6E5-17FE2E45E8F2}</ProjectGuid>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1E94C244-EF1A-485A-BABE-97FA53402D9E}</ProjectGuid>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
     <RootNamespace>DnDAssistant.Xamarin.iOS</RootNamespace>
-    <AssemblyName>DnDAssistant.Xamarin.iOS</AssemblyName>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>DnDAssistant.Xamarin.iOS</AssemblyName>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
   </PropertyGroup>
@@ -17,83 +19,107 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
-    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <DefineConstants>DEBUG</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <CodesignKey>iPhone Developer</CodesignKey>
-    <MtouchDebug>True</MtouchDebug>
-    <MtouchFastDev>True</MtouchFastDev>
-    <MtouchUseSGen>True</MtouchUseSGen>
-    <MtouchUseRefCounting>True</MtouchUseRefCounting>
-    <MtouchLink>None</MtouchLink>
+    <ConsolePause>false</ConsolePause>
     <MtouchArch>i386, x86_64</MtouchArch>
-    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
-    <MtouchTlsProvider>Default</MtouchTlsProvider>
-    <PlatformTarget>x86</PlatformTarget>
-    <MtouchSdkVersion>10.1</MtouchSdkVersion>
-    <MtouchProfiling>False</MtouchProfiling>
-    <MtouchUseLlvm>False</MtouchUseLlvm>
-    <MtouchUseThumb>False</MtouchUseThumb>
-    <MtouchEnableBitcode>False</MtouchEnableBitcode>
-    <OptimizePNGs>True</OptimizePNGs>
-    <MtouchFloat32>False</MtouchFloat32>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\iPhone\Release</OutputPath>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <CodesignKey>iPhone Developer</CodesignKey>
-    <MtouchUseSGen>true</MtouchUseSGen>
-    <MtouchUseRefCounting>true</MtouchUseRefCounting>
-    <MtouchFloat32>true</MtouchFloat32>
-    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-    <MtouchLink>SdkOnly</MtouchLink>
-    <MtouchArch>ARMv7, ARM64</MtouchArch>
-    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
-    <MtouchTlsProvider>Default</MtouchTlsProvider>
-    <PlatformTarget>x86</PlatformTarget>
-    <BuildIpa>true</BuildIpa>
+    <MtouchLink>None</MtouchLink>
+    <MtouchDebug>true</MtouchDebug>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
-    <DebugType>pdbonly</DebugType>
+    <DebugType>none</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <CodesignKey>iPhone Developer</CodesignKey>
-    <MtouchUseSGen>true</MtouchUseSGen>
-    <MtouchUseRefCounting>true</MtouchUseRefCounting>
     <MtouchLink>None</MtouchLink>
-    <MtouchArch>x86_64</MtouchArch>
-    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
-    <MtouchTlsProvider>Default</MtouchTlsProvider>
-    <PlatformTarget>x86</PlatformTarget>
+    <MtouchArch>i386, x86_64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\iPhone\Debug</OutputPath>
-    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <DefineConstants>DEBUG</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <CodesignKey>iPhone Developer</CodesignKey>
-    <DeviceSpecificBuild>true</DeviceSpecificBuild>
-    <MtouchDebug>true</MtouchDebug>
-    <MtouchFastDev>true</MtouchFastDev>
-    <MtouchUseSGen>true</MtouchUseSGen>
-    <MtouchUseRefCounting>true</MtouchUseRefCounting>
-    <MtouchFloat32>true</MtouchFloat32>
-    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-    <MtouchLink>SdkOnly</MtouchLink>
+    <ConsolePause>false</ConsolePause>
     <MtouchArch>ARMv7, ARM64</MtouchArch>
-    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
-    <MtouchTlsProvider>Default</MtouchTlsProvider>
-    <PlatformTarget>x86</PlatformTarget>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhone\Ad-Hoc</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <BuildIpa>True</BuildIpa>
+    <CodesignProvision>Automatic:AdHoc</CodesignProvision>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhone\AppStore</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignProvision>Automatic:AppStore</CodesignProvision>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <None Include="Entitlements.plist" />
+    <None Include="Info.plist" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <ITunesArtwork Include="iTunesArtwork" />
+    <ITunesArtwork Include="iTunesArtwork@2x" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Default-568h%402x.png" />
+    <BundleResource Include="Resources\Default-Portrait.png" />
+    <BundleResource Include="Resources\Default-Portrait%402x.png" />
+    <BundleResource Include="Resources\Default.png" />
+    <BundleResource Include="Resources\Default%402x.png" />
+    <BundleResource Include="Resources\Icon-60%402x.png" />
+    <BundleResource Include="Resources\Icon-60%403x.png" />
+    <BundleResource Include="Resources\Icon-76.png" />
+    <BundleResource Include="Resources\Icon-76%402x.png" />
+    <BundleResource Include="Resources\Icon-Small-40.png" />
+    <BundleResource Include="Resources\Icon-Small-40%402x.png" />
+    <BundleResource Include="Resources\Icon-Small-40%403x.png" />
+    <BundleResource Include="Resources\Icon-Small.png" />
+    <BundleResource Include="Resources\Icon-Small%402x.png" />
+    <BundleResource Include="Resources\Icon-Small%403x.png" />
+    <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="PropertyChanged, Version=2.1.4.0, Culture=neutral, PublicKeyToken=ee3ee20bcf148ddd, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\PropertyChanged.Fody.2.1.4\lib\netstandard1.0\PropertyChanged.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -110,39 +136,6 @@
       <HintPath>..\..\packages\Xamarin.Forms.2.3.4.247\lib\Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.iOS" />
-    <Reference Include="System.Net.Http" />
-  </ItemGroup>
-  <ItemGroup>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
-      <InProject>false</InProject>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\Contents.json">
-      <InProject>false</InProject>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-76.png">
-      <InProject>false</InProject>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-76%402x.png">
-      <InProject>false</InProject>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Small.png">
-      <InProject>false</InProject>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Small%402x.png">
-      <InProject>false</InProject>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Small%403x.png">
-      <InProject>false</InProject>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Small-40%402x.png">
-      <InProject>false</InProject>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-60%402x.png">
-      <InProject>false</InProject>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-60%403x.png">
-      <InProject>false</InProject>
-    </ImageAsset>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\DnDAssistant.Core\DnDAssistant.Core.csproj">
@@ -151,29 +144,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <InterfaceDefinition Include="LaunchScreen.storyboard" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Info.plist" />
-    <None Include="Entitlements.plist" />
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Main.cs" />
-    <Compile Include="AppDelegate.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\profile_generic.png" />
-    <BundleResource Include="Resources\profile_generic%402x.png" />
-    <BundleResource Include="Resources\profile_generic%403x.png" />
-    <BundleResource Include="Resources\slideout.png" />
-    <BundleResource Include="Resources\slideout%402x.png" />
-    <BundleResource Include="Resources\tab_about.png" />
-    <BundleResource Include="Resources\tab_about%402x.png" />
-    <BundleResource Include="Resources\tab_about%403x.png" />
-    <BundleResource Include="Resources\tab_feed.png" />
-    <BundleResource Include="Resources\tab_feed%402x.png" />
-    <BundleResource Include="Resources\tab_feed%403x.png" />
+    <None Include="FodyWeavers.xml" />
   </ItemGroup>
   <Import Project="..\DnDAssistant.Xamarin\DnDAssistant.Xamarin.projitems" Label="Shared" Condition="Exists('..\DnDAssistant.Xamarin\DnDAssistant.Xamarin.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
@@ -183,5 +154,7 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\..\packages\Xamarin.Forms.2.3.4.247\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.2.3.4.247\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets'))" />
+    <Error Condition="!Exists('..\..\packages\Fody.2.0.0\build\netstandard1.4\Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Fody.2.0.0\build\netstandard1.4\Fody.targets'))" />
   </Target>
+  <Import Project="..\..\packages\Fody.2.0.0\build\netstandard1.4\Fody.targets" Condition="Exists('..\..\packages\Fody.2.0.0\build\netstandard1.4\Fody.targets')" />
 </Project>

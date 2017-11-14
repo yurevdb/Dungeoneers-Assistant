@@ -102,10 +102,8 @@ C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\bin\Debug\DnDAssistant.Wp
 C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\bin\Debug\DnDAssistant.Wpf.pdb
 C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\bin\Debug\DnDAssistant.Core.dll
 C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\bin\Debug\HtmlAgilityPack.dll
-C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\bin\Debug\DnDAssistant.Core.pdb
 C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\bin\Debug\HtmlAgilityPack.pdb
 C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\bin\Debug\HtmlAgilityPack.xml
-C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\DnDAssistant.Wpf.csprojResolveAssemblyReference.cache
 C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\CampaignSelect\CampaignHostWindow.g.cs
 C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\CampaignSelect\CampaignSelector\CampaignSelector.g.cs
 C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\CampaignSelect\CampaignSelector\CampaignSelectorItem.g.cs
@@ -184,3 +182,5 @@ C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\DnDAssistant.Wp
 C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\DnDAssistant.Wpf.csproj.CoreCompileInputs.cache
 C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\DnDAssistant.Wpf.exe
 C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\DnDAssistant.Wpf.pdb
+C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\DnDAssistant.Wpf.csprojResolveAssemblyReference.cache
+C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\bin\Debug\DnDAssistant.Core.pdb

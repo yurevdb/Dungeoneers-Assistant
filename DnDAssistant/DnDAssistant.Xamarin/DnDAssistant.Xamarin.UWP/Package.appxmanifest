@@ -6,12 +6,12 @@
   xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
   IgnorableNamespaces="uap mp">
 
-  <Identity
-    Name="3525444a-26b1-4b14-bdf1-e1beb3d585eb"
+  <Identity 
+    Name="e2466d75-1d47-4fba-a026-91315f6d8c52"
     Publisher="CN=Yure Vanderbruggen"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="3525444a-26b1-4b14-bdf1-e1beb3d585eb" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="f736c883-f105-4d30-a719-4bf328872f5e" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>DnDAssistant.Xamarin.UWP</DisplayName>
@@ -26,11 +26,11 @@
   <Resources>
     <Resource Language="x-generate"/>
   </Resources>
-  
+
   <Applications>
     <Application Id="App"
-      Executable="$targetnametoken$.exe"
-      EntryPoint="DnDAssistant.Xamarin.UWP.App">
+        Executable="$targetnametoken$.exe"
+        EntryPoint="DnDAssistant.Xamarin.UWP.App">
       <uap:VisualElements
         DisplayName="DnDAssistant.Xamarin.UWP"
         Square150x150Logo="Assets\Square150x150Logo.png"

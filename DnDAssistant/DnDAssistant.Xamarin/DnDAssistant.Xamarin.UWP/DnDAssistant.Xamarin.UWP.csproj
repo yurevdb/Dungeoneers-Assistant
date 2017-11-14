@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{78DDEF8F-2950-4081-B345-9C7D2B16BA3B}</ProjectGuid>
+    <ProjectGuid>{CCACEB7D-18D2-490D-B129-D7C9777C7289}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DnDAssistant.Xamarin.UWP</RootNamespace>
@@ -90,13 +90,6 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
-    <Content Include="Assets\LockScreenLogo.scale-200.png" />
-    <Content Include="Assets\SplashScreen.scale-200.png" />
-    <Content Include="Assets\Square150x150Logo.scale-200.png" />
-    <Content Include="Assets\Square44x44Logo.scale-200.png" />
-    <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
-    <Content Include="Assets\StoreLogo.png" />
-    <Content Include="Assets\Wide310x150Logo.scale-200.png" />
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
@@ -112,11 +105,37 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <None Include="DnDAssistant.Xamarin.UWP_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="profile_generic.png" />
     <Content Include="Properties\Default.rd.xml" />
-    <Content Include="slideout.png" />
+    <Content Include="Assets\LockScreenLogo.scale-100.png" />
+    <Content Include="Assets\LockScreenLogo.scale-125.png" />
+    <Content Include="Assets\LockScreenLogo.scale-150.png" />
+    <Content Include="Assets\LockScreenLogo.scale-200.png" />
+    <Content Include="Assets\LockScreenLogo.scale-400.png" />
+    <Content Include="Assets\SplashScreen.scale-100.png" />
+    <Content Include="Assets\SplashScreen.scale-125.png" />
+    <Content Include="Assets\SplashScreen.scale-150.png" />
+    <Content Include="Assets\SplashScreen.scale-200.png" />
+    <Content Include="Assets\SplashScreen.scale-400.png" />
+    <Content Include="Assets\Square150x150Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.scale-100.png" />
+    <Content Include="Assets\Square44x44Logo.scale-125.png" />
+    <Content Include="Assets\Square44x44Logo.scale-150.png" />
+    <Content Include="Assets\Square44x44Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.scale-400.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-16_altform-unplated.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-32_altform-unplated.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-48_altform-unplated.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-256_altform-unplated.png" />
+    <Content Include="Assets\StoreLogo.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-100.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-125.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-150.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-400.png" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -128,15 +147,10 @@
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
-  <ItemGroup>
-    <SDKReference Include="Microsoft.VCLibs, Version=14.0">
-      <Name>Visual C++ 2015 Runtime for Universal Windows Platform Apps</Name>
-    </SDKReference>
-  </ItemGroup>
-  <Import Project="..\DnDAssistant.Xamarin\DnDAssistant.Xamarin.projitems" Label="Shared" Condition="Exists('..\DnDAssistant.Xamarin\DnDAssistant.Xamarin.projitems')" />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
+  <Import Project="..\DnDAssistant.Xamarin\DnDAssistant.Xamarin.projitems" Label="Shared" Condition="Exists('..\DnDAssistant.Xamarin\DnDAssistant.Xamarin.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
