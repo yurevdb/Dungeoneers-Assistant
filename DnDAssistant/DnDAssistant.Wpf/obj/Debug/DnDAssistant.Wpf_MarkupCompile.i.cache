@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\
+C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\
 DnDAssistant.Wpf
 none
 false
 DEBUG;TRACE
-C:\Users\Yure Vanderbruggen\Documents\GitHub\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\App.xaml
+C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\App.xaml
 301642039739
 
 69-2052115905
-71-1306369341
+70-2020585882
 Controls\CampaignSelect\CampaignHostWindow.xaml;Controls\CampaignSelect\Pages\Creator.xaml;Controls\CampaignSelect\Pages\Selector.xaml;Controls\ControlHub\ControlHub.xaml;Controls\Dialogs\DialogMessageBox.xaml;Controls\LoadingAnimation\Dice\DiceSix.xaml;Controls\LoadingAnimation\Dice\DiceFive.xaml;Controls\LoadingAnimation\Dice\DiceFour.xaml;Controls\LoadingAnimation\Dice\DiceThree.xaml;Controls\LoadingAnimation\Dice\DiceTwo.xaml;Controls\LoadingAnimation\Dice\DiceOne.xaml;Controls\MenuControl\MenuControl.xaml;Controls\Menus\VerticalMenu.xaml;Controls\Dialogs\Base\DialogWindow.xaml;Controls\NavigationMenu.xaml;Controls\PageHost.xaml;Controls\Splashscreen\Splash.xaml;Controls\LoadingAnimation\LoadingAnimation.xaml;MainWindow.xaml;Styles\Buttons.xaml;Styles\Colors.xaml;Styles\Fonts.xaml;Styles\Miscellaneous.xaml;Styles\SVG.xaml;Styles\Texts.xaml;Styles\Window.xaml;Views\Character Creator\CharacterCreatorPage.xaml;Views\Character Creator\CharPage.xaml;Views\StartupPage.xaml;Views\Test\TestPage.xaml;
 
-False
+True
 
