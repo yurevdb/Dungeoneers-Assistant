@@ -1,4 +1,4 @@
-﻿C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\GeneratedInternalTypeHelper.g.cs
+﻿
 FC:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\App.xaml;;
 FC:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Controls\CampaignSelect\CampaignHostWindow.xaml;;
 FC:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Controls\CampaignSelect\CampaignSelector\CampaignSelector.xaml;;
@@ -7,6 +7,7 @@ FC:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Controls\CampaignSelect\
 FC:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Controls\CampaignSelect\Pages\Selector.xaml;;
 FC:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Controls\ControlHub\ControlHub.xaml;;
 FC:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Controls\Dialogs\DialogMessageBox.xaml;;
+FC:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Controls\Extra\HexagonWidget.xaml;;
 FC:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Controls\Extra\NumberSelector.xaml;;
 FC:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Controls\LoadingAnimation\Dice\DiceSix.xaml;;
 FC:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\Controls\LoadingAnimation\Dice\DiceFive.xaml;;

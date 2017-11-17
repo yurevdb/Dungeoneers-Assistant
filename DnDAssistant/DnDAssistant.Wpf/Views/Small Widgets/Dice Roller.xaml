@@ -20,51 +20,16 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <Ellipse x:Name="image"
-                 Grid.Column="1"
-                 Grid.Row="0"
-                 Grid.RowSpan="3"
-                 Width="250"
-                 Height="250"
-                 Stroke="{StaticResource DarkRedBrush}"
-                 StrokeThickness="4"
-                 VerticalAlignment="Center"
-                 HorizontalAlignment="Left"
-                 Panel.ZIndex="5"
-                 >
-            <Ellipse.Fill>
-                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/red_d20_png.png" 
-                            Stretch="UniformToFill"
-                            />
-            </Ellipse.Fill>
-            <Ellipse.RenderTransform>
-                <RotateTransform />
-            </Ellipse.RenderTransform>
-        </Ellipse>
-
-        <Ellipse Grid.Column="1"
-                 Grid.Row="0"
-                 Grid.RowSpan="3"
-                 Width="250"
-                 Height="250"
-                 Stroke="{StaticResource DarkRedBrush}"
-                 StrokeThickness="4"
-                 VerticalAlignment="Center"
-                 HorizontalAlignment="Left"
-                 Fill="White"
-                 Panel.ZIndex="2"
-                 />
-
-        <Button x:Name="btnRoll"
-                Grid.Column="1"
-                Grid.Row="2"
-                Content="Roll the Dice"
-                VerticalAlignment="Center"
-                HorizontalAlignment="Center"
-                Click="BtnRoll_ClickAsync"
-                />
-
-        <local:NumberSelector Grid.Column="2" Grid.Row="1" Width="100" Height="50"/>
+        <local:HexagonWidget VerticalAlignment="Center" 
+                             HorizontalAlignment="Center" 
+                             Grid.Row="0" Grid.Column="0"
+                             Grid.RowSpan="3" Grid.ColumnSpan="3"
+                             Width="100"
+                             Height="100"
+                             Image="{Binding Image}"
+                             IsSelected="False"
+                             Click="{Binding Click}"
+                             />
 
     </Grid>
 </local:BasePage>

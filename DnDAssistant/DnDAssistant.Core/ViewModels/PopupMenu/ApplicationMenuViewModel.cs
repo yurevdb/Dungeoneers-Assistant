@@ -39,7 +39,7 @@ namespace DnDAssistant.Core
                         Click = new RelayCommand(()=>
                         {
                             // Set the campaignhostwindow to the selector
-                            IoC.App.GoTo(CampaignHostWindows.Selector);
+                            IoC.App.GoToAsync(CampaignHostWindows.Selector);
 
                             // Close the campaign menu
                             IoC.App.CampaignMenuVisible = false;

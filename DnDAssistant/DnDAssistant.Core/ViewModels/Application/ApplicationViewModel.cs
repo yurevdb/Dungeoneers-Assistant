@@ -104,20 +104,26 @@ namespace DnDAssistant.Core
         /// Function to set the current page of the campaign window
         /// </summary>
         /// <param name="page">The page to go to</param>
-        public void GoTo(CampaignHostWindows page)
+        public async void GoToAsync(CampaignHostWindows page)
         {
-            // Set the current page of the application
-            CurrentCampaignPage = page;
+            await Task.Run(() =>
+            {
+                // Set the current page of the application
+                CurrentCampaignPage = page;
+            });
         }
 
         /// <summary>
         /// Function to set the Current Campaign of the application
         /// </summary>
         /// <param name="campaign">The Campaign to edit</param>
-        public void SetCampaign(CampaignViewModel campaign)
+        public async void SetCampaignAsync(CampaignViewModel campaign)
         {
-            // Set the Current Campaign of the application
-            Campaign = campaign;
+            await Task.Run(() =>
+            {
+                // Set the Current Campaign of the application
+                Campaign = campaign;
+            });
         }
     }
 }

@@ -40,11 +40,11 @@ namespace DnDAssistant.Core
                 {
                     if(campaign.Name == "New Campaign")
                     {
-                        IoC.App.GoTo(CampaignHostWindows.Creator);
+                        IoC.App.GoToAsync(CampaignHostWindows.Creator);
                         return;
                     }
 
-                    IoC.App.SetCampaign(campaign);
+                    IoC.App.SetCampaignAsync(campaign);
                     IoC.UI.OpenWindow(Windows.Main);
                 }
             });

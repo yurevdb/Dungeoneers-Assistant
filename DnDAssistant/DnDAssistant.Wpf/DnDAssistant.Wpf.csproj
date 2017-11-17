@@ -138,6 +138,9 @@
     <Compile Include="Controls\Dialogs\DialogMessageBox.xaml.cs">
       <DependentUpon>DialogMessageBox.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\Extra\HexagonWidget.xaml.cs">
+      <DependentUpon>HexagonWidget.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Extra\NumberSelector.xaml.cs">
       <DependentUpon>NumberSelector.xaml</DependentUpon>
     </Compile>
@@ -263,6 +266,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\Dialogs\DialogMessageBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Extra\HexagonWidget.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

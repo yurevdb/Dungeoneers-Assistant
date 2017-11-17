@@ -1,4 +1,6 @@
-﻿namespace DnDAssistant.Wpf
+﻿using DnDAssistant.Core;
+
+namespace DnDAssistant.Wpf
 {
     /// <summary>
     /// Interaction logic for Dice_Roller.xaml
@@ -8,11 +10,11 @@
         public Dice_Roller()
         {
             InitializeComponent();
-        }
-
-        private async void BtnRoll_ClickAsync(object sender, System.Windows.RoutedEventArgs e)
-        {
-            await Animations.SpinAnimationAsync(image, 45, 5);
+            DataContext = new WidgetViewModel
+            {
+                Image = "pack://siteoforigin:,,,/Resources/d20.png",
+                Click = new RelayCommand(() => IoC.UI.ShowMessage(new DialogViewModel { Message = "It works.", Title = "Click test", Buttons = Buttons.Ok }))
+            };
         }
     }
 }
