@@ -97,7 +97,7 @@ namespace DnDAssistant.Core
             {
                 Name = "Dice Roller",
                 Image = "pack://siteoforigin:,,,/Resources/d20.png",
-                Click = new RelayCommand(() => IoC.UI.ShowMessage(new DialogViewModel { Message = "Not yet implemented", Title = "Dice Roller", Buttons = Buttons.Ok }))
+                Click = new RelayCommand(() => IoC.App.GoToAsync(ApplicationPage.DiceRoller))
             });
 
             Add(new WidgetViewModel

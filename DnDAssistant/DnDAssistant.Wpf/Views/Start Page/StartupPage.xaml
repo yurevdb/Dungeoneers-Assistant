@@ -69,7 +69,8 @@
             <ItemsControl ItemsSource="{Binding FilteredWidgets}">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
-                        <local:Widget local:AnimateFadeInOut.Value="{Binding ShowWidget}">
+                        <local:Widget local:AnimateFadeInOut.Value="{Binding ShowWidget}"
+                                             >
                             <local:Widget.ContextMenu>
                                 <ContextMenu />
                             </local:Widget.ContextMenu>

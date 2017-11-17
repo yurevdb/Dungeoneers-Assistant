@@ -1,0 +1,77 @@
+﻿<UserControl x:Class="DnDAssistant.Wpf.HexagonWidget"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DnDAssistant.Wpf"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Viewbox>
+        <Border Padding="5">
+            <Grid VerticalAlignment="Center" HorizontalAlignment="Center" Cursor="Hand">
+
+                <!-- Outer Border, Fill will be bronze gradient and animations for hover and selected -->
+                <Polygon Points="60,0 30,50 -30,50 -60,0 -30,-50 30,-50" 
+                         Stroke="{StaticResource DarkRedBrush}"
+                         StrokeThickness="2"
+                         Panel.ZIndex="1"
+                         >
+                    <Polygon.Fill>
+                        <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                            <GradientStop x:Name="GS1" Color="#FF98641A" Offset="0.2"/>
+                            <GradientStop x:Name="GS2" Color="#FF7c5215" Offset="0.8"/>
+                        </LinearGradientBrush>
+                    </Polygon.Fill>
+                </Polygon>
+
+                <!-- Inner border, will have the image as fill or initials and hover over zoom in-->
+                <Polygon Points="53,0 27,44 -27,44 -53,0 -27,-44 27,-44" 
+                         Stroke="{StaticResource DarkRedBrush}"
+                         StrokeThickness="2"
+                         Panel.ZIndex="2"
+                         >
+                    <Polygon.Fill>
+                        <ImageBrush ImageSource="{Binding Path=Image, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                                    AlignmentX="Center" AlignmentY="Center"
+                                    Stretch="UniformToFill"
+                                    >
+                            <ImageBrush.RelativeTransform>
+                                <ScaleTransform x:Name="ImageScale" CenterX="0.5" CenterY="0.5" ScaleX="1" ScaleY="1" />
+                            </ImageBrush.RelativeTransform>
+                        </ImageBrush>
+                    </Polygon.Fill>
+                </Polygon>
+
+                <Grid.InputBindings>
+                    <MouseBinding MouseAction="LeftClick" Command="{Binding Path=Click}"/>
+                </Grid.InputBindings>
+
+                <!-- Triggers -->
+                <Grid.Triggers>
+
+                    <!-- Mouse Events -->
+                    <EventTrigger RoutedEvent="MouseEnter">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation To="1.1" Duration="0:0:0.15" Storyboard.TargetName="ImageScale" Storyboard.TargetProperty="ScaleX"/>
+                                <DoubleAnimation To="1.1" Duration="0:0:0.15" Storyboard.TargetName="ImageScale" Storyboard.TargetProperty="ScaleY"/>
+                                <ColorAnimation To="#FFc98420" Duration="0:0:0.15" Storyboard.TargetName="GS1" Storyboard.TargetProperty="Color"/>
+                                <ColorAnimation To="#FF98641A" Duration="0:0:0.15" Storyboard.TargetName="GS2" Storyboard.TargetProperty="Color"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                    <EventTrigger RoutedEvent="MouseLeave">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation To="1" Duration="0:0:0.15" Storyboard.TargetName="ImageScale" Storyboard.TargetProperty="ScaleX"/>
+                                <DoubleAnimation To="1" Duration="0:0:0.15" Storyboard.TargetName="ImageScale" Storyboard.TargetProperty="ScaleY"/>
+                                <ColorAnimation To="#FF98641A" Duration="0:0:0.15" Storyboard.TargetName="GS1" Storyboard.TargetProperty="Color"/>
+                                <ColorAnimation To="#FF7c5215" Duration="0:0:0.15" Storyboard.TargetName="GS2" Storyboard.TargetProperty="Color"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Grid.Triggers>
+            </Grid>
+        </Border>
+    </Viewbox>
+</UserControl>

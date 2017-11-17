@@ -81,14 +81,14 @@ namespace DnDAssistant.Wpf
                 _Image.Save($"{IoC.App.ResourcePath}\\{_ImageName}");
 
             // Set it as the Campaign of the Application
-            IoC.App.SetCampaign(nc);
+            IoC.App.SetCampaignAsync(nc);
 
             OpenMainWindow();
         }
 
         private void ButtonClose_Click(object sender, RoutedEventArgs e)
         {
-            IoC.App.GoTo(CampaignHostWindows.Selector);
+            IoC.App.GoToAsync(CampaignHostWindows.Selector);
             return;
         }
 

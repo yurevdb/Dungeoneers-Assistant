@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DnDAssistant.Xamarin"
+             x:Class="DnDAssistant.Xamarin.MainPage">
+
+    <ContentPage.BindingContext>
+        <local:CampaignViewModelXam />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="5*"/>
+            </Grid.RowDefinitions>
+            
+            <Button Text="Klik Me" 
+                    Grid.Row="0"
+                    BackgroundColor="Red"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="End"
+                    Command="{Binding Click}"
+                    />
+            
+            <Button Text="Switch" 
+                    Grid.Row="0"
+                    BackgroundColor="Red"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Start"
+                    Command="{Binding Switch}"
+                    />
+
+            <Label Text="{Binding Text}"
+                   BackgroundColor="Bisque"
+                   Grid.Row="1"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"/>
+            
+        </Grid>
+        
+    </ContentPage.Content>
+
+	
+
+</ContentPage>

@@ -221,8 +221,8 @@
                                       Data="M 0 0 L 16 16 M 0 16 L 16 0" />
                             </Border>
                         </BulletDecorator.Bullet>
-                        <ContentPresenter Margin="4,0,0,0"
-                                          VerticalAlignment="Center"
+                        <ContentPresenter Margin="4,0,0,2"
+                                          VerticalAlignment="Bottom"
                                           HorizontalAlignment="Left"
                                           RecognizesAccessKey="True"/>
                     </BulletDecorator>
@@ -252,15 +252,14 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ContextMenu}">
-                    <Border x:Name="Border"
-                            Background="{StaticResource SmokeWhiteBrush}"
+                    <Border Background="{StaticResource SmokeWhiteBrush}"
                             BorderBrush="{StaticResource BronzeBrush}"
                             Cursor="Hand"
                             BorderThickness="1">
                         <ItemsControl ItemsSource="{Binding ContextMenu}">
                             <ItemsControl.ItemTemplate>
                                 <DataTemplate>
-                                    <Border Padding="10 4">
+                                    <Border Padding="10 4" Background="{StaticResource SmokeWhiteBrush}" x:Name="border">
 
                                         <Grid Height="23">
 
@@ -290,27 +289,28 @@
                                                           Command="{Binding Click}" 
                                                           CommandParameter="{Binding DataContext, RelativeSource={RelativeSource AncestorType=ItemsControl}}"/>
                                         </Border.InputBindings>
+
+                                        <Border.Triggers>
+                                            <EventTrigger RoutedEvent="MouseEnter">
+                                                <BeginStoryboard>
+                                                    <Storyboard>
+                                                        <ColorAnimation To="{StaticResource White}" DecelerationRatio="0.9" Duration="0:0:0.3" Storyboard.TargetName="border" Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)" />
+                                                    </Storyboard>
+                                                </BeginStoryboard>
+                                            </EventTrigger>
+                                            <EventTrigger RoutedEvent="MouseLeave">
+                                                <BeginStoryboard>
+                                                    <Storyboard>
+                                                        <ColorAnimation To="{StaticResource SmokeWhite}" DecelerationRatio="0.9" Duration="0:0:0.3" Storyboard.TargetName="border" Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)" />
+                                                    </Storyboard>
+                                                </BeginStoryboard>
+                                            </EventTrigger>
+                                        </Border.Triggers>
+
                                     </Border>
                                 </DataTemplate>
                             </ItemsControl.ItemTemplate>
                         </ItemsControl>
-
-                        <Border.Triggers>
-                            <EventTrigger RoutedEvent="MouseEnter">
-                                <BeginStoryboard>
-                                    <Storyboard>
-                                        <ColorAnimation To="{StaticResource White}" DecelerationRatio="0.9" Duration="0:0:0.3" Storyboard.TargetName="Border" Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)" />
-                                    </Storyboard>
-                                </BeginStoryboard>
-                            </EventTrigger>
-                            <EventTrigger RoutedEvent="MouseLeave">
-                                <BeginStoryboard>
-                                    <Storyboard>
-                                        <ColorAnimation To="{StaticResource SmokeWhite}" DecelerationRatio="0.9" Duration="0:0:0.3" Storyboard.TargetName="Border" Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)" />
-                                    </Storyboard>
-                                </BeginStoryboard>
-                            </EventTrigger>
-                        </Border.Triggers>
                     </Border>
 
                 </ControlTemplate>

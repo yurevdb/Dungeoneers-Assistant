@@ -67,6 +67,5 @@ namespace DnDAssistant.Core
         }
 
         #endregion
-
     }
 }
