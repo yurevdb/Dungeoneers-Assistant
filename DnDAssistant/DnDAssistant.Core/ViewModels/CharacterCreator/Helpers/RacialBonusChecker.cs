@@ -7,6 +7,7 @@ namespace DnDAssistant.Core
 {
     public static class RacialBonusChecker
     {
+        #region Readonly_Lists
         /// <summary>
         /// List containing the subraces of the Dwarf Race
         /// </summary>
@@ -15,6 +16,9 @@ namespace DnDAssistant.Core
         /// List containing the subraces of the Elf Race
         /// </summary>
         private static readonly List<string> _SubElf = new List<string>() { "Drow", "High Elf", "Wood Elf" };
+        /// <summary>
+        /// List containing  the subraces of the Elf Race
+        /// </summary>
         private static readonly List<string> _SubGnome = new List<string>() { "Forest Gnome", "Rock Gnome", "Deep Gnome" };
         /// <summary>
         /// List containing the subraces of the Halfling Race
@@ -23,7 +27,7 @@ namespace DnDAssistant.Core
         /// <summary>
         /// List containing the subraces of the Hooman Race
         /// </summary>
-        private static readonly List<string> _Hooman = new List<string>() { "None"};
+        private static readonly List<string> _Hooman = new List<string>() { "None" };
         /// <summary>
         /// List containing the subraces of the Dragonborn Race
         /// </summary>
@@ -32,7 +36,15 @@ namespace DnDAssistant.Core
         /// List for when the Race has no Subrace
         /// </summary>
         private static readonly List<string> _NoSub = new List<string>() { "None" };
+        #endregion
 
+
+        /// <summary>
+        /// Method to check what bonusses (except from stats) a race and or subrace receives
+        /// </summary>
+        /// <param name="Race"></param>
+        /// <param name="SubRace"></param>
+        /// <returns></returns>
         public static string BonusCheck(string Race, string SubRace)
         {
             return null;
