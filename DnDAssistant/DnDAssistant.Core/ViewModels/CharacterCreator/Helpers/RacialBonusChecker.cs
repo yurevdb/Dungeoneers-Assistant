@@ -7,6 +7,8 @@ namespace DnDAssistant.Core
 {
     public static class RacialBonusChecker
     {
+        enum Size { Small = 0, Medium = 1}
+
         #region Readonly_Lists
         /// <summary>
         /// List containing the subraces of the Dwarf Race
