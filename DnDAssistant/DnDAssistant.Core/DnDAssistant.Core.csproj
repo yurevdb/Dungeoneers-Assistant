@@ -107,6 +107,8 @@
     <Compile Include="ViewModels\PopupMenu\ApplicationMenuViewModel.cs" />
     <Compile Include="ViewModels\PopupMenu\Base\BasePopupViewModel.cs" />
     <Compile Include="ViewModels\Splash\SplashViewModel.cs" />
+    <Compile Include="ViewModels\StoryBoard\ChapterTool\ChapterToolViewModel.cs" />
+    <Compile Include="ViewModels\StoryBoard\StoryBoardViewModel.cs" />
     <Compile Include="ViewModels\Widgets\Base\WidgetContextMenuItemViewModel.cs" />
     <Compile Include="ViewModels\Widgets\Base\WidgetListViewModel.cs" />
     <Compile Include="ViewModels\Widgets\Base\WidgetViewModel.cs" />

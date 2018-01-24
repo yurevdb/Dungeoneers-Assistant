@@ -2,15 +2,13 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:DnDAssistant.Wpf">
 
+    <!-- Gray Scale Colors -->
     <Color x:Key="Black">#000000</Color>
     <SolidColorBrush x:Key="BlackBrush" Color="{StaticResource Black}"/>
-
     <Color x:Key="Gray">#b5b5b5</Color>
     <SolidColorBrush x:Key="GrayBrush" Color="{StaticResource Gray}"/>
-
     <Color x:Key="White">#ffffff</Color>
     <SolidColorBrush x:Key="WhiteBrush" Color="{StaticResource White}"/>
-
     <Color x:Key="SmokeWhite">#f5f5f5</Color>
     <SolidColorBrush x:Key="SmokeWhiteBrush" Color="{StaticResource SmokeWhite}"/>
 
@@ -30,7 +28,12 @@
     <Color x:Key="DarkRed">#6d1a13</Color>
     <SolidColorBrush x:Key="DarkRedBrush" Color="{StaticResource DarkRed}"/>
 
+    <!-- The Blues -->
+    <Color x:Key="LightBlue">#45a4e8</Color>
+    <SolidColorBrush x:Key="LightBlueBrush" Color="{StaticResource LightBlue}"/>
     <Color x:Key="Blue">#328dcd</Color>
     <SolidColorBrush x:Key="BlueBrush" Color="{StaticResource Blue}"/>
+    <Color x:Key="DarkBlue">#1a5884</Color>
+    <SolidColorBrush x:Key="DarkBlueBrush" Color="{StaticResource DarkBlue}"/>
 
 </ResourceDictionary>

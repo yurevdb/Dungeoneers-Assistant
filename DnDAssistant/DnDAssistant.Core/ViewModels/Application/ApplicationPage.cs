@@ -29,5 +29,10 @@
         /// Dice Roller Widget
         /// </summary>
         DiceRoller = 4,
+
+        /// <summary>
+        /// StoryBoard Widget
+        /// </summary>
+        StoryBoard = 5,
     }
 }

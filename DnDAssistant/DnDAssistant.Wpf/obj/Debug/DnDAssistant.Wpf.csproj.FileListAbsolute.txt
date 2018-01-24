@@ -102,8 +102,10 @@ C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\bin\Debug\DnDAssistant.Wp
 C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\bin\Debug\DnDAssistant.Wpf.pdb
 C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\bin\Debug\DnDAssistant.Core.dll
 C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\bin\Debug\HtmlAgilityPack.dll
+C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\bin\Debug\DnDAssistant.Core.pdb
 C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\bin\Debug\HtmlAgilityPack.pdb
 C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\bin\Debug\HtmlAgilityPack.xml
+C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\DnDAssistant.Wpf.csprojResolveAssemblyReference.cache
 C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\CampaignSelect\CampaignHostWindow.g.cs
 C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\CampaignSelect\CampaignSelector\CampaignSelector.g.cs
 C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\CampaignSelect\CampaignSelector\CampaignSelectorItem.g.cs
@@ -111,6 +113,7 @@ C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\Campai
 C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\CampaignSelect\Pages\Selector.g.cs
 C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\ControlHub\ControlHub.g.cs
 C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\Dialogs\DialogMessageBox.g.cs
+C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\Extra\HexagonWidget.g.cs
 C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\Extra\NumberSelector.g.cs
 C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\LoadingAnimation\Dice\DiceSix.g.cs
 C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\LoadingAnimation\Dice\DiceFive.g.cs
@@ -126,6 +129,7 @@ C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\Extra\
 C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\NavigationMenu\NavigationMenuItem.g.cs
 C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\Splashscreen\Splash.g.cs
 C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\LoadingAnimation\LoadingAnimation.g.cs
+C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\StoryBoard\ChapterTool.g.cs
 C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\Widget\Widget.g.cs
 C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\MainWindow.g.cs
 C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Views\Character Creator\CharacterCreatorPage.g.cs
@@ -133,6 +137,7 @@ C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Views\Character
 C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Views\DM Tools\DMToolsPage.g.cs
 C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Views\Small Widgets\Dice Roller.g.cs
 C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Views\Start Page\StartupPage.g.cs
+C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Views\StoryBoard\StoryBoard.g.cs
 C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Views\Test\TestPage.g.cs
 C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\App.g.cs
 C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\GeneratedInternalTypeHelper.g.cs
@@ -146,6 +151,7 @@ C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\Campai
 C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\CampaignSelect\Pages\Selector.baml
 C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\ControlHub\ControlHub.baml
 C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\Dialogs\DialogMessageBox.baml
+C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\Extra\HexagonWidget.baml
 C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\Extra\NumberSelector.baml
 C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\LoadingAnimation\Dice\DiceSix.baml
 C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\LoadingAnimation\Dice\DiceFive.baml
@@ -161,6 +167,7 @@ C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\Extra\
 C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\NavigationMenu\NavigationMenuItem.baml
 C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\Splashscreen\Splash.baml
 C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\LoadingAnimation\LoadingAnimation.baml
+C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\StoryBoard\ChapterTool.baml
 C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\Widget\Widget.baml
 C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\MainWindow.baml
 C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Styles\Buttons.baml
@@ -175,6 +182,7 @@ C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Views\Character
 C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Views\DM Tools\DMToolsPage.baml
 C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Views\Small Widgets\Dice Roller.baml
 C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Views\Start Page\StartupPage.baml
+C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Views\StoryBoard\StoryBoard.baml
 C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Views\Test\TestPage.baml
 C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\DnDAssistant.Wpf.g.resources
 C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\DnDAssistant.Wpf.Properties.Resources.resources
@@ -182,7 +190,3 @@ C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\DnDAssistant.Wp
 C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\DnDAssistant.Wpf.csproj.CoreCompileInputs.cache
 C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\DnDAssistant.Wpf.exe
 C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\DnDAssistant.Wpf.pdb
-C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\DnDAssistant.Wpf.csprojResolveAssemblyReference.cache
-C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\bin\Debug\DnDAssistant.Core.pdb
-C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\Extra\HexagonWidget.g.cs
-C:\Dungeoneers-Assistant\DnDAssistant\DnDAssistant.Wpf\obj\Debug\Controls\Extra\HexagonWidget.baml

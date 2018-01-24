@@ -185,6 +185,9 @@
     <Compile Include="Controls\LoadingAnimation\LoadingAnimation.xaml.cs">
       <DependentUpon>LoadingAnimation.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\StoryBoard\ChapterTool.xaml.cs">
+      <DependentUpon>ChapterTool.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Widget\Widget.xaml.cs">
       <DependentUpon>Widget.xaml</DependentUpon>
     </Compile>
@@ -237,6 +240,9 @@
     </Compile>
     <Compile Include="Views\Start Page\StartupPage.xaml.cs">
       <DependentUpon>StartupPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StoryBoard\StoryBoard.xaml.cs">
+      <DependentUpon>StoryBoard.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Test\TestPage.xaml.cs">
       <DependentUpon>TestPage.xaml</DependentUpon>
@@ -333,6 +339,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Controls\StoryBoard\ChapterTool.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\Widget\Widget.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -394,6 +404,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Start Page\StartupPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\StoryBoard\StoryBoard.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

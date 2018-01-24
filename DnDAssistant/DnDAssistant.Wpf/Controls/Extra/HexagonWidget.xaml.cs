@@ -62,7 +62,6 @@ namespace DnDAssistant.Wpf
 
         private static void ImagePropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
-            throw new NotImplementedException();
         }
     }
 }

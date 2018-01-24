@@ -1,0 +1,43 @@
+﻿<local:BasePage x:Class="DnDAssistant.Wpf.StoryBoard"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DnDAssistant.Wpf"
+             xmlns:core="clr-namespace:DnDAssistant.Core;assembly=DnDAssistant.Core"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <local:BasePage.DataContext>
+        <core:StoryBoardViewModel />
+    </local:BasePage.DataContext>
+    
+    <Grid Background="{StaticResource DarkBlueBrush}">
+
+        <Grid.ColumnDefinitions>
+            <!-- Side Menu -->
+            <ColumnDefinition Width="Auto"/>
+            <!-- Main Content -->
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Side Menu -->
+        <Border Grid.Column="0"
+                BorderBrush="{StaticResource LightBlueBrush}"
+                BorderThickness="0 0 5 0"
+                Padding="5"
+                >
+            <ItemsControl>
+                <local:ChapterTool DataContext="{Binding ChapterTool}" Height="50" Width="150"/>
+            </ItemsControl>
+        </Border>
+
+        <Border Padding="5" Grid.Column="1">
+            <Grid Background="{StaticResource BlueBrush}" 
+                  PreviewMouseLeftButtonDown="Grid_PreviewMouseLeftButtonDown"
+                  PreviewMouseLeftButtonUp="Grid_PreviewMouseLeftButtonUp"
+                  >
+            </Grid>
+        </Border>
+        
+    </Grid>
+</local:BasePage>

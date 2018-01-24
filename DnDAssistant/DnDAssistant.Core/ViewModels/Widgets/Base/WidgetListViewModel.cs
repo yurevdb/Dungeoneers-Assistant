@@ -103,7 +103,7 @@ namespace DnDAssistant.Core
             Add(new WidgetViewModel
             {
                 Name = "Story Board",
-                Click = new RelayCommand(() => IoC.UI.ShowMessage(new DialogViewModel { Message = "Not yet implemented", Title = "Story Board", Buttons = Buttons.Ok }))
+                Click = new RelayCommand(() => IoC.App.GoToAsync(ApplicationPage.StoryBoard))
             });
 
             Add(new WidgetViewModel
